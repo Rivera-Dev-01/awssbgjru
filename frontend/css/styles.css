@@ -869,13 +869,14 @@ main {
     transform: translateY(-2px);
 }
 
+/*== ABOUT PAGE - HERO SECTION ==*/
+
 .hero-container {
     position: relative;
     height: 100%;
     border-radius: 25px;
     overflow: hidden;
 }
-
 
 .about-hero {
     margin: 90px auto 0 auto;
@@ -974,3 +975,13 @@ main {
 .hero-bottom-text button:active {
     background: #fef08a;
 }
+
+/*== ABOUT PAGE - MISSION & VISION SECTION ==*/
+
+/*== ABOUT PAGE - GOAL SECTION ==*/
+
+/*== ABOUT PAGE - SKILL BUILDER & OFFICES SECTION ==*/
+
+/*== ABOUT PAGE - FUTURE WITH US SECTION ==*/
+
+/*== ABOUT PAGE - FOOTER SECTION ==*/
