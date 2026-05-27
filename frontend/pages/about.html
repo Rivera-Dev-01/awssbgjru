@@ -227,19 +227,44 @@
         </div>
       </div>
 
-      <div class="future-header-container">
-        <h1>Build Your Future With Us</h1>
-        <p>
-          Unlock exclusive resources, elevate your cloud skills, and accelerate
-          your tech career.
-        </p>
-      </div>
+      <section class="future-section">
+        <div class="future-container">
+
+          <div class="future-mascot-col">
+            <img src="../assets/src/graphic-designs/mascot/Hima_Ship.png" alt="Hima Mascot" class="future-mascot-img"/>
+          </div>
+
+          <div class="future-content-col">
+            <div class="future-header-container">
+              <h1>Build Your Future With Us</h1>
+              <p>Unlock exclusive resources, elevate your cloud skills, and accelerate your tech career.</p>
+            </div>
+
+            <!-- Future Section Cards Contents -->
+
+            <script type="application/json" id="future-cards-data">
+              [
+                { "title": "Certificate of Membership", "description": "They have the right to enjoy all the benefits and privileges of the organization. They will receive a Certificate of Membership after completing their first semester or upon approval of their membership revalidation." },
+                { "title": "Training and Skill Enhancement", "description": "They have the opportunity to enhance their skills in specialized areas such as Cloud Computing, Software and Web Development, Machine Learning, and AI." },
+                { "title": "Incentives", "description": "Active participants in training and meetings may receive a Certification of Attendance as an incentive." },
+                { "title": "Professional Training", "description": "They will receive training from the Chief Officers of the Board of Executives to equip them with the necessary skills for their chosen office." },
+                { "title": "Representation and Empowerment", "description": "This community provides members with training to develop necessary skills and fosters inclusivity. AWS technologies may be appointed as consultants to provide guidance and support to the club." }
+              ]
+            </script>
+
+            <!-- For the future-cards.js -->
+            <div class="future-cards-stack" id="future-cards-stack"></div>
+          </div>
+
+        </div>
+      </section>
     </main>
 
     <div id="footer-placeholder"></div>
 
     <script type="module" src="../js/main.js"></script>
     <script src="../js/nav.js"></script>
+    <script src="../js/future-cards.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const goalGrid = document.getElementById("goal-grid");

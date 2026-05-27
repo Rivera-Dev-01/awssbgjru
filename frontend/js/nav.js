@@ -1,10 +1,14 @@
 // Navigation component
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Load dynamic header
   loadComponent('header-placeholder', '../components/header.html')
     .then(() => {
       highlightActiveLink();
     });
+
+  // Load dynamic footer
+  loadComponent('footer-placeholder', '../components/footer.html');
 });
 
 

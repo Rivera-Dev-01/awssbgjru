@@ -1,6 +1,7 @@
 {
     "liveServer.settings.port": 5501,
-    "editor.fontFamily": "Consolas",
-    "terminal.integrated.fontFamily": "Consolas",
-    "editor.fontSize": 16
+    "editor.fontFamily": "Cascadia Code SemiLight",
+    "terminal.integrated.fontFamily": "JetBrains Mono",
+    "editor.fontSize": 16,
+    "editor.fontLigatures": false
 }
