@@ -19,8 +19,12 @@
     <main>
         <!-- Hero Section -->
         <section class="hero-section">
+            <div class="hero-background-sky"></div>
+            <div class="hero-background-ocean"></div>
+            <div class="hero-birds"></div>
+            
             <div class="hero-content-wrapper">
-                <h1 class="hero-title">IT'S ALWAYS BEEN DAY ONE</h1>
+                <img src="../assets/Hero-Title.png" alt="IT'S ALWAYS BEEN DAY ONE" class="hero-title">
                 <p class="hero-description">
                     Where in AWS, <span class="highlight">It's Always Day One</span>, the moment ambition meets action the single step that transforms a distant dream into your daily reality.
                 </p>
@@ -31,8 +35,9 @@
             </div>
         </section>
 
+        <div class="content-section">
         <!-- Who Are We Section -->
-        <section class="who-are-we-section">
+        <section class="who-are-we-section" style="background: url('../assets/Who-Are-We-Background.png') center/cover no-repeat;">
             <h2 class="section-title">Who Are We</h2>
             <p class="section-subtitle">
                 AWS Learning Club - JRU Chapter is a newly established AWS Learning Chapter focused on bringing cloud knowledge, innovation, and hands-on learning to students, based at Jose Rizal University
@@ -41,20 +46,28 @@
             <div>
                 <div class="about-grid">
                     <div class="about-card">
-                        <h3>VISION</h3>
-                        <p>To build a network of student innovators using AWS to drive technological progress and industry transformation.</p>
+                        <div class="about-card-inner">
+                            <h3>VISION</h3>
+                            <p>To build a network of student innovators using AWS to drive technological progress and industry transformation.</p>
+                        </div>
                     </div>
                     <div class="about-card">
-                        <h3>MISSION</h3>
-                        <p>To empower students through hands-on learning, workshops, and community service that build real AWS and cloud skills.</p>
+                        <div class="about-card-inner">
+                            <h3>MISSION</h3>
+                            <p>To empower students through hands-on learning, workshops, and community service that build real AWS and cloud skills.</p>
+                        </div>
                     </div>
                     <div class="about-card">
-                        <h3>DEPARTMENTS</h3>
-                        <p>Dedicated technical teams that bring our projects, programs, and community initiatives to life.</p>
+                        <div class="about-card-inner">
+                            <h3>DEPARTMENTS</h3>
+                            <p>Dedicated technical teams that bring our projects, programs, and community initiatives to life.</p>
+                        </div>
                     </div>
                     <div class="about-card">
-                        <h3>OFFICES</h3>
-                        <p>The leadership teams that guide our chapter's vision, growth, and direction.</p>
+                        <div class="about-card-inner">
+                            <h3>OFFICES</h3>
+                            <p>The leadership teams that guide our chapter's vision, growth, and direction.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -67,22 +80,35 @@
         <!-- What We Do Section -->
         <section class="what-we-do-section">
             <div class="content-card what-we-do-card">
-                <h3>What We Do</h3>
-                <p>The AWS Learning Club - JRU Chapter bridges the gap between academic theory and real-world cloud technology. We host peer-to-peer learning sessions, interactive technical workshops, and collaborative community projects centered around cloud computing and innovation.</p>
+                <div class="content-card-inner">
+                    <h3>What We Do</h3>
+                    <p>The AWS Learning Club - JRU Chapter bridges the gap between academic theory and real-world cloud technology. We host peer-to-peer learning sessions, interactive technical workshops, and collaborative community projects centered around cloud computing and innovation.</p>
+                </div>
+            </div>
+
+            <div class="content-card fueling-tomorrow-card">
+                <div class="content-card-inner">
+                    <h3>Fueling Tomorrow's Tech Leaders</h3>
+                    <p>We don't just study the cloud—we actively build and innovate within it. The AWS Learning Club - JRU Chapter is a dynamic student community that bridges the gap between academic theory and industry practice. Through hands-on team training, collaborative team projects, and expert-led workshops, we turn theoretical knowledge into real-world skills. Whether you're launching your first AWS build or building a robust project portfolio, you will gain a competitive edge alongside driven learners. Our technical expertise will help you cultivate the vital industry connections and leadership.</p>
+                </div>
             </div>
 
             <div class="content-card what-we-offer-card">
-                <h3>What We Offer</h3>
-                <p>Explore the exclusive benefits, technical training, and career-building opportunities available to our members:</p>
-                <ul>
-                    <li>Hands-On Technical Workshops</li>
-                    <li>Practical Skill Development</li>
-                    <li>Collaborative Projects</li>
-                    <li>Industry Networking</li>
-                </ul>
+                <div class="content-card-inner">
+                    <h3>What We Offer</h3>
+                    <p>Explore the exclusive benefits, technical training, and career-building opportunities available to our members:</p>
+                    <ul>
+                        <li>Hands-On Technical Workshops</li>
+                        <li>Practical Skill Development</li>
+                        <li>Collaborative Projects</li>
+                        <li>Industry Networking</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
+        <!-- Events & Sponsors Background -->
+        <div class="events-sponsors-bg">
         <!-- Events Section -->
         <section class="events-section">
             <h2 class="events-title">EVENTS</h2>
@@ -132,10 +158,12 @@
                 <p>is a premier cloud computing training platform that supplies our organization with official AWS reviewers.</p>
             </div>
         </section>
+        </div>
     </main>
     
     <!-- Footer -->
     <div id="footer-placeholder"></div>
+</div>
     
     <script type="module" src="../js/main.js"></script>
     <script src="../js/nav.js"></script>
