@@ -1,7 +1,8 @@
 {
     "liveServer.settings.port": 5501,
-    "editor.fontFamily": "Cascadia Code SemiLight",
+    "editor.fontFamily": "Cascadia Mono",
     "terminal.integrated.fontFamily": "JetBrains Mono",
     "editor.fontSize": 16,
-    "editor.fontLigatures": false
+    "editor.fontLigatures": false,
+    "editor.cursorStyle": "line"
 }
