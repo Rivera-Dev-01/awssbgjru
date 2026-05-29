@@ -1,0 +1,132 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - img "AWS Logo" [ref=e5]
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - generic [ref=e8]: AWS
+          - generic [ref=e9]: Learning Club
+        - generic [ref=e10]: "- JRU Chapter"
+  - main [ref=e11]:
+    - generic [ref=e13]:
+      - img "IT'S ALWAYS BEEN DAY ONE" [ref=e14]
+      - paragraph [ref=e15]: Where in AWS, It's Always Day One, the moment ambition meets action the single step that transforms a distant dream into your daily reality.
+      - generic [ref=e16]:
+        - button "ABOUT US" [ref=e17] [cursor=pointer]
+        - button "JOIN NOW" [ref=e18] [cursor=pointer]
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - heading "Who Are We" [level=2] [ref=e21]
+        - paragraph [ref=e22]: AWS Learning Club - JRU Chapter is a newly established AWS Learning Chapter focused on bringing cloud knowledge, innovation, and hands-on learning to students, based at Jose Rizal University
+        - generic [ref=e23]:
+          - generic [ref=e24]:
+            - generic [ref=e26]:
+              - heading "VISION" [level=3] [ref=e27]
+              - paragraph [ref=e28]: To build a network of student innovators using AWS to drive technological progress and industry transformation.
+            - generic [ref=e30]:
+              - heading "MISSION" [level=3] [ref=e31]
+              - paragraph [ref=e32]: To empower students through hands-on learning, workshops, and community service that build real AWS and cloud skills.
+            - generic [ref=e34]:
+              - heading "DEPARTMENTS" [level=3] [ref=e35]
+              - paragraph [ref=e36]: Dedicated technical teams that bring our projects, programs, and community initiatives to life.
+            - generic [ref=e38]:
+              - heading "OFFICES" [level=3] [ref=e39]
+              - paragraph [ref=e40]: The leadership teams that guide our chapter's vision, growth, and direction.
+          - img "AWS Mascot" [ref=e42]
+      - generic [ref=e43]:
+        - generic [ref=e45]:
+          - heading "What We Do" [level=3] [ref=e46]
+          - paragraph [ref=e47]: The AWS Learning Club - JRU Chapter bridges the gap between academic theory and real-world cloud technology. We host peer-to-peer learning sessions, interactive technical workshops, and collaborative community projects centered around cloud computing and innovation.
+        - generic [ref=e49]:
+          - heading "Fueling Tomorrow's Tech Leaders" [level=3] [ref=e50]
+          - paragraph [ref=e51]: We don't just study the cloud—we actively build and innovate within it. The AWS Learning Club - JRU Chapter is a dynamic student community that bridges the gap between academic theory and industry practice. Through hands-on team training, collaborative team projects, and expert-led workshops, we turn theoretical knowledge into real-world skills. Whether you're launching your first AWS build or building a robust project portfolio, you will gain a competitive edge alongside driven learners. Our technical expertise will help you cultivate the vital industry connections and leadership.
+        - generic [ref=e53]:
+          - heading "What We Offer" [level=3] [ref=e54]
+          - paragraph [ref=e55]: "Explore the exclusive benefits, technical training, and career-building opportunities available to our members:"
+          - list [ref=e56]:
+            - listitem [ref=e57]: Hands-On Technical Workshops
+            - listitem [ref=e58]: Practical Skill Development
+            - listitem [ref=e59]: Collaborative Projects
+            - listitem [ref=e60]: Industry Networking
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - heading "EVENTS" [level=2] [ref=e63]
+          - paragraph [ref=e64]: Highlighting the AWS events we've hosted and joined. See how we engage with the tech community to share knowledge, build skills, and explore the future of cloud computing.
+          - generic [ref=e65]:
+            - generic [ref=e66]:
+              - img "Event" [ref=e68]
+              - generic:
+                - heading "FROM CLOUD FUNDAMENTALS TO NEXT-GEN CODE BUILDERS" [level=3]
+                - paragraph: Master cloud computing basics and build your first AI-assisted web app! Explore AWS fundamentals, then join our interactive Kiro Workshop to create real applications from scratch. No prior experience needed!
+            - generic [ref=e69]:
+              - img "Event" [ref=e71]
+              - generic:
+                - heading "AWS STUDENTS COMMUNITY DAY" [level=3]
+                - paragraph:
+                  - text: student-led tech conference that connects academic learning with the cloud industry. Run
+                  - strong: "\"by students, for students\""
+                  - text: alongside local AWS Cloud Clubs, the event features hands-on tracks in cloud computing, DevOps, and AI, offering crucial networking and career growth for future tech innovators.
+            - generic [ref=e72]:
+              - img "Event" [ref=e74]
+              - generic:
+                - heading "AWS OFFICER JOINED BYTEFORWARD HACKATHON" [level=3]
+                - paragraph: Team "Hello World!", composed of AWS Learning Club - JRU Ch. executives Rizelle Bautista, Joaquin Hao, Johann Cuisia, and Fiona Cañas, proudly represented José Rizal University at the Byte Forward Hackathon (NCR Leg 2025), showcasing Rizalian innovation and teamwork.
+        - generic [ref=e75]:
+          - heading "SPONSORS & PARTNERS" [level=2] [ref=e76]
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - heading "TUTORIALS DOJO" [level=3] [ref=e79]
+              - img "Tutorial Dojo" [ref=e81]
+            - generic [ref=e82]:
+              - heading "DATACAMP DONATES" [level=3] [ref=e83]
+              - img "DataCamp" [ref=e85]
+            - generic [ref=e86]:
+              - heading "KADAKAREER" [level=3] [ref=e87]
+              - img "KadaKareer" [ref=e89]
+  - contentinfo [ref=e91]:
+    - generic [ref=e92]:
+      - generic [ref=e93]:
+        - generic [ref=e94]:
+          - img "AWS Logo" [ref=e95]
+          - generic [ref=e96]:
+            - generic [ref=e97]: AWS Student Builder Group
+            - generic [ref=e98]: JRU Ch.
+        - generic [ref=e99]:
+          - link "f" [ref=e100] [cursor=pointer]:
+            - /url: https://www.facebook.com/profile.php?id=61567373138708
+          - link "in" [ref=e101] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/aws-student-builder-group-jru
+        - generic [ref=e102]:
+          - heading "CONTACT US" [level=4] [ref=e103]
+          - paragraph [ref=e104]:
+            - generic [ref=e105]: ✉
+            - text: awslearningclub.shaw@gmail.com
+        - paragraph [ref=e106]: The official AWS Student Builder Group of Jose Rizal University — fostering cloud education, innovation, and community among students.
+      - generic [ref=e107]:
+        - heading "NAVIGATION" [level=4] [ref=e108]
+        - list [ref=e109]:
+          - listitem [ref=e110]:
+            - link "Home" [ref=e111] [cursor=pointer]:
+              - /url: landingPage.html
+          - listitem [ref=e112]:
+            - link "About Us" [ref=e113] [cursor=pointer]:
+              - /url: about.html
+          - listitem [ref=e114]:
+            - link "Events" [ref=e115] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e116]:
+            - link "Members" [ref=e117] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=e118]:
+        - heading "ORGANIZATION" [level=4] [ref=e119]
+        - list [ref=e120]:
+          - listitem [ref=e121]:
+            - link "Departments" [ref=e122] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e123]:
+            - link "Officers" [ref=e124] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e125]:
+            - link "Tech Team" [ref=e126] [cursor=pointer]:
+              - /url: "#"
+    - paragraph [ref=e128]: © 2026 AWS Student Builder Group JRU Ch. All rights reserved.

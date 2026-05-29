@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Lexend:wght@300;400;500;600;700&family=Lexend+Deca:wght@400;500;600&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/landing-page.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body class="landing-page">
     <!-- Header -->
@@ -40,7 +42,7 @@
         <section class="who-are-we-section" style="background: url('../assets/Who-Are-We-Background.png') center/cover no-repeat;">
             <h2 class="section-title">Who Are We</h2>
             <p class="section-subtitle">
-                AWS Learning Club - JRU Chapter is a newly established AWS Learning Chapter focused on bringing cloud knowledge, innovation, and hands-on learning to students, based at Jose Rizal University
+                <span class="highlight">AWS Learning Club - JRU Chapter</span> is a newly established AWS Learning Chapter focused on bringing cloud knowledge, innovation, and hands-on learning to students, based at Jose Rizal University
             </p>
             
             <div class="about-container">
@@ -79,6 +81,9 @@
 
         <!-- What We Do Section -->
         <section class="what-we-do-section">
+            <img src="../assets/clouds/What-We-Do-Cloud-Up.png" alt="" class="cloud-img cloud-what-we-do-up">
+            <img src="../assets/clouds/What-We-Do-Cloud-Down.png" alt="" class="cloud-img cloud-what-we-do-down">
+
             <div class="content-card what-we-do-card">
                 <div class="content-card-inner">
                     <h3>What We Do</h3>
@@ -86,12 +91,20 @@
                 </div>
             </div>
 
+            <img src="../assets/clouds/Fueling-Cloud-Up.png" alt="" class="cloud-img cloud-fueling-up">
+            <img src="../assets/clouds/Fueling-Cloud-Down-1.png" alt="" class="cloud-img cloud-fueling-down-1">
+            <img src="../assets/clouds/Fueling-Cloud-Down-2.png" alt="" class="cloud-img cloud-fueling-down-2">
+
             <div class="content-card fueling-tomorrow-card">
                 <div class="content-card-inner">
                     <h3>Fueling Tomorrow's Tech Leaders</h3>
                     <p>We don't just study the cloud—we actively build and innovate within it. The AWS Learning Club - JRU Chapter is a dynamic student community that bridges the gap between academic theory and industry practice. Through hands-on team training, collaborative team projects, and expert-led workshops, we turn theoretical knowledge into real-world skills. Whether you're launching your first AWS build or building a robust project portfolio, you will gain a competitive edge alongside driven learners. Our technical expertise will help you cultivate the vital industry connections and leadership.</p>
                 </div>
             </div>
+
+            <img src="../assets/clouds/What-We-Offer-Up1.png" alt="" class="cloud-img cloud-offer-up">
+            <img src="../assets/clouds/Fueling-Cloud-Down-1.png" alt="" class="cloud-img cloud-offer-fueling">
+            <img src="../assets/clouds/What-We-Offer-Down.png" alt="" class="cloud-img cloud-offer-down">
 
             <div class="content-card what-we-offer-card">
                 <div class="content-card-inner">
@@ -149,13 +162,69 @@
 
         <!-- Sponsorship Section -->
         <section class="sponsorship-section">
-            <h2 class="sponsorship-title">SPONSORSHIP</h2>
-            <div class="sponsor-card">
-                <h3>TUTORIAL DOJO</h3>
-                <div class="sponsor-logo">
-                    <img src="https://www.figma.com/api/mcp/asset/b14efb00-75ea-4981-9b0e-837ebf723bd7" alt="Tutorial Dojo">
+            <h2 class="sponsorship-title">PARTNERSHIP &amp; SPONSORS</h2>
+            <div class="partners-container">
+                <!-- Row 1 -->
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="../assets/icons/TUP-Manila.png" alt="AWS Learning Club - TUP Manila">
+                    </div>
+                    <p class="partner-name partner-name-gold">AWS Learning Club - TUP Manila</p>
                 </div>
-                <p>is a premier cloud computing training platform that supplies our organization with official AWS reviewers.</p>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="../assets/icons/AWS-CVSU.png" alt="AWS Learning Club - Spade">
+                    </div>
+                    <p class="partner-name partner-name-gold">AWS Learning Club - Spade</p>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="../assets/icons/Bitskwela.png" alt="Bitskwela">
+                    </div>
+                    <p class="partner-name partner-name-gold">Bitskwela</p>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="partner-item partner-dim">
+                    <div class="partner-logo">
+                        <img src="../assets/Tutorials-Dojo.png" alt="Tutorials Dojo">
+                    </div>
+                    <p class="partner-name partner-name-gold">Tutorials Dojo</p>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo-rect">
+                        <img src="../assets/DataCamp.png" alt="Datacamp Donates">
+                    </div>
+                    <p class="partner-name partner-name-gold">Datacamp Donates</p>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="../assets/KadaKareer.png" alt="KadaKareer">
+                    </div>
+                    <p class="partner-name partner-name-gold">KadaKareer</p>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="../assets/icons/UXPH.png" alt="UXPH">
+                    </div>
+                    <p class="partner-name partner-name-gold">UXPH</p>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="../assets/icons/GDG-Mapua.png" alt="Google Developer Groups on Campus Mapua University">
+                    </div>
+                    <p class="partner-name partner-name-gold">
+                        Google Developer Groups on Campus<br>Mapua University
+                    </p>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="../assets/icons/Combines-Mapua.png" alt="COMBINES Mapua">
+                    </div>
+                    <p class="partner-name partner-name-gold">COMBINES Mapua</p>
+                </div>
             </div>
         </section>
         </div>

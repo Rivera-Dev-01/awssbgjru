@@ -10,6 +10,8 @@
     <title>AWS Learning Club - About</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
   </head>
 
   <body class="about-page">
@@ -97,7 +99,12 @@
           </p>
         </div>
 
-        <div class="goal-grid" id="goal-grid"></div>
+        <div class="goal-grid-wrapper">
+
+
+          <!-- The actual goal grid cards (rendered dynamically via JS) -->
+          <div class="goal-grid" id="goal-grid"></div>
+        </div>
       </div>
 
       <div class="skill-builder-container">
@@ -272,17 +279,17 @@
 
         const cardsData = [
           {
-            title: "EDUCATION &amp; SKILL DEVELOPMENT",
+            title: "EDUCATION &amp <br/> SKILL DEVELOPMENT",
             desc: "We empower students with AWS expertise and cloud architecture skills to build innovative solutions effectively.",
             icon: "../assets/icons/education_and_skill_development.svg",
           },
           {
-            title: "INDUSTRY ENGAGEMENT",
+            title: "INDUSTRY <br/> ENGAGEMENT",
             desc: "We bridge academia and industry by connecting students with AWS professionals and internships to provide real-world insights and career growth.",
             icon: "../assets/icons/industry_and_engagement.svg",
           },
           {
-            title: "INNOVATION &amp; PROJECTS",
+            title: "INNOVATION &amp <br/> PROJECTS",
             desc: "We foster innovation by encouraging students to solve real-world problems and develop AWS-based projects.",
             icon: "../assets/icons/innovations_and_projects.svg",
           },
@@ -297,7 +304,7 @@
             icon: "../assets/icons/studentapproachcentric.svg",
           },
           {
-            title: "UNIVERSITY CHAPTERS &amp; COLLABORATION",
+            title: "UNIVERSITY <br/> CHAPTERS &amp; COLLABORATION",
             desc: "Supporting university chapters promotes collaboration and growth, creating an empowered network of learners and industry-connected innovators.",
             icon: "../assets/icons/university_and_chapterscollaboration.svg",
           },
