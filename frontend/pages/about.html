@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/chatbot.css" />
   </head>
 
   <body class="about-page">
@@ -476,70 +477,9 @@
 
     <div id="footer-placeholder"></div>
 
+    <div id="chatbot-placeholder"></div>
     <script type="module" src="../js/main.js"></script>
     <script src="../js/nav.js"></script>
-    <script src="../js/future-cards.js" defer></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const goalGrid = document.getElementById("goal-grid");
-        if (!goalGrid) return;
-
-        const cardsData = [
-          {
-            title: "EDUCATION &amp <br/> SKILL DEVELOPMENT",
-            desc: "We empower students with AWS expertise and cloud architecture skills to build innovative solutions effectively.",
-            icon: "../assets/icons/education_and_skill_development.svg",
-          },
-          {
-            title: "INDUSTRY <br/> ENGAGEMENT",
-            desc: "We bridge academia and industry by connecting students with AWS professionals and internships to provide real-world insights and career growth.",
-            icon: "../assets/icons/industry_and_engagement.svg",
-          },
-          {
-            title: "INNOVATION &amp <br/> PROJECTS",
-            desc: "We foster innovation by encouraging students to solve real-world problems and develop AWS-based projects.",
-            icon: "../assets/icons/innovations_and_projects.svg",
-          },
-          {
-            title: "NATION<br>COMMUNITY BUILDING",
-            desc: "We foster a nationwide, inclusive AWS community through events and forums, encouraging knowledge sharing and networking among students.",
-            icon: "../assets/icons/nationcommunitybuilding.svg",
-          },
-          {
-            title: "STUDENT-CENTRIC APPROACH",
-            desc: "We put students first, providing an inclusive environment for skill development and career preparation through mentorship and leadership opportunities.",
-            icon: "../assets/icons/studentapproachcentric.svg",
-          },
-          {
-            title: "UNIVERSITY <br/> CHAPTERS &amp; COLLABORATION",
-            desc: "Supporting university chapters promotes collaboration and growth, creating an empowered network of learners and industry-connected innovators.",
-            icon: "../assets/icons/university_and_chapterscollaboration.svg",
-          },
-        ];
-
-        fetch("../components/card.html")
-          .then((response) => {
-            if (!response.ok)
-              throw new Error("Failed to load modular card component.");
-            return response.text();
-          })
-          .then((templateHtml) => {
-            const renderedCards = cardsData
-              .map((data) => {
-                return templateHtml
-                  .replace(
-                    "{{ICON}}",
-                    `<img src="${data.icon}" class="goal-card-svg" alt="${data.title}" />`,
-                  )
-                  .replace("{{TITLE}}", data.title)
-                  .replace("{{DESC}}", data.desc);
-              })
-              .join("");
-
-            goalGrid.innerHTML = renderedCards;
-          })
-          .catch((error) => console.error("Component Rendering Error:", error));
-      });
-    </script>
+    <script src="../js/chatbot.js"></script>
   </body>
 </html>
