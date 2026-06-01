@@ -879,7 +879,17 @@ main {
     color: #ffffff;
 }
 
-.vision-mission-container p {
+.desktop-desc {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.9;
+    text-align: justify;
+    margin: 0;
+}
+
+.mobile-desc{
+    display: none;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 14px;
@@ -1528,6 +1538,73 @@ main {
         display: block;
     }
 }
+
+/* MOBILE LAYOUT - Header */
+@media (max-width: 768px) {
+  .site-header {
+    display: none;
+  }
+}
+
+/* MOBILE LAYOUT - Vision & Mission Section */
+@media (max-width: 768px) {
+  .vision-mission-container{
+    margin: 0 auto;
+  }
+
+  .vision-mission-container p{
+    font-size: 15px;
+  }
+
+  .vision-card-header h1, .mission-card-header h1{
+    font-size: 25px;
+  }
+
+  .vision-icon, .mission-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .vision-card, .mission-card{
+    width: 400px;
+    height: 300px;
+  }
+
+  .desktop-desc{
+    display: none;
+  }
+
+  .mobile-desc{
+    display: block;
+    text-align: center;
+  }
+}
+
+/* MOBILE LAYOUT - Goal Section */
+@media (max-width: 768px) {
+  .goal-header h1{
+    font-size: 40px;
+  }
+
+  .goal-header p{
+    font-size: 11px;
+  }
+}
+
+/* MOBILE LAYOUT - Future Section */
+@media (max-width: 768px) {
+    .future-header-container h1{
+        text-align: left;
+        font-size: 26px;
+    }
+    .future-header-container p{
+        text-align: left;
+        font-size: 13px;
+    }
+}
+
+
+
 
 /* No Footer Styles in styles.css — see footer.css */
 
