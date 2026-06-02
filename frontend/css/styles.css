@@ -1092,6 +1092,10 @@ main {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 6.5vw; /* Scales with screen width */
+    white-space: nowrap; /* Always one line */
+    text-align: center;
 }
 
 .offices-container{
@@ -1109,7 +1113,7 @@ main {
 
 .offices-container h1{
     text-shadow: #474646;
-    background: linear-gradient(to bottom, #0099ff 0%, #080b36 100%);
+    background: linear-gradient(to bottom, #24468f 0%, #0a183d 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1421,7 +1425,7 @@ main {
     display: none !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 
     /* Show mobile, hide desktop */
     .mobile-only {
@@ -1464,7 +1468,7 @@ main {
         position: relative !important;
         display: block !important;
         width: 100% !important;
-        height: 340px !important;
+        height: 480px !important; /* Increased from 340px to show more image */
         overflow: hidden !important;
     }
 
@@ -1503,7 +1507,7 @@ main {
     .hero-logo-badge {
         position: absolute !important;
         display: flex !important;
-        top: 210px !important;
+        top: 345px !important; /* Centered precisely on the peak of the arc */
         left: 50% !important;
         transform: translateX(-50%) !important;
         width: 110px !important;
@@ -1679,12 +1683,12 @@ main {
         font-size: 13px !important;
         line-height: 1.5 !important;
         text-align: center !important;
-        margin-top: 40px !important; /* Pushes the paragraph down to the middle */
+        margin-top: 20px !important; /* Raised slightly from 40px */
     }
 
     /* Vision Active State */
     .vision-card.active {
-        transform: translateX(10px) translateY(20px) scale(1) !important;
+        transform: translateX(0) translateY(20px) scale(1) !important; /* Centered perfectly */
         opacity: 1 !important;
         z-index: 3 !important;
     }
@@ -1698,14 +1702,14 @@ main {
 
     /* Mission Active State */
     .mission-card.active {
-        transform: translateX(55px) translateY(20px) scale(1) !important;
+        transform: translateX(0) translateY(20px) scale(1) !important; /* Centered perfectly */
         opacity: 1 !important;
         z-index: 3 !important;
     }
 
     /* Vision Inactive (bottom-left when Mission is active) */
     .vision-card.inactive {
-        transform: translateX(-15px) translateY(75px) scale(0.9) !important;
+        transform: translateX(-75px) translateY(75px) scale(0.9) !important; /* Made symmetrical to bottom-right */
         opacity: 0.55 !important;
         z-index: 2 !important;
     }
@@ -1747,252 +1751,325 @@ main {
     .skill-builder-container {
         height: auto !important;
         overflow: visible !important;
-        padding: 24px 16px !important;
+        padding: 14px 16px !important;
         margin-bottom: 30px !important;
+    }
+
+    .skill-builder-container h1 {
+        margin-top: 0 !important;
+        margin-bottom: 18px !important;
     }
 
     .skill-builder-mobile-drawer {
         display: flex !important;
-        gap: 10px !important;
+        flex-direction: row !important;
         width: 100% !important;
-        justify-content: space-between !important;
+        gap: 25px !important; /* Huge 25px gap as requested */
         align-items: stretch !important;
+        min-height: 400px !important;
     }
 
-    .depts-drawer-slots {
-        width: 44% !important;
+    .master-list-container {
+        width: calc(50% - 12.5px) !important; /* Perfect 50/50 split minus gap */
+        background: transparent !important;
+        border-radius: 12px !important;
+        padding: 10px 0 !important;
         display: flex !important;
         flex-direction: column !important;
-        gap: 6px !important;
+        gap: 0 !important;
     }
 
-    .dept-slot {
-        background: rgba(255, 255, 255, 0.08) !important;
-        border: 1px solid rgba(255, 255, 255, 0.15) !important;
-        border-radius: 12px !important;
-        padding: 10px 12px !important;
+    .master-list-card {
+        position: relative !important;
+        background: #6079a3 !important;
+        border: 12px solid #23395d !important; /* Increased thickness from 8px to 12px */
         color: #ffffff !important;
         font-family: 'Poppins', sans-serif !important;
-        font-size: 12px !important;
-        font-weight: 500 !important;
+        padding: 8px 10px 10px 10px !important;
+        border-radius: 24px !important; /* Increased to make it rounder */
+        text-align: center !important;
         cursor: pointer !important;
-        transition: all 0.3s ease !important;
+        transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+        box-shadow: 0 -4px 12px rgba(0,0,0,0.15) !important;
+        height: 180px !important; /* Fixed square height */
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
 
-    .dept-slot.active {
-        background: #FFFFFF !important;
-        color: #1C3466 !important;
+    .master-list-title {
+        font-size: 24px !important; /* Increased again to a massive fixed size */
         font-weight: 700 !important;
-        transform: translateX(6px) !important;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+        display: block !important;
+        margin-bottom: 10px !important; /* Increased to 10px as requested */
+        line-height: 1.1 !important;
     }
 
-    .depts-detail-sheet {
-        width: 56% !important;
+    .master-list-desc {
+        font-size: 11px !important; /* Increased by 1px as requested */
+        font-weight: 400 !important;
+        line-height: 1.3 !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    /* ── OVERLAPPING STACK LOGIC (Roof Shingles) ── */
+    .master-list-card:nth-child(1) { z-index: 1 !important; margin-top: 0 !important; }
+    .master-list-card:nth-child(2) { z-index: 2 !important; margin-top: -132px !important; }
+    .master-list-card:nth-child(3) { z-index: 3 !important; margin-top: -132px !important; }
+    .master-list-card:nth-child(4) { z-index: 4 !important; margin-top: -132px !important; }
+    .master-list-card:nth-child(5) { z-index: 5 !important; margin-top: -132px !important; }
+    .master-list-card:nth-child(6) { z-index: 6 !important; margin-top: -132px !important; }
+    .master-list-card:nth-child(7) { z-index: 7 !important; margin-top: -132px !important; }
+    .master-list-card:nth-child(8) { z-index: 8 !important; margin-top: -132px !important; }
+
+    .master-list-card.active {
+        background: #EDF4FF !important; /* EDF4FF at 100% */
+        border-color: #D9D9D9 !important; /* D9D9D9 100% */
+        color: #1C3466 !important; /* 1C3466 100% */
+        box-shadow: 0 8px 24px rgba(0,0,0,0.3) !important;
+        transform: scale(1.04) translateY(-8px) !important;
+    }
+
+    .master-list-card.active .master-list-title {
+        font-weight: 800 !important;
+        color: #1C3466 !important;
+    }
+
+    .master-list-card.active .master-list-desc {
+        color: #333333 !important;
+    }
+
+    .detail-panel-container {
+        width: calc(50% - 12.5px) !important; /* Perfect 50/50 split minus gap */
+        position: relative !important;
+        overflow: hidden !important; /* Hides card when sliding down */
         display: flex !important;
-    }
-
-    .dept-detail-card {
-        background: #FFFFFF !important;
+        align-items: center !important; /* Centered vertically */
+        justify-content: center !important;
+        padding-top: 0 !important;
         border-radius: 16px !important;
-        padding: 16px !important;
+    }
+
+    .detail-slide-card {
+        background: #EDF4FF !important; /* Match Skill Builder active card background */
+        border-radius: 24px !important; /* Match stack card rounding */
+        padding: 24px 20px 28px 20px !important;
         width: 100% !important;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
-        transition: opacity 0.2s ease, transform 0.2s ease !important;
-    }
-
-    .dept-detail-card.updating {
-        opacity: 0.3 !important;
-        transform: translateY(8px) !important;
-    }
-
-    .dept-detail-header {
+        min-height: 420px !important; /* Made the box much longer vertically */
         display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important; /* Pushes title to the top */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+        transform: translateY(0) !important;
+        transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s ease !important;
+        overflow: hidden !important;
+        border: 12px solid #D9D9D9 !important; /* Match Skill Builder active card border */
+    }
+
+    /* No accent bar */
+    .detail-slide-card::before {
+        display: none !important;
+    }
+
+    .detail-slide-card.sliding-up-out {
+        transform: translateY(-120%) !important;
+        opacity: 0 !important;
+    }
+
+    .detail-slide-card.sliding-down-enter {
+        transform: translateY(120%) !important;
+        opacity: 0 !important;
+    }
+
+    .no-transition {
+        transition: none !important;
+    }
+
+    /* Header: icon + title side by side */
+    .detail-slide-header {
+        display: flex !important;
+        flex-direction: row !important;
         align-items: center !important;
         gap: 10px !important;
-        margin-bottom: 10px !important;
+        padding: 0 !important;
+        margin-bottom: 18px !important;
+        justify-content: flex-start !important; /* Align left */
     }
 
-    .dept-detail-icon-circle {
-        width: 36px !important;
-        height: 36px !important;
+    .detail-slide-header h2 {
+        font-family: 'Poppins', sans-serif !important;
+        font-size: clamp(18px, 5vw, 24px) !important; /* Increased responsive scaling */
+        font-weight: 800 !important; /* Made bolder to match */
+        color: #1C3466 !important;
+        margin: 0 !important;
+        line-height: 1.3 !important;
+        text-align: left !important; /* Align left */
+        word-break: keep-all !important;
+    }
+
+    /* Circle icon container */
+    .detail-slide-icon {
+        width: 42px !important;
+        height: 42px !important;
         border-radius: 50% !important;
-        background: linear-gradient(135deg, #1C3466, #3b6cb5) !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         flex-shrink: 0 !important;
+        background: #ffffff !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+        border: 1px solid rgba(0, 0, 0, 0.05) !important;
+    }
+    
+    .detail-slide-icon.dept-icon {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+        background: #ffffff !important;
+        border: 1px solid rgba(0, 0, 0, 0.05) !important;
     }
 
-    .dept-detail-icon-circle img {
+    .detail-slide-icon img {
         width: 22px !important;
         height: 22px !important;
         object-fit: contain !important;
     }
 
-    .dept-detail-card h2 {
-        font-family: 'Poppins', sans-serif !important;
-        font-size: 14px !important;
-        font-weight: 700 !important;
-        color: #1C3466 !important;
-        margin: 0 !important;
-        line-height: 1.2 !important;
+    /* No divider line */
+    .detail-slide-inner::before {
+        display: none !important;
     }
 
-    .dept-detail-card p {
+    /* Subtle grey background for description */
+    .detail-slide-inner {
+        background: #F5F6F8 !important;
+        border-radius: 8px !important;
+        padding: 16px 16px !important;
+        margin: 0 !important;
+    }
+
+    .detail-slide-card p {
         font-family: 'Poppins', sans-serif !important;
-        font-size: 11px !important;
+        font-size: 16px !important; /* Increased description font size */
         font-weight: 400 !important;
-        color: #333 !important;
-        line-height: 1.5 !important;
+        color: #333333 !important;
+        line-height: 1.65 !important;
         margin: 0 !important;
-        text-align: left !important;
-        letter-spacing: 0 !important;
+        text-align: left !important; /* Align left */
     }
-
+    
     /* ── Offices Section Mobile ── */
     .offices-container {
         height: auto !important;
         overflow: visible !important;
         padding: 24px 16px !important;
         margin-bottom: 30px !important;
+        background: linear-gradient(to bottom, #ffaf14, #ff6a00) !important;
+        border-radius: 20px !important; /* Keep it rounded */
     }
 
-    .offices-mobile-layout {
-        display: block !important;
+    .offices-container .skill-builder-mobile-drawer {
+        flex-direction: row-reverse !important;
+        gap: 25px !important; /* Huge 25px gap to match Skill Builder */
     }
 
-    .offices-mobile-grid {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-        gap: 10px !important;
+    .offices-container h1 {
+        text-align: left !important;
+        margin-top: 0 !important;
+        margin-bottom: 18px !important;
+        background: linear-gradient(to right, #24468f 0%, #0a183d 100%) !important;
+        -webkit-background-clip: text !important;
+        background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        color: transparent !important;
+        text-shadow: none !important;
     }
 
-    .office-mobile-btn {
-        background: linear-gradient(135deg, #1C3466, #2e5aaa) !important;
-        border-radius: 14px !important;
-        padding: 14px 10px !important;
-        text-align: center !important;
-        cursor: pointer !important;
-        transition: all 0.3s ease !important;
+    /* ── Offices Detail Card (Left Side) ── */
+    #mobile-office-detail-card {
+        background: #ffffff !important; /* White detail card matches Offices active card */
+        border: 12px solid #F5F6F8 !important; /* Match Offices active card border */
+        border-radius: 24px !important; /* Match Offices active card border radius */
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+        padding: 24px 20px 28px 20px !important;
     }
 
-    .office-mobile-btn:active {
-        transform: scale(0.95) !important;
-    }
-
-    .office-mobile-btn span {
-        font-family: 'Poppins', sans-serif !important;
-        font-size: 13px !important;
-        font-weight: 600 !important;
-        color: #ffffff !important;
-    }
-
-    /* ── Office Bottom Drawer Overlay ── */
-    .office-drawer-overlay {
-        position: fixed !important;
-        inset: 0 !important;
-        background: rgba(0, 0, 0, 0.5) !important;
-        z-index: 9999 !important;
-        display: flex !important;
-        align-items: flex-end !important;
-        justify-content: center !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
-        transition: opacity 0.3s ease !important;
-    }
-
-    .office-drawer-overlay.open {
-        opacity: 1 !important;
-        pointer-events: all !important;
-    }
-
-    .office-drawer {
+    #mobile-office-detail-card .detail-slide-icon {
+        display: flex !important; /* Restore icon */
         background: #ffffff !important;
-        border-radius: 24px 24px 0 0 !important;
-        padding: 20px 24px 30px 24px !important;
-        width: 100% !important;
-        max-width: 500px !important;
-        transform: translateY(100%) !important;
-        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    }
-
-    .office-drawer-overlay.open .office-drawer {
-        transform: translateY(0) !important;
-    }
-
-    .drawer-handle {
-        width: 40px !important;
-        height: 4px !important;
-        background: #ccc !important;
-        border-radius: 4px !important;
-        margin: 0 auto 16px auto !important;
-    }
-
-    .drawer-header {
-        display: flex !important;
-        align-items: center !important;
-        gap: 12px !important;
-        margin-bottom: 12px !important;
-    }
-
-    .drawer-icon-circle {
-        width: 44px !important;
-        height: 44px !important;
-        border-radius: 50% !important;
-        background: linear-gradient(135deg, #FF8C00, #FF6600) !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        flex-shrink: 0 !important;
-    }
-
-    .drawer-icon-circle img {
-        width: 28px !important;
-        height: 28px !important;
-        object-fit: contain !important;
-    }
-
-    .drawer-header h2 {
-        font-family: 'Poppins', sans-serif !important;
-        font-size: 20px !important;
-        font-weight: 700 !important;
-        color: #1C3466 !important;
-        margin: 0 !important;
-    }
-
-    .drawer-divider {
-        width: 100% !important;
-        height: 1px !important;
-        background: #eee !important;
-        margin-bottom: 12px !important;
-    }
-
-    .office-drawer p {
-        font-family: 'Poppins', sans-serif !important;
-        font-size: 14px !important;
-        color: #444 !important;
-        line-height: 1.6 !important;
-        margin: 0 0 20px 0 !important;
-    }
-
-    .drawer-close-btn {
-        display: block !important;
-        width: 100% !important;
-        padding: 12px !important;
-        background: #1C3466 !important;
-        color: #ffffff !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;
         border: none !important;
-        border-radius: 12px !important;
-        font-family: 'Poppins', sans-serif !important;
-        font-size: 15px !important;
-        font-weight: 600 !important;
-        cursor: pointer !important;
-        transition: background 0.3s ease !important;
+    }
+    
+    #mobile-office-detail-title {
+        color: #E86016 !important; /* Specific brand orange */
+        text-align: left !important; /* Align left */
+        width: 100% !important;
+        font-size: clamp(18px, 5vw, 24px) !important; /* Responsive scaling */
+        font-weight: 800 !important;
+        margin-bottom: 8px !important;
+        word-break: keep-all !important; /* Prevent mid-word breaking */
+        white-space: normal !important; /* Let it wrap if narrow */
     }
 
-    .drawer-close-btn:active {
-        background: #15294f !important;
+    #mobile-office-detail-desc {
+        color: #E86016 !important;
+        text-align: left !important; /* Align left */
+        font-weight: 500 !important;
+    }
+
+    /* ── Offices Master List Stack (Right Side) ── */
+    .offices-container .master-list-container {
+        background: transparent !important; /* Removed white/grey background behind the stack */
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .offices-container .master-list-card {
+        background: #FCE198 !important; /* Light yellow inner box */
+        border: 12px solid #FFB700 !important; /* Increased dark yellow outer box thickness */
+        border-radius: 24px !important; /* Increased to make it rounder */
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+        padding: 8px 12px !important; /* Tighter padding for inactive stack */
+    }
+
+    .offices-container .master-list-card.active {
+        background: #ffffff !important; /* Entire inner area turns white when active */
+        border: 12px solid #F5F6F8 !important; /* Increased grey outer border thickness */
+        padding: 16px !important; /* Breathing room for active card */
+        border-radius: 24px !important; /* Match inactive border-radius */
+    }
+
+    /* Tighter vertical compression for Offices */
+    .offices-container .master-list-card:nth-child(2) { margin-top: -146px !important; }
+    .offices-container .master-list-card:nth-child(3) { margin-top: -146px !important; }
+    .offices-container .master-list-card:nth-child(4) { margin-top: -146px !important; }
+    .offices-container .master-list-card:nth-child(5) { margin-top: -146px !important; }
+    .offices-container .master-list-card:nth-child(6) { margin-top: -146px !important; }
+    .offices-container .master-list-card:nth-child(7) { margin-top: -146px !important; }
+    .offices-container .master-list-card:nth-child(8) { margin-top: -146px !important; }
+
+    .offices-container .master-list-title {
+        color: #1C3466 !important; /* Navy text */
+        text-align: center !important;
+        width: 100% !important;
+        font-weight: 800 !important;
+        font-size: clamp(16px, 5vw, 22px) !important; /* Increased responsive scaling */
+        display: block !important;
+        word-break: keep-all !important; /* Prevent awkward breaks */
+        white-space: nowrap !important; /* Force single line */
+    }
+
+    /* Description */
+    .offices-container .master-list-desc {
+        color: #1C3466 !important;
+        text-align: left !important;
+        background: transparent !important;
+        padding: 0 !important;
+        margin-top: 12px !important;
+        line-height: 1.5 !important;
+        font-size: 14px !important; /* Increased font size */
     }
 
     /* ── Future Section Mobile ── */
