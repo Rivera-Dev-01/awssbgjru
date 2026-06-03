@@ -1,0 +1,148 @@
+/* ===================================
+   MOBILE HEADER STYLES ONLY
+   Based on Figma: PgsTeM4ex0EbDfCwS2ZIVn
+   Node: 209:1514 (349x39px)
+   ONLY applies to screens ≤768px
+   =================================== */
+
+@media (max-width: 768px) {
+    /* Mobile Header Container */
+    .site-header {
+        position: fixed;
+        top: 104px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        max-width: calc(100% - 40px);
+        height: auto;
+        padding: 0;
+        z-index: 1000;
+    }
+
+    .header-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Hide desktop logo on mobile */
+    .header-logo {
+        display: none !important;
+    }
+
+    /* Mobile Navigation Bar */
+    .header-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        padding: 3px 6px;
+        height: auto;
+        min-height: 32px;
+        background: rgba(250, 254, 0, 0.05);
+        border: 0.5px solid rgba(250, 254, 0, 0.04);
+        border-radius: 6px;
+        width: fit-content;
+        max-width: 100%;
+    }
+
+    /* Mobile Nav Items */
+    .nav-item {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        padding: 4px 8px;
+        height: 22px;
+        background: rgba(250, 254, 0, 0.04);
+        border: 0.5px solid rgba(250, 254, 0, 0.04);
+        border-radius: 5px;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: -0.33px;
+        color: #123A90;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+        flex-shrink: 0;
+        box-sizing: border-box;
+    }
+
+    /* Mobile Nav Icons - Height-based sizing */
+    .nav-icon {
+        height: 11px;
+        width: auto;
+        flex-shrink: 0;
+        color: #123A90;
+        display: block;
+        max-width: none;
+    }
+
+    /* Mobile Nav Text */
+    .nav-item span {
+        color: #123A90;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 1;
+        letter-spacing: -0.33px;
+        display: block;
+    }
+
+    /* Mobile Hover/Active States */
+    .nav-item:hover,
+    .nav-item.active {
+        background: rgba(250, 254, 0, 0.08);
+    }
+
+    .nav-item:hover span,
+    .nav-item.active span {
+        color: #0F2D70;
+    }
+
+    .nav-item:hover .nav-icon,
+    .nav-item.active .nav-icon {
+        color: #0F2D70;
+    }
+}
+
+/* Responsive Fallback for Very Narrow Screens */
+@media (max-width: 380px) {
+    .header-nav {
+        gap: 3px;
+        padding: 3px 4px;
+    }
+    
+    .nav-item {
+        gap: 2px;
+        padding: 4px 6px;
+        font-size: 10px;
+    }
+    
+    .nav-icon {
+        height: 10px;
+    }
+    
+    .nav-item span {
+        font-size: 10px;
+        letter-spacing: -0.4px;
+    }
+}
+
+/* Ultra-narrow fallback - Allow horizontal scroll */
+@media (max-width: 340px) {
+    .header-nav {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    
+    .header-nav::-webkit-scrollbar {
+        display: none;
+    }
+}

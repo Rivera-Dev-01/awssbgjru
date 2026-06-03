@@ -1,0 +1,23 @@
+/* ===================================
+   SHARED HEADER STYLES
+   Common styles for both mobile and desktop
+   =================================== */
+
+/* Header Placeholder */
+#header-placeholder {
+    display: block;
+}
+
+/* Mobile placeholder height */
+@media (max-width: 768px) {
+    #header-placeholder {
+        min-height: 50px;
+    }
+}
+
+/* Desktop placeholder height */
+@media (min-width: 769px) {
+    #header-placeholder {
+        min-height: 120px;
+    }
+}
