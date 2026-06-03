@@ -170,3 +170,18 @@ document.addEventListener('DOMContentLoaded', () => {
     slides[currentSlideIndex].classList.add('active');
   }, 3000);
 });
+
+// Mobile Goals Card Button — Display-only (prevents anchor page reload)
+document.addEventListener('DOMContentLoaded', () => {
+  const isMobile = () => window.innerWidth <= 768;
+  const goalsGrid = document.querySelector('.aws-club-goals');
+  if (!goalsGrid) return;
+
+  goalsGrid.addEventListener('click', (event) => {
+    if (!isMobile()) return;
+    const btn = event.target.closest('.goal-card-btn');
+    if (!btn) return;
+    event.preventDefault();
+    // Non-functional for now — reserved for future functionality
+  });
+});

@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Lexend:wght@300;400;500;600;700&family=Lexend+Deca:wght@400;500;600&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
 /* Main stylesheet */
+:root {
+    --primary-color: #2E67A8;
+    --secondary-color: #1C3466;
+    --gold-color: #FFC72C;
+    --dark-blue-color: #0A1931;
+    --light-blue-color: #2563EB;
+    --white-color: #FFFFFF;
+    --off-white-color: #F5F5F5;
+    --dark-gray-color: #333333;
+    --text-primary: #111;
+    --card-border-gradient: conic-gradient(from 93deg, #fafe00 3%, #ff6f08 14%, #006AFF 31%, #1500FF 42%, #006AFF 50%, #1500FF 59%, #006AFF 71%, #FAFE00 98%);
+}
 
 body.landing-page {
     background-image: url('../assets/web.png');
@@ -11,6 +23,10 @@ body.landing-page {
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+}
+
+html {
     overflow-x: hidden;
 }
 
@@ -980,33 +996,90 @@ main {
     max-width: 1300px;
     margin: 0 auto;
     padding: 62px;
-
 }
 
 .goal-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    max-height: 359px;
-    max-width: 333px;
-    min-height: 267px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2); /* Translucent glass background */
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    padding: 12px;
+    padding: 16px;
+    border: none; 
 }
 
-.goal-card::before {
+/* Keep your existing ::before style */
+/* .goal-card::before {
     content: "";
     position: absolute;
-        top: 6%;
-        bottom: 6%;
-        left: 6%;
-        right: 6%;
+    top: 6%;
+    bottom: 6%;
+    left: 6%;
+    right: 6%;
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0 ,0 ,0 ,0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.19);
+    pointer-events: none;
+} */
+
+/* The hollowed-out gradient border */
+.goal-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit; /* Inherits the 16px border-radius */
+    pointer-events: none;
+    
+    /* 2. Create the border width and set the gradient background */
+    border: 2px solid transparent; 
+    background: var(--card-border-gradient) border-box;
+    
+    
+    /* 3. Mask out the center so it is completely hollow and transparent */
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) padding-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    opacity: 0.25;
+}
+
+.inner-goal-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.19);
+    pointer-events: none;
+}
+
+.goal-card-btn {
+    background-color: #fafe00;
+}
+
+.goal-card-icon-container {
+    margin-top: 20px;
+    background: linear-gradient(to bottom, #4363A6 0%, #1C3466 100%);
+    border-radius: 50%;
+    width: fit-content;
+}
+
+.goal-card-icon {
+    width: clamp(2rem, 4.4vw, 3rem);
+    height: auto;
+    filter: drop-shadow(0px 3px 4px rgba(227, 204, 73, 0.25));
 }
 
 .header-card {
@@ -1502,7 +1575,7 @@ main {
     display: none !important;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
 
     /* Show mobile, hide desktop */
     .mobile-only {
@@ -1663,6 +1736,7 @@ main {
         display: inline-block !important;
         padding: 4px 32px !important;
         width: 340px !important;
+        max-width: 90% !important;
         border: 4px solid #F2AF00 !important;
         border-radius: 8px !important;
         background: transparent !important;
@@ -1682,8 +1756,9 @@ main {
 
     .mobile-pda-text {
         display: block !important;
-        width: calc(100% + 48px) !important;
-        margin: 0 -24px !important; 
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important; 
         font-family: 'Poppins', sans-serif !important;
         font-size: 26px !important; 
         font-weight: 800 !important;
@@ -1803,25 +1878,156 @@ main {
         margin-bottom: 30px !important;
     }
 
-    .goal-card-outer {
-        background: rgba(255, 255, 255, 0.12) !important;
-        border: 1px solid rgba(255, 255, 255, 0.22) !important;
-        backdrop-filter: blur(12px) !important;
-        -webkit-backdrop-filter: blur(12px) !important;
+    /* ── Goals 2x3 Grid Layout ── */
+    .aws-club-goals {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        column-gap: 12px !important;
+        row-gap: 16px !important;
+        padding: 24px 12px !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
     }
 
-    .goal-card-desc {
-        max-height: 0px !important;
-        opacity: 0 !important;
-        overflow: hidden !important;
-        transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-                    opacity 0.3s ease !important;
-        margin: 0 !important;
+    /* ── Outer Box (Frosted Glass — Thick Frame with Deep Refraction) ── */
+    .goal-card {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+        backdrop-filter: blur(12px) saturate(180%) !important;
+        -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
+        border-radius: 8px !important;
+        border: 1px solid rgba(255, 255, 255, 0.25) !important;
+        box-shadow:
+            0 10px 30px rgba(31, 38, 135, 0.04),
+            inset 0 1px 0 rgba(255, 255, 255, 0.25),
+            inset 0 -1px 0 rgba(255, 255, 255, 0.05) !important;
+        padding: 16px !important;
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+        height: auto !important;
     }
 
-    .goal-card-outer.expanded .goal-card-desc {
-        max-height: 200px !important;
+    /* Disable desktop gradient border overlay on mobile */
+    .goal-card::after {
+        display: none !important;
+        content: none !important;
+    }
+
+    /* ── Inner Box (Heavy Frosted Glassmorphic Panel) ── */
+    .inner-goal-card {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        background: rgba(255, 255, 255, 0.38) !important;
+        backdrop-filter: blur(20px) saturate(200%) !important;
+        -webkit-backdrop-filter: blur(20px) saturate(200%) !important;
+        border-radius: 8px !important;
+        border: 1px solid rgba(255, 255, 255, 0.45) !important;
+        box-shadow:
+            0 4px 16px rgba(0, 0, 0, 0.02),
+            inset 0 1.5px 0 rgba(255, 255, 255, 0.45),
+            inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+            inset 1px 0 0 rgba(255, 255, 255, 0.1),
+            inset -1px 0 0 rgba(255, 255, 255, 0.1) !important;
+        width: 100% !important;
+        height: 100% !important;
+        padding: 16px 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* ── Goal Card Icon (Blue Circle Badge with Glass Ring) ── */
+    .goal-card-icon-container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: linear-gradient(135deg, #4363A6 0%, #1C3466 100%) !important;
+        border-radius: 50% !important;
+        width: 44px !important;
+        height: 44px !important;
+        margin-top: 0 !important;
+        margin-bottom: 12px !important;
+        flex-shrink: 0 !important;
+        box-shadow:
+            0 4px 14px rgba(28, 52, 102, 0.2),
+            0 0 0 3px rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .goal-card-icon {
+        width: 26px !important;
+        height: 26px !important;
+        object-fit: contain !important;
+    }
+
+    /* ── Goal Card Title (Poppins) ── */
+    .header-card {
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 13px !important;
+        font-weight: 800 !important;
+        color: #1C3466 !important;
+        text-align: center !important;
+        text-transform: uppercase !important;
+        margin: 0 0 10px 0 !important;
+        line-height: 1.35 !important;
+        letter-spacing: 0.2px !important;
+    }
+
+    /* ── Goal Card Description (Poppins — Always Visible) ── */
+    .card-info {
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 10.5px !important;
+        font-weight: 500 !important;
+        color: #2E3486 !important;
+        text-align: center !important;
+        line-height: 1.45 !important;
+        padding: 0 !important;
+        margin: 0 0 16px 0 !important;
+        box-sizing: border-box !important;
+        max-height: none !important;
         opacity: 1 !important;
+        overflow: visible !important;
+        display: block !important;
+    }
+
+    /* ── Clean "More" Button (glass outline, inside inner card) ── */
+    .goal-card-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        align-self: center !important;
+        background: transparent !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        color: #1C3466 !important;
+        border: 1px solid rgba(255, 255, 255, 0.5) !important;
+        border-radius: 4px !important;
+        padding: 4px 14px !important;
+        font-family: 'Poppins', sans-serif !important;
+        font-size: 10px !important;
+        font-weight: 600 !important;
+        text-decoration: none !important;
+        cursor: pointer !important;
+        box-shadow: none !important;
+        transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+        margin-top: auto !important;
+        width: auto !important;
+        box-sizing: border-box !important;
+    }
+
+    .goal-card-btn:hover {
+        background: rgba(255, 255, 255, 0.15) !important;
+        border-color: rgba(255, 255, 255, 0.7) !important;
+        transform: scale(1.03) !important;
+    }
+
+    .goal-card-btn:active {
+        transform: scale(0.97) !important;
+        background: rgba(255, 255, 255, 0.08) !important;
     }
 
     /* ── Skill Builder Departments Mobile ── */

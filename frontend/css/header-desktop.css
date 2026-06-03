@@ -1,138 +1,24 @@
 /* ===================================
-   HEADER STYLES - MOBILE FIRST
-   Based on Figma: PgsTeM4ex0EbDfCwS2ZIVn
-   Mobile Node: 209:1514 (349x39px)
+   DESKTOP HEADER STYLES ONLY
+   ONLY applies to screens ≥769px
    =================================== */
 
-/* Header Placeholder */
-#header-placeholder {
-    display: block;
-    min-height: 50px;
-}
-
-/* ===================================
-   MOBILE STYLES (Default - 430px viewport)
-   =================================== */
-
-.site-header {
-    position: fixed;
-    top: 104px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    max-width: calc(100% - 40px);
-    height: auto;
-    padding: 0;
-    z-index: 1000;
-}
-
-.header-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Hide desktop logo on mobile */
-.header-logo {
-    display: none;
-}
-
-/* Mobile Navigation Bar - Exact Figma Specs */
-.header-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    padding: 3px 7px;
-    height: auto;
-    min-height: 32px;
-    background: rgba(250, 254, 0, 0.05);
-    border: 2px solid rgba(250, 254, 0, 0.04);
-    border-radius: 6px;
-    width: fit-content;
-    flex-wrap: nowrap;
-}
-
-.nav-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-    padding: 0 11px;
-    height: 22px;
-    background: rgba(250, 254, 0, 0.04);
-    border: 0.5px solid rgba(250, 254, 0, 0.04);
-    border-radius: 5px;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    line-height: 9.57px;
-    letter-spacing: -0.33px;
-    color: #123A90;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-    flex-shrink: 0;
-    width: auto;
-    min-width: fit-content;
-}
-
-.nav-icon {
-    width: 12px;
-    height: 12px;
-    flex-shrink: 0;
-    color: #123A90;
-    stroke-width: 1.5;
-}
-
-.nav-item span {
-    color: #123A90;
-    font-size: 11px;
-    font-weight: 500;
-    line-height: 9.57px;
-    letter-spacing: -0.33px;
-    flex-shrink: 0;
-}
-
-.nav-item:hover,
-.nav-item.active {
-    background: rgba(250, 254, 0, 0.08);
-}
-
-.nav-item:hover span,
-.nav-item.active span {
-    color: #0F2D70;
-}
-
-.nav-item:hover .nav-icon,
-.nav-item.active .nav-icon {
-    color: #0F2D70;
-}
-
-/* ===================================
-   DESKTOP STYLES (769px and above)
-   Desktop gets completely different styling
-   =================================== */
 @media (min-width: 769px) {
-    /* Reset mobile styles */
-    #header-placeholder {
-        min-height: 120px;
-    }
-
+    /* Desktop Header Container */
     .site-header {
+        position: fixed;
         top: 73px;
+        left: 50%;
+        transform: translateX(-50%);
         width: 1242px;
         max-width: 95%;
         height: 100px;
         padding: 2px;
         border-radius: 24px;
+        z-index: 1000;
     }
 
-    /* Gradient Border Effect - Desktop Only */
+    /* Desktop Gradient Border */
     .site-header::before {
         content: '';
         position: absolute;
@@ -157,18 +43,21 @@
     }
 
     .header-container {
+        width: 100%;
+        height: 100%;
         background: rgba(255, 255, 255, 0.5);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         border-radius: 22px;
+        display: flex;
+        align-items: center;
         justify-content: space-between;
         padding: 0 40px;
-        height: 100%;
     }
 
-    /* Desktop Logo - Show on Desktop */
+    /* Desktop Logo */
     .header-logo {
-        display: flex;
+        display: flex !important;
         align-items: center;
         gap: 14px;
         flex-shrink: 0;
@@ -214,40 +103,36 @@
         font-weight: 400;
     }
 
-    /* Desktop Navigation - Completely Different */
+    /* Desktop Navigation */
     .header-nav {
+        display: flex;
+        align-items: center;
         gap: 20px;
-        padding: 0;
-        height: auto;
-        background: transparent;
-        border: none;
-        border-radius: 0;
-    }
-
-    /* Reset mobile specific widths */
-    .nav-item:nth-child(1),
-    .nav-item:nth-child(2),
-    .nav-item:nth-child(3),
-    .nav-item:nth-child(4) {
-        width: auto;
     }
 
     .nav-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 10px 20px;
-        height: auto;
-        background: transparent;
-        border: none;
-        border-radius: 50px;
+        text-decoration: none;
         font-family: 'Montserrat', sans-serif;
         font-size: 24px;
         font-weight: 700;
         line-height: 29px;
         letter-spacing: -0.05em;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        background: transparent;
+        border: none;
+        height: auto;
         gap: 0;
     }
 
+    /* Hide icons on desktop */
     .nav-icon {
-        display: none;
+        display: none !important;
     }
 
     .nav-item span {
@@ -274,9 +159,7 @@
     }
 }
 
-/* ===================================
-   TABLET STYLES (769px - 1024px)
-   =================================== */
+/* Tablet Adjustments (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     .site-header {
         width: 90%;
