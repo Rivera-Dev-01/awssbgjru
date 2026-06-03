@@ -1150,7 +1150,7 @@ main {
     height: 250px;
     overflow: hidden;
     position: relative; 
-    background: linear-gradient(to bottom, #64b8f0 0%, #080b36 100%);
+    background: linear-gradient(to bottom, #8FBEFF 0%, #1A79FF 50%, #040A50 95%);
     margin-bottom: 50px;
 }
 
@@ -2288,7 +2288,7 @@ main {
         overflow: visible !important;
         padding: 24px 16px !important;
         margin-bottom: 30px !important;
-        background: linear-gradient(to bottom, #ffaf14, #ff6a00) !important;
+        background: linear-gradient(to bottom, #FFB700 0%, #F2AF00 30%, #FF6F08 78%) !important;
         border-radius: 20px !important; /* Keep it rounded */
     }
 
