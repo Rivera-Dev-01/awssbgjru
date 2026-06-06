@@ -1,7 +1,7 @@
 // Chatbot UI — Cumulus Helm component
 // Requires backend running on port 8001. Frontend works without it — chat silently degrades.
 
-const CHAT_API_URL = 'http://localhost:8001/api/chat';
+const CHAT_API_URL = '/api/chat';
 
 document.addEventListener('DOMContentLoaded', () => {
   loadComponent('chatbot-placeholder', '../components/chatbot.html')
