@@ -96,7 +96,7 @@ function initChatbot() {
     const avatar = document.createElement('div');
     avatar.className = 'chatbot-message-avatar';
     const img = document.createElement('img');
-    img.src = '../assets/icons/AWS LOGO.png';
+    img.src = '../assets/icons/AWS LOGO.webp';
     img.alt = 'Captain Hima';
     avatar.appendChild(img);
 
@@ -146,7 +146,7 @@ function initChatbot() {
     const avatar = document.createElement('div');
     avatar.className = 'chatbot-message-avatar';
     const img = document.createElement('img');
-    img.src = '../assets/icons/AWS LOGO.png';
+    img.src = '../assets/icons/AWS LOGO.webp';
     img.alt = 'Captain Hima';
     avatar.appendChild(img);
     const name = document.createElement('span');
