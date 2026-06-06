@@ -1323,6 +1323,12 @@ main {
     display: flex;
     flex-direction: column;
     gap: 25px;
+    height: 450px;
+    overflow-y: scroll;
+}
+
+.future-cards-stack{
+    scrollbar-width: none;
 }
 
 /* Glassmorphism Card Style */
@@ -1374,7 +1380,6 @@ main {
 .future-card-cloud-icon {
     position: absolute;
     left: 16px;
-    top: 16px;
     width: 121px;
     height: 121px;
     object-fit: contain;
@@ -1417,9 +1422,9 @@ main {
 
 .future-card-desc {
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 600;
-    color: #1C3466;
+    color: #1E376C;
     line-height: 1.7;
     margin: 0;
     text-align: right;
@@ -1434,33 +1439,15 @@ main {
 .future-card-accent-bar {
     position: absolute;
     right: 48px;
-    top: 50%;
+    top: 65%;
     transform: translateY(-50%);
     width: 10px;
+    height: 55%;
     background: #FF7A00;
     border-radius: 6px;
     flex-shrink: 0;
 }
 
-.card-membership .future-card-accent-bar {
-    height: 132px;
-}
-
-.card-training .future-card-accent-bar {
-    height: 132px;
-}
-
-.card-incentives .future-card-accent-bar {
-    height: 132px;
-}
-
-.card-professional .future-card-accent-bar {
-    height: 132px;
-}
-
-.card-representation .future-card-accent-bar {
-    height: 132px;
-}
 
 
 @media (max-width: 1200px) {
