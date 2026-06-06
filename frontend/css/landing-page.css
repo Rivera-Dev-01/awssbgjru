@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 /* Override header placeholder height on landing page — hero fills from top */
 .landing-page #header-placeholder {
     min-height: 0;

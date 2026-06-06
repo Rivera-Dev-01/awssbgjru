@@ -291,21 +291,19 @@
     .footer-contact {
         width: 100%;
         text-align: left;
-        padding-left: 26px;
+        padding-left: 48px;
         margin-bottom: 20px;
+        box-sizing: border-box;
     }
 
-.footer-contact {
-    grid-column: 1 / -1;
-}
-
-.footer-contact h4 {
+    .footer-contact h4 {
         font-size: 16px;
         font-weight: 600;
         text-align: left;
         transform: none;
         margin-bottom: 10px;
         letter-spacing: 0.5px;
+        padding-left: 0;
     }
 
     .footer-contact p {
@@ -314,6 +312,7 @@
         justify-content: flex-start;
         transform: none;
         gap: 12px;
+        padding-left: 0;
     }
 
     .icon-email {
@@ -331,6 +330,7 @@
         max-width: 400px;
         gap: 60px;
         padding: 0 48px;
+        box-sizing: border-box;
     }
 
     .footer-nav-col {
@@ -380,4 +380,8 @@
         color: #000000;
     }
 
+}
+
+.footer-contact {
+    grid-column: 1 / -1;
 }

@@ -457,8 +457,8 @@
 /* ---- Responsive ---- */
 @media (max-width: 768px) {
   .chatbot-trigger {
-    bottom: 20px;
-    right: 38px;
+    bottom: 30px;
+    right: 15px;
   }
 
   .chatbot-trigger-inner {
@@ -537,7 +537,7 @@
   .chatbot-window {
     bottom: 80px;
     right: 10px;
-    left: 30px;
+    left: 47px;
     width: 85%;
     height: calc(100vh - 100px);
     max-height: calc(100vh - 300px);

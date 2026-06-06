@@ -19,7 +19,7 @@
     position: fixed;
     top: 104px;
     left: 50%;
-    transform: translateX(-55%);
+    transform: translateX(-50%);
     width: auto;
     max-width: calc(100% - 40px);
     height: auto;
@@ -50,7 +50,9 @@
     padding: 3px 6px;
     height: auto;
     min-height: 32px;
-    background: rgba(250, 254, 0, 0.05);
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border: 0.5px solid rgba(255, 255, 255, 0.3);
     border-radius: 6px;
     width: fit-content;
@@ -66,7 +68,7 @@
     gap: 3px;
     padding: 4px 8px;
     height: 22px;
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.3);
     border: 0.1px solid rgba(255,255,255, 0.2);
     border-radius: 5px;
     text-decoration: none;
@@ -200,9 +202,9 @@
     }
 
     .header-container {
-        background: rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.45);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
         border-radius: 22px;
         justify-content: space-between;
         padding: 0 40px;
@@ -263,6 +265,8 @@
         padding: 0;
         height: auto;
         background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
         border: none;
         border-radius: 0;
     }
@@ -298,16 +302,21 @@
         letter-spacing: -0.05em;
     }
 
-    .nav-item:hover {
-        background: rgba(255, 255, 255, 0.2);
-        transform: scale(1.05);
-    }
-
     .nav-item.active span {
-        background: linear-gradient(180deg, #FBE502 27.96%, #FE9206 82.76%);
+        background: linear-gradient(180deg, #FFF200 0%, #FBB515 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+    }
+
+    .nav-item:hover,
+    .nav-item.active {
+        background: none;
+    }
+
+    .nav-item:hover span,
+    .nav-item.active span {
+        color: inherit;
     }
 }
 
