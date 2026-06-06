@@ -1,0 +1,43 @@
+<!-- Chatbot component — Cumulus Helm -->
+<div class="chatbot-trigger" id="chatbotTrigger" aria-label="Open chat" role="button" tabindex="0">
+  <div class="chatbot-trigger-inner">
+    <svg class="chatbot-trigger-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1C3466" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+    </svg>
+    <span class="chatbot-trigger-label">Chat with Captain Hima</span>
+  </div>
+</div>
+
+<div class="chatbot-window" id="chatbotWindow" role="dialog" aria-label="Chat with Captain Hima">
+  <div class="chatbot-header">
+    <div class="chatbot-avatar">
+      <img src="../assets/icons/AWS LOGO.webp" alt="Captain Hima" class="chatbot-avatar-img" loading="lazy">
+    </div>
+    <div class="chatbot-header-info">
+      <span class="chatbot-name">Captain Hima</span>
+      <div class="chatbot-status-row">
+        <span class="chatbot-status-dot"></span>
+        <span class="chatbot-status-text">Aboard the Cloud</span>
+      </div>
+    </div>
+    <button class="chatbot-close" id="chatbotClose" aria-label="Close chat">✕</button>
+  </div>
+
+  <div class="chatbot-messages" id="chatbotMessages"></div>
+
+  <div class="chatbot-input-section">
+    <div class="chatbot-input-area">
+      <input type="text" class="chatbot-input" id="chatbotInput" placeholder="Type a message..." autocomplete="off" maxlength="1000">
+      <button class="chatbot-send" id="chatbotSend" aria-label="Send message">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        </svg>
+      </button>
+    </div>
+    <div class="chatbot-input-footer">
+      <span class="chatbot-helper-text">Ask me about AWS, cloud, or our events!</span>
+      <span class="chatbot-char-counter" id="chatbotCharCounter">0/1000</span>
+    </div>
+  </div>
+</div>

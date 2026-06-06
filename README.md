@@ -1,161 +1,162 @@
 # AWS Learning Club Website
 
-Welcome to the AWS Learning Club website project! This is a beginner-friendly web application built with HTML, CSS, JavaScript (frontend) and Python FastAPI (backend).
+Welcome to the AWS Learning Club website project! A beginner-friendly web application with a **Cumulus Helm**-themed chatbot powered by Groq AI.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 AWS-Website/
-├── frontend/                 # All frontend files
-│   ├── pages/               # HTML pages
-│   │   ├── index.html       # Landing page
-│   │   ├── about.html       # About page
-│   │   ├── events.html      # Events page
-│   │   ├── partners.html    # Partners page
-│   │   ├── achievements.html # Achievements page
-│   │   └── contact.html     # Contact page
-│   ├── components/          # Reusable components (header, footer, card)
-│   │   ├── header.html      # Header component
-│   │   ├── footer.html      # Footer component
-│   │   └── card.html        # Card component
-│   ├── css/                 # Stylesheets
-│   │   └── styles.css       # Main CSS file
-│   ├── js/                  # JavaScript files
-│   │   ├── main.js          # Template loader
-│   │   ├── nav.js           # Navigation component
-│   │   ├── contentLoader.js # API content loader
-│   │   ├── events.js        # Events page logic
-│   │   ├── partners.js      # Partners page logic
-│   │   ├── achievements.js  # Achievements page logic
-│   │   ├── contactForm.js   # Contact form handler
-│   │   └── chatbot.js       # Chatbot interface
-│   ├── assets/              # Static assets
-│   │   ├── icons/           # Icon files
-│   │   ├── logo.png         # Site logo
-│   │   └── src/
-│   │       └── graphic-designs/ # GSAP animations & Blender renders
-│   │       └── mascot/ # AWS Mascot Images for Design
-│   ├── favicon.ico          # Browser tab icon
-│   └── robots.txt           # Search engine instructions
+├── frontend/                     # Static frontend
+│   ├── pages/                    # HTML pages
+│   │   ├── landingPage.html      # Landing page
+│   │   ├── about.html            # About page
+│   │   ├── events.html           # Events page
+│   │   ├── partners.html         # Partners page
+│   │   ├── achievements.html     # Achievements page
+│   │   └── contact.html          # Contact page
+│   ├── components/               # Reusable HTML partials
+│   │   ├── header.html           # Navigation header
+│   │   ├── footer.html           # Site footer
+│   │   ├── card.html             # Card template
+│   │   └── chatbot.html          # Chatbot widget (Cumulus Helm)
+│   ├── css/
+│   │   ├── styles.css            # Main styles
+│   │   ├── landing-page.css      # Landing page styles
+│   │   ├── header.css            # Header styles
+│   │   ├── footer.css            # Footer styles
+│   │   └── chatbot.css           # Chatbot styles
+│   ├── js/
+│   │   ├── main.js               # Template loader
+│   │   ├── nav.js                # Navigation logic
+│   │   ├── gsap.js               # Cloud animations
+│   │   ├── events.js             # Events page logic
+│   │   ├── future-cards.js       # Future section cards
+│   │   └── chatbot.js            # Chatbot UI + SSE streaming
+│   └── assets/                   # Images, icons, mascot
 │
-└── backend/                 # All backend files
-    ├── data/                # JSON content files
-    │   ├── events.json      # Events data
-    │   ├── partners.json    # Partners data
-    │   ├── achievements.json # Achievements data
-    │   └── team.json        # Team members data
-    ├── main.py              # FastAPI application
-    ├── content_handler.py   # Content file reader
-    ├── contact_handler.py   # Contact form handler
-    ├── chatbot_engine.py    # Chatbot logic
-    └── requirements.txt     # Python dependencies
+├── backend/                      # Backend
+│   ├── api/                      # FastAPI chatbot API
+│   │   ├── index.py              # FastAPI app (entry point for Vercel)
+│   │   ├── chatbot.py            # Groq API integration (streaming)
+│   │   ├── config.py             # Environment configuration
+│   │   ├── guardrails.py         # Content safety checks
+│   │   ├── rate_limiter.py       # IP-based rate limiting
+│   │   ├── cache.py              # In-memory TTL cache
+│   │   ├── prompts.py            # Captain Hima system prompt
+│   │   ├── requirements.txt      # Python dependencies
+│   │   ├── .env.example          # Environment variable template
+│   │   └── .env                  # Local env vars (gitignored)
+│   └── data/                     # JSON data files
+│       ├── events.json
+│       ├── partners.json
+│       ├── achievements.json
+│       └── team.json
+│
+├── vercel.json                   # Vercel deployment config
+├── .gitignore
+└── README.md
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
-Before you start, make sure you have installed:
 - **Python 3.8+** - [Download here](https://www.python.org/downloads/)
-- **Node.js** (optional, for testing) - [Download here](https://nodejs.org/)
+- **Groq API key** - [Get one free](https://console.groq.com/)
 
-### Installation Steps
+### 1. Install Dependencies
 
-1. **Clone or download this repository**
-   ```bash
-   cd AWS-Website
-   ```
+```bash
+cd backend/api
+pip install -r requirements.txt
+```
 
-2. **Set up the backend**
-   ```bash
-   cd backend
-   pip install -r requirements.txt
-   ```
+### 2. Set Environment Variables
 
-3. **Run the backend server**
-   ```bash
-   python main.py
-   ```
-   The backend will start at `http://localhost:8000`
+Copy the example env file and add your Groq key:
 
-4. **Open the frontend**
-   - Open `frontend/pages/index.html` in your browser
-   - Or use a local server (recommended):
-     ```bash
-     cd frontend
-     python -m http.server 3000
-     ```
-   - Then visit `http://localhost:3000/pages/index.html`
+```bash
+copy backend/api/.env.example backend/api/.env
+```
 
-## 📝 How to Work on This Project
+Then edit `backend/api/.env` and set:
 
-### For Frontend Developers
+```
+GROQ_API_KEY=gsk_your_key_here
+```
 
-**Working on HTML pages:**
-1. Open any HTML file in `frontend/pages/`
-2. Add your content inside the `<main>` tags
-3. Save and refresh your browser to see changes
+### 3. Run the Backend (API + Frontend)
 
-**Working on CSS:**
-1. Open `frontend/css/styles.css`
-2. Add your styles
-3. Save and refresh to see changes
+From the project root, run:
 
-**Working on JavaScript:**
-1. Open the relevant JS file in `frontend/js/`
-2. Add your functions
-3. Save and refresh to test
+```bash
+uvicorn backend.api.index:app --reload --port 8001 --host 0.0.0.0
+```
 
-### For Backend Developers
+Or navigate to `backend/` first:
 
-**Adding content data:**
-1. Open JSON files in `backend/data/`
-2. Follow the existing format
-3. Save the file
-4. Restart the backend server
+```bash
+cd backend
+uvicorn api.index:app --reload --port 8001 --host 0.0.0.0
+```
 
-**Working on API endpoints:**
-1. Open `backend/main.py`
-2. Add or modify endpoints
-3. Restart the server to test
+Open `http://localhost:8001` in your browser — the frontend and API are served from the same port.
 
-## 🎯 Common Tasks
+## Chatbot
 
-### Adding a New Event
-1. Open `backend/data/events.json`
-2. Add your event following this format:
-   ```json
-   {
-     "id": "unique-id",
-     "title": "Event Name",
-     "date": "2024-03-01T18:00:00Z",
-     "speaker": {
-       "name": "Speaker Name",
-       "title": "Speaker Title"
-     },
-     "description": "Event description",
-     "registrationLink": "https://..."
-   }
-   ```
-3. Save and reload the events page
+The **Cumulus Helm** chatbot ("Chat with Hima") appears as a floating pill button on every page. Powered by `llama3-8b-8192` via Groq with streaming responses.
 
-### Updating Styles
-1. Open `frontend/css/styles.css`
-2. Add your CSS rules
-3. Save and refresh browser
+### How It Works
 
-### Testing Your Changes
-1. Always test in the browser after making changes
-2. Check the browser console (F12) for errors
-3. Test on mobile view (responsive design)
+```
+User types message
+       ↓
+Frontend creates empty bot bubble
+       ↓
+POST /api/chat  { "message": "..." }
+       ↓
+Backend: rate limit check → guardrails → cache lookup → Groq API (stream)
+       ↓
+SSE stream: tokens arrive one by one
+       ↓
+Frontend appends tokens to bot bubble in real-time
+```
 
-## 🆘 Getting Help
+### Architecture
 
-**Common Issues:**
+| Layer | File | Purpose |
+|---|---|---|
+| UI | `frontend/components/chatbot.html` | Chat widget HTML |
+| Styles | `frontend/css/chatbot.css` | Cumulus Helm styling |
+| Client | `frontend/js/chatbot.js` | Toggle, send, SSE streaming |
+| API | `backend/api/index.py` | FastAPI endpoints |
+| Engine | `backend/api/chatbot.py` | Groq integration |
+| Safety | `backend/api/guardrails.py` | Content filtering |
+| Rate Limit | `backend/api/rate_limiter.py` | 20 req/min per IP |
+| Cache | `backend/api/cache.py` | 5-min TTL for identical queries |
+| Prompt | `backend/api/prompts.py` | Captain Hima persona |
 
-- **Backend won't start**: Make sure Python is installed and you ran `pip install -r requirements.txt`
-- **Changes not showing**: Try hard refresh (Ctrl+F5 or Cmd+Shift+R)
-- **API not working**: Check if backend server is running at `http://localhost:8000`
+## Deploying to Vercel
 
+1. Push the repo to GitHub
+2. Import it in Vercel
+3. Add environment variable in Vercel dashboard → Settings → Environment Variables:
+   - `GROQ_API_KEY` = your Groq API key
+4. Deploy — `vercel.json` handles routing:
+   - `/api/*` → Python serverless function
+   - `/*` → static frontend files
 
-**Happy Coding! 🎉**
+## Development Notes
+
+- The backend auto-reloads when you change files (thanks to `--reload`)
+- Rate limit resets every 60 seconds
+- Identical messages within 5 minutes return cached responses
+- All CSS uses `Poppins` font family matching the existing site design
+- The chatbot trigger toggles open/close on click
+
+## Common Tasks
+
+- **Change the system prompt**: Edit `backend/api/prompts.py`
+- **Adjust rate limits**: Edit `backend/api/config.py`
+- **Update chatbot styles**: Edit `frontend/css/chatbot.css`
+- **Modify streaming behavior**: Edit `frontend/js/chatbot.js`

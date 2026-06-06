@@ -1,9 +1,3 @@
-// js/main.js
-/**
- * Dynamic Template Loader
- * Loads reusable HTML components into designated placeholders
- */
-
 function loadComponent(elementId, filePath) {
     return fetch(filePath)
         .then(response => {
@@ -21,35 +15,4 @@ function loadComponent(elementId, filePath) {
         })
         .catch(error => console.error(`Error loading component [${elementId}] from ${filePath}:`,
             error));
-
 }
-
-// Expose to window scope so that standard script tags like nav.js can call it
-window.loadComponent = loadComponent;
-
-/* function loadComponent(elementId, filePath) {
-    fetch(filePath)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById(elementId).innerHTML = data;
-            
-            // After loading the header, automatically highlight the active link
-            if (elementId === 'header-placeholder') {
-                const currentPath = window.location.pathname;
-                const navItems = document.querySelectorAll('.nav-item');
-                navItems.forEach(item => {
-                    if (item.getAttribute('href').includes(currentPath) && currentPath !== '/') {
-                        item.classList.add('active');
-                    }
-                });
-            }
-        })
-        .catch(error => console.error(`Error loading ${filePath}:`, error));
-}
-
-// Initialize components
-document.addEventListener('DOMContentLoaded', () => {
-    loadComponent('header-placeholder', 'html/components/header.html');
-    // loadComponent('footer-placeholder', 'html/components/footer.html');
-});
-*/

@@ -6,7 +6,7 @@ const events = [
       date: "Date",
       time: "Time",
       location: "Location",
-      mascot: "assets/src/graphic-designs/mascot/hero icon.png"
+      mascot: "assets/src/graphic-designs/mascot/hero icon.webp"
     },
 
     { 
@@ -15,7 +15,7 @@ const events = [
       date: "Date",
       time: "Time",
       location: "Location",
-      mascot: "assets/src/graphic-designs/mascot/hero icon.png"
+      mascot: "assets/src/graphic-designs/mascot/hero icon.webp"
     },
 
     { 
@@ -24,7 +24,7 @@ const events = [
       date: "Date",
       time: "Time",
       location: "Location",
-      mascot: "assets/src/graphic-designs/mascot/hero icon.png"
+      mascot: "assets/src/graphic-designs/mascot/hero icon.webp"
     },
 ];
 
@@ -40,15 +40,15 @@ events.forEach((event, index) => {
         <img class="events-mascot" src="${event.mascot}" alt="mascot" />
         <div class="events-meta">
             <div class="events-meta-item">
-                <img src="../assets/icons/calendar-icon.png" alt="date" class="meta-icon" />
+                <img src="../assets/icons/calendar-icon.webp" alt="date" class="meta-icon" />
                 <p class="events-date">${event.date}</p>
             </div>
             <div class="events-meta-item">
-                <img src="../assets/icons/time-icon.png" alt="time" class="meta-icon" />
+                <img src="../assets/icons/time-icon.webp" alt="time" class="meta-icon" />
                 <p class="events-time">${event.time}</p>
             </div>
             <div class="events-meta-item">
-                <img src="../assets/icons/location-icon.png" alt="location" class="meta-icon" />
+                <img src="../assets/icons/location-icon.webp" alt="location" class="meta-icon" />
                 <p class="events-location">${event.location}</p>
             </div>
         </div>

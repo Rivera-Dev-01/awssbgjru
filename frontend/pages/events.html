@@ -9,20 +9,20 @@
     />
     <title>AWS Learning Club - Events</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
-    <link rel="stylesheet" href="../css/styles.css" />
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/chatbot.css" />
   </head>
   <body class="about-page">
     <div id="header-placeholder"></div>
 
     <main>
       <div class="events-cloud-bg">
-        <img
-          src="../assets/clouds/intro-cloud.png"
+        <img 
+          src="../assets/clouds/intro-cloud.webp"
           alt="Cloud Background"
           class="events-cloud-img"
-        />
+        / loading="lazy">
       </div>
       <div class="events-header-container">
         <h1 class="events-header">Events</h1>
@@ -43,8 +43,10 @@
 
     <div id="footer-placeholder"></div>
 
-    <script type="module" src="../js/main.js"></script>
+    <div id="chatbot-placeholder"></div>
+    <script src="../js/main.js"></script>
     <script type="module" src="../js/events.js"></script>
-    <script src="../js/nav.js"></script>
+    <script src="../js/nav.js" defer></script>
+    <script src="../js/chatbot.js" defer></script>
   </body>
 </html>

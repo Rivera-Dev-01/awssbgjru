@@ -9,9 +9,13 @@
     />
     <title>AWS Learning Club - About</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/about.css" />
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/chatbot.css" />
   </head>
 
   <body class="about-page">
@@ -21,23 +25,47 @@
       <!-- About page content -->
       <section class="about-hero">
         <div class="hero-container">
+          <!-- Desktop Version -->
           <img
-            src="../assets/milcon_2025.png"
+            src="../assets/milcon_2025.webp"
             alt="Milcon 2025"
-            class="milcon-pic"
+            class="milcon-pic desktop-only"
           />
-          <div class="hero-top-text">
+          <div class="hero-top-text desktop-only">
             <p>Build the future with</p>
             <h1>
               AWS CLOUD <br />
               TECHNOLOGY
             </h1>
           </div>
-          <div class="hero-bottom-text">
+          <div class="hero-bottom-text desktop-only">
             <p>A community driven by</p>
             <h2>INNOVATORS</h2>
             <p>Where Rizalian architects the FUTURE</p>
             <button>Learn More</button>
+          </div>
+
+          <!-- Mobile Version (Slideshow, Arc, Logo, and Gradient Text) -->
+          <div class="about-hero-slideshow mobile-only">
+            <img src="../assets/frame1.webp" alt="Frame 1" class="slide active" />
+            <img src="../assets/frame2.webp" alt="Frame 2" class="slide" />
+            <img src="../assets/frame3.webp" alt="Frame 3" class="slide" />
+            <img src="../assets/frame4.webp" alt="Frame 4" class="slide" />
+            <img src="../assets/frame5.webp" alt="Frame 5" class="slide" />
+          </div>
+          
+          <img src="../assets/Vector-97.webp" alt="Curved Arc Overlay" class="hero-arc-overlay mobile-only" />
+          
+          <div class="hero-logo-badge mobile-only">
+            <img src="../assets/icons/AWS LOGO.webp" alt="AWS Learning Club Logo" / loading="lazy">
+          </div>
+          
+          <div class="hero-mobile-content mobile-only">
+            <h3>Build the future with</h3>
+            <h1 class="hero-title-gradient">AWS CLOUD<br>TECHNOLOGY</h1>
+            <p>Master industry-standard tools and launch your career in tech alongside driven peers.</p>
+            <button class="btn-learn-more">Learn More</button>
+            <div class="mobile-pda-text mobile-only">PURPOSE-DRIVEN ACTION</div>
           </div>
         </div>
       </section>
@@ -45,38 +73,43 @@
       <!-- Container - Cards - Information -->
 
       <div class="PDA-container">
-        <h1>Purpose-Driven Actions</h1>
+        <h1 class="desktop-only">Purpose-Driven Actions</h1>
       </div>
 
       <div class="vision-mission-container">
-        <div class="vision-card">
+        <!-- Vision Card -->
+        <div id="vision-card" class="vision-card active" onclick="selectCard('vision')">
           <div class="vision-card-header">
-            <img
+            <img 
               src="../assets/icons/icon_vision.svg"
               alt="vision-icon"
               class="vision-icon"
-            />
+            / loading="lazy">
             <h1>Vision</h1>
           </div>
-          <p>
+          <p class="desktop-only">
             As a student organization focused on Amazon Web Services (AWS) and
             cloud computing, we envision a dynamic and long-standing community
             of passionate learners from various universities nationwide. We aim
             to foster innovation and harness the power of AWS to drive
             technological advancements and industry transformation.
           </p>
+          <p class="mobile-only">
+            A thriving network of student innovators driving technological progress and shaping the future of the industry.
+          </p>
         </div>
 
-        <div class="mission-card">
+        <!-- Mission Card -->
+        <div id="mission-card" class="mission-card inactive" onclick="selectCard('mission')">
           <div class="mission-card-header">
-            <img
+            <img 
               src="../assets/icons/icon_mission.svg"
               alt="mission-icon"
               class="mission-icon"
-            />
+            / loading="lazy">
             <h1>Mission</h1>
           </div>
-          <p>
+          <p class="desktop-only">
             We are dedicated to fostering a culture of learning, volunteerism,
             and social impact. Through active community service, we culivate a
             well-rounded perspective on the importance of giving back to
@@ -85,6 +118,9 @@
             opportunities. By equipping students with essential AWS and cloud
             compuing skills, we prepare them to thrive in the digital economy
             and contribute meaningfully to technological progress.
+          </p>
+          <p class="mobile-only">
+            To empower the next generation of cloud enthusiasts through meaningful learning, collaboration, and community impact.
           </p>
         </div>
       </div>
@@ -99,17 +135,89 @@
           </p>
         </div>
 
+        <div class="aws-club-goals">
+          <div class="goal-card education-skill-development">
+            <div class="inner-goal-card">
+              <div class="goal-card-icon-container">
+              <img src="../assets/icons/education_and_skill_development.svg" alt="Company Logo" width="300" height="300" class="goal-card-icon" loading="lazy">
+            </div>
+            <h3 class="header-card">EDUCATION <br/> & SKILL DEVELOPMENT</h3>
+            <p class="card-info">We empower students with AWS expertise and cloud architecture skills to build innovative solutions effectively.</p>
+            <a href="" class="goal-card-btn">More</a>
+            </div>
+          </div>
+
+          <div class="goal-card innovative-projects">
+            <div class="inner-goal-card">
+              <div class="goal-card-icon-container">
+              <img src="../assets/icons/innovations_and_projects.svg" alt="Company Logo" width="300" height="300" class="goal-card-icon" loading="lazy">
+            </div>
+            <h3 class="header-card">INNOVATION & <br/> PROJECTS</h3>
+            <p class="card-info">We foster innovation by encouraging students to solve real-world problems and develop AWS-based projects.</p>
+            <a href="" class="goal-card-btn">More</a>
+            </div>
+          </div>
+
+          <div class="goal-card industry-engagement">
+            <div class="inner-goal-card">
+              <div class="goal-card-icon-container">
+              <img src="../assets/icons/industry_engagement.webp" alt="Industry Engagement" width="300" height="300" class="goal-card-icon" loading="lazy">
+            </div>
+            <h3 class="header-card">INDUSTRY <br/> ENGAGEMENT</h3>
+            <p class="card-info">We bridge academia and industry by connecting students with AWS professionals and internships to provide real-world insights
+              and career growth.</p>
+            <a href="" class="goal-card-btn">More</a>
+            </div>
+          </div>
+          
+          <div class="goal-card nation-community-building">
+            <div class="inner-goal-card">
+              <div class="goal-card-icon-container">
+              <img src="../assets/icons/nationcommunitybuilding.svg" alt="Company Logo" width="300" height="300" class="goal-card-icon" loading="lazy">
+            </div>
+            <h3 class="header-card">NATION <br/> COMMUNITY BUILDING</h3>
+            <p class="card-info">We foster nationwide, inclusive AWS community through events and forums, encouraging knowledge sharing and networking among students.</P>
+            <a href="" class="goal-card-btn">More</a>
+            </div>
+          </div>
+
+          <div class="goal-card student-centric-approach">
+            <div class="inner-goal-card">
+                <div class="goal-card-icon-container">
+                  <img src="../assets/icons/studentapproachcentric.svg" alt="Company Logo" width="300" height="300" class="goal-card-icon" loading="lazy">
+                </div>
+                <h3 class="header-card">STUDENT-CENTRIC APPROACH</h3>
+                <p class="card-info">We put students first, providing an inclusive environment for skill development and career preparation through mentorship and
+                  leadership opportunities.</p>
+                <a href="" class="goal-card-btn">More</a>
+            </div>
+          </div>
+
+          <div class="goal-card university-chapters-collaboration">
+            <div class="inner-goal-card">
+              <div class="goal-card-icon-container">
+              <img src="../assets/icons/university_and_chapterscollaboration.svg" alt="Company Logo" width="300" height="300" class="goal-card-icon" loading="lazy">
+            </div>
+            <h3 class="header-card">UNIVERSITY CHAPTERS & COLLABORATION</h3>
+            <p class="card-info">Supporting university chapters promotes collaboration and growth, creating an empowered network of learners and industry-connected
+              innovators.</p>
+            <a href="" class="goal-card-btn">More</a>
+            </div>
+          </div>
+
+        </div>
+
         <div class="goal-grid-wrapper">
-
-
           <!-- The actual goal grid cards (rendered dynamically via JS) -->
-          <div class="goal-grid" id="goal-grid"></div>
+          <div class="goal-grid" id="goal-grid">
+
+          </div>
         </div>
       </div>
 
       <div class="skill-builder-container">
         <h1>SKILL BUILDER DEPARTMENTS</h1>
-        <div class="skill-builder-cards-container">
+        <div class="skill-builder-cards-container desktop-only">
           <div class="skill-builder-cards">
             <h2>Software & Web Development</h2>
             <p>
@@ -163,11 +271,57 @@
             </p>
           </div>
         </div>
+
+        <!-- Mobile Double-Column Drawer Layout (Side-by-Side) -->
+                                <!-- Mobile Departments Side-by-Side -->
+        <div class="skill-builder-mobile-drawer mobile-only">
+          <div class="master-list-container">
+            <div class="master-list-card active" onclick="selectMobileDept('software-web')">
+                <span class="master-list-title">Software & Web<br/>Development</span>
+                <p class="master-list-desc">Focuses on building technical proficiency in web and application development while enhancing coding skills through personal projects.</p>
+            </div>
+            <div class="master-list-card" onclick="selectMobileDept('data-analytics')">
+                <span class="master-list-title">Data Analytics</span>
+                <p class="master-list-desc">Develops skills in complex data analysis to drive technological advancement and prepare members for data-driven industries.</p>
+            </div>
+            <div class="master-list-card" onclick="selectMobileDept('security')">
+                <span class="master-list-title">Security</span>
+                <p class="master-list-desc">Focuses on the critical field of cybersecurity, equipping members with the skills necessary to protect digital assets and implement security best practices.</p>
+            </div>
+            <div class="master-list-card" onclick="selectMobileDept('cloud-computing')">
+                <span class="master-list-title">Cloud Computing</span>
+                <p class="master-list-desc">Masters cloud architecture and AWS services to prepare members for the digital economy through practical, real-world deployment.</p>
+            </div>
+            <div class="master-list-card" onclick="selectMobileDept('ml-ai')">
+                <span class="master-list-title">Machine Learning<br/>& AI</span>
+                <p class="master-list-desc">Advances innovation in artificial intelligence and machine learning, encouraging members to conduct research and build real-world prototypes with AWS tools.</p>
+            </div>
+            <div class="master-list-card" onclick="selectMobileDept('adv-infra')">
+                <span class="master-list-title">Advanced Network<br/>& Infrastructure</span>
+                <p class="master-list-desc">Strengthens understanding of modern networking systems and foundational infrastructure through technical assessments designed to build high-level engineering leaders.</p>
+            </div>
+          </div>
+          
+          <div class="detail-panel-container">
+            <div class="detail-slide-card" id="mobile-dept-detail-card">
+              <div class="detail-slide-header">
+                <div class="detail-slide-icon dept-icon">
+                  <img id="mobile-dept-detail-icon" src="../assets/icons/SoftwareWeb.webp" alt="Dept Icon" / loading="lazy">
+                </div>
+                <h2 id="mobile-dept-detail-title" class="shrink-long-title">Software & Web Development</h2>
+              </div>
+              <div class="detail-slide-inner">
+                <p id="mobile-dept-detail-desc">Focuses on building technical proficiency in web and application development while enhancing coding skills through personal projects.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
       </div>
 
       <div class="offices-container">
         <h1>OFFICES</h1>
-        <div class="offices-cards-container">
+        <div class="offices-cards-container desktop-only">
           <div class="offices-cards">
             <h2>Executive</h2>
             <p>
@@ -232,107 +386,118 @@
             </p>
           </div>
         </div>
+
+        <!-- Mobile Offices Layout -->
+                                <!-- Mobile Offices Side-by-Side -->
+        <div class="skill-builder-mobile-drawer mobile-only">
+          <div class="master-list-container">
+            <div class="master-list-card active" onclick="selectMobileOffice('Executive')">
+                <span class="master-list-title">Executive</span>
+                <p class="master-list-desc">The Executive Committee provides overall direction, coordination, and oversight for the organization. Due to limited availability of senior officers, executive roles are primarily supervisory, documentation-focused, and approval-based.</p>
+            </div>
+            <div class="master-list-card" onclick="selectMobileOffice('Relations')">
+                <span class="master-list-title">Relations</span>
+                <p class="master-list-desc">Driving organizational growth and protecting its digital integrity by leading initiatives in resource acquisition, engaging content creation, strategic partnerships, professional correspondence, cybersecurity, and meticulous agreement alignment.</p>
+            </div>
+            <div class="master-list-card" onclick="selectMobileOffice('Operations')">
+                <span class="master-list-title">Operations</span>
+                <p class="master-list-desc">Manages the Cloud Club's Operations and Events Office by directing strategic planning, resource allocation, event execution, quality assurance, risk mitigation, and team leadership to ensure seamless daily functioning and successful club experiences.</p>
+            </div>
+            <div class="master-list-card" onclick="selectMobileOffice('Creatives')">
+                <span class="master-list-title">Creatives</span>
+                <p class="master-list-desc">Driving its visual identity and audience engagement by managing visual content creation, media enhancement, project documentation, and impactful presentations.</p>
+            </div>
+            <div class="master-list-card" onclick="selectMobileOffice('Marketing')">
+                <span class="master-list-title">Marketing</span>
+                <p class="master-list-desc">Amplifying the organization's online influence and community engagement through social media management, strategic publication materials, brand protection, and proactive security measures.</p>
+            </div>
+            <div class="master-list-card" onclick="selectMobileOffice('Finance')">
+                <span class="master-list-title">Finance</span>
+                <p class="master-list-desc">Safeguarding the organization's assets and ensuring university compliance by managing budgets, monitoring expenditures, and conducting financial forecasting to support strategic planning.</p>
+            </div>
+            <div class="master-list-card" onclick="selectMobileOffice('Media')">
+                <span class="master-list-title">Media</span>
+                <p class="master-list-desc">Handles event photography and videography, coordinate officer pictorials, and organize media files. By delivering high-quality visual assets, they provide essential support to the creatives and marketing teams for post-event publicity.</p>
+            </div>
+            <div class="master-list-card" onclick="selectMobileOffice('Technology')">
+                <span class="master-list-title">Technology</span>
+                <p class="master-list-desc">Key tasks include managing the AWS Skill Builder Program, training officers, and facilitating hands-on technical seminars. The committee also provides event technical support, proposes future tech initiatives, and recruits volunteers to maintain the website.</p>
+            </div>
+          </div>
+          
+          <div class="detail-panel-container">
+            <div class="detail-slide-card" id="mobile-office-detail-card">
+              <div class="detail-slide-header">
+                <div class="detail-slide-icon office-icon">
+                  <img id="mobile-office-detail-icon" src="../assets/icons/Exec.webp" alt="Office Icon" / loading="lazy">
+                </div>
+                <h2 id="mobile-office-detail-title">Executive</h2>
+              </div>
+              <p id="mobile-office-detail-desc">The Executive Committee provides overall direction, coordination, and oversight for the organization. Due to limited availability of senior officers, executive roles are primarily supervisory, documentation-focused, and approval-based.</p>
+            </div>
+          </div>
+        </div>
+        </div>
       </div>
 
       <section class="future-section">
         <div class="future-container">
-
           <div class="future-mascot-col">
-            <img src="../assets/src/graphic-designs/mascot/Hima_Ship.png" alt="Hima Mascot" class="future-mascot-img"/>
+            <img 
+              src="../assets/src/graphic-designs/mascot/Hima_Ship.webp"
+              alt="Hima Mascot"
+              class="future-mascot-img"
+            / loading="lazy">
           </div>
 
           <div class="future-content-col">
             <div class="future-header-container">
               <h1>Build Your Future With Us</h1>
-              <p>Unlock exclusive resources, elevate your cloud skills, and accelerate your tech career.</p>
+              <p>
+                Unlock exclusive resources, elevate your cloud skills, and
+                accelerate your tech career.
+              </p>
             </div>
 
             <!-- Future Section Cards Contents -->
 
             <script type="application/json" id="future-cards-data">
               [
-                { "title": "Certificate of Membership", "description": "They have the right to enjoy all the benefits and privileges of the organization. They will receive a Certificate of Membership after completing their first semester or upon approval of their membership revalidation." },
-                { "title": "Training and Skill Enhancement", "description": "They have the opportunity to enhance their skills in specialized areas such as Cloud Computing, Software and Web Development, Machine Learning, and AI." },
-                { "title": "Incentives", "description": "Active participants in training and meetings may receive a Certification of Attendance as an incentive." },
-                { "title": "Professional Training", "description": "They will receive training from the Chief Officers of the Board of Executives to equip them with the necessary skills for their chosen office." },
-                { "title": "Representation and Empowerment", "description": "This community provides members with training to develop necessary skills and fosters inclusivity. AWS technologies may be appointed as consultants to provide guidance and support to the club." }
+                {
+                  "title": "Certificate of Membership",
+                  "description": "They have the right to enjoy all the benefits and privileges of the organization. They will receive a Certificate of Membership after completing their first semester or upon approval of their membership revalidation."
+                },
+                {
+                  "title": "Training and Skill Enhancement",
+                  "description": "They have the opportunity to enhance their skills in specialized areas such as Cloud Computing, Software and Web Development, Machine Learning, and AI."
+                },
+                {
+                  "title": "Incentives",
+                  "description": "Active participants in training and meetings may receive a Certification of Attendance as an incentive."
+                },
+                {
+                  "title": "Professional Training",
+                  "description": "They will receive training from the Chief Officers of the Board of Executives to equip them with the necessary skills for their chosen office."
+                },
+                {
+                  "title": "Representation and Empowerment",
+                  "description": "This community provides members with training to develop necessary skills and fosters inclusivity. AWS technologies may be appointed as consultants to provide guidance and support to the club."
+                }
               ]
             </script>
 
             <!-- For the future-cards.js -->
             <div class="future-cards-stack" id="future-cards-stack"></div>
           </div>
-
         </div>
       </section>
     </main>
 
     <div id="footer-placeholder"></div>
 
-    <script type="module" src="../js/main.js"></script>
-    <script src="../js/nav.js"></script>
-    <script src="../js/future-cards.js" defer></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const goalGrid = document.getElementById("goal-grid");
-        if (!goalGrid) return;
-
-        const cardsData = [
-          {
-            title: "EDUCATION &amp <br/> SKILL DEVELOPMENT",
-            desc: "We empower students with AWS expertise and cloud architecture skills to build innovative solutions effectively.",
-            icon: "../assets/icons/education_and_skill_development.svg",
-          },
-          {
-            title: "INDUSTRY <br/> ENGAGEMENT",
-            desc: "We bridge academia and industry by connecting students with AWS professionals and internships to provide real-world insights and career growth.",
-            icon: "../assets/icons/industry_and_engagement.svg",
-          },
-          {
-            title: "INNOVATION &amp <br/> PROJECTS",
-            desc: "We foster innovation by encouraging students to solve real-world problems and develop AWS-based projects.",
-            icon: "../assets/icons/innovations_and_projects.svg",
-          },
-          {
-            title: "NATION<br>COMMUNITY BUILDING",
-            desc: "We foster a nationwide, inclusive AWS community through events and forums, encouraging knowledge sharing and networking among students.",
-            icon: "../assets/icons/nationcommunitybuilding.svg",
-          },
-          {
-            title: "STUDENT-CENTRIC APPROACH",
-            desc: "We put students first, providing an inclusive environment for skill development and career preparation through mentorship and leadership opportunities.",
-            icon: "../assets/icons/studentapproachcentric.svg",
-          },
-          {
-            title: "UNIVERSITY <br/> CHAPTERS &amp; COLLABORATION",
-            desc: "Supporting university chapters promotes collaboration and growth, creating an empowered network of learners and industry-connected innovators.",
-            icon: "../assets/icons/university_and_chapterscollaboration.svg",
-          },
-        ];
-
-        fetch("../components/card.html")
-          .then((response) => {
-            if (!response.ok)
-              throw new Error("Failed to load modular card component.");
-            return response.text();
-          })
-          .then((templateHtml) => {
-            const renderedCards = cardsData
-              .map((data) => {
-                return templateHtml
-                  .replace(
-                    "{{ICON}}",
-                    `<img src="${data.icon}" class="goal-card-svg" alt="${data.title}" />`,
-                  )
-                  .replace("{{TITLE}}", data.title)
-                  .replace("{{DESC}}", data.desc);
-              })
-              .join("");
-
-            goalGrid.innerHTML = renderedCards;
-          })
-          .catch((error) => console.error("Component Rendering Error:", error));
-      });
-    </script>
+    <div id="chatbot-placeholder"></div>
+    <script src="../js/main.js"></script>
+    <script src="../js/nav.js" defer></script>
+    <script src="../js/chatbot.js" defer></script>
   </body>
 </html>
