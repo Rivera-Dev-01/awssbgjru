@@ -1449,7 +1449,7 @@ main {
     transform: translateY(-50%);
     width: 10px;
     height: 55%;
-    background: #FF7A00;
+    background: linear-gradient(to bottom, #F2AF00 0%, #FF6F08 100%);
     border-radius: 6px;
     flex-shrink: 0;
 }
@@ -1518,6 +1518,7 @@ main {
         border-radius: 10px;
         margin: 90px 0 0 0;
         display: block;
+        background: linear-gradient(to bottom, #F2AF00 0%, #FF6F08 100%);
     }
 }
 
