@@ -1879,14 +1879,15 @@ main {
 
     /* ── Goals Section Mobile ── */
     .goal-header h1 {
-        margin-top: 60px !important;
-        font-size: 45px !important;
+        margin-top: 100px !important;
+        font-size: 40px !important;
     }
 
     .goal-header p {
-        font-size: 14px !important;
+        font-size: 11px !important;
         padding: 0 16px !important;
         margin-bottom: 30px !important;
+        margin-top: 5px !important;
     }
 
     /* ── Goals 2x3 Grid Layout ── */
