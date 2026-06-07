@@ -2028,12 +2028,17 @@ main {
     .goal-header h1 {
         margin-top: 160px !important; /* Pushed down to clear Vision/Mission cards */
         font-size: 45px !important;
+        background: linear-gradient(to bottom, #4363A6 0%, #1C3466 100%) !important;
+        -webkit-background-clip: text !important;
+        background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
     }
 
     .goal-header p {
-        font-size: 14px !important;
-        padding: 50px 16px 0 16px !important; /* 50px padding between title and description */
+        font-size: 11px !important;
+        padding: 20px 16px 0 16px !important; /* 50px padding between title and description */
         margin-bottom: 10px !important; /* Reduced space between description and cards */
+        line-height: 20px;
     }
 
     /* ── Goals 2x3 Grid Layout ── */
