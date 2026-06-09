@@ -20,7 +20,7 @@
       <div class="future-card ${extraClass}">
         <div class="future-card-header">
           <img
-            src="../assets/clouds/aws-pixel-cloud.svg"
+            src="../assets/about/clouds/aws-pixel-cloud.svg"
             alt="Cloud Icon"
             class="future-card-cloud-icon"
           />

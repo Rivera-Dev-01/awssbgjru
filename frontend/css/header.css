@@ -17,7 +17,7 @@
 
 .site-header {
     position: fixed;
-    top: 24px;
+    top: 12%;
     left: 50%;
     transform: translateX(-50%);
     width: auto;

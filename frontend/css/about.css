@@ -25,7 +25,7 @@
 }
 
 body.landing-page {
-    background-image: url('../assets/web.webp');
+    background-image: url('../assets/about/web.webp');
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -2201,7 +2201,7 @@ main {
         flex-direction: column !important;
         height: auto !important;
         overflow: visible !important;
-        padding: 14px 16px !important;
+        padding: 20px 20px !important;
         margin-bottom: 30px !important;
     }
 
@@ -2223,7 +2223,7 @@ main {
         width: 100% !important;
         gap: 15px !important; /* Shrunk gap from 25px for zoomed out look */
         align-items: stretch !important;
-        min-height: 320px !important;
+        min-height: 400px !important;
     }
 
     .master-list-container {
@@ -2242,13 +2242,13 @@ main {
         border: 8px solid #23395d !important; /* Shrunk from 12px for a neater scale */
         color: #ffffff !important;
         font-family: 'Poppins', sans-serif !important;
-        padding: 6px 8px 8px 8px !important; /* Maximized inner space by reducing padding */
+        padding: 10px 10px !important;
         border-radius: 16px !important; /* Shrunk from 24px */
         text-align: center !important;
         cursor: pointer !important;
         transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
         box-shadow: 0 -4px 12px rgba(0,0,0,0.15) !important;
-        height: 140px !important; /* Zoomed out from 180px */
+        height: 160px !important;
         overflow: hidden !important;
         display: flex !important;
         flex-direction: column !important;
@@ -2278,13 +2278,13 @@ main {
 
     /* ── OVERLAPPING STACK LOGIC (Zoomed Out) ── */
     .master-list-card:nth-child(1) { z-index: 1 !important; margin-top: 0 !important; }
-    .master-list-card:nth-child(2) { z-index: 2 !important; margin-top: -96px !important; }
-    .master-list-card:nth-child(3) { z-index: 3 !important; margin-top: -96px !important; }
-    .master-list-card:nth-child(4) { z-index: 4 !important; margin-top: -96px !important; }
-    .master-list-card:nth-child(5) { z-index: 5 !important; margin-top: -96px !important; }
-    .master-list-card:nth-child(6) { z-index: 6 !important; margin-top: -96px !important; }
-    .master-list-card:nth-child(7) { z-index: 7 !important; margin-top: -132px !important; }
-    .master-list-card:nth-child(8) { z-index: 8 !important; margin-top: -132px !important; }
+    .master-list-card:nth-child(2) { z-index: 2 !important; margin-top: -100px !important; }
+    .master-list-card:nth-child(3) { z-index: 3 !important; margin-top: -100px !important; }
+    .master-list-card:nth-child(4) { z-index: 4 !important; margin-top: -100px !important; }
+    .master-list-card:nth-child(5) { z-index: 5 !important; margin-top: -100px !important; }
+    .master-list-card:nth-child(6) { z-index: 6 !important; margin-top: -100px !important; }
+    .master-list-card:nth-child(7) { z-index: 7 !important; margin-top: -130px !important; }
+    .master-list-card:nth-child(8) { z-index: 8 !important; margin-top: -130px !important; }
 
     .master-list-card.active {
         background: #EDF4FF !important; /* EDF4FF at 100% */
@@ -2317,9 +2317,9 @@ main {
     .detail-slide-card {
         background: #EDF4FF !important; /* Match Skill Builder active card background */
         border-radius: 16px !important; /* Shrunk from 24px */
-        padding: 16px 12px 20px 12px !important; /* Maximized inner space */
+        padding: 20px 16px 24px 16px !important;
         width: 100% !important;
-        min-height: 350px !important; /* Zoomed out from 420px */
+        min-height: 420px !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: flex-start !important; /* Pushes title to the top */
@@ -2415,7 +2415,7 @@ main {
     .detail-slide-inner {
         background: #F5F6F8 !important;
         border-radius: 8px !important;
-        padding: 16px 16px !important;
+        padding: 20px 20px !important;
         margin: 0 !important;
     }
 
@@ -2435,7 +2435,7 @@ main {
         flex-direction: column !important;
         height: auto !important;
         overflow: visible !important;
-        padding: 24px 16px !important;
+        padding: 30px 20px !important;
         margin-bottom: 30px !important;
         background: linear-gradient(to bottom, #FFB700 0%, #F2AF00 30%, #FF6F08 78%) !important;
         border-radius: 20px !important; /* Keep it rounded */
@@ -2648,4 +2648,8 @@ main {
         font-size: clamp(10.5px, 3.3vw, 13px) !important; /* Extremely neat size for long titles so they NEVER overflow or slice */
         line-height: 1.2 !important;
     }
+}
+
+body.about-page .site-header {
+    top: 6%;
 }

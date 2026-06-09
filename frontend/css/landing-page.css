@@ -36,7 +36,7 @@ body.landing-page {
     height: 1200px;
     padding: 120px 60px 80px;       /* Removed extreme values */
     margin: 0;                      /* Removed negative margin */
-    background: url('../assets/Hero-Section.webp') no-repeat center center;
+    background: url('../assets/landing-page/backgrounds/Hero-Section.webp') no-repeat center center;
     background-size: cover;
     background-attachment: scroll;
     overflow: hidden;
@@ -371,7 +371,7 @@ body.landing-page {
 .what-we-do-section {
     position: relative;
     padding: 100px 0 250px;
-    background: url('../assets/What-We-Do-Background.webp') center center / cover no-repeat;
+    background: url('../assets/landing-page/backgrounds/What-We-Do-Background.webp') center center / cover no-repeat;
     min-height: 1500px;
     width: 100%;
     margin: 0;
@@ -586,7 +586,7 @@ body.landing-page {
 
 /* Events Section */
 .events-sponsors-bg {
-    background: url('../assets/Events-and-Sponsors-Background.webp') center/cover no-repeat;
+    background: url('../assets/landing-page/backgrounds/Events-and-Sponsors-Background.webp') center/cover no-repeat;
     padding-top: 150px;
 }
 
@@ -985,7 +985,7 @@ body.landing-page {
 
 .partner-name-img {
     color: transparent;
-    background-image: url('../assets/Tutorials-Dojo.webp');
+    background-image: url('../assets/landing-page/Tutorials-Dojo.webp');
     background-clip: text;
     -webkit-background-clip: text;
     background-size: cover;
@@ -1051,7 +1051,7 @@ body.landing-page {
         height: auto;
         padding: 0;
         margin: 0;
-        background: #fff url('../assets/Mobile-Landing-Background.webp') no-repeat center top;
+        background: #fff url('../assets/landing-page/backgrounds/Mobile-Landing-Background.webp') no-repeat center top;
         background-size: cover;
         display: flex;
         flex-direction: column;
@@ -1141,7 +1141,7 @@ body.landing-page {
 
     .who-are-we-section {
         padding: 100px 30px 180px;
-        background: url('../assets/Mobile-WhoWeAre-Background.webp') center/cover no-repeat !important;
+        background: url('../assets/landing-page/backgrounds/Mobile-WhoWeAre-Background.webp') center/cover no-repeat !important;
     }
 
     .mascot-container {
@@ -1267,7 +1267,7 @@ body.landing-page {
 
     .what-we-do-section {
         padding: 60px 24px 80px;
-        background: url('../assets/Mobile-WhatWeDo-Background.jpg') center/cover no-repeat;
+        background: url('../assets/landing-page/backgrounds/Mobile-WhatWeDo-Background.jpg') center/cover no-repeat;
         min-height: auto;
         position: relative;
     }
@@ -1475,7 +1475,7 @@ body.landing-page {
         padding: 40px 20px 60px !important;
         margin: 0 auto;
         min-height: 600px;
-        background: linear-gradient(180deg, rgba(66, 167, 236, 0.3) 0%, rgba(66, 167, 236, 0.3) 100%), url('../assets/Mobile-Events-Background.webp') center/cover no-repeat !important;
+        background: linear-gradient(180deg, rgba(66, 167, 236, 0.3) 0%, rgba(66, 167, 236, 0.3) 100%), url('../assets/landing-page/backgrounds/Mobile-Events-Background.webp') center/cover no-repeat !important;
         border-radius: 0 !important;
         box-shadow: none !important;
         max-width: 100% !important;
@@ -1806,7 +1806,7 @@ body.landing-page {
     /* Sponsors Section - Carousel */
     .sponsorship-section {
         padding: 60px 0 80px;
-        background: url('../assets/Mobile-SponsorsBackground.webp') center/cover no-repeat;
+        background: url('../assets/landing-page/backgrounds/Mobile-SponsorsBackground.webp') center/cover no-repeat;
     }
 
     .sponsorship-section .sponsorship-title {

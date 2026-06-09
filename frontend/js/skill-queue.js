@@ -32,23 +32,23 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const officesIcons = {
-            'Executive': '../assets/icons/Exec.png',
-            'Relations': '../assets/icons/Relations.png',
-            'Operations': '../assets/icons/Operations.png',
-            'Creatives': '../assets/icons/Creatives.png',
-            'Marketing': '../assets/icons/Marketing.png',
-            'Finance': '../assets/icons/Finance.png',
-            'Media': '../assets/icons/Mediaa.png',
-            'Technology': '../assets/icons/Technology.png'
+            'Executive': '../assets/about/departments-offices/Exec.png',
+            'Relations': '../assets/about/departments-offices/Relations.png',
+            'Operations': '../assets/about/departments-offices/Operations.png',
+            'Creatives': '../assets/about/departments-offices/Creatives.png',
+            'Marketing': '../assets/about/departments-offices/Marketing.png',
+            'Finance': '../assets/about/departments-offices/Finance.png',
+            'Media': '../assets/about/departments-offices/Mediaa.png',
+            'Technology': '../assets/about/departments-offices/Technology.png'
         };
 
         const departmentsIcons = {
-            'Software & Web Development': '../assets/icons/SoftwareWeb.png',
-            'Data Analytics': '../assets/icons/DataAnalytics.png',
-            'Security': '../assets/icons/Security.png',
-            'Cloud Computing': '../assets/icons/CloudComputing.png',
-            'Machine Learning & AI': '../assets/icons/MLAI.png',
-            'Advanced Network & Infrastructure': '../assets/icons/AdvInfra.png'
+            'Software & Web Development': '../assets/about/departments-offices/SoftwareWeb.png',
+            'Data Analytics': '../assets/about/departments-offices/DataAnalytics.png',
+            'Security': '../assets/about/departments-offices/Security.png',
+            'Cloud Computing': '../assets/about/departments-offices/CloudComputing.png',
+            'Machine Learning & AI': '../assets/about/departments-offices/MLAI.png',
+            'Advanced Network & Infrastructure': '../assets/about/departments-offices/AdvInfra.png'
         };
 
         const cardsData = Array.from(cardElements).map((card, index) => {
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: title,
                 desc: card.querySelector('p').innerHTML,
                 longDesc: longDescMap[title] || card.querySelector('p').innerHTML,
-                icon: iconMap[title] || (isOffices ? '../assets/office-icon.png' : '../assets/dept-icon.png')
+                icon: iconMap[title] || (isOffices ? '../assets/about/departments-offices/office-icon.png' : '../assets/about/departments-offices/dept-icon.png')
             };
         });
 
