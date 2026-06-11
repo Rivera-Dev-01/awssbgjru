@@ -992,6 +992,15 @@ body.landing-page {
     background-position: center;
 }
 
+.partner-link {
+    text-decoration: none;
+    color: inherit
+}
+
+.partner-link:hover {
+    text-decoration: none;
+}
+
 @media (max-width: 1024px) {
     .who-are-we-section > div:last-of-type {
         flex-direction: column;
