@@ -675,10 +675,13 @@ body.events-page {
     }
 
     .section-desc{
-      font-size: 16px;
-      max-width: 600px;
-      width: 1200px;
-      margin-left: -90px;
+      font-size: 19px;
+      max-width: 1900px;
+      width: 800px;
+      margin: 0 auto;
+      display: block;
+      text-align: center;
+      margin-left: -190px;
     }
 
     .event-card-img-wrap {
@@ -690,10 +693,33 @@ body.events-page {
       right: 0;
       height: 385px;
       width: 400px;
-      margin-top: -50px;
+      margin-top: -70px;
     }
 
     .event-card{
       position: relative;
+    }
+
+    .tag-workshop, .tag-hackathon{
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: #1C3466;
+      font-style: italic;
+      box-shadow: none;
+    }
+
+    .cloud-icon{
+      display: block;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+}
+
+/* Proactive Engagement Desktop Section */
+@media(min-width: 1024px){
+    .events-proactive{
+      margin-top: -100px;
+      background: url('../assets/events/backgrounds/background-3-color.png') center;
     }
 }
