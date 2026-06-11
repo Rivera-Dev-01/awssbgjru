@@ -10,7 +10,7 @@
 }
 
 body.events-page {
-  background: var(--page-bg);
+  background: url('../assets/events/backgrounds/Desktop-Event-Card-BG.jpg') center / cover fixed no-repeat;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -18,32 +18,34 @@ body.events-page {
   font-family: var(--font-poppins);
 }
 
+/* Override header placeholder — hero fills from top */
+.events-page #header-placeholder {
+    min-height: 0;
+}
+
 /* ── HERO SECTION ── */
 .events-hero {
   position: relative;
   width: 100%;
   min-height: 580px;
-  margin-top: -50px;
-  overflow: hidden;
-  background: url('../assets/events/backgrounds/Events-Page-HeroSection-Background.png') center top / cover no-repeat;
+  background: url('../assets/events/backgrounds/Desktop-Event-Hero-Bg.jpg') center top / contain no-repeat
 }
 
 .events-hero-card {
   position: absolute;
-  left: 15px;
-  right: 15px;
-  bottom: 40px;
-  aspect-ratio: 820 / 906;
+  left: 40px;
+  right: 0px;
+  bottom: 70px;
+  min-height: 750px;
   border-radius: 24px;
   overflow: hidden;
-  background: url('../assets/events/backgrounds/HeroSectionCube-Card.png') center 20px / cover no-repeat;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.25)) drop-shadow(0 1px 10px rgba(0, 0, 0, 0.1));
+  background: url('../assets/events/cards/Desktop-Cube.png') center / 100% 100% no-repeat;
 }
 
 .events-hero-content {
   position: relative;
   z-index: 2;
-  padding: 50px 30px 40px 30px;
+  padding: 60px 50px 40px 70px;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -123,15 +125,15 @@ body.events-page {
 .events-hero-badges {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin: 10px 0 50px 0;
+  gap: 25px;
+  margin: -10px 0 50px 10px;
 }
 
 .hero-badge {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex: 1;
   position: relative;
 }
@@ -152,8 +154,8 @@ body.events-page {
   content: "";
   position: absolute;
   right: -10px;
-  width: 1px;
-  height: 24px;
+  width: 1.7px;
+  height: 40px;
   background: rgba(255, 255, 255, 0.3);
 }
 
@@ -186,6 +188,7 @@ body.events-page {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+  margin-right: 10px;
 }
 
 .hero-badge-label {
@@ -219,14 +222,14 @@ body.events-page {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 7px 50px;
+  padding: 10px 60px;
   border: 0.5px solid rgba(255,255,255,0.52);
-  border-radius: 20px;
+  border-radius: 30px;
   background: linear-gradient(to left, #ff6f08 14%, #ff8f00 55%, #FFB700);
   color: #fff;
   font-family: var(--font-poppins);
   font-weight: medium;
-  font-size: 14px;
+  font-size: 20px;
   text-decoration: none;
   cursor: pointer;
   box-shadow: inset -1px -1px 0px rgba(255,255,255,0.25);
@@ -306,8 +309,9 @@ body.events-page {
 
 /* ── EVENT ARCHIVES ── */
 .events-archives {
-  background: url('../assets/events/backgrounds/Events-Archives-Background.png') center top / cover no-repeat;
+  background: #EEF6FC;
   padding: 40px 20px 60px 20px;
+  margin-top: -100px;
 }
 
 .events-archives-inner {
@@ -494,7 +498,7 @@ body.events-page {
 
 /* ── PROACTIVE ENGAGEMENT ── */
 .events-proactive {
-  background: url('../assets/events/backgrounds/Proactive-Engagement-Background.png') center top / cover no-repeat;
+  background: #FFFFFF;
   aspect-ratio: 534 / 654;
   width: 100%;
 }
@@ -662,7 +666,7 @@ body.events-page {
 
     .events-archives{
       height: 1800px;
-      background: url('../assets/events/backgrounds/background-3-color.png');
+      background: #FFFFFF;
     }
 
     .section-title-outline{
@@ -724,6 +728,6 @@ body.events-page {
 @media(min-width: 1024px){
     .events-proactive{
       margin-top: -100px;
-      background: url('../assets/events/backgrounds/background-3-color.png') center;
+      background: #FFFFFF;
     }
 }
