@@ -620,8 +620,12 @@ body.events-page {
       width: 1481px;
       height: 393px;
       margin-left: -550px;
+      padding: 0;
       background: linear-gradient(to bottom, #FFFF 0%, #084A8D 100%);
-      background: url('../assets/events/backgrounds/events-archive-card-bg.png');
+      background: url('../assets/events/cards/Desktop-Event-Card.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
       backdrop-filter: none;
       -webkit-backdrop-filter: none;
     }
@@ -691,9 +695,9 @@ body.events-page {
     .event-card-img-wrap-desktop{
       position: absolute;
       right: 0;
-      height: 385px;
+      top: 0;
       width: 400px;
-      margin-top: -70px;
+      height: 385px;
     }
 
     .event-card{
