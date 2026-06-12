@@ -816,7 +816,7 @@ body.events-page {
       top: 58%;
       display: flex;
       flex-direction: row;
-      gap: 70px;
+      gap: 10px;
     }
 
     .event-time, .event-location{
@@ -824,7 +824,6 @@ body.events-page {
       font-size: 18px;
       color: rgb(28, 52, 102, 0.70);
     }
-
 }
 
 /* Proactive Engagement Desktop Section */
