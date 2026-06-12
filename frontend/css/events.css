@@ -808,6 +808,23 @@ body.events-page {
       height: 90px;
       border-radius: 5px;
     }
+
+    .event-location-dates-container{
+      margin: 0;
+      position: absolute;
+      left: 17%;
+      top: 58%;
+      display: flex;
+      flex-direction: row;
+      gap: 70px;
+    }
+
+    .event-time, .event-location{
+      font-family: 'Poppins', 'sans-serif';
+      font-size: 18px;
+      color: rgb(28, 52, 102, 0.70);
+    }
+
 }
 
 /* Proactive Engagement Desktop Section */
