@@ -9,8 +9,14 @@
   --font-poppins: 'Poppins', sans-serif;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body.events-page {
-  background: url('../assets/events/backgrounds/Desktop-Event-Card-BG.jpg') center / cover fixed no-repeat;
+  background: url('../assets/events/backgrounds/Desktop-Event-Hero-Bg-Crisp.png') center / cover fixed no-repeat;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -18,15 +24,13 @@ body.events-page {
   font-family: var(--font-poppins);
 }
 
-/* Override header placeholder — hero fills from top */
-.events-page #header-placeholder {
-    min-height: 0;
-}
 
 /* ── HERO SECTION ── */
 .events-hero {
   position: relative;
   width: 100%;
+  margin-top: -50px;
+  padding-top: 50px;
   min-height: 580px;
   overflow: hidden;
   background:
@@ -314,7 +318,7 @@ body.events-page {
 
 /* ── EVENT ARCHIVES ── */
 .events-archives {
-  background: #EEF6FC;
+  background: linear-gradient(180deg, #e0f1fd 0%, #EEF6FC 100px, #EEF6FC 100%);
   padding: 40px 20px 60px 20px;
   margin-top: -100px;
 }
@@ -503,22 +507,7 @@ body.events-page {
 }
 
 /* ── PROACTIVE ENGAGEMENT ── */
-.events-proactive {
-  background: #FFFFFF;
-  aspect-ratio: 534 / 654;
-  width: 100%;
-}
 
-.events-proactive-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-.upcoming-label {
   font-family: var(--font-poppins);
   font-weight: 500;
   font-size: 15px;
@@ -580,9 +569,19 @@ body.events-page {
 
 /* Desktop Version - Hero Section */
 @media(min-width: 1024px){
+    body.events-page {
+        background: #e0f1fd;
+    }
+
     .events-hero{
-        min-height: 110vh; 
-        margin-top: 0;
+        min-height: 800px;
+        height: 100vh;
+        margin-top: -120px;
+        padding-top: 120px;
+        background: #e0f1fd url('../assets/events/backgrounds/Desktop-Event-Hero-Bg.svg') top center / 100% auto no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .events-hero-content{
@@ -593,6 +592,10 @@ body.events-page {
     .events-hero-card{
         height: 700px;
         width: 1500px;
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
         margin: 0 auto;
         padding: 0 0 20px 20px;
     }
@@ -701,13 +704,16 @@ body.events-page {
     }
 
     .events-archives{
-      height: 1800px;
-      background: #FFFFFF;
+      padding-bottom: 60px;
+      background: linear-gradient(180deg, #e0f1fd 0%, #FFFFFF 150px, #FFFFFF 100%);
     }
 
     .section-title-outline{
       margin: 120px auto 0 auto;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
       font-size: 75px;
+      line-height: 112px;
       width: fit-content;
       height: 113px;
       background: linear-gradient(180deg, #FFB700 0%, #F2AF00 44%, #FF6F08 78%);
@@ -715,6 +721,8 @@ body.events-page {
       -webkit-text-fill-color: transparent;
       background-clip: text;
       color: transparent;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      text-align: center;
       display: block;
     }
 
@@ -743,6 +751,21 @@ body.events-page {
     .event-card{
       position: relative;
       z-index: 2;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 20px 40px -15px rgba(28, 52, 102, 0.1);
+      opacity: 0;
+      animation: waterfallFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .event-card:nth-child(1) { animation-delay: 100ms; }
+    .event-card:nth-child(2) { animation-delay: 200ms; }
+    .event-card:nth-child(3) { animation-delay: 300ms; }
+    .event-card:nth-child(4) { animation-delay: 400ms; }
+    .event-card:nth-child(5) { animation-delay: 500ms; }
+
+    @keyframes waterfallFadeUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     .tag-workshop, .tag-hackathon{
@@ -759,14 +782,36 @@ body.events-page {
       margin-bottom: 0px;
     }
 
-    .cloud-icon{
-      display: block;
-      width: 100vw;
-      margin-left: 50%;
-      transform: translateX(-50%);
-      margin-top: 30px;
+    .cloud-separator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 44px;
+      width: 100%;
+      margin-top: -60px; /* Pulls it up as a bridge between sections */
+      margin-bottom: 40px;
       position: relative;
-      z-index: 0;
+      z-index: 5;
+    }
+
+    .cloud-line {
+      width: 197px;
+      height: 1.5px;
+    }
+
+    .cloud-line:first-child {
+      background: linear-gradient(270deg, rgba(56, 104, 204, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    .cloud-line:last-child {
+      background: linear-gradient(90deg, rgba(56, 104, 204, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    .cloud-icon-small {
+      width: 61px;
+      height: 41px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
     }
 
     .events-archives{
@@ -828,7 +873,7 @@ body.events-page {
       margin: 0;
       position: absolute;
       left: 17%;
-      top: 58%;
+      top: 61%;
       display: flex;
       flex-direction: row;
       gap: 10px;
@@ -838,13 +883,5 @@ body.events-page {
       font-family: 'Poppins', 'sans-serif';
       font-size: 18px;
       color: rgb(28, 52, 102, 0.70);
-    }
-}
-
-/* Proactive Engagement Desktop Section */
-@media(min-width: 1024px){
-    .events-proactive{
-      margin-top: -100px;
-      background: #FFFFFF;
     }
 }
