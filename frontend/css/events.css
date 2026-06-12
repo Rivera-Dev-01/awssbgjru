@@ -289,9 +289,10 @@ body.events-page {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   margin: 0 auto;
-  width: 271px;
+  width: max-content;
+  white-space: nowrap;
   height: 53px;
   transform: translateY(-30px);
 }
@@ -315,7 +316,8 @@ body.events-page {
 }
 
 .events-archives-inner {
-  max-width: 400px;
+  max-width: 414px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -623,7 +625,7 @@ body.events-page {
     .event-card{
       width: 1481px;
       height: 393px;
-      margin-left: -550px;
+      margin: 0 auto 24px auto;
       padding: 0;
       background: linear-gradient(to bottom, #FFFF 0%, #084A8D 100%);
       background: url('../assets/events/cards/Desktop-Event-Card.jpg');
@@ -632,14 +634,41 @@ body.events-page {
       background-position: center;
       backdrop-filter: none;
       -webkit-backdrop-filter: none;
+      display: flex;
+      flex-direction: column;
     }
+
+    .events-archives-inner {
+      max-width: 1481px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+.event-card-top {
+  flex: 1;
+}
     
+.event-card-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
     .event-card-title{
       font-size: 45px;
+      font-weight: bold;
+      text-align: left;
+      margin-left: 224px;
+      margin-right: 420px;
     }
     
     .event-card-subtitle{
       font-size: 37px;
+      text-align: left;
+      margin-left: 224px;
+      margin-right: 420px;
+      line-height: 1.3;
     }
 
     .event-card-desc{
@@ -654,10 +683,13 @@ body.events-page {
       align-items: center;
       justify-content: center;
       color: #1C3466;
-      background: rgba(255, 255, 255, 0.70);
-      border-color: #1C3466;
-      border: 2px solid;
+      background: rgba(255, 255, 255, 1);
+      border: 2px solid #1C3466;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25); 
+      margin-left: 224px;
+      margin-top: auto;
+      margin-bottom: 35px;
+      padding: 0;
     }
 
     .event-card-btn{
@@ -670,7 +702,7 @@ body.events-page {
     }
 
     .section-title-outline{
-      margin-top: 120px;
+      margin: 120px auto 0 auto;
       font-size: 75px;
       width: fit-content;
       height: 113px;
@@ -686,10 +718,9 @@ body.events-page {
       font-size: 19px;
       max-width: 1900px;
       width: 800px;
-      margin: 0 auto;
+      margin: 10px auto 0 auto;
       display: block;
       text-align: center;
-      margin-left: -190px;
     }
 
     .event-card-img-wrap {
@@ -712,9 +743,14 @@ body.events-page {
       background: none;
       border: none;
       font-size: 24px;
+      font-weight: 500;
       color: #1C3466;
       font-style: italic;
       box-shadow: none;
+      align-self: flex-start;
+      margin-left: 207px;
+      margin-top: 35px;
+      margin-bottom: 0px;
     }
 
     .cloud-icon{
