@@ -898,11 +898,12 @@ body.events-page {
     display: none;
   }
 
-  .event-card{
+  .event-card {
     width: 372px;
-    height: 269px;
+    height: 320px;
     margin: 0 auto;
     margin-bottom: 20px;
+    position: relative;
   }
 
   .event-card-title{
@@ -911,15 +912,20 @@ body.events-page {
 
   .tag-workshop, .tag-hackathon{
     position: absolute;
+    top: 16px;
+    left: 55%;
     background: linear-gradient(-115deg, #649CEC 0%, #006AFF 100%);
     font-size: 11.05px;
+    margin-bottom: 0;
   }
 
   .event-card-info{
-    position: absolute;
-    top: 15%;
-    left: 55%;
+    position: static;
+    display: flex;
+    flex-direction: column;
     gap: 7px;
+    margin-top: 25px;
+
   }
 
   .event-card-img-wrap{
@@ -954,12 +960,14 @@ body.events-page {
 
   .event-date-containers-mobile{
     position: absolute;
-    top: 100%;
-    right: 0%;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
     display: flex;
     flex-direction: row;
-    row-gap: 20px;
-    padding: 10px 10px 10px 10px;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 0;
   }
 
   .event-date-details-mobile{
@@ -971,10 +979,10 @@ body.events-page {
   }
 
   .event-date-card-mobile{
-    margin-left: 20px;
+    margin-left: 0x;
     background: #3868CC;
     color: #FFFFFF;
-    width: 101px;
+    flex: 1;
     height: 91px;
     border-radius: 5px;
     position: relative;
@@ -1055,6 +1063,287 @@ body.events-page {
   .hero-badge-icon{
     width: 25.01px;
     height: 25.01px;
+  }
+
+  /* ── SPLIT MOBILE LAYOUTS (event-split-left & event-split-right) ── */
+  .event-card.event-split-left,
+  .event-card.event-split-right {
+    --card-w: 380px;
+    --card-h: 450px;
+    --frame-w: 225px;
+    --img-h: 210px;
+    --gap-top: 8px;
+    --content-w: 148px;
+
+    position: relative;
+    width: var(--card-w);
+    height: var(--card-h);
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-radius: 0;
+    padding: 0;
+    overflow: visible;
+  }
+
+  /* ── SPLIT LEFT (Byte Forward) ── */
+  .event-card.event-split-left::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--frame-w);
+    height: var(--card-h);
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 20px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.10);
+    z-index: 0;
+  }
+
+  .event-card.event-split-left .event-card-img-wrap {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: var(--frame-w);
+    height: var(--img-h);
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .event-card.event-split-left .event-card-tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    z-index: 5;
+  }
+
+  .event-card.event-split-left .event-card-top {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .event-card.event-split-left .event-card-info {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: var(--content-w);
+    z-index: 5;
+    gap: 6px;
+    height: auto;
+    margin-top: 0;
+    text-align: left;
+    border-right: 1.5px solid rgba(28, 52, 102, 0.15);
+    padding-right: 12px;
+    box-sizing: border-box;
+  }
+
+  .event-card.event-split-left .event-date-containers-mobile {
+    position: absolute;
+    top: calc(var(--img-h) + var(--gap-top));
+    right: 0;
+    left: auto;
+    width: var(--frame-w);
+    padding: 6px 8px 10px 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    z-index: 1;
+    bottom: auto;
+    box-sizing: border-box;
+  }
+
+  /* ── SPLIT RIGHT (Community Day) ── */
+  .event-card.event-split-right::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--frame-w);
+    height: var(--card-h);
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 20px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.10);
+    z-index: 0;
+  }
+
+  .event-card.event-split-right .event-card-img-wrap {
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--frame-w);
+    height: var(--img-h);
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .event-card.event-split-right .event-card-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-left: 0;
+    z-index: 5;
+  }
+
+  .event-card.event-split-right .event-card-top {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .event-card.event-split-right .event-card-info {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    width: var(--content-w);
+    z-index: 5;
+    gap: 6px;
+    height: auto;
+    margin-top: 0;
+    text-align: left;
+    border-left: 1.5px solid rgba(28, 52, 102, 0.15);
+    padding-left: 12px;
+    box-sizing: border-box;
+  }
+
+  .event-card.event-split-right .event-date-containers-mobile {
+    position: absolute;
+    top: calc(var(--img-h) + var(--gap-top));
+    left: 0;
+    right: auto;
+    width: var(--frame-w);
+    padding: 6px 8px 10px 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    z-index: 1;
+    bottom: auto;
+    box-sizing: border-box;
+  }
+
+  /* ── COMMON SPLIT LAYOUT CHILD STYLES ── */
+  .event-card.event-split-left .event-card-img-wrap img,
+  .event-card.event-split-right .event-card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .event-card.event-split-left .event-card-title,
+  .event-card.event-split-right .event-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1c3466;
+    text-align: left;
+    line-height: 1.2;
+  }
+
+  .event-card.event-split-left .event-card-subtitle,
+  .event-card.event-split-right .event-card-subtitle {
+    font-size: 11px;
+    font-weight: 600;
+    color: #1c3466;
+    text-align: left;
+  }
+
+  .event-card.event-split-left .event-card-desc,
+  .event-card.event-split-right .event-card-desc {
+    display: block;
+    font-size: 9px;
+    font-weight: 300;
+    color: #1c3466;
+    text-align: left;
+    line-height: 1.5;
+    margin-top: 4px;
+  }
+
+  .event-card.event-split-left .event-card-btn,
+  .event-card.event-split-right .event-card-btn {
+    display: inline-flex;
+    width: var(--content-w);
+    padding: 10px 0;
+    border-radius: 25px;
+    background: linear-gradient(to left, #ff6f08 14%, #ffb700 100%);
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    justify-content: center;
+    margin-top: 12px;
+    align-self: flex-start;
+  }
+
+  .event-card.event-split-left .event-date-card-mobile,
+  .event-card.event-split-right .event-date-card-mobile {
+    margin-left: 0;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 0 8px;
+    box-sizing: border-box;
+  }
+
+  /* Grid span for Location card (last-child) */
+  .event-card.event-split-left .event-date-card-mobile:last-child,
+  .event-card.event-split-right .event-date-card-mobile:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .event-card.event-split-left .event-date-icon-ellipse,
+  .event-card.event-split-right .event-date-icon-ellipse {
+    width: 28px;
+    height: 28px;
+    margin-top: 0;
+    flex-shrink: 0;
+  }
+
+  .event-card.event-split-left .calendar-icon,
+  .event-card.event-split-right .calendar-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .event-card.event-split-left .event-date-details-mobile,
+  .event-card.event-split-right .event-date-details-mobile {
+    text-align: left;
+    margin-top: 0;
+    gap: 1px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .event-card.event-split-left .event-title-mobile,
+  .event-card.event-split-right .event-title-mobile {
+    font-size: 9px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  .event-card.event-split-left .event-subtitle-mobile,
+  .event-card.event-split-right .event-subtitle-mobile {
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.2;
+  }
+
+  .event-card.event-split-left .event-description-mobile,
+  .event-card.event-split-right .event-description-mobile {
+    font-size: 9px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: left;
+    line-height: 1.1;
   }
 
   .hero-badge-icon img{
