@@ -1006,4 +1006,58 @@ body.events-page {
     align-items: center;  
     justify-content: center;
   }
+
+  .events-hero-card{
+    width: fit-content;
+    height: 500px;
+    min-height: 500px;
+    left: 10%;
+    transform: translateX(-5%);
+  }
+
+  .events-and-community-badge{
+    display: none;
+  }
+
+  .events-hero-subtitle{
+    font-size: 21px;
+  }
+
+  .events-hero-content{
+    right: 5%;
+  }
+
+  .events-btn-primary{
+    width: 201px;
+    height: 34.71px;
+    font-size: 12px;
+    max-width: 500px;
+    padding: 10px;
+    padding-left: 40px;
+    position: absolute;
+    top: 79%;
+  }
+
+  .hero-badge{
+    flex-direction: column;
+  }
+
+  .hero-badge-sublabel{
+    font-size: 7px;
+  }
+
+  .hero-badge-text{
+    display: block;
+    text-align: center;
+    line-height: 0;
+  }
+
+  .hero-badge-icon{
+    width: 25.01px;
+    height: 25.01px;
+  }
+
+  .hero-badge-icon img{
+    height: 25.01px;
+  }
 }
