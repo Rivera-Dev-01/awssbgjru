@@ -362,10 +362,12 @@ body.events-page {
 
 .tag-workshop {
   background: linear-gradient(180deg, #649cec 0%, #006aff 100%);
+  left: 55%;
 }
 
 .tag-hackathon {
   background: linear-gradient(180deg, rgba(100,156,236,0.64) 0%, #006aff 100%);
+  left: 55%;
 }
 
 .event-card-top {
@@ -409,7 +411,7 @@ body.events-page {
 .event-card-subtitle {
   font-family: var(--font-poppins);
   font-weight: 500;
-  font-size: 10px;
+  font-size: 11px;
   color: #173574;
   margin: 0;
   line-height: 1.3;
@@ -884,4 +886,124 @@ body.events-page {
       font-size: 18px;
       color: rgb(28, 52, 102, 0.70);
     }
+
+    .event-date-containers-mobile{
+      display: none;
+    }
+}
+
+/* Mobile Version Events Page Update */
+@media(max-width: 780px){
+  .event-date-card-container, .event-location-dates-container{
+    display: none;
+  }
+
+  .event-card{
+    width: 372px;
+    height: 269px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .event-card-title{
+    font-size: 21px;
+  }
+
+  .tag-workshop, .tag-hackathon{
+    position: absolute;
+    background: linear-gradient(-115deg, #649CEC 0%, #006AFF 100%);
+    font-size: 11.05px;
+  }
+
+  .event-card-info{
+    position: absolute;
+    top: 15%;
+    left: 55%;
+    gap: 7px;
+  }
+
+  .event-card-img-wrap{
+    width: 180px;
+    height: 126px;
+  }
+
+  .cloud-icon-small{
+    display: none;
+  }
+
+  .section-title-outline{
+    margin-top: 90px;
+  }
+
+  .event-title-mobile, 
+  .event-subtitle-mobile, 
+  .event-description-mobile{
+    font-family: 'Poppins';
+    text-align: center;
+  }
+
+  .event-title-mobile, .event-description-mobile{
+    font-size: 9px;
+    font-weight: lighter;
+  }
+
+  .event-subtitle-mobile{
+    font-size: 9px;
+    font-weight: normal;
+  }
+
+  .event-date-containers-mobile{
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    display: flex;
+    flex-direction: row;
+    row-gap: 20px;
+    padding: 10px 10px 10px 10px;
+  }
+
+  .event-date-details-mobile{
+    position: relative;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+  }
+
+  .event-date-card-mobile{
+    margin-left: 20px;
+    background: #3868CC;
+    color: #FFFFFF;
+    width: 101px;
+    height: 91px;
+    border-radius: 5px;
+    position: relative;
+  }
+
+  .event-date-icon-ellipse{
+    margin-top: 10px;
+    position: relative;
+    background: linear-gradient(180deg, #6AA5F9 0%, #250F53 100%);
+    border-radius: 30px;
+    width: 31.56px;
+    height: 31.56px;
+    display: block;
+    box-shadow: 0px 4px 6px 0px rgb(27, 27, 27);
+  }
+
+  .event-date-icon-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .calendar-icon{
+    width: 31.56px;
+    height: 31.56px;
+    display: block;
+    align-items: center;  
+    justify-content: center;
+  }
 }
