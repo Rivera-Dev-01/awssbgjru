@@ -4,6 +4,7 @@
     <span>Back to Events</span>
   </button>
 
+  <!-- Desktop Hero -->
   <article class="event-detail-hero">
     <div class="event-detail-hero-left">
       <div class="event-detail-hero-left-content">
@@ -22,6 +23,53 @@
     </div>
   </article>
 
+  <!-- Mobile Hero Card (shown only on ≤480px) -->
+  <article class="event-detail-hero-mobile">
+    <div class="mobile-hero-img-area">
+      <img data-mobile-title-img alt="" />
+    </div>
+    <div class="mobile-hero-badge-wrap">
+      <img src="../assets/events/Kiro-Rocket.png" alt="" class="mobile-hero-rocket" />
+      <span class="mobile-hero-badge-circle"></span>
+      <span class="mobile-hero-badge-text" data-mobile-category></span>
+    </div>
+    <h1 class="mobile-hero-title" data-mobile-title></h1>
+    <div class="mobile-hero-line"></div>
+    <p class="mobile-hero-subtitle" data-mobile-subtitle></p>
+    <p class="mobile-hero-quote" data-mobile-quote></p>
+    <div class="mobile-hero-line-2"></div>
+    <div class="mobile-hero-meta">
+      <div class="mobile-meta-card">
+        <div class="mobile-meta-circle mobile-meta-circle-1"></div>
+        <span class="mobile-meta-label">DATE</span>
+        <span class="mobile-meta-value" data-mobile-date></span>
+        <span class="mobile-meta-sub">1 - Day Workshop</span>
+      </div>
+      <div class="mobile-meta-card">
+        <div class="mobile-meta-circle mobile-meta-circle-2"></div>
+        <span class="mobile-meta-label">DURATION</span>
+        <span class="mobile-meta-value" data-mobile-time></span>
+        <span class="mobile-meta-sub" data-mobile-timesub></span>
+      </div>
+      <div class="mobile-meta-card">
+        <div class="mobile-meta-circle mobile-meta-circle-3"></div>
+        <span class="mobile-meta-label">LOCATION</span>
+        <span class="mobile-meta-value" data-mobile-location></span>
+        <span class="mobile-meta-sub" data-mobile-locationsub></span>
+      </div>
+    </div>
+    <p class="mobile-hero-summary" data-mobile-summary></p>
+    <img class="mobile-hero-summary-card" src="../assets/events/Kiro-Stack-Card.png" alt="" aria-hidden="true" />
+    <div class="mobile-hero-stacked">
+      <div class="mobile-st-layer mobile-st-1"></div>
+      <div class="mobile-st-layer mobile-st-2"></div>
+      <div class="mobile-st-layer mobile-st-3"></div>
+      <div class="mobile-st-icon-wrap">
+        <div class="mobile-st-circle"></div>
+      </div>
+    </div>
+  </article>
+
   <div class="event-detail-mid-background" aria-hidden="true"></div>
   <section class="event-detail-summary">
     <div class="event-detail-summary-box">
@@ -31,13 +79,13 @@
   </section>
 
   <section class="event-detail-meta" aria-label="Event details">
-    <article class="event-detail-meta-card" data-meta-card="time">
-      <div class="event-detail-meta-icon" data-meta-icon="time"></div>
-      <strong data-event-time></strong>
-    </article>
     <article class="event-detail-meta-card" data-meta-card="date">
       <div class="event-detail-meta-icon" data-meta-icon="date"></div>
       <strong data-event-date></strong>
+    </article>
+    <article class="event-detail-meta-card" data-meta-card="time">
+      <div class="event-detail-meta-icon" data-meta-icon="time"></div>
+      <strong data-event-time></strong>
     </article>
     <article class="event-detail-meta-card" data-meta-card="location">
       <div class="event-detail-meta-icon" data-meta-icon="location"></div>

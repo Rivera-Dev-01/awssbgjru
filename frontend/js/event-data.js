@@ -8,8 +8,13 @@ const eventDetailData = [
     heroImage: '../assets/events/cards/kiro-poster.jpg',
     relatedHeroImage: '../assets/events/kiro-workshop-img.png',
     summary: 'The cloud powers modern innovation. This event allowed students to get hands-on experience in AI-assisted development. In this interactive Kiro Workshop, they learned to build real, web-based applications using cutting-edge, spec-driven AI tools.',
-    time: '1:00 PM - 5:00 PM',  
+    time: '1:00 PM - 5:00 PM',
     date: 'April 7, 2026',
+    mobileDuration: '4 HOURS',
+    mobileDurationSub: 'Hands on Experience',
+    mobileTitleImage: '../assets/events/cards/Mobile-Kiro.png',
+    mobileLocation: 'Jose Rizal University',
+    mobileLocationSub: 'Bldg, H - 407',
     location: 'JRU Bldg. H, H - 407',
     insights: [
       {
@@ -71,6 +76,8 @@ const eventDetailData = [
     time: '24 Hours',
     date: 'August 7 & 8, 2025',
     location: 'Seda Vertis North, Quezon City',
+    mobileDuration: '24 Hours',
+    mobileDurationSub: 'NCR Leg 2025',
     insights: [
       {
         key: 'left',
@@ -139,6 +146,8 @@ const eventDetailData = [
     time: '8:30 AM - 3:00 PM',
     date: 'September 17, 2025',
     location: 'JRU Centennial Bldg., Auditorium, 9th Floor',
+    mobileDuration: '8:30 AM - 3:00 PM',
+    mobileDurationSub: 'Full Day Event',
     insights: [
       {
         key: 'left',

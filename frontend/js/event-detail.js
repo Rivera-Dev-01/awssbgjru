@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const root = document.getElementById('event-detail-root');
   if (!root) return;
 
-  await loadComponent('event-detail-root', '../components/event-detail.html?v=20260612-18');
+  await loadComponent('event-detail-root', '../components/event-detail.html?v=20260613-05');
 
   if (!root.querySelector('.event-detail-hero')) return;
 
@@ -29,6 +29,10 @@ function renderEventDetail() {
   renderRelatedEvents(root, event);
 
   root.dataset.eventSlug = event.slug;
+
+  if (window.innerWidth <= 480) {
+    injectMobileWaves(root);
+  }
 
   document.title = `${event.title} | AWS Learning Club`;
 
@@ -53,11 +57,39 @@ function renderHero(root, event) {
     img.style.setProperty('--event-hero-image-position', event.heroImagePosition || 'center');
   }
 
+  const mobileTitleImg = root.querySelector('[data-mobile-title-img]');
+  if (mobileTitleImg) {
+    mobileTitleImg.src = event.mobileTitleImage || '';
+    mobileTitleImg.alt = `${event.title} poster`;
+  }
+
   setText(root, '[data-event-category]', event.category);
+  setText(root, '[data-mobile-category]', event.category);
   setText(root, '[data-event-title]', event.title);
-  setText(root, '[data-event-subtitle]', event.subtitle);
-  setText(root, '[data-event-quote]', event.quote);
+  setText(root, '[data-mobile-title]', event.title);
+
+  const subtitleEl = root.querySelector('[data-event-subtitle]');
+  if (subtitleEl) {
+    subtitleEl.innerHTML = (event.subtitle || '').replace(/AI Shift/g, '<span class="subtitle-highlight">AI Shift</span>');
+  }
+
+  const mobileSubtitleEl = root.querySelector('[data-mobile-subtitle]');
+  if (mobileSubtitleEl) {
+    mobileSubtitleEl.innerHTML = (event.subtitle || '').replace(/AI Shift/g, '<span class="subtitle-highlight">AI Shift</span>');
+  }
+
+  const quoteEl = root.querySelector('[data-event-quote]');
+  if (quoteEl) {
+    quoteEl.innerHTML = (event.quote || '').replace(/KIRO/g, '<span class="quote-highlight">KIRO</span>');
+  }
+
+  const mobileQuoteEl = root.querySelector('[data-mobile-quote]');
+  if (mobileQuoteEl) {
+    mobileQuoteEl.innerHTML = (event.quote || '').replace(/KIRO/g, '<span class="quote-highlight">KIRO</span>');
+  }
+
   setText(root, '[data-event-summary]', event.summary);
+  setText(root, '[data-mobile-summary]', event.summary);
 }
 
 const metaIcons = {
@@ -67,6 +99,22 @@ const metaIcons = {
 };
 
 function renderMeta(root, event) {
+  const labels = {
+    date: 'DATE',
+    time: 'DURATION',
+    location: 'LOCATION'
+  };
+  const subValues = {
+    time: event.mobileDurationSub || '',
+    location: event.mobileLocationSub || ''
+  };
+
+  setText(root, '[data-mobile-date]', event.date);
+  setText(root, '[data-mobile-time]', event.mobileDuration || event.time);
+  setText(root, '[data-mobile-timesub]', event.mobileDurationSub || '');
+  setText(root, '[data-mobile-location]', event.mobileLocation || event.location);
+  setText(root, '[data-mobile-locationsub]', event.mobileLocationSub || '');
+
   [['time', event.time], ['date', event.date], ['location', event.location]].forEach(([key, value]) => {
     const card = root.querySelector(`[data-meta-card="${key}"]`);
     if (!card) return;
@@ -75,10 +123,40 @@ function renderMeta(root, event) {
     if (strong) strong.textContent = value || '';
     const icon = card.querySelector('[data-meta-icon]');
     if (icon && metaIcons[key]) icon.innerHTML = metaIcons[key];
+
+    if (window.innerWidth <= 480) {
+      let label = card.querySelector('.event-detail-meta-label');
+      if (!label) {
+        label = document.createElement('span');
+        label.className = 'event-detail-meta-label';
+        card.insertBefore(label, strong ? strong.nextSibling : null);
+      }
+      label.textContent = labels[key] || '';
+
+      let sub = card.querySelector('.event-detail-meta-sub');
+      if (!sub) {
+        sub = document.createElement('span');
+        sub.className = 'event-detail-meta-sub';
+        card.appendChild(sub);
+      }
+      sub.textContent = subValues[key] || '';
+
+      if (key === 'time') {
+        strong.textContent = event.mobileDuration || value;
+      }
+      if (key === 'location') {
+        strong.textContent = event.mobileLocation || value;
+      }
+    }
   });
 }
 
 function renderInsights(root, event) {
+  const mobileTitles = {
+    left: 'KEY TOPICS',
+    right: 'LEARNING OUTCOME'
+  };
+
   ['left', 'center', 'right'].forEach((key) => {
     const insight = (event.insights || []).find((i) => i.key === key);
     const card = root.querySelector(`[data-insight-card="${key}"]`);
@@ -86,7 +164,8 @@ function renderInsights(root, event) {
     if (!insight) { card.hidden = true; return; }
 
     card.hidden = false;
-    setText(root, `[data-insight-title="${key}"]`, insight.title);
+    const title = window.innerWidth <= 480 && mobileTitles[key] ? mobileTitles[key] : insight.title;
+    setText(root, `[data-insight-title="${key}"]`, title);
 
     const icon = root.querySelector(`[data-insight-icon="${key}"]`);
     if (icon) icon.innerHTML = insightIcons[insight.type] || insightIcons.learn;
@@ -281,6 +360,23 @@ function getRelatedSlugs(event) {
 function setText(root, selector, value) {
   const el = root.querySelector(selector);
   if (el) el.textContent = value || '';
+}
+
+function injectMobileWaves(root) {
+  const shell = root.querySelector('.event-detail-shell');
+  if (!shell) return;
+  const waveEl = document.createElement('div');
+  waveEl.className = 'event-detail-mobile-waves';
+  shell.appendChild(waveEl);
+
+  const waves = ['wave-xl', 'wave-lg', 'wave-md', 'wave-mid', 'wave-sm', 'wave-bottom', 'wave-bottom-last'];
+  waves.forEach((name) => {
+    const img = document.createElement('img');
+    img.className = `event-detail-wave event-detail-wave-${name}`;
+    img.src = `../assets/events/mobile/${name}.svg`;
+    img.alt = '';
+    waveEl.appendChild(img);
+  });
 }
 
 function handleRootClick(event) {
