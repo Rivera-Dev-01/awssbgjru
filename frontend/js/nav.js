@@ -6,10 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(() => {
       highlightActiveLink();
       initMobileSidebar();
-    });
+    })
+    .catch((err) => console.error('Header load failed:', err));
 
   // Load dynamic footer
-  loadComponent('footer-placeholder', '../components/footer.html');
+  loadComponent('footer-placeholder', '../components/footer.html')
+    .catch((err) => console.error('Footer load failed:', err));
 });
 
 
@@ -32,8 +34,10 @@ function highlightActiveLink() {
 
     if ((isCurrentHome && isTargetHome) || currentPageName === targetPageName || isCurrentEvents) {
       item.classList.add('active');
+      item.setAttribute('aria-current', 'page');
     } else {
       item.classList.remove('active');
+      item.removeAttribute('aria-current');
     }
   });
 }
@@ -174,13 +178,13 @@ function slideDetailCard(cardId, titleId, descId, dataObj, newKey, clickedEl, ic
   }, 300); // Wait 300ms for exit animation to complete
 }
 
-function selectMobileDept(deptId) {
-  slideDetailCard('mobile-dept-detail-card', 'mobile-dept-detail-title', 'mobile-dept-detail-desc', mobileDeptData, deptId, event.currentTarget, 'mobile-dept-detail-icon');
+function selectMobileDept(deptId, el) {
+  slideDetailCard('mobile-dept-detail-card', 'mobile-dept-detail-title', 'mobile-dept-detail-desc', mobileDeptData, deptId, el || event.currentTarget, 'mobile-dept-detail-icon');
 }
 window.selectMobileDept = selectMobileDept;
 
-function selectMobileOffice(officeId) {
-  slideDetailCard('mobile-office-detail-card', 'mobile-office-detail-title', 'mobile-office-detail-desc', mobileOfficeData, officeId, event.currentTarget, 'mobile-office-detail-icon');
+function selectMobileOffice(officeId, el) {
+  slideDetailCard('mobile-office-detail-card', 'mobile-office-detail-title', 'mobile-office-detail-desc', mobileOfficeData, officeId, el || event.currentTarget, 'mobile-office-detail-icon');
 }
 window.selectMobileOffice = selectMobileOffice;
 

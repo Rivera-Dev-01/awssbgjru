@@ -9,6 +9,12 @@
     />
     <title>AWS Learning Club - About</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <meta property="og:title" content="AWS Learning Club - About" />
+    <meta property="og:description" content="Learn about AWS Learning Club JRU Chapter - our mission, vision, departments, and the team behind the community" />
+    <meta property="og:image" content="../assets/shared/components/AWS-NewLogo.webp" />
+    <meta property="og:url" content="https://awslearningclub.jru/about" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
     <script type="speculationrules">
     {
       "prefetch": [{
@@ -31,7 +37,7 @@
   <body class="about-page">
     <div id="header-placeholder"></div>
 
-    <main>
+    <main id="main-content">
       <!-- About page content -->
       <section class="about-hero">
         <div class="hero-container">
@@ -153,7 +159,7 @@
             </div>
             <h3 class="header-card">EDUCATION <br/> & SKILL DEVELOPMENT</h3>
             <p class="card-info">We empower students with AWS expertise and cloud architecture skills to build innovative solutions effectively.</p>
-            <a href="" class="goal-card-btn">More</a>
+            <a href="#" class="goal-card-btn">More</a>
             </div>
           </div>
 
@@ -164,7 +170,7 @@
             </div>
             <h3 class="header-card">INNOVATION & <br/> PROJECTS</h3>
             <p class="card-info">We foster innovation by encouraging students to solve real-world problems and develop AWS-based projects.</p>
-            <a href="" class="goal-card-btn">More</a>
+            <a href="#" class="goal-card-btn">More</a>
             </div>
           </div>
 
@@ -176,7 +182,7 @@
             <h3 class="header-card">INDUSTRY <br/> ENGAGEMENT</h3>
             <p class="card-info">We bridge academia and industry by connecting students with AWS professionals and internships to provide real-world insights
               and career growth.</p>
-            <a href="" class="goal-card-btn">More</a>
+            <a href="#" class="goal-card-btn">More</a>
             </div>
           </div>
           
@@ -187,7 +193,7 @@
             </div>
             <h3 class="header-card">NATION <br/> COMMUNITY BUILDING</h3>
             <p class="card-info">We foster nationwide, inclusive AWS community through events and forums, encouraging knowledge sharing and networking among students.</P>
-            <a href="" class="goal-card-btn">More</a>
+            <a href="#" class="goal-card-btn">More</a>
             </div>
           </div>
 
@@ -199,7 +205,7 @@
                 <h3 class="header-card">STUDENT-CENTRIC APPROACH</h3>
                 <p class="card-info">We put students first, providing an inclusive environment for skill development and career preparation through mentorship and
                   leadership opportunities.</p>
-                <a href="" class="goal-card-btn">More</a>
+                <a href="#" class="goal-card-btn">More</a>
             </div>
           </div>
 
@@ -211,7 +217,7 @@
             <h3 class="header-card">UNIVERSITY CHAPTERS & COLLABORATION</h3>
             <p class="card-info">Supporting university chapters promotes collaboration and growth, creating an empowered network of learners and industry-connected
               innovators.</p>
-            <a href="" class="goal-card-btn">More</a>
+            <a href="#" class="goal-card-btn">More</a>
             </div>
           </div>
 
@@ -286,27 +292,27 @@
                                 <!-- Mobile Departments Side-by-Side -->
         <div class="skill-builder-mobile-drawer mobile-only">
           <div class="master-list-container">
-            <div class="master-list-card active" onclick="selectMobileDept('software-web')">
+            <div class="master-list-card active" onclick="selectMobileDept('software-web', this)">
                 <span class="master-list-title">Software & Web<br/>Development</span>
                 <p class="master-list-desc">Focuses on building technical proficiency in web and application development while enhancing coding skills through personal projects.</p>
             </div>
-            <div class="master-list-card" onclick="selectMobileDept('data-analytics')">
+            <div class="master-list-card" onclick="selectMobileDept('data-analytics', this)">
                 <span class="master-list-title">Data Analytics</span>
                 <p class="master-list-desc">Develops skills in complex data analysis to drive technological advancement and prepare members for data-driven industries.</p>
             </div>
-            <div class="master-list-card" onclick="selectMobileDept('security')">
+            <div class="master-list-card" onclick="selectMobileDept('security', this)">
                 <span class="master-list-title">Security</span>
                 <p class="master-list-desc">Focuses on the critical field of cybersecurity, equipping members with the skills necessary to protect digital assets and implement security best practices.</p>
             </div>
-            <div class="master-list-card" onclick="selectMobileDept('cloud-computing')">
+            <div class="master-list-card" onclick="selectMobileDept('cloud-computing', this)">
                 <span class="master-list-title">Cloud Computing</span>
                 <p class="master-list-desc">Masters cloud architecture and AWS services to prepare members for the digital economy through practical, real-world deployment.</p>
             </div>
-            <div class="master-list-card" onclick="selectMobileDept('ml-ai')">
+            <div class="master-list-card" onclick="selectMobileDept('ml-ai', this)">
                 <span class="master-list-title">Machine Learning<br/>& AI</span>
                 <p class="master-list-desc">Advances innovation in artificial intelligence and machine learning, encouraging members to conduct research and build real-world prototypes with AWS tools.</p>
             </div>
-            <div class="master-list-card" onclick="selectMobileDept('adv-infra')">
+            <div class="master-list-card" onclick="selectMobileDept('adv-infra', this)">
                 <span class="master-list-title">Advanced Network<br/>& Infrastructure</span>
                 <p class="master-list-desc">Strengthens understanding of modern networking systems and foundational infrastructure through technical assessments designed to build high-level engineering leaders.</p>
             </div>
@@ -393,35 +399,35 @@
                                 <!-- Mobile Offices Side-by-Side -->
         <div class="skill-builder-mobile-drawer mobile-only">
           <div class="master-list-container">
-            <div class="master-list-card active" onclick="selectMobileOffice('Executive')">
+            <div class="master-list-card active" onclick="selectMobileOffice('Executive', this)">
                 <span class="master-list-title">Executive</span>
                 <p class="master-list-desc">The Executive Committee provides overall direction, coordination, and oversight for the organization. Due to limited availability of senior officers, executive roles are primarily supervisory, documentation-focused, and approval-based.</p>
             </div>
-            <div class="master-list-card" onclick="selectMobileOffice('Relations')">
+            <div class="master-list-card" onclick="selectMobileOffice('Relations', this)">
                 <span class="master-list-title">Relations</span>
                 <p class="master-list-desc">Driving organizational growth and protecting its digital integrity by leading initiatives in resource acquisition, engaging content creation, strategic partnerships, professional correspondence, cybersecurity, and meticulous agreement alignment.</p>
             </div>
-            <div class="master-list-card" onclick="selectMobileOffice('Operations')">
+            <div class="master-list-card" onclick="selectMobileOffice('Operations', this)">
                 <span class="master-list-title">Operations</span>
                 <p class="master-list-desc">Manages the Cloud Club's Operations and Events Office by directing strategic planning, resource allocation, event execution, quality assurance, risk mitigation, and team leadership to ensure seamless daily functioning and successful club experiences.</p>
             </div>
-            <div class="master-list-card" onclick="selectMobileOffice('Creatives')">
+            <div class="master-list-card" onclick="selectMobileOffice('Creatives', this)">
                 <span class="master-list-title">Creatives</span>
                 <p class="master-list-desc">Driving its visual identity and audience engagement by managing visual content creation, media enhancement, project documentation, and impactful presentations.</p>
             </div>
-            <div class="master-list-card" onclick="selectMobileOffice('Marketing')">
+            <div class="master-list-card" onclick="selectMobileOffice('Marketing', this)">
                 <span class="master-list-title">Marketing</span>
                 <p class="master-list-desc">Amplifying the organization's online influence and community engagement through social media management, strategic publication materials, brand protection, and proactive security measures.</p>
             </div>
-            <div class="master-list-card" onclick="selectMobileOffice('Finance')">
+            <div class="master-list-card" onclick="selectMobileOffice('Finance', this)">
                 <span class="master-list-title">Finance</span>
                 <p class="master-list-desc">Safeguarding the organization's assets and ensuring university compliance by managing budgets, monitoring expenditures, and conducting financial forecasting to support strategic planning.</p>
             </div>
-            <div class="master-list-card" onclick="selectMobileOffice('Media')">
+            <div class="master-list-card" onclick="selectMobileOffice('Media', this)">
                 <span class="master-list-title">Media</span>
                 <p class="master-list-desc">Handles event photography and videography, coordinate officer pictorials, and organize media files. By delivering high-quality visual assets, they provide essential support to the creatives and marketing teams for post-event publicity.</p>
             </div>
-            <div class="master-list-card" onclick="selectMobileOffice('Technology')">
+            <div class="master-list-card" onclick="selectMobileOffice('Technology', this)">
                 <span class="master-list-title">Technology</span>
                 <p class="master-list-desc">Key tasks include managing the AWS Skill Builder Program, training officers, and facilitating hands-on technical seminars. The committee also provides event technical support, proposes future tech initiatives, and recruits volunteers to maintain the website.</p>
             </div>

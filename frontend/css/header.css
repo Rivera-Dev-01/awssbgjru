@@ -419,3 +419,14 @@ html {
         font-size: 20px;
     }
 }
+
+/* Footer email link - keep mailto functional but styled as plain white text */
+.footer-email-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-email-link:hover,
+.footer-email-link:focus {
+    text-decoration: underline;
+}

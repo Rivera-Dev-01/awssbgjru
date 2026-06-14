@@ -8,7 +8,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   const root = document.getElementById('event-detail-root');
   if (!root) return;
 
-  await loadComponent('event-detail-root', '../components/event-detail.html?v=20260613-08');
+  try {
+    await loadComponent('event-detail-root', '../components/event-detail.html');
+  } catch (err) {
+    console.error('Event detail component failed to load:', err);
+    return;
+  }
 
   if (!root.querySelector('.event-detail-hero')) return;
 
