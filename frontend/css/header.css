@@ -5,6 +5,11 @@
    Desktop: full header bar
    =================================== */
 
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Header Placeholder */
 #header-placeholder {
     display: block;

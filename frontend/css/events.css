@@ -1,5 +1,4 @@
 /* Events Page - Mobile First */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Lexend:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
 :root {
   --blue-dark: #1c3466;
@@ -321,6 +320,8 @@ body.events-page {
   background: linear-gradient(180deg, #e0f1fd 0%, #EEF6FC 100px, #EEF6FC 100%);
   padding: 40px 20px 60px 20px;
   margin-top: -100px;
+  content-visibility: auto;
+  contain-intrinsic-size: 800px;
 }
 
 .events-archives-inner {

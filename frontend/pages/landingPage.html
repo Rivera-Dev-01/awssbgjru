@@ -6,10 +6,20 @@
     <meta name="description" content="AWS Learning Club - Join us to learn and grow with AWS">
     <title>AWS Learning Club - Home</title>
     <link rel="icon" type="image/png" href="../assets/shared/components/AWS-NewLogo.webp">
+    <script type="speculationrules">
+    {
+      "prefetch": [{
+        "source": "document",
+        "where": { "selector": "a" },
+        "eagerness": "conservative"
+      }]
+    }
+    </script>
+    <link rel="preload" href="../assets/landing-page/backgrounds/Hero-Section.webp" as="image">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Lexend:wght@300;400;500;600;700&family=Lexend+Deca:wght@400;500;600&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Lexend:wght@300;400;500;600;700&family=Lexend+Deca:wght@400;500;600&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/landing-page.css">
     <!-- Header CSS - Separated for mobile and desktop -->
     <link rel="stylesheet" href="../css/header.css">

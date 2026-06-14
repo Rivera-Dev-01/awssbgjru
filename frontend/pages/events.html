@@ -13,16 +13,27 @@
       type="image/png"
       href="../assets/shared/components/AWS-NewLogo.webp"
     />
+    <script type="speculationrules">
+    {
+      "prefetch": [{
+        "source": "document",
+        "where": { "selector": ".event-card-btn, .event-card-btn-desktop, .event-card-img" },
+        "eagerness": "moderate"
+      }]
+    }
+    </script>
+    <link rel="preload" href="../assets/events/backgrounds/Desktop-Event-Hero-Bg-Crisp.webp" as="image">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Lexend:wght@300;400;500;600;700&family=Lexend+Deca:wght@400;500;600&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Lexend:wght@300;400;500;600;700&family=Lexend+Deca:wght@400;500;600&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/events.css?v=20260612-2" />
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/chatbot.css" />
+    <script src="https://cdn.jsdelivr.net/npm/quicklink@2/dist/quicklink.umd.js" defer></script>
   </head>
   <body class="events-page">
     <div id="header-placeholder"></div>
@@ -132,7 +143,7 @@
                   src="../assets/events/kiro-workshop-img.webp"
                   alt="Kiro Workshop"
                   class="event-card-img"
-                  loading="lazy"
+                  loading="lazy" decoding="async"
                 />
               </div>
               <div class="event-card-img-wrap-desktop">
@@ -140,7 +151,7 @@
                   src="../assets/events/kiro-workshop-img.webp"
                   alt="Kiro Workshop"
                   class="event-card-img-desktop"
-                  loading="lazy"
+                  loading="lazy" decoding="async"
                 />
               </div>
               <div class="event-card-info">
@@ -248,7 +259,7 @@
                   src="../assets/events/byteforward-img.webp"
                   alt="Byte Forward Hackathon"
                   class="event-card-img"
-                  loading="lazy"
+                  loading="lazy" decoding="async"
                 />
               </div>
               <div class="event-card-img-wrap-desktop">
@@ -256,7 +267,7 @@
                   src="../assets/events/byteforward-img.webp"
                   alt="Kiro Workshop"
                   class="event-card-img-desktop"
-                  loading="lazy"
+                  loading="lazy" decoding="async"
                 />
               </div>
               <div class="event-card-info">
@@ -366,7 +377,7 @@
                   src="../assets/events/student-com-day-img.webp"
                   alt="Byte Forward Hackathon"
                   class="event-card-img"
-                  loading="lazy"
+                  loading="lazy" decoding="async"
                 />
               </div>
               <div class="event-card-img-wrap-desktop">
@@ -374,7 +385,7 @@
                   src="../assets/events/student-com-day-img.webp"
                   alt="Kiro Workshop"
                   class="event-card-img-desktop"
-                  loading="lazy"
+                  loading="lazy" decoding="async"
                 />
               </div>
               <div class="event-card-info">
@@ -635,5 +646,10 @@
     <script src="../js/main.js"></script>
     <script src="../js/nav.js" defer></script>
     <script src="../js/chatbot.js" defer></script>
+    <script defer>
+      window.addEventListener('load', () => {
+        if (window.quicklink) quicklink.listen();
+      });
+    </script>
   </body>
 </html>

@@ -9,9 +9,19 @@
     />
     <title>AWS Learning Club - About</title>
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <script type="speculationrules">
+    {
+      "prefetch": [{
+        "source": "document",
+        "where": { "selector": "a" },
+        "eagerness": "conservative"
+      }]
+    }
+    </script>
+    <link rel="preload" href="../assets/about/milcon_2025.webp" as="image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Lexend:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/about.css" />
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
