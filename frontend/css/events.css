@@ -567,10 +567,6 @@ body.events-page {
     .event-card-btn-desktop{
       display: none;
     }
-
-    .event-card.event-right, .event-card.event-left{
-      display: none;
-    }
 }
 
 /* Hiding elements in desktop version */
