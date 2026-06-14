@@ -66,7 +66,15 @@ function renderHero(root, event) {
   setText(root, '[data-event-category]', event.category);
   setText(root, '[data-mobile-category]', event.category);
   setText(root, '[data-event-title]', event.title);
-  setText(root, '[data-mobile-title]', event.title);
+
+  const mobileTitleEl = root.querySelector('[data-mobile-title]');
+  if (mobileTitleEl) {
+    if (event.mobileTitleHTML) {
+      mobileTitleEl.innerHTML = event.mobileTitleHTML;
+    } else {
+      mobileTitleEl.textContent = event.title;
+    }
+  }
 
   const subtitleEl = root.querySelector('[data-event-subtitle]');
   if (subtitleEl) {
