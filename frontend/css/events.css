@@ -399,7 +399,7 @@ body.events-page {
   gap: 4px;
 }
 
-.event-card-title {
+.event-card-title, .community-card-title {
   font-family: var(--font-poppins);
   font-weight: 600;
   font-size: 18px;
@@ -408,7 +408,7 @@ body.events-page {
   line-height: 1.2;
 }
 
-.event-card-subtitle {
+.event-card-subtitle, .community-card-subtitle {
   font-family: var(--font-poppins);
   font-weight: 500;
   font-size: 11px;
@@ -417,7 +417,7 @@ body.events-page {
   line-height: 1.3;
 }
 
-.event-card-desc {
+.event-card-desc, .community-card-desc {
   font-family: var(--font-poppins);
   font-weight: 200;
   font-size: 9.5px;
@@ -557,6 +557,7 @@ body.events-page {
   }
 }
 
+
 /* Hiding elements in mobile version */
 @media(max-width: 768px){
     .event-card-img-desktop, .event-card-img-wrap-desktop{
@@ -564,6 +565,16 @@ body.events-page {
     }
 
     .event-card-btn-desktop{
+      display: none;
+    }
+}
+
+/* Hiding elements in desktop version */
+@media(min-width: 1042px) {
+    .community-card-container-mobile{
+      display: none;
+    }
+    .community-card-details{
       display: none;
     }
 }
@@ -1348,5 +1359,165 @@ body.events-page {
 
   .hero-badge-icon img{
     height: 25.01px;
+  }
+
+  .community-card-container-mobile{
+    background: var(--card-bg);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 13px;
+    padding: 16px;
+    margin-bottom: 24px;
+    box-shadow: 0px 7px 8.3px rgba(0,0,0,0.25);
+    width: 261px;
+    height: 319px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .community-card-img-container{
+    width: 222px;
+    height: 168px;
+    margin-bottom: 15px;
+  }
+
+  .com-day-img{
+    width: 222px;
+    height: 168px;
+  }
+
+  .community-date-container-mobile{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 222px;
+    height: 60px;
+    position: relative;
+  }
+
+  .community-date-card{
+    width: 120px;
+    height: 54px;
+    border-radius: 5px;
+    background: #3868CC;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 8px;
+    box-sizing: border-box;
+  }
+
+  .community-location-card {
+  background: #3868CC;
+  width: 222px;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  box-sizing: border-box;
+  }
+
+  .community-title-mobile, .community-desc-mobile{
+    font-family: 'Poppins';
+    font-size: 8px;
+    font-weight: lighter;
+    color: #FFFFFF;
+    
+  }
+
+  .community-subtitle-mobile{
+    font-family: 'Poppins';
+    font-size: 10px;
+    color: #FFFFFF;
+  }
+
+  .community-location-container{
+    width: 222px;
+  }
+
+  .community-location-card{
+    background: #3868CC;
+    width: 222px;
+    height: 50px;
+    border-radius: 5px;
+  }
+
+  .community-icon-container{
+    background: linear-gradient(180deg, #6AA5F9 0%, #250F53 100%);
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+  }
+
+  .community-calendar-icon{
+    width: 14.73px;
+    height: 19.73px;
+    align-self: center;
+  }
+
+  .community-date-details-container{
+    line-height: 1.1;
+  }
+
+  .location-date-details-container{
+    margin-left: 35px;
+    margin-top: -13px;
+    line-height: 1.1;
+  }
+
+  .community-icon-ellipse{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background: linear-gradient(180deg, #6AA5F9 0%, #250F53 100%);
+    border-radius: 20px;
+    width: 20px;
+  }
+
+  .community-card-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* aligns card and details to the top */
+    gap: 24px;
+  }
+
+  .community-card-details {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    max-width: 300px;
+  }
+  
+  .community-tag{
+    top: 16px;
+    left: 55%;
+    background: linear-gradient(-115deg, #649CEC 0%, #006AFF 100%);
+    font-size: 11.05px;
+    margin-bottom: 0;
+  }
+
+  .community-view-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    background: linear-gradient(161deg, #ff6f08 14%, #ffb700 55%);
+    color: #fff;
+    font-family: var(--font-poppins);
+    font-weight: 500;
+    font-size: 9px;
+    text-decoration: none;
+    margin-top: auto;
+    align-self: flex-start;
+    box-shadow: 0px 2px 0.4px rgba(106,165,249,0.25), inset -0.7px -0.7px 0px rgba(255,255,255,0.25);
+    transition: opacity 0.3s; 
+    border: none;
   }
 }
