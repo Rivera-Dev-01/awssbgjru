@@ -1071,10 +1071,12 @@ body.events-page {
 
   .events-hero-card{
     width: 410px;
+    max-width: calc(100% - 32px);
     height: 453px;
     min-height: 400px;
-    left: 10%;
-    transform: translateX(-3%);
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
   }
 
   .events-and-community-badge{
@@ -1093,6 +1095,7 @@ body.events-page {
 
   .events-hero-badges{
     gap: 50px;
+    margin: -20px 0 30px 10px;
   }
 
   .hero-badge:not(:last-child)::after {
@@ -1116,6 +1119,7 @@ body.events-page {
     padding-left: 40px;
     position: absolute;
     top: 79%;
+    left: 40px;
   }
 
   .hero-badge{
