@@ -1071,10 +1071,12 @@ body.events-page {
 
   .events-hero-card{
     width: 410px;
+    max-width: calc(100% - 32px);
     height: 453px;
     min-height: 400px;
-    left: 10%;
-    transform: translateX(-3%);
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
   }
 
   .events-and-community-badge{
