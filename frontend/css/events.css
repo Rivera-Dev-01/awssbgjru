@@ -1467,16 +1467,16 @@ body.events-page {
   }
 
   .community-location-card {
-  background: #3868CC;
-  width: 222px;
-  height: 50px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 8px;
-  box-sizing: border-box;
+    background: #3868CC;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 8px;
+    box-sizing: border-box;
   }
 
   .community-title-mobile, .community-desc-mobile{
@@ -1497,13 +1497,6 @@ body.events-page {
     width: 222px;
   }
 
-  .community-location-card{
-    background: #3868CC;
-    width: 222px;
-    height: 50px;
-    border-radius: 5px;
-  }
-
   .community-icon-container{
     background: linear-gradient(180deg, #6AA5F9 0%, #250F53 100%);
     width: 20px;
@@ -1512,9 +1505,9 @@ body.events-page {
   }
 
   .community-calendar-icon{
-    width: 14.73px;
-    height: 19.73px;
-    align-self: center;
+    width: 19px;
+    height: 19px;
+    justify-items: center;
   }
 
   .community-date-details-container{
@@ -1532,8 +1525,10 @@ body.events-page {
     justify-content: center;
     display: flex;
     background: linear-gradient(180deg, #6AA5F9 0%, #250F53 100%);
-    border-radius: 20px;
-    width: 20px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
   }
 
   .community-card-wrapper {
