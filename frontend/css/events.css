@@ -1486,8 +1486,8 @@ body.events-page {
     font-family: 'Poppins';
     font-size: 8px;
     font-weight: lighter;
-    color: #FFFFFF;
-    
+    color: #FFFFFF; 
+    margin-top: 2px;
   }
 
   .community-subtitle-mobile{
