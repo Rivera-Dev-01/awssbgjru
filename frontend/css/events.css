@@ -320,7 +320,7 @@ body.events-page {
 .events-archives {
   background: linear-gradient(180deg, #e0f1fd 0%, #EEF6FC 100px, #EEF6FC 100%);
   padding: 40px 20px 60px 20px;
-  margin-top: -100px;
+  margin-top: -50px;
   content-visibility: auto;
   contain-intrinsic-size: 800px;
 }
@@ -1067,11 +1067,11 @@ body.events-page {
   }
 
   .events-hero-card{
-    width: fit-content;
-    height: 500px;
-    min-height: 500px;
+    width: 410px;
+    height: 453px;
+    min-height: 400px;
     left: 10%;
-    transform: translateX(-5%);
+    transform: translateX(-3%);
   }
 
   .events-and-community-badge{
@@ -1084,6 +1084,24 @@ body.events-page {
 
   .events-hero-content{
     right: 5%;
+    bottom: 7%;
+    height: 495px;
+  }
+
+  .events-hero-badges{
+    gap: 50px;
+  }
+
+  .hero-badge:not(:last-child)::after {
+    right: -30px;
+    height: 30px;
+    top: 15px;
+    width: 1.5px;
+    background: rgba(255, 255, 255, 0.36);
+  }
+
+  .events-hero-title{
+    line-height: 0.95;
   }
 
   .events-btn-primary{
