@@ -479,28 +479,6 @@ body.members-page {
   gap: 14px;
 }
 
-/* ── PLACEHOLDER SECTIONS ── */
-.section-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.placeholder-content {
-  text-align: center;
-  opacity: 0.3;
-}
-
-.placeholder-title {
-  font-family: var(--font-poppins);
-  font-weight: 700;
-  font-size: clamp(32px, 6vw, 75px);
-  background: linear-gradient(180deg, #ffb700 0%, #ff6f08 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 /* ── DESKTOP (1024px+) ── */
 @media (min-width: 1024px) {
   .members-sidebar {
@@ -813,11 +791,6 @@ body.members-page {
     gap: 16px;
   }
 
-  /* ── PLACEHOLDER SECTIONS (DESKTOP) ── */
-  .section-placeholder {
-    padding-left: 460px;
-    padding-right: 113px;
-  }
 }
 
 /* ── LARGE DESKTOP (1400px+) ── */

@@ -23,7 +23,10 @@ function initSidebarNav() {
       const section = item.dataset.section;
       const targetId = sectionMap[section];
       if (targetId) {
-        document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+        const section = document.getElementById(targetId);
+        const main = document.getElementById('main-content');
+        const sectionTop = section.getBoundingClientRect().top - main.getBoundingClientRect().top + main.scrollTop;
+        main.scrollTo({ top: sectionTop, behavior: 'smooth' });
       }
 
       sidebarItems.forEach(i => {
