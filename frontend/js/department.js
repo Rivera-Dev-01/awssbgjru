@@ -9,6 +9,7 @@ function initCards() {
   cards.forEach(card => {
     card.addEventListener('click', () => {
       const dept = card.dataset.dept;
+      sessionStorage.setItem('regDept', dept === 'offices' ? 'office' : 'skillbuilder');
 
       if (dept === 'offices') {
         window.location.href = 'office.html';

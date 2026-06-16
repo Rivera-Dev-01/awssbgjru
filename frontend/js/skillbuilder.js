@@ -1,3 +1,6 @@
+// Change this when deploying
+const API_BASE = 'http://localhost:8000';
+
 document.addEventListener('DOMContentLoaded', () => {
   initPills();
   initSubmit();
@@ -42,20 +45,56 @@ function clearConstraint() {
   btnSave.classList.remove('constraint-btn');
 }
 
-function handleSubmit() {
+async function handleSubmit() {
   if (!selectedDivision) {
     showConstraint();
     return;
   }
 
-  const data = {
-    department: 'skillbuilder',
-    division: selectedDivision,
+  const basic = JSON.parse(sessionStorage.getItem('regBasic') || '{}');
+  const explanation = sessionStorage.getItem('regExplanation') || '';
+
+  const payload = {
+    full_name: basic.fullName || '',
+    student_id: basic.studentId || '',
+    email: basic.email || '',
+    year: basic.year || '',
+    program: basic.program || '',
+    dob: basic.dob || '',
+    photo_base64: basic.photoBase64 || '',
+    explanation: explanation,
+    division_type: 'skillbuilder',
+    division_name: selectedDivision,
   };
 
-  console.log('Skill Builder division data ready for backend:', data);
+  const btnSave = document.getElementById('btnSaveSB');
+  btnSave.textContent = 'Submitting...';
+  btnSave.disabled = true;
 
-  window.location.href = 'loading.html';
+  try {
+    const res = await fetch(`${API_BASE}/api/register`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+
+    if (!res.ok) {
+      const err = await res.json();
+      console.error('Registration failed:', err);
+      btnSave.textContent = 'Submit';
+      btnSave.disabled = false;
+      return;
+    }
+
+    sessionStorage.removeItem('regBasic');
+    sessionStorage.removeItem('regExplanation');
+    sessionStorage.removeItem('regDept');
+    window.location.href = 'loading.html';
+  } catch (err) {
+    console.error('Network error:', err);
+    btnSave.textContent = 'Submit';
+    btnSave.disabled = false;
+  }
 }
 
 function initBackNavigation() {

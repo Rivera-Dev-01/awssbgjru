@@ -56,14 +56,10 @@ function onValidSubmit() {
   const textarea = document.getElementById('explanationText');
   const btnSave = document.getElementById('btnSave');
 
-  const data = {
-    explanation: textarea.value.trim(),
-  };
+  sessionStorage.setItem('regExplanation', textarea.value.trim());
 
   btnSave.textContent = 'Submitting...';
   btnSave.disabled = true;
-
-  console.log('Explanation data ready for backend:', data);
 
   setTimeout(() => {
     btnSave.textContent = 'Save & Continue';

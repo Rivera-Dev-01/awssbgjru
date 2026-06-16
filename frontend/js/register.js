@@ -190,25 +190,28 @@ function clearFieldError(group) {
 }
 
 function onValidSubmit() {
-  const form = document.getElementById('registerForm');
-  const formData = new FormData(form);
+  const photoPreview = document.getElementById('photoPreview');
+  const photoBase64 = photoPreview.classList.contains('visible') ? photoPreview.src : '';
 
   const data = {
-    fullName: formData.get('fullName') || document.getElementById('fullName').value.trim(),
-    studentNumber: document.getElementById('studentNumber').value.trim(),
-    jruEmail: document.getElementById('jruEmail').value.trim(),
-    schoolYear: document.querySelector('[data-select="schoolYear"]').dataset.value,
+    fullName: document.getElementById('fullName').value.trim(),
+    studentId: document.getElementById('studentNumber').value.trim(),
+    email: document.getElementById('jruEmail').value.trim(),
+    year: document.querySelector('[data-select="schoolYear"]').dataset.value,
     program: document.querySelector('[data-select="program"]').dataset.value,
-    dobDay: document.querySelector('[data-select="dobDay"]').dataset.value,
-    dobMonth: document.querySelector('[data-select="dobMonth"]').dataset.value,
-    dobYear: document.querySelector('[data-select="dobYear"]').dataset.value,
+    dob: [
+      document.querySelector('[data-select="dobYear"]').dataset.value,
+      document.querySelector('[data-select="dobMonth"]').dataset.value,
+      document.querySelector('[data-select="dobDay"]').dataset.value,
+    ].join('-'),
+    photoBase64: photoBase64,
   };
+
+  sessionStorage.setItem('regBasic', JSON.stringify(data));
 
   const btnSave = document.getElementById('btnSave');
   btnSave.textContent = 'Submitting...';
   btnSave.disabled = true;
-
-  console.log('Form data ready for backend:', data);
 
   setTimeout(() => {
     btnSave.textContent = 'Save & Continue';
