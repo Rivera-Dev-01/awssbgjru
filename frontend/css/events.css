@@ -984,9 +984,13 @@ body.events-page {
     pointer-events: none;
   }
 
-  .events-hero,
+  .events-hero {
+    background: transparent !important;
+  }
+
   .events-archives {
     background: transparent !important;
+    padding-bottom: 20px;
   }
 
   .events-archives-header {
@@ -1046,9 +1050,10 @@ body.events-page {
   .archive-title-bar {
     background-color: #1C3466;
     height: 85px;
-    width: calc(100% + 40px);
-    margin-left: -20px;
-    margin-right: -20px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
     margin-top: -70px;
     margin-bottom: 20px;
     display: flex;
@@ -1061,9 +1066,10 @@ body.events-page {
     background-color: #1C3466;
     height: auto;
     padding: 10px 0;
-    width: calc(100% + 40px);
-    margin-left: -20px;
-    margin-right: -20px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
     margin-top: -30px;
     margin-bottom: 20px;
     display: flex;
@@ -2093,7 +2099,9 @@ body.events-page {
   }
 
   .event-archive-card.event-featured {
-    margin-bottom: 25px;
+    transform: scale(1.1);
+    transform-origin: top center;
+    margin-bottom: 50px;
   }
 
   .event-archive-card.event-community-day,
@@ -2202,8 +2210,8 @@ body.events-page {
   }
 
   .event-hackathon .badge-hackathon {
-    background: radial-gradient(20.75% 176.98% at 37.77% 53.66%, #FF6F08 0%, #FFB700 100%);
-    box-shadow: inset -1.48384px -1.48384px 0.816113px rgba(255, 175, 8, 0.15);
+    background: radial-gradient(20.75% 176.98% at 37.77% 53.66%, rgba(100, 156, 236, 0.64) 0%, rgba(0, 106, 255, 0.64) 100%);
+    box-shadow: inset -1.48384px -1.48384px 0.816113px rgba(106, 165, 249, 0.15);
   }
 
   /* Titles & Subtitles */
@@ -2542,13 +2550,144 @@ body.events-page {
     overflow: visible;
   }
 
+  /* ── BYTE FORWARD HACKATHON FIGMA SPEC OVERRIDES ── */
+  .event-archive-card.event-hackathon {
+    position: relative;
+    width: 401px;
+    height: 316px;
+    margin: 0 auto;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+    transform: scale(1.2);
+    transform-origin: top center;
+    margin-bottom: 80px;
+  }
+
+  .event-hackathon .event-visual-col {
+    position: absolute;
+    width: 252px;
+    height: 316px;
+    left: 149px;
+    top: 0;
+  }
+
+  .event-hackathon .event-img-wrap {
+    position: absolute;
+    width: 228.21px;
+    height: 172.85px;
+    left: 11.3px;
+    top: 14.69px;
+    border-radius: 6.77863px;
+  }
+
+  .event-hackathon .event-meta-card.location-card {
+    height: 45px;
+  }
+
+  .event-hackathon .location-card .meta-icon-ellipse {
+    left: 14px;
+    top: 11px;
+  }
+
+  .event-hackathon .location-card .meta-title {
+    left: 45px;
+    top: 4px;
+  }
+
+  .event-hackathon .location-card .meta-val {
+    left: 45px;
+    top: 15px;
+  }
+
+  .event-hackathon .location-card .meta-sub {
+    left: 45px;
+    top: 30px;
+  }
+
+  .event-hackathon .duration-card .meta-icon-ellipse {
+    left: 6px;
+    top: 17px;
+  }
+
+  .event-hackathon .duration-card .meta-title {
+    left: 31px;
+    top: 11px;
+  }
+
+  .event-hackathon .duration-card .meta-val {
+    left: 31px;
+    top: 20px;
+    font-size: 10px;
+  }
+
+  .event-hackathon .date-card .meta-val {
+    top: 21px;
+    font-size: 8.7025px;
+  }
+
+  .event-archive-card.event-hackathon::after {
+    left: 140px;
+    top: 35px;
+    transform: rotate(-0.02deg);
+  }
+
+  .event-hackathon .event-details-col {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .event-hackathon .event-badge {
+    width: 97.55px;
+    height: 19.9px;
+    left: 38.55px;
+    top: 47px;
+  }
+
+  .event-hackathon .event-card-title {
+    width: 132.58px;
+    height: 44px;
+    left: 3.76px;
+    top: 79.91px;
+    text-align: right;
+    font-size: 19.7457px;
+  }
+
+  .event-hackathon .event-card-subtitle {
+    width: 71px;
+    height: 11px;
+    left: 60.18px;
+    top: 125.98px;
+    text-align: right;
+    font-size: 10.343px;
+  }
+
+  .event-hackathon .event-card-desc {
+    width: 122.24px;
+    height: 40px;
+    left: 11.28px;
+    top: 147.61px;
+    text-align: right;
+  }
+
+  .event-hackathon .event-btn-pill {
+    width: 136.11px;
+    height: 28.26px;
+    left: 0px;
+    top: 207.79px;
+  }
+
   /* Smaller viewport scaling for Hackathon split card */
   @media (max-width: 425px) {
     .event-archive-card.event-hackathon {
       left: 50%;
-      transform: translateX(-50%) scale(0.85);
+      transform: translateX(-50%) scale(1.0);
       transform-origin: top center;
-      margin-bottom: -15px;
+      margin-bottom: 15px;
     }
     .event-archive-card.event-community-day {
       left: 50%;
@@ -2556,14 +2695,20 @@ body.events-page {
       transform-origin: top center;
       margin-bottom: 60px;
     }
+    .event-archive-card.event-featured {
+      left: 50%;
+      transform: translateX(-50%) scale(0.95);
+      transform-origin: top center;
+      margin-bottom: 25px;
+    }
   }
 
   @media (max-width: 360px) {
     .event-archive-card.event-hackathon {
       left: 50%;
-      transform: translateX(-50%) scale(0.72);
+      transform: translateX(-50%) scale(0.85);
       transform-origin: top center;
-      margin-bottom: -50px;
+      margin-bottom: -30px;
     }
     .event-archive-card.event-community-day {
       left: 50%;
@@ -2571,5 +2716,16 @@ body.events-page {
       transform-origin: top center;
       margin-bottom: 30px;
     }
+    .event-archive-card.event-featured {
+      left: 50%;
+      transform: translateX(-50%) scale(0.8);
+      transform-origin: top center;
+      margin-bottom: 15px;
+    }
+  }
+
+  /* Tighten footer top padding on mobile events page */
+  .events-page .site-footer {
+    padding-top: 30px;
   }
 }
