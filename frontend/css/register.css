@@ -604,7 +604,7 @@ body.register-page {
     height: 876px;
     max-width: none;
     position: relative;
-    transform: scale(0.9);
+    transform: scale(1);
     transform-origin: center;
   }
 
