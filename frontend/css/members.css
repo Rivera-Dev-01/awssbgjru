@@ -928,3 +928,52 @@ body.members-page {
     margin: 0 auto;
   }
 }
+
+
+/* Founders mobile section*/
+@media(max-width: 767px){
+  .founders-grid{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 10px;
+     height: 70%;
+  }
+  
+  .founders-description{
+    font-size: 12px;
+    height: 100%;
+    background: linear-gradient(180deg, #1C3466 0%, #1C3466 13%, #1C3466 93%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .member-name, .member-position{
+    color: #003678;
+  }
+  
+  .founders-content{
+    overflow-y: auto; 
+  }
+
+  .founders-title{
+    font-size: 37px;
+     background: linear-gradient(180deg, #FFB700 0%, #F2AF00 30%, #FF6F08 78%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .founders-header{
+    margin-bottom: 0;
+  }
+
+  .founders-line{ 
+    height: 2.5px;
+  }
+
+  .member-card{
+    width: 182.46px;
+    height: 282.85px;
+  }
+}
