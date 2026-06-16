@@ -1,0 +1,143 @@
+/* ── Skill Builder divisions page overrides ── */
+
+.sb-section-title {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--color-label);
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+
+/* ── Pill grid ── */
+.sb-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  max-width: 849px;
+  margin: 0 auto;
+}
+
+.sb-pill {
+  height: 73px;
+  border: 1px solid var(--color-orange);
+  border-radius: 20px;
+  background: #fff;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--color-orange);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0 16px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sb-pill:hover {
+  background: var(--color-orange);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(255, 111, 8, 0.3);
+}
+
+.sb-pill.selected {
+  background: var(--color-orange);
+  color: #fff;
+  border-width: 2px;
+}
+
+.sb-submit-row {
+  margin-top: 40px;
+}
+
+/* ── MOBILE (< 768px) ── */
+@media (max-width: 767px) {
+  .sb-section-title {
+    font-size: 18px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .sb-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .sb-pill {
+    height: 56px;
+    font-size: 16px;
+    white-space: normal;
+    padding: 0 12px;
+  }
+}
+
+/* ── TABLET (768px - 1023px) ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .sb-pill {
+    height: 64px;
+    font-size: 20px;
+  }
+}
+
+/* ── DESKTOP (1024px+) ── */
+@media (min-width: 1024px) {
+  .sb-content {
+    position: absolute;
+    left: 31px;
+    top: 232px;
+    width: 930px;
+  }
+
+  .sb-section-title {
+    position: absolute;
+    left: 50%;
+    top: 45px;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 28px;
+    white-space: nowrap;
+  }
+
+  .sb-grid {
+    position: absolute;
+    left: 16.5px;
+    top: 147.57px;
+    display: grid;
+    grid-template-columns: 436px 436px;
+    gap: 25px;
+    margin: 0;
+    max-width: none;
+  }
+
+  .sb-pill {
+    height: 73px;
+    font-size: 26px;
+    padding: 0 16px;
+  }
+
+  .sb-pill.wrap-text {
+    font-size: 22px;
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  .sb-error {
+    position: absolute;
+    left: 16.5px;
+    top: 420.18px;
+    margin: 0;
+    padding-left: 0;
+    gap: 4px;
+  }
+
+  .sb-submit-row {
+    position: absolute;
+    left: 50%;
+    top: 472.98px;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+}

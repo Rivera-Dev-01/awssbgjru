@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AWS Learning Club Registration - Choose a Skill Builder Division" />
+    <title>AWS Learning Club - Skill Builder Division</title>
+    <link rel="icon" type="image/png" href="../assets/shared/components/AWS-NewLogo.webp" />
+    <meta property="og:title" content="AWS Learning Club - Skill Builder Division" />
+    <meta property="og:description" content="Choose your Skill Builder Division at AWS Student Builder Group - JRU Chapter" />
+    <meta property="og:image" content="../assets/shared/components/AWS-NewLogo.webp" />
+    <meta property="og:url" content="https://awslearningclub.jru/skillbuilder" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Lexend:wght@300;400;500;600;700&family=Lexend+Deca:wght@400;500;600&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/register.css" />
+    <link rel="stylesheet" href="../css/skillbuilder.css" />
+  </head>
+  <body class="register-page">
+    <main class="register-main">
+      <div class="register-card">
+
+        <a href="department.html" class="register-back">
+          <span class="register-back-arrow"></span>
+          Back
+        </a>
+
+        <h1 class="register-title">Sign up</h1>
+
+        <div class="register-progress">
+          <div class="progress-step">
+            <div class="progress-circle filled"></div>
+          </div>
+          <div class="progress-line filled"></div>
+          <div class="progress-step">
+            <div class="progress-circle filled"></div>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step">
+            <div class="progress-circle"></div>
+          </div>
+        </div>
+
+        <div class="sb-content">
+          <h2 class="sb-section-title">SKILL BUILDER : Choose a Skill Builder Division</h2>
+          <div class="sb-grid">
+            <button class="sb-pill" data-division="Software & Web Dev.">Software &amp; Web Dev.</button>
+            <button class="sb-pill" data-division="Security">Security</button>
+            <button class="sb-pill" data-division="Data Analyst">Data Analyst</button>
+            <button class="sb-pill" data-division="Cloud Computing">Cloud Computing</button>
+            <button class="sb-pill" data-division="Machine Learning & AI">Machine Learning &amp; AI</button>
+            <button class="sb-pill wrap-text" data-division="Advanced Network & Infrastructure">Advanced Network &amp; Infrastructure</button>
+          </div>
+          <div class="form-error sb-error" data-for="skillbuilder">
+            <span class="error-icon"></span>
+            <span class="error-text">To proceed, please select a Skill Builder Division</span>
+          </div>
+          <div class="form-submit-row sb-submit-row">
+            <button type="submit" class="btn-save" id="btnSaveSB">Submit</button>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <script src="../js/skillbuilder.js"></script>
+  </body>
+</html>

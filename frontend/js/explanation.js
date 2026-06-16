@@ -68,7 +68,7 @@ function onValidSubmit() {
   setTimeout(() => {
     btnSave.textContent = 'Save & Continue';
     btnSave.disabled = false;
-    alert('Explanation submitted! (Next step not yet implemented)');
+    window.location.href = 'department.html';
   }, 1000);
 }
 

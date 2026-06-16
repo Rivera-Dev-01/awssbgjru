@@ -1,0 +1,182 @@
+/* ── Department page overrides ── */
+
+.dept-content {
+  width: 100%;
+  position: relative;
+}
+
+.dept-section-title {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--color-label);
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+
+/* ── Department cards ── */
+.dept-cards {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.dept-card {
+  width: 381px;
+  height: 464px;
+  border: 1px solid var(--color-orange);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fff;
+  position: relative;
+}
+
+.dept-card:hover {
+  border-color: #1c3466;
+  background: #1c3466;
+  box-shadow: 0 4px 20px rgba(28, 52, 102, 0.2);
+}
+
+.dept-card.selected {
+  border-color: var(--color-orange);
+  background: #fff6ed;
+}
+
+.dept-card-icon {
+  width: 240px;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dept-icon-circle {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: rgba(255, 111, 8, 0.1);
+  border: 2px solid var(--color-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.dept-card:hover .dept-icon-circle {
+  border-color: #1c3466;
+  background: #e8edff;
+}
+
+.dept-icon-circle img {
+  position: absolute;
+  max-width: 40%;
+  max-height: 40%;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.dept-icon-circle .icon-inactive {
+  opacity: 1;
+}
+
+.dept-icon-circle .icon-active {
+  opacity: 0;
+}
+
+.dept-card:hover .icon-inactive {
+  opacity: 0;
+}
+
+.dept-card:hover .icon-active {
+  opacity: 1;
+}
+
+.dept-card-label {
+  font-family: var(--font-poppins);
+  font-weight: 900;
+  font-size: 28px;
+  color: var(--color-orange);
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.dept-card:hover .dept-card-label {
+  color: #fff;
+}
+
+
+/* ── MOBILE (< 768px) ── */
+@media (max-width: 767px) {
+  .dept-section-title {
+    font-size: 20px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .dept-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .dept-card {
+    width: 280px;
+    height: 320px;
+  }
+
+  .dept-card-icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  .dept-card-label {
+    font-size: 22px;
+  }
+}
+
+/* ── TABLET (768px - 1023px) ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .dept-card {
+    width: 300px;
+    height: 360px;
+  }
+
+  .dept-card-icon {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* ── DESKTOP (1024px+) ── */
+@media (min-width: 1024px) {
+  .dept-content {
+    height: 100%;
+  }
+
+  .dept-section-title {
+    position: absolute;
+    left: 50%;
+    top: 209px;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 28px;
+    white-space: nowrap;
+  }
+
+  .dept-cards {
+    position: absolute;
+    left: 50%;
+    top: 290px;
+    transform: translateX(-50%);
+    gap: 16px;
+  }
+}

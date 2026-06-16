@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AWS Learning Club Registration - Choose your aspiring department" />
+    <title>AWS Learning Club - Department</title>
+    <link rel="icon" type="image/png" href="../assets/shared/components/AWS-NewLogo.webp" />
+    <meta property="og:title" content="AWS Learning Club - Department" />
+    <meta property="og:description" content="Choose your aspiring department at AWS Student Builder Group - JRU Chapter" />
+    <meta property="og:image" content="../assets/shared/components/AWS-NewLogo.webp" />
+    <meta property="og:url" content="https://awslearningclub.jru/department" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Lexend:wght@300;400;500;600;700&family=Lexend+Deca:wght@400;500;600&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/register.css" />
+    <link rel="stylesheet" href="../css/department.css" />
+  </head>
+  <body class="register-page">
+    <main class="register-main">
+      <div class="register-card">
+
+        <!-- Back button -->
+        <a href="explanation.html" class="register-back">
+          <span class="register-back-arrow"></span>
+          Back
+        </a>
+
+        <!-- Title -->
+        <h1 class="register-title">Sign up</h1>
+
+        <!-- Progress steps: all 3 filled -->
+        <div class="register-progress">
+          <div class="progress-step">
+            <div class="progress-circle filled"></div>
+          </div>
+          <div class="progress-line filled"></div>
+          <div class="progress-step">
+            <div class="progress-circle filled"></div>
+          </div>
+          <div class="progress-line filled"></div>
+          <div class="progress-step">
+            <div class="progress-circle filled"></div>
+          </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="dept-content" id="deptContent">
+
+          <!-- Section title -->
+          <h2 class="dept-section-title">Choose an Aspiring Department</h2>
+
+          <!-- Selection cards -->
+          <div class="dept-cards" id="deptCards">
+            <div class="dept-card" data-dept="offices">
+              <div class="dept-card-icon">
+                <div class="dept-icon-circle">
+                  <img class="icon-inactive" src="../assets/members/badges/Offices-Inactive-Badge.png" alt="" />
+                  <img class="icon-active" src="../assets/members/badges/Officers-Active-Badge.png" alt="" />
+                </div>
+              </div>
+              <span class="dept-card-label">OFFICES</span>
+            </div>
+            <div class="dept-card" data-dept="skillbuilder">
+              <div class="dept-card-icon">
+                <div class="dept-icon-circle">
+                  <img class="icon-inactive" src="../assets/members/badges/SkillBuilder-Inactive-Badge.png" alt="" />
+                  <img class="icon-active" src="../assets/members/badges/SkillBuilder-Active-Badge.png" alt="" />
+                </div>
+              </div>
+              <span class="dept-card-label">SKILL BUILDER</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+    <script src="../js/department.js"></script>
+  </body>
+</html>
