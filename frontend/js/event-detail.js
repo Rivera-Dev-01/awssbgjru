@@ -402,6 +402,6 @@ function handleRootClick(event) {
   const target = event.target instanceof Element ? event.target : event.target.parentElement;
   const backButton = target ? target.closest('[data-event-back]') : null;
   if (backButton) {
-    window.location.href = 'events.html';
+    window.location.href = '/events';
   }
 }

@@ -16,7 +16,15 @@
     },
     {
       "src": "/",
-      "dest": "frontend/pages/landingPage.html"
+      "dest": "frontend/pages/landing-page.html"
+    },
+    {
+      "src": "/landing-page",
+      "dest": "/"
+    },
+    {
+      "src": "/(register|explanation|department|office|skillbuilder|loading|waiting-approval|members|about|events|partners|achievements|contact|event-detail)(?:\\.html)?$",
+      "dest": "frontend/pages/$1.html"
     },
     {
       "src": "/(.*)",

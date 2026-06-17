@@ -12,9 +12,9 @@ function initCards() {
       sessionStorage.setItem('regDept', dept === 'offices' ? 'office' : 'skillbuilder');
 
       if (dept === 'offices') {
-        window.location.href = 'office.html';
+        window.location.href = '/office';
       } else {
-        window.location.href = 'skillbuilder.html';
+        window.location.href = '/skillbuilder';
       }
     });
   });
@@ -29,3 +29,5 @@ function initBackNavigation() {
     });
   }
 }
+
+

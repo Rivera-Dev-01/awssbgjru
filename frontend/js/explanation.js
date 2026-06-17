@@ -64,7 +64,7 @@ function onValidSubmit() {
   setTimeout(() => {
     btnSave.textContent = 'Save & Continue';
     btnSave.disabled = false;
-    window.location.href = 'department.html';
+    window.location.href = '/department';
   }, 1000);
 }
 
@@ -77,3 +77,5 @@ function initBackNavigation() {
     });
   }
 }
+
+

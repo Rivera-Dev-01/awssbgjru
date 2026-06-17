@@ -23,14 +23,15 @@ function highlightActiveLink() {
     const href = item.getAttribute('href');
     if (!href) return;
 
-    // Extract file names for comparison
-    const currentPageName = currentPath.substring(currentPath.lastIndexOf('/') + 1);
-    const targetPageName = href.substring(href.lastIndexOf('/') + 1);
+    // Extract file names for comparison, strip .html and query/hash
+    const strip = (s) => s.split('?')[0].split('#')[0].replace(/\.html$/, '');
+    const currentPageName = strip(currentPath.substring(currentPath.lastIndexOf('/') + 1));
+    const targetPageName = strip(href.substring(href.lastIndexOf('/') + 1));
 
-    // Standardize Home matching (handles index.html, landingPage.html, or root /)
-    const isCurrentHome = currentPageName === '' || currentPageName === 'index.html' || currentPageName === 'landingPage.html';
-    const isTargetHome = targetPageName === 'index.html' || targetPageName === 'landingPage.html';
-    const isCurrentEvents = currentPageName === 'event-detail.html' && targetPageName === 'events.html';
+    // Standardize Home matching (handles /, /landing-page, etc.)
+    const isCurrentHome = currentPageName === '' || currentPageName === 'index' || currentPageName === 'landingPage' || currentPageName === 'landing-page';
+    const isTargetHome = targetPageName === '' || targetPageName === 'index' || targetPageName === 'landingPage' || targetPageName === 'landing-page';
+    const isCurrentEvents = currentPageName === 'event-detail' && targetPageName === 'events';
 
     if ((isCurrentHome && isTargetHome) || currentPageName === targetPageName || isCurrentEvents) {
       item.classList.add('active');

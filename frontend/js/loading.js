@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
-    window.location.href = 'waiting-approval.html';
+    window.location.href = '/waiting-approval';
   }, 4000);
 });

@@ -68,6 +68,14 @@ body.register-page {
   opacity: 0.7;
 }
 
+button.register-back {
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
 .register-back-arrow {
   display: inline-block;
   width: 10px;
@@ -628,6 +636,7 @@ body.register-page {
     position: absolute;
     left: 31px;
     top: 29.68px;
+    z-index: 1;
   }
 
   .register-title {

@@ -10,3 +10,4 @@ kilo.json
 *.backup.*
 *-backup.*
 .vscode/settings.json
+.vercel

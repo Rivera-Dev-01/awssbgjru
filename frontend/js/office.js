@@ -90,7 +90,7 @@ async function handleSubmit() {
     sessionStorage.removeItem('regBasic');
     sessionStorage.removeItem('regExplanation');
     sessionStorage.removeItem('regDept');
-    window.location.href = 'loading.html';
+    window.location.href = '/loading';
   } catch (err) {
     console.error('Network error:', err);
     btnSave.textContent = 'Submit';

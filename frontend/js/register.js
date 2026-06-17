@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initDropdowns();
   initPhotoUpload();
   initFormValidation();
-  initBackNavigation();
 });
 
 function initDropdowns() {
@@ -216,16 +215,9 @@ function onValidSubmit() {
   setTimeout(() => {
     btnSave.textContent = 'Save & Continue';
     btnSave.disabled = false;
-    window.location.href = 'explanation.html';
+    window.location.href = '/explanation';
   }, 1000);
 }
 
-function initBackNavigation() {
-  const backBtn = document.querySelector('.register-back');
-  if (backBtn) {
-    backBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.location.href = backBtn.getAttribute('href');
-    });
-  }
-}
+
+
