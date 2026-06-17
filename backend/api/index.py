@@ -23,10 +23,6 @@ import config
 import rate_limiter
 import cache
 
-from supabase import create_client
-
-supabase = create_client(config.SUPABASE_URL, config.SUPABASE_KEY)
-
 app = FastAPI(title="Cumulus Helm Chatbot API")
 
 app.add_middleware(
@@ -88,6 +84,13 @@ async def health():
     return {"status": "ok", "model": config.GROQ_MODEL}
 
 
+def _get_supabase():
+    if not hasattr(_get_supabase, "_client"):
+        from supabase import create_client
+        _get_supabase._client = create_client(config.SUPABASE_URL, config.SUPABASE_KEY)
+    return _get_supabase._client
+
+
 @app.post("/api/register")
 async def register(request: Request):
     data = await request.json()
@@ -119,7 +122,8 @@ async def register(request: Request):
     }
 
     try:
-        result = supabase.table("registrations").insert(row).execute()
+        sb = _get_supabase()
+        result = sb.table("registrations").insert(row).execute()
     except Exception as e:
         return JSONResponse({"error": f"Database error: {str(e)}"}, status_code=500)
 
@@ -166,6 +170,27 @@ Explanation:
         smtp.starttls()
         smtp.login(config.EMAIL_USER, config.EMAIL_PASS)
         smtp.send_message(msg)
+
+
+@app.get("/api/_debug")
+async def debug():
+    info = {
+        "python": sys.version,
+        "has_supabase_url": bool(config.SUPABASE_URL),
+        "has_supabase_key": bool(config.SUPABASE_KEY),
+        "has_groq_key": bool(config.GROQ_API_KEY),
+        "has_email_user": bool(config.EMAIL_USER),
+        "has_email_pass": bool(config.EMAIL_PASS),
+        "has_notify_email": bool(config.NOTIFY_EMAIL),
+    }
+    try:
+        sb = _get_supabase()
+        r = sb.table("registrations").select("id").limit(1).execute()
+        info["supabase_ok"] = True
+    except Exception as e:
+        info["supabase_ok"] = False
+        info["supabase_error"] = str(e)
+    return info
 
 
 frontend_path = os.path.join(_project_root, "frontend")
