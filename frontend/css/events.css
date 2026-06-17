@@ -35,7 +35,7 @@ body.events-page {
   background:
     radial-gradient(circle at 78% 28%, rgba(255, 255, 255, 0.42), transparent 24%),
     radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.32), transparent 22%),
-    linear-gradient(180deg, rgba(224, 241, 253, 0.98), rgba(171, 210, 232, 0.94));
+    linear-gradient(180deg, rgba(224, 241, 253, 0.98), rgba(171, 210, 232, 0.94));@media(max-width: 1041px)
 }
 
 .events-hero-card {
@@ -286,6 +286,13 @@ body.events-page {
 }
 
 /* ── SECTION TITLE (gradient gold/orange with dark blue outline) ── */
+.archive-title-bar {
+  background: transparent;
+  padding: 0;
+  width: auto;
+  margin: 0;
+}
+
 .section-title-outline {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -586,11 +593,11 @@ body.events-page {
     }
 }
 
-/* Hide desktop-specific event cards on mobile/tablet viewports */
 @media (max-width: 1041px) {
   .event-card.event-left,
-  .event-card.event-right {
-    display: none;
+  .event-card.event-right,
+  .event-card.event-card-featured {
+    display: none !important;
   }
 }
 
@@ -783,6 +790,18 @@ body.events-page {
      transform: none;
   }
 
+  .proactive-title-bar {
+    height: 100px;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -30px;
+    margin-bottom: 20px;
+    border-radius: 0;
+    max-width: none;
+    padding: 0;
+  }
+
   .proactive-header .section-desc {
     font-size: 19px;
     max-width: 800px;
@@ -811,7 +830,6 @@ body.events-page {
       animation: waterfallFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
-    /* Refactored waterfall entrance delays using card classes */
     .event-card.event-card-featured { animation-delay: 100ms; }
     .event-card.event-right { animation-delay: 250ms; }
     .event-card.event-left { animation-delay: 400ms; }
@@ -841,7 +859,7 @@ body.events-page {
       justify-content: center;
       gap: 44px;
       width: 100%;
-      margin-top: -60px; /* Pulls it up as a bridge between sections */
+      margin-top: -60px; 
       margin-bottom: 40px;
       position: relative;
       z-index: 5;
@@ -943,8 +961,42 @@ body.events-page {
     }
 }
 
+/* ── NEW UNIFIED ARCHIVE CARDS DEFAULT (DESKTOP) ── */
+.event-archive-card {
+  display: none;
+}
+
 /* Mobile Version Events Page Update */
-@media(max-width: 780px){
+@media(max-width: 1041px){
+  body.events-page {
+    background: transparent !important;
+  }
+
+  body.events-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #e0f1fd url('../assets/events/backgrounds/Events-Mobile-Bg.jpg') center top / cover no-repeat;
+    pointer-events: none;
+  }
+
+  .events-hero {
+    background: transparent !important;
+  }
+
+  .events-archives {
+    background: transparent !important;
+    padding-bottom: 20px;
+  }
+
+  .events-archives-header {
+    margin-bottom: 25px;
+  }
+
   .event-date-card-container, .event-location-dates-container{
     display: none;
   }
@@ -953,7 +1005,7 @@ body.events-page {
     width: 372px;
     height: 290px;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     position: relative;
   }
 
@@ -988,25 +1040,90 @@ body.events-page {
     display: none;
   }
 
-  .section-title-outline{
-    margin-top: 90px;
+  .section-title-outline {
+    background: linear-gradient(180deg, #eff459 0%, #ff6f08 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .archive-title-bar {
+    background-color: #1C3466;
+    height: 85px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    margin-top: -70px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .proactive-title-bar {
+    background-color: #1C3466;
+    height: auto;
+    padding: 10px 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    margin-top: -30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .archive-title-bar .section-title-outline {
+    margin: 0;
+    transform: translateY(15px) !important;
+    height: auto;
+    line-height: 1;
+    font-size: 30px;
+    text-align: center;
+    width: auto;
+  }
+
+  /* Proactive title text — same as Event Archives */
+  .proactive-title-bar .section-title-outline {
+    transform: none !important;
+    font-size: 28px;
+    line-height: 1.3;
+    font-weight: 700;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin: 0;
   }
 
   .event-title-mobile, 
   .event-subtitle-mobile, 
   .event-description-mobile{
-    font-family: 'Poppins';
-    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    margin: 0;
   }
 
-  .event-title-mobile, .event-description-mobile{
-    font-size: 9px;
-    font-weight: lighter;
+  .event-title-mobile {
+    font-size: 10px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
   }
 
-  .event-subtitle-mobile{
-    font-size: 9px;
-    font-weight: normal;
+  .event-subtitle-mobile {
+    font-size: 12px;
+    font-weight: 300;
+    color: #FFFFFF;
+  }
+
+  .event-description-mobile {
+    font-size: 10px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
   }
 
   .event-date-containers-mobile{
@@ -1014,64 +1131,74 @@ body.events-page {
     bottom: 16px;
     left: 16px;
     right: 16px;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
     padding: 0;
   }
 
   .event-date-details-mobile{
     position: relative;
-    line-height: 1.5;
+    line-height: 1.2;
     display: flex;
     flex-direction: column;
-    margin-top: 5px;
   }
 
   .event-date-card-mobile{
-    margin-left: 0x;
     background: #3868CC;
     color: #FFFFFF;
-    flex: 1;
-    height: 91px;
+    height: 54px;
     border-radius: 5px;
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 8px;
+    box-sizing: border-box;
+  }
+
+  .event-date-card-mobile:last-child {
+    grid-column: 1 / -1;
+    height: 50px;
   }
 
   .event-date-icon-ellipse{
-    margin-top: 10px;
     position: relative;
     background: linear-gradient(180deg, #6AA5F9 0%, #250F53 100%);
-    border-radius: 30px;
-    width: 31.56px;
-    height: 31.56px;
-    display: block;
+    border-radius: 50%;
+    width: 25px;
+    flex-shrink: 0;
+    height: 25px;
     box-shadow: 0px 4px 6px 0px rgb(27, 27, 27);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .event-date-icon-container{
     position: relative;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
   }
 
   .calendar-icon{
-    width: 31.56px;
-    height: 31.56px;
-    display: block;
-    align-items: center;  
+    width: 100%;
+    height: 100%;
+    align-items: center;
     justify-content: center;
+    display: flex; 
   }
 
   .events-hero-card{
-    width: 410px;
+    width: calc(100% - 30px);
+    max-width: 410px;
     height: 453px;
     min-height: 400px;
-    left: 10%;
-    transform: translateX(-3%);
+    left: 50%;
+    bottom: 70px;
+    transform: translateX(-50%);
+    background: url('../assets/events/cards/Mobile-Cube.webp') center / 100% 100% no-repeat;
   }
 
   .events-and-community-badge{
@@ -1083,50 +1210,99 @@ body.events-page {
   }
 
   .events-hero-content{
-    right: 5%;
-    bottom: 7%;
-    height: 495px;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    height: 100%;
+    padding: 40px 24px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
   }
 
   .events-hero-badges{
-    gap: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    margin: 20px 0 0 0;
   }
 
   .hero-badge:not(:last-child)::after {
-    right: -30px;
-    height: 30px;
-    top: 15px;
-    width: 1.5px;
-    background: rgba(255, 255, 255, 0.36);
+    display: none;
   }
 
   .events-hero-title{
+    font-family: var(--font-poppins);
+    font-weight: 700;
+    font-size: 73px;
     line-height: 0.95;
   }
 
+  @media (max-width: 380px) {
+    .events-hero-title {
+      font-size: 50px;
+    }
+  }
+
+  .events-hero-desc{
+    font-weight: 300;
+  }
+
   .events-btn-primary{
-    width: 201px;
-    height: 34.71px;
-    font-size: 12px;
-    max-width: 500px;
-    padding: 10px;
-    padding-left: 40px;
-    position: absolute;
-    top: 79%;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    min-width: 180px;
+    height: 35px;
+    font-size: 15px;
+    padding: 0 16px;
+    margin-top: auto;
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transform: none;
+    background: linear-gradient(to bottom, #FFB700 0%, #ff6f08 100%);
   }
 
   .hero-badge{
     flex-direction: column;
+    align-items: center;
+    transform: none !important;
+  }
+
+  .hero-badge:nth-child(1),
+  .hero-badge:nth-child(2),
+  .hero-badge:nth-child(3) {
+    transform: none !important;
   }
 
   .hero-badge-sublabel{
-    font-size: 7px;
+    font-size: 8px;
+    font-weight: 300;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .hero-badge-label{
+    font-size: 10px;
+    text-align: center;
+    white-space: nowrap;
   }
 
   .hero-badge-text{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    line-height: 0;
+    margin-right: 0;
+    line-height: 1.2;
   }
 
   .hero-badge-icon{
@@ -1420,9 +1596,7 @@ body.events-page {
   }
 
   .community-card-container-mobile{
-    background: var(--card-bg);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: #FFFFFF;
     border-radius: 13px;
     padding: 16px;
     margin-bottom: 24px;
@@ -1434,113 +1608,128 @@ body.events-page {
   }
 
   .community-card-img-container{
-    width: 222px;
+    width: 229px;
     height: 168px;
     margin-bottom: 15px;
   }
 
   .com-day-img{
-    width: 222px;
-    height: 168px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .community-date-container-mobile{
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-    width: 222px;
-    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 8px;
     position: relative;
   }
 
   .community-date-card{
-    width: 120px;
+    width: auto;
     height: 54px;
     border-radius: 5px;
     background: #3868CC;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    gap: 6px;
-    padding: 6px 8px;
+    justify-content: center;
+    gap: 4px;
+    padding: 6px;
     box-sizing: border-box;
   }
 
   .community-location-card {
-  background: #3868CC;
-  width: 222px;
-  height: 50px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 8px;
-  box-sizing: border-box;
+    background: #3868CC;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 6px;
+    box-sizing: border-box;
   }
 
-  .community-title-mobile, .community-desc-mobile{
-    font-family: 'Poppins';
-    font-size: 8px;
-    font-weight: lighter;
-    color: #FFFFFF;
-    
-  }
-
-  .community-subtitle-mobile{
-    font-family: 'Poppins';
+  .community-title-mobile, .event-title-mobile{
+    font-family: 'Poppins', sans-serif;
     font-size: 10px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .community-subtitle-mobile, .event-subtitle-mobile{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
     color: #FFFFFF;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .community-desc-mobile, .event-description-mobile{
+    display: none !important;
   }
 
   .community-location-container{
-    width: 222px;
-  }
-
-  .community-location-card{
-    background: #3868CC;
-    width: 222px;
-    height: 50px;
-    border-radius: 5px;
+    width: 100%;
   }
 
   .community-icon-container{
-    background: linear-gradient(180deg, #6AA5F9 0%, #250F53 100%);
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
+    display: none;
   }
 
-  .community-calendar-icon{
-    width: 14.73px;
-    height: 19.73px;
-    align-self: center;
+  .community-calendar-icon, .calendar-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
   }
 
   .community-date-details-container{
     line-height: 1.1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
-  .location-date-details-container{
-    margin-left: 35px;
-    margin-top: -13px;
-    line-height: 1.1;
-  }
-
-  .community-icon-ellipse{
+  .community-icon-ellipse, .event-date-icon-ellipse{
+    background: transparent !important;
+    box-shadow: none !important;
+    width: auto !important;
+    height: auto !important;
+    margin-top: 0 !important;
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
-    background: linear-gradient(180deg, #6AA5F9 0%, #250F53 100%);
-    border-radius: 20px;
-    width: 20px;
   }
 
   .community-card-wrapper {
     display: flex;
     flex-direction: row;
-    align-items: flex-start; /* aligns card and details to the top */
+    align-items: flex-start;
     gap: 24px;
+    position: relative;
+    margin-bottom: 60px;
+  }
+
+  .community-card-wrapper::before {
+    content: '';
+    position: absolute;
+    left: 273px;
+    top: 20px;
+    bottom: 20px;
+    width: 1.5px;
+    background-color: rgba(28, 52, 102, 0.15);
   }
 
   .community-card-details {
@@ -1560,22 +1749,983 @@ body.events-page {
     margin-bottom: 0;
   }
 
-  .community-view-btn{
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 4px 12px;
-    border-radius: 12px;
-    background: linear-gradient(161deg, #ff6f08 14%, #ffb700 55%);
-    color: #fff;
+  .event-card-title,
+  .community-card-title {
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    font-size: 20px;
+    color: #1C3466;
+  }
+
+  .event-card-subtitle,
+  .community-card-subtitle {
     font-family: var(--font-poppins);
     font-weight: 500;
-    font-size: 9px;
+    font-size: 12px;
+    color: #1C3466;
+  }
+
+  .community-card-desc {
+    font-family: var(--font-poppins);
+    font-weight: 300;
+    font-size: 10px;
+    color: rgba(28, 52, 102, 0.75);
+    line-height: 1.4;
+  }
+
+  .event-card-btn {
+    width: 148px;
+    height: 35px;
+    font-size: 11px;
+    font-family: var(--font-poppins);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #FFB700 0%, #ff6f08 100%);
+    color: #ffffff;
+    border-radius: 30px;
+    padding: 0;
     text-decoration: none;
-    margin-top: auto;
-    align-self: flex-start;
     box-shadow: 0px 2px 0.4px rgba(106,165,249,0.25), inset -0.7px -0.7px 0px rgba(255,255,255,0.25);
-    transition: opacity 0.3s; 
     border: none;
+  }
+
+  @media (max-width: 410px) {
+    .community-card-wrapper {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .community-card-wrapper::before {
+      display: none;
+    }
+
+    .community-card-details {
+      margin-top: 20px;
+      text-align: center;
+      align-items: center;
+    }
+
+    .community-card-details .event-card-btn {
+      align-self: center;
+    }
+
+    .event-card-top {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .event-card-info {
+      text-align: center;
+      align-items: center;
+    }
+
+    .event-card-info .event-card-btn {
+      align-self: center;
+    }
+  }
+
+  .event-card.event-card-featured,
+  .event-card.event-right,
+  .event-card.event-left,
+  .community-card-wrapper {
+    display: none !important;
+  }
+
+  .event-archive-card {
+    display: block;
+    position: relative;
+    width: 372px;
+    height: 269px;
+    margin: 0 auto 60px auto;
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0px 7px 8.3px rgba(0, 0, 0, 0.25);
+    border-radius: 13px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .event-img-wrap {
+    position: absolute;
+    width: 180px;
+    height: 126px;
+    left: 13px;
+    top: 18px;
+    border-radius: 6.55px;
+    overflow: hidden;
+  }
+
+  .event-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Badges */
+  .event-badge {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4.73px 22.09px;
+    gap: 4.73px;
+    position: absolute;
+    width: 99.19px;
+    height: 21.47px;
+    left: 201px;
+    top: 19px;
+    border-radius: 22.0934px;
+    font-family: var(--font-poppins);
+    font-weight: 300;
+    font-size: 11.0467px;
+    line-height: 1.0941;
+    text-align: center;
+    color: #FFFFFF;
+    box-sizing: border-box;
+  }
+
+  .badge-workshop {
+    background: radial-gradient(20.75% 176.98% at 37.77% 53.66%, #649CEC 0%, #006AFF 100%);
+    box-shadow: inset -1.5781px -1.5781px 0.867954px rgba(106, 165, 249, 0.15);
+  }
+
+  .badge-community {
+    background: radial-gradient(20.75% 176.98% at 37.77% 53.66%, #649CEC 0%, #08458D 100%);
+    box-shadow: inset -1.5781px -1.5781px 0.867954px rgba(106, 165, 249, 0.15);
+  }
+
+  .badge-hackathon {
+    background: radial-gradient(20.75% 176.98% at 37.77% 53.66%, #FF6F08 0%, #FFB700 100%);
+    box-shadow: inset -1.5781px -1.5781px 0.867954px rgba(255, 175, 8, 0.15);
+  }
+
+  /* Titles & Subtitles */
+  .event-card-title {
+    position: absolute;
+    width: 156px;
+    height: 23px;
+    left: 203px;
+    top: 43px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 1.0941;
+    color: #1C3466;
+    margin: 0;
+  }
+
+  .event-card-subtitle {
+    position: absolute;
+    width: 157px;
+    height: 36px;
+    left: 203px;
+    top: 73px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1.0941;
+    color: #173574;
+    margin: 0;
+  }
+
+  .event-archive-card .event-card-desc {
+    display: none;
+  }
+
+  /* Button */
+  .event-btn-pill {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 11px;
+    gap: 4.73px;
+    position: absolute;
+    width: 101.13px;
+    height: 20.59px;
+    left: 203px;
+    top: 121px;
+    background: linear-gradient(120.32deg, #FF6F08 -14.07%, #FFB700 54.56%);
+    border: 0.278964px solid rgba(255, 255, 255, 0.52);
+    box-shadow: 0px 2px 0.8px rgba(106, 165, 249, 0.25), inset -0.710441px -0.710441px 0px rgba(255, 255, 255, 0.25);
+    border-radius: 11.9954px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 7.92685px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .event-btn-pill:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 3px 6px rgba(255, 111, 8, 0.3);
+  }
+
+  .btn-chevron {
+    width: 10.32px;
+    height: 10.32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+
+  /* Meta Sub-Cards */
+  .event-meta-card {
+    position: absolute;
+    width: 101px;
+    height: 91px;
+    top: 165px;
+    background: #3868CC;
+    border-radius: 5.4104px;
+    box-sizing: border-box;
+    padding: 8px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .event-meta-card.date-card {
+    left: 16.5px;
+  }
+
+  .event-meta-card.duration-card {
+    left: 135.5px;
+  }
+
+  .event-meta-card.location-card {
+    left: 254.5px;
+  }
+
+  .meta-icon-ellipse {
+    width: 31.56px;
+    height: 31.56px;
+    background: linear-gradient(180deg, rgba(106, 165, 249, 0.2) 0%, rgba(37, 15, 83, 0.2) 100%);
+    box-shadow: 0px 3.60694px 3.60694px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+    flex-shrink: 0;
+  }
+
+  .meta-icon-ellipse img {
+    width: 23.45px;
+    height: 23.45px;
+    object-fit: contain;
+    filter: blur(0.450867px) drop-shadow(0px 3.60694px 3.60694px rgba(0, 0, 0, 0.25));
+  }
+
+  .meta-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .meta-title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 275;
+    font-size: 7.46263px;
+    line-height: 1.0941;
+    color: #FFFFFF;
+    text-transform: uppercase;
+  }
+
+  .location-card .meta-title {
+    font-size: 6.5298px;
+  }
+
+  .meta-val {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9.01734px;
+    line-height: 1.0941;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .location-card .meta-val {
+    font-size: 8.11561px;
+  }
+
+  .meta-sub {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 6.31214px;
+    line-height: 1.0941;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .location-card .meta-sub {
+    font-size: 7px;
+    color: #D9D9D9;
+  }
+
+  @media (max-width: 380px) {
+    .event-archive-card {
+      left: 50%;
+      transform: translateX(-50%) scale(0.85);
+      transform-origin: top center;
+      margin-bottom: 20px;
+    }
+  }
+
+  .event-archive-card.event-featured {
+    transform: scale(1.1);
+    transform-origin: top center;
+    margin-bottom: 50px;
+  }
+
+  .event-archive-card.event-community-day,
+  .event-archive-card.event-hackathon {
+    width: 408px;
+    height: 319px;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  .event-archive-card.event-community-day {
+    transform: scale(1.2);
+    transform-origin: top center;
+    margin-bottom: 125px;
+  }
+
+  .event-archive-card.event-hackathon {
+    transform: scale(0.88);
+    transform-origin: top center;
+    margin-bottom: -40px;
+  }
+
+  .event-community-day .event-visual-col,
+  .event-hackathon .event-visual-col {
+    position: absolute;
+    width: 252px;
+    height: 319px;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0px 7.9084px 9.3771px rgba(0, 0, 0, 0.25);
+    border-radius: 13.5573px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-sizing: border-box;
+  }
+
+  .event-archive-card.event-community-day::after,
+  .event-archive-card.event-hackathon::after {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 236px;
+    left: 262px;
+    top: 32px;
+    border-left: 1.31674px solid rgba(28, 52, 102, 0.16);
+  }
+
+  .event-community-day .event-details-col,
+  .event-hackathon .event-details-col {
+    position: absolute;
+    width: 137px;
+    height: 319px;
+    left: 271px;
+    top: 0;
+  }
+
+  .event-community-day .event-img-wrap,
+  .event-hackathon .event-img-wrap {
+    position: absolute;
+    width: 222px;
+    height: 168px;
+    left: 14px;
+    top: 13px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+  }
+
+  .event-community-day .event-card-img,
+  .event-hackathon .event-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Badges */
+  .event-community-day .event-badge,
+  .event-hackathon .event-badge {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4.45153px 20.7738px;
+    gap: 4.45px;
+    position: absolute;
+    width: 102.55px;
+    height: 19.9px;
+    left: 2px;
+    top: 37px;
+    border-radius: 16.9249px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10.3869px;
+    line-height: 1.0941;
+    color: #FFFFFF;
+  }
+
+  .event-community-day .badge-community {
+    background: radial-gradient(20.75% 176.98% at 37.77% 53.66%, rgba(100, 156, 236, 0.64) 0%, rgba(0, 106, 255, 0.64) 100%);
+    box-shadow: inset -1.48384px -1.48384px 0.816113px rgba(106, 165, 249, 0.15);
+  }
+
+  .event-hackathon .badge-hackathon {
+    background: radial-gradient(20.75% 176.98% at 37.77% 53.66%, rgba(100, 156, 236, 0.64) 0%, rgba(0, 106, 255, 0.64) 100%);
+    box-shadow: inset -1.48384px -1.48384px 0.816113px rgba(106, 165, 249, 0.15);
+  }
+
+  /* Titles & Subtitles */
+  .event-community-day .event-card-title,
+  .event-hackathon .event-card-title {
+    position: absolute;
+    width: 132.58px;
+    height: 16px;
+    left: 0px;
+    top: 66px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.0941;
+    color: #1C3466;
+    margin: 0;
+  }
+
+  .event-community-day .event-card-subtitle,
+  .event-hackathon .event-card-subtitle {
+    position: absolute;
+    width: 137px;
+    height: 26px;
+    left: 0px;
+    top: 86px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.0941;
+    color: #1C3466;
+    margin: 0;
+  }
+
+  /* Description */
+  .event-community-day .event-card-desc,
+  .event-hackathon .event-card-desc {
+    display: block;
+    position: absolute;
+    width: 122.24px;
+    height: 40px;
+    left: 0px;
+    top: 124px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 275;
+    font-size: 9.40273px;
+    line-height: 1.0941;
+    color: #081B41;
+    margin: 0;
+  }
+
+  /* Button */
+  .event-community-day .event-btn-pill,
+  .event-hackathon .event-btn-pill {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4.98357px 14.9507px 5.27709px;
+    gap: 2.26px;
+    position: absolute;
+    width: 136.11px;
+    height: 28.26px;
+    left: 1px;
+    top: 213px;
+    background: linear-gradient(120.32deg, #FF6F08 -14.07%, #FFB700 54.56%);
+    border: 0.376935px solid rgba(255, 255, 255, 0.52);
+    box-shadow: 0px 2.70239px 1.08096px rgba(106, 165, 249, 0.25), inset -0.959945px -0.959945px 0px rgba(255, 255, 255, 0.25);
+    border-radius: 6.58191px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12.0619px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .event-community-day .event-btn-pill:hover,
+  .event-hackathon .event-btn-pill:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 3px 6px rgba(255, 111, 8, 0.3);
+  }
+
+  /* Meta Cards (Community Day & Hackathon) */
+  .event-community-day .event-meta-card,
+  .event-hackathon .event-meta-card {
+    position: absolute;
+    background: #3868CC;
+    border-radius: 4.82542px;
+    box-sizing: border-box;
+    display: block;
+    padding: 0;
+  }
+
+  .event-community-day .event-meta-card.date-card,
+  .event-hackathon .event-meta-card.date-card {
+    width: 120px;
+    height: 54px;
+    left: 11px;
+    top: 195px;
+  }
+
+  .event-community-day .event-meta-card.duration-card,
+  .event-hackathon .event-meta-card.duration-card {
+    width: 106px;
+    height: 54px;
+    left: 134px;
+    top: 195px;
+  }
+
+  .event-community-day .event-meta-card.location-card,
+  .event-hackathon .event-meta-card.location-card {
+    width: 228px;
+    height: 50px;
+    left: 11px;
+    top: 256px;
+  }
+
+  /* Date Card internals */
+  .event-community-day .date-card .meta-icon-ellipse,
+  .event-hackathon .date-card .meta-icon-ellipse {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 10px;
+    top: 17px;
+    background: linear-gradient(180deg, rgba(106, 165, 249, 0.2) 0%, rgba(37, 15, 83, 0.2) 100%);
+    box-shadow: 0px 3.481px 3.481px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    margin-bottom: 0;
+  }
+
+  .event-community-day .date-card .meta-icon-ellipse img,
+  .event-hackathon .date-card .meta-icon-ellipse img {
+    position: absolute;
+    width: 14.73px;
+    height: 14.73px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(0.435125px) drop-shadow(0px 3.481px 3.481px rgba(0, 0, 0, 0.25));
+  }
+
+  .event-community-day .date-card .meta-details,
+  .event-hackathon .date-card .meta-details {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .event-community-day .date-card .meta-title,
+  .event-hackathon .date-card .meta-title {
+    position: absolute;
+    width: auto;
+    height: 9px;
+    left: 37px;
+    top: 10px;
+    font-family: 'Poppins';
+    font-weight: 275;
+    font-size: 8px;
+    line-height: 1.0941;
+    color: #FFFFFF;
+  }
+
+  .event-community-day .date-card .meta-val,
+  .event-hackathon .date-card .meta-val {
+    position: absolute;
+    width: auto;
+    height: 22px;
+    left: 37px;
+    top: 19px;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.0941;
+    color: #FFFFFF;
+    white-space: normal;
+    text-align: left;
+    overflow: visible;
+  }
+
+  /* Duration Card internals */
+  .event-community-day .duration-card .meta-icon-ellipse,
+  .event-hackathon .duration-card .meta-icon-ellipse {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 8px;
+    top: 15px;
+    background: linear-gradient(180deg, rgba(106, 165, 249, 0.2) 0%, rgba(37, 15, 83, 0.2) 100%);
+    box-shadow: 0px 3.69407px 3.69407px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    margin-bottom: 0;
+  }
+
+  .event-community-day .duration-card .meta-icon-ellipse img,
+  .event-hackathon .duration-card .meta-icon-ellipse img {
+    position: absolute;
+    width: 16.1px;
+    height: 16.1px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(0.461758px);
+  }
+
+  .event-community-day .duration-card .meta-details,
+  .event-hackathon .duration-card .meta-details {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .event-community-day .duration-card .meta-title,
+  .event-hackathon .duration-card .meta-title {
+    position: absolute;
+    width: auto;
+    height: 9px;
+    left: 34px;
+    top: 15px;
+    font-family: 'Poppins';
+    font-weight: 275;
+    font-size: 8px;
+    line-height: 1.0941;
+    color: #FFFFFF;
+  }
+
+  .event-community-day .duration-card .meta-val,
+  .event-hackathon .duration-card .meta-val {
+    position: absolute;
+    width: auto;
+    height: 13px;
+    left: 34px;
+    top: 24px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.0941;
+    color: #FFFFFF;
+    white-space: normal;
+    text-align: left;
+    overflow: visible;
+  }
+
+  /* Location Card internals */
+  .event-community-day .location-card .meta-icon-ellipse,
+  .event-hackathon .location-card .meta-icon-ellipse {
+    position: absolute;
+    width: 22.2px;
+    height: 22.2px;
+    left: 13px;
+    top: 11px;
+    background: linear-gradient(180deg, rgba(106, 165, 249, 0.2) 0%, rgba(37, 15, 83, 0.2) 100%);
+    box-shadow: 0px 3.481px 3.481px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    margin-bottom: 0;
+  }
+
+  .event-community-day .location-card .meta-icon-ellipse img,
+  .event-hackathon .location-card .meta-icon-ellipse img {
+    position: absolute;
+    width: 15.97px;
+    height: 15.97px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(0.435125px);
+  }
+
+  .event-community-day .location-card .meta-details,
+  .event-hackathon .location-card .meta-details {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .event-community-day .location-card .meta-title,
+  .event-hackathon .location-card .meta-title {
+    position: absolute;
+    width: auto;
+    height: 10px;
+    left: 43px;
+    top: 5px;
+    font-family: 'Poppins';
+    font-weight: 275;
+    font-size: 9px;
+    line-height: 1.0941;
+    color: #FFFFFF;
+  }
+
+  .event-community-day .location-card .meta-val,
+  .event-hackathon .location-card .meta-val {
+    position: absolute;
+    width: auto;
+    height: 13px;
+    left: 43px;
+    top: 16px;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.0941;
+    color: #FFFFFF;
+    white-space: normal;
+    text-align: left;
+    overflow: visible;
+  }
+
+  .event-community-day .location-card .meta-sub,
+  .event-hackathon .location-card .meta-sub {
+    position: absolute;
+    width: auto;
+    height: 11px;
+    left: 43px;
+    top: 31px;
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 1.0941;
+    color: #FFFFFF;
+    white-space: normal;
+    text-align: left;
+    overflow: visible;
+  }
+
+  /* ── BYTE FORWARD HACKATHON FIGMA SPEC OVERRIDES ── */
+  .event-archive-card.event-hackathon {
+    position: relative;
+    width: 401px;
+    height: 316px;
+    margin: 0 auto;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+    transform: scale(1.2);
+    transform-origin: top center;
+    margin-bottom: 80px;
+  }
+
+  .event-hackathon .event-visual-col {
+    position: absolute;
+    width: 252px;
+    height: 316px;
+    left: 149px;
+    top: 0;
+  }
+
+  .event-hackathon .event-img-wrap {
+    position: absolute;
+    width: 228.21px;
+    height: 172.85px;
+    left: 11.3px;
+    top: 14.69px;
+    border-radius: 6.77863px;
+  }
+
+  .event-hackathon .event-meta-card.location-card {
+    height: 45px;
+  }
+
+  .event-hackathon .location-card .meta-icon-ellipse {
+    left: 14px;
+    top: 11px;
+  }
+
+  .event-hackathon .location-card .meta-title {
+    left: 45px;
+    top: 4px;
+  }
+
+  .event-hackathon .location-card .meta-val {
+    left: 45px;
+    top: 15px;
+  }
+
+  .event-hackathon .location-card .meta-sub {
+    left: 45px;
+    top: 30px;
+  }
+
+  .event-hackathon .duration-card .meta-icon-ellipse {
+    left: 6px;
+    top: 17px;
+  }
+
+  .event-hackathon .duration-card .meta-title {
+    left: 31px;
+    top: 11px;
+  }
+
+  .event-hackathon .duration-card .meta-val {
+    left: 31px;
+    top: 20px;
+    font-size: 10px;
+  }
+
+  .event-hackathon .date-card .meta-val {
+    top: 21px;
+    font-size: 8.7025px;
+  }
+
+  .event-archive-card.event-hackathon::after {
+    left: 140px;
+    top: 35px;
+    transform: rotate(-0.02deg);
+  }
+
+  .event-hackathon .event-details-col {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .event-hackathon .event-badge {
+    width: 97.55px;
+    height: 19.9px;
+    left: 38.55px;
+    top: 47px;
+  }
+
+  .event-hackathon .event-card-title {
+    width: 132.58px;
+    height: 44px;
+    left: 3.76px;
+    top: 79.91px;
+    text-align: right;
+    font-size: 19.7457px;
+  }
+
+  .event-hackathon .event-card-subtitle {
+    width: 71px;
+    height: 11px;
+    left: 60.18px;
+    top: 125.98px;
+    text-align: right;
+    font-size: 10.343px;
+  }
+
+  .event-hackathon .event-card-desc {
+    width: 122.24px;
+    height: 40px;
+    left: 11.28px;
+    top: 147.61px;
+    text-align: right;
+  }
+
+  .event-hackathon .event-btn-pill {
+    width: 136.11px;
+    height: 28.26px;
+    left: 0px;
+    top: 207.79px;
+  }
+
+  /* Smaller viewport scaling for Hackathon split card */
+  @media (max-width: 425px) {
+    .event-archive-card.event-hackathon {
+      left: 50%;
+      transform: translateX(-50%) scale(1.0);
+      transform-origin: top center;
+      margin-bottom: 15px;
+    }
+    .event-archive-card.event-community-day {
+      left: 50%;
+      transform: translateX(-50%) scale(1.0);
+      transform-origin: top center;
+      margin-bottom: 60px;
+    }
+    .event-archive-card.event-featured {
+      left: 50%;
+      transform: translateX(-50%) scale(0.95);
+      transform-origin: top center;
+      margin-bottom: 25px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .event-archive-card.event-hackathon {
+      left: 50%;
+      transform: translateX(-50%) scale(0.85);
+      transform-origin: top center;
+      margin-bottom: -30px;
+    }
+    .event-archive-card.event-community-day {
+      left: 50%;
+      transform: translateX(-50%) scale(0.85);
+      transform-origin: top center;
+      margin-bottom: 30px;
+    }
+    .event-archive-card.event-featured {
+      left: 50%;
+      transform: translateX(-50%) scale(0.8);
+      transform-origin: top center;
+      margin-bottom: 15px;
+    }
+  }
+
+  /* Tighten footer top padding on mobile events page */
+  .events-page .site-footer {
+    padding-top: 30px;
   }
 }

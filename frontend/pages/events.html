@@ -23,7 +23,7 @@
     {
       "prefetch": [{
         "source": "document",
-        "where": { "selector": ".event-card-btn, .event-card-btn-desktop, .event-card-img" },
+        "where": { "selector": ".event-card-btn, .event-card-btn-desktop, .event-card-img, .event-btn-pill" },
         "eagerness": "moderate"
       }]
     }
@@ -35,7 +35,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Lexend:wght@300;400;500;600;700&family=Lexend+Deca:wght@400;500;600&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/events.css?v=20260612-2" />
+    <link rel="stylesheet" href="../css/events.css?v=20260615-7" />
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="stylesheet" href="../css/chatbot.css" />
@@ -59,7 +59,7 @@
             </div>
 
             <p class="events-hero-subtitle">
-              AWS Learning Club <br />JRU Chapter
+              Student Builder Group <br />JRU Chapter
             </p>
             <h1 class="events-hero-title">Events</h1>
             <p class="events-hero-desc">
@@ -126,13 +126,16 @@
       <section class="events-archives">
         <div class="events-archives-inner">
           <div class="events-archives-header">
-            <h2 class="section-title-outline">Event Archives</h2>
+            <div class="archive-title-bar">
+              <h2 class="section-title-outline">Event Archives</h2>
+            </div>
             <p class="section-desc">
               Explore our archive of past events to find recap details, learning
               tracks, and highlights from our tech community.
             </p>
           </div>
 
+          <!-- Event 1: Kiro Workshop (Desktop Version) -->
           <div class="event-card event-card-featured">
             <div class="event-date-card-container">
               <div class="event-date-card-detail">
@@ -191,64 +194,69 @@
                   >View Event Details</a
                 >
                 <div class="event-date-containers-mobile">
-                  <div class="event-date-card-mobile">
-                    <div class="event-date-icon-container">
-                      <div class="event-date-icon-ellipse">
-                        <img
-                          src="../assets/events/badges/calendar-icon.svg"
-                          alt="cal-icon"
-                          class="calendar-icon"
-                        />
-                      </div>
-                    </div>
-                    <div class="event-date-details-mobile">
-                      <p class="event-title-mobile">Date</p>
-                      <p class="event-subtitle-mobile">April 7, 2026</p>
-                      <p class="event-description-mobile">1 - Day Workshop</p>
-                    </div>
-                  </div>
-
-                  <div class="event-date-card-mobile">
-                    <div class="event-date-icon-container">
-                      <div class="event-date-icon-ellipse">
-                        <img
-                          src="../assets/events/badges/clock-icon.svg"
-                          alt="cal-icon"
-                          class="calendar-icon"
-                        />
-                      </div>
-                    </div>
-                    <div class="event-date-details-mobile">
-                      <p class="event-title-mobile">Duration</p>
-                      <p class="event-subtitle-mobile">4 HOURS</p>
-                      <p class="event-description-mobile">
-                        Hands on Experience
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="event-date-card-mobile">
-                    <div class="event-date-icon-container">
-                      <div class="event-date-icon-ellipse">
-                        <img
-                          src="../assets/events/badges/pin-icon.svg"
-                          alt="cal-icon"
-                          class="calendar-icon"
-                        />
-                      </div>
-                    </div>
-                    <div class="event-date-details-mobile">
-                      <p class="event-title-mobile">Location</p>
-                      <p class="event-subtitle-mobile">Jose Rizal University</p>
-                      <p class="event-description-mobile">Bldg, H - 407</p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!--COMMUNITY desktop (hidden in mobile)-->
+          <!-- Event 1: Kiro Workshop (Mobile Version) -->
+          <div class="event-archive-card event-featured">
+            <div class="event-visual-col">
+              <div class="event-img-wrap">
+                <img src="../assets/events/kiro-workshop-img.webp" alt="Kiro Workshop" class="event-card-img" />
+              </div>
+
+              <!-- Date Card -->
+              <div class="event-meta-card date-card">
+                <div class="meta-icon-ellipse">
+                  <img src="../assets/events/badges/calendar-icon.svg" alt="Calendar Icon" />
+                </div>
+                <div class="meta-details">
+                  <span class="meta-title">DATE</span>
+                  <span class="meta-val">April 7, 2026</span>
+                  <span class="meta-sub">1 - Day Workshop</span>
+                </div>
+              </div>
+
+              <!-- Duration Card -->
+              <div class="event-meta-card duration-card">
+                <div class="meta-icon-ellipse">
+                  <img src="../assets/events/badges/clock-icon.svg" alt="Clock Icon" />
+                </div>
+                <div class="meta-details">
+                  <span class="meta-title">DURATION</span>
+                  <span class="meta-val">4 Hours</span>
+                  <span class="meta-sub">Hands on Experience</span>
+                </div>
+              </div>
+
+              <!-- Location Card -->
+              <div class="event-meta-card location-card">
+                <div class="meta-icon-ellipse">
+                  <img src="../assets/events/badges/pin-icon.svg" alt="Location Icon" />
+                </div>
+                <div class="meta-details">
+                  <span class="meta-title">LOCATION</span>
+                  <span class="meta-val">Jose Rizal University</span>
+                  <span class="meta-sub">Bldg. H, H - 407</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT: Details Column -->
+            <div class="event-details-col">
+              <span class="event-badge badge-workshop">Workshop</span>
+              <h3 class="event-card-title">Kiro Workshop</h3>
+              <h4 class="event-card-subtitle">The AI Shift: From Cloud Fundamentals to Next-Gen Code Builders</h4>
+              <p class="event-card-desc">Students built web apps using cutting-edge spec-driven AI tools in this hands-on workshop.</p>
+              <a href="event-detail.html?event=kiro-workshop" class="event-btn-pill">
+                View All Events
+                <span class="btn-chevron">&gt;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Event 2: Student Community Day (Desktop Version) -->
           <div class="event-card event-right">
             <div class="event-date-card-container">
               <div class="event-date-card-detail">
@@ -263,7 +271,7 @@
               <div class="event-card-img-wrap">
                 <img
                   src="../assets/events/student-com-day-img.webp"
-                  alt="Student Community Day"
+                  alt="AWS Cloud Club Student Community Day"
                   class="event-card-img"
                   loading="lazy" decoding="async"
                 />
@@ -271,7 +279,7 @@
               <div class="event-card-img-wrap-desktop">
                 <img
                   src="../assets/events/student-com-day-img.webp"
-                  alt="Student Community Day"
+                  alt="AWS Cloud Club Student Community Day"
                   class="event-card-img-desktop"
                   loading="lazy" decoding="async"
                 />
@@ -313,152 +321,79 @@
                   >View Event Details</a
                 >
                 <div class="event-date-containers-mobile">
-                  <div class="event-date-card-mobile">
-                    <div class="event-date-icon-container">
-                      <div class="event-date-icon-ellipse">
-                        <img
-                          src="../assets/events/badges/calendar-icon.svg"
-                          alt="cal-icon"
-                          class="calendar-icon"
-                        />
-                      </div>
-                    </div>
-                    <div class="event-date-details-mobile">
-                      <p class="event-title-mobile">Date</p>
-                      <p class="event-subtitle-mobile">Sept 17, 2025</p>
-                      <p class="event-description-mobile">1 - Day Event</p>
-                    </div>
-                  </div>
-
-                  <div class="event-date-card-mobile">
-                    <div class="event-date-icon-container">
-                      <div class="event-date-icon-ellipse">
-                        <img
-                          src="../assets/events/badges/clock-icon.svg"
-                          alt="clock-icon"
-                          class="calendar-icon"
-                        />
-                      </div>
-                    </div>
-                    <div class="event-date-details-mobile">
-                      <p class="event-title-mobile">Duration</p>
-                      <p class="event-subtitle-mobile">6.5 HOURS</p>
-                      <p class="event-description-mobile">
-                        Student Community Day
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="event-date-card-mobile">
-                    <div class="event-date-icon-container">
-                      <div class="event-date-icon-ellipse">
-                        <img
-                          src="../assets/events/badges/pin-icon.svg"
-                          alt="pin-icon"
-                          class="calendar-icon"
-                        />
-                      </div>
-                    </div>
-                    <div class="event-date-details-mobile">
-                      <p class="event-title-mobile">Location</p>
-                      <p class="event-subtitle-mobile">JRU Centennial Aud.</p>
-                      <p class="event-description-mobile">
-                        Centennial Bldg., 9F
-                      </p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!--COMMUNITY CARD - mobile version -->
-          <div class="community-card-wrapper">
-            <!--LEFT SIDE CARD-->
-            <div class="community-card-container-mobile">
-              <div class="community-card-img-container">
-                <img
-                  src="../assets/events/student-com-day-img.png"
-                  alt="student-com-day-img"
-                  class="com-day-img"
-                />
+          <!-- Event 2: Student Community Day (Mobile Version) -->
+          <div class="event-archive-card event-community-day">
+            <!-- LEFT: Visual Card Column (Translucent card background & drop shadow) -->
+            <div class="event-visual-col">
+              <!-- Banner Image Wrapper -->
+              <div class="event-img-wrap">
+                <img src="../assets/events/student-com-day-img.webp" alt="AWS Cloud Club Student Community Day" class="event-card-img" />
               </div>
 
-              <div class="community-date-container-mobile">
-                <div class="community-date-card">
-                  <div class="community-icon-ellipse">
-                    <img
-                      src="../assets/events/badges/calendar-icon.svg"
-                      alt="cal-icon"
-                      class="community-calendar-icon"
-                    />
-                  </div>
-                  <div class="community-date-details-container">
-                    <p class="community-title-mobile">DATE</p>
-                    <p class="community-subtitle-mobile">September 7, 2025</p>
-                  </div>
+              <!-- Date Card -->
+              <div class="event-meta-card date-card">
+                <div class="meta-icon-ellipse">
+                  <img src="../assets/events/badges/calendar-icon.svg" alt="Calendar Icon" />
                 </div>
-
-                <div class="community-date-card">
-                  <div class="community-icon-ellipse">
-                    <img
-                      src="../assets/events/badges/clock-icon.svg"
-                      alt="clock-icon"
-                      class="community-calendar-icon"
-                    />
-                  </div>
-                  <div class="community-date-details-container">
-                    <p class="community-title-mobile">Duration</p>
-                    <p class="community-subtitle-mobile">6 Hours</p>
-                  </div>
+                <div class="meta-details">
+                  <span class="meta-title">DATE</span>
+                  <span class="meta-val">Sept 17, 2025</span>
                 </div>
               </div>
 
-              <div class="community-location-container">
-                <div class="community-location-card">
-                  <div class="community-icon-ellipse">
-                    <img
-                      src="../assets/events/badges/pin-icon.svg"
-                      alt="pin-icon"
-                      class="community-calendar-icon"
-                    />
-                  </div>
-                  <div class="community-date-details-container">
-                    <p class="community-title-mobile">Location</p>
-                    <p class="community-subtitle-mobile">
-                      Jose Rizal University
-                    </p>
-                    <p class="community-desc-mobile">
-                      Centenial Auditorium, 9th Floor
-                    </p>
-                  </div>
+              <!-- Duration Card -->
+              <div class="event-meta-card duration-card">
+                <div class="meta-icon-ellipse">
+                  <img src="../assets/events/badges/clock-icon.svg" alt="Clock Icon" />
+                </div>
+                <div class="meta-details">
+                  <span class="meta-title">DURATION</span>
+                  <span class="meta-val">6 Hours</span>
+                </div>
+              </div>
+
+              <!-- Location Card -->
+              <div class="event-meta-card location-card">
+                <div class="meta-icon-ellipse">
+                  <img src="../assets/events/badges/pin-icon.svg" alt="Location Icon" />
+                </div>
+                <div class="meta-details">
+                  <span class="meta-title">LOCATION</span>
+                  <span class="meta-val">Jose Rizal University</span>
+                  <span class="meta-sub">Centenial Auditorium, 9th Floor</span>
                 </div>
               </div>
             </div>
-            <!--RIGHT SIDE CARD-->
-            <div class="community-card-details">
-              <p class="event-card-tag community-tag">Community</p>
-              <h2 class="community-card-title">
-                AWS Cloud Club Student Community Day
-              </h2>
-              <p class="community-card-subtitle">Mega Manila 2025</p>
-              <p class="community-card-desc">
-                Exceptional Creativity on Display: Team 'Hello World!'
-                Represents JRU at the 2025 NCR Hackathon.
-              </p>
-              <button class="community-view-btn">View All Events ›</button>
+
+            <!-- RIGHT: Details Column -->
+            <div class="event-details-col">
+              <span class="event-badge badge-community">Community</span>
+              <h3 class="event-card-title">Community Day</h3>
+              <h4 class="event-card-subtitle">AWS Cloud Student Day</h4>
+              <p class="event-card-desc">Exceptional Creativity on Display: Team 'Hello World!' Represents JRU at the 2025 NCR Hackathon.</p>
+              <a href="event-detail.html?event=student-community-day" class="event-btn-pill">
+                View All Events
+                <span class="btn-chevron">&gt;</span>
+              </a>
             </div>
           </div>
 
           <!-- Proactive Engagement Section Header -->
           <div class="proactive-header">
-            <h2 class="section-title-outline">Proactive Engagement</h2>
+            <div class="archive-title-bar proactive-title-bar">
+              <h2 class="section-title-outline">Proactive Engagement</h2>
+            </div>
             <p class="section-desc">
-              Expanding our reach and impact through collaborative external events and hackathons.
+              To foster continuous learning, we proactively engage in external initiatives. Through our participation in hackathons, seminars, and workshops, we consistently develop both our technical expertise and interpersonal skills.
             </p>
           </div>
 
-          <!--Hackathon desktop (hidden in mobile) -->
+          <!-- Event 3: Byte Forward Hackathon (Desktop Version) -->
           <div class="event-card event-left">
             <div class="event-date-card-container">
               <div class="event-date-card-detail">
@@ -519,135 +454,65 @@
                 >
 
                 <div class="event-date-containers-mobile">
-                  <div class="event-date-card-mobile">
-                    <div class="event-date-icon-container">
-                      <div class="event-date-icon-ellipse">
-                        <img
-                          src="../assets/events/badges/calendar-icon.svg"
-                          alt="cal-icon"
-                          class="calendar-icon"
-                        />
-                      </div>
-                    </div>
-                    <div class="event-date-details-mobile">
-                      <p class="event-title-mobile">Date</p>
-                      <p class="event-subtitle-mobile">August 7-8, 2025</p>
-                      <p class="event-description-mobile">2 - Day Hackathon</p>
-                    </div>
-                  </div>
-
-                  <div class="event-date-card-mobile">
-                    <div class="event-date-icon-container">
-                      <div class="event-date-icon-ellipse">
-                        <img
-                          src="../assets/events/badges/clock-icon.svg"
-                          alt="clock-icon"
-                          class="calendar-icon"
-                        />
-                      </div>
-                    </div>
-                    <div class="event-date-details-mobile">
-                      <p class="event-title-mobile">Duration</p>
-                      <p class="event-subtitle-mobile">24 HOURS</p>
-                      <p class="event-description-mobile">
-                        Continuous Building
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="event-date-card-mobile">
-                    <div class="event-date-icon-container">
-                      <div class="event-date-icon-ellipse">
-                        <img
-                          src="../assets/events/badges/pin-icon.svg"
-                          alt="pin-icon"
-                          class="calendar-icon"
-                        />
-                      </div>
-                    </div>
-                    <div class="event-date-details-mobile">
-                      <p class="event-title-mobile">Location</p>
-                      <p class="event-subtitle-mobile">Seda Vertis North</p>
-                      <p class="event-description-mobile">Quezon City</p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!--BYTEFORWARD CARD - mobile version -->
-          <div class="community-card-wrapper">
-            <!--LEFT SIDE CARD-->
-            <div class="community-card-details">
-              <p class="event-card-tag community-tag">Hackathon</p>
-              <h2 class="community-card-title">Byte Forward Hackathon</h2>
-              <p class="community-card-subtitle">NCR Leg 2025</p>
-              <p class="community-card-desc">
-                Exceptional Creativity on Display: Team 'Hello World!'
-                Represents JRU at the 2025 NCR Hackathon.
-              </p>
-              <button class="community-view-btn">View All Events ›</button>
+          <!-- Event 3: Byte Forward Hackathon (Mobile Version) -->
+          <div class="event-archive-card event-hackathon">
+            <!-- LEFT: Visual Card Column (Translucent card background & drop shadow) -->
+            <div class="event-visual-col">
+              <!-- Banner Image Wrapper -->
+              <div class="event-img-wrap">
+                <img src="../assets/events/byteforward-img.webp" alt="Byte Forward Hackathon" class="event-card-img" />
+              </div>
+
+              <!-- Date Card -->
+              <div class="event-meta-card date-card">
+                <div class="meta-icon-ellipse">
+                  <img src="../assets/events/badges/calendar-icon.svg" alt="Calendar Icon" />
+                </div>
+                <div class="meta-details">
+                  <span class="meta-title">DATE</span>
+                  <span class="meta-val">Aug 7-8, 2025</span>
+                </div>
+              </div>
+
+              <!-- Duration Card -->
+              <div class="event-meta-card duration-card">
+                <div class="meta-icon-ellipse">
+                  <img src="../assets/events/badges/clock-icon.svg" alt="Clock Icon" />
+                </div>
+                <div class="meta-details">
+                  <span class="meta-title">DURATION</span>
+                  <span class="meta-val">24 Hours</span>
+                </div>
+              </div>
+
+              <!-- Location Card -->
+              <div class="event-meta-card location-card">
+                <div class="meta-icon-ellipse">
+                  <img src="../assets/events/badges/pin-icon.svg" alt="Location Icon" />
+                </div>
+                <div class="meta-details">
+                  <span class="meta-title">LOCATION</span>
+                  <span class="meta-val">Seda Vertis North</span>
+                  <span class="meta-sub">Quezon City</span>
+                </div>
+              </div>
             </div>
 
-            <!--RIGHT SIDE CARD-->
-            <div class="community-card-container-mobile">
-              <div class="community-card-img-container">
-                <img
-                  src="../assets/events/byteforward-img.png"
-                  alt="student-com-day-img"
-                  class="com-day-img"
-                />
-              </div>
-
-              <div class="community-date-container-mobile">
-                <div class="community-date-card">
-                  <div class="community-icon-ellipse">
-                    <img
-                      src="../assets/events/badges/calendar-icon.svg"
-                      alt="cal-icon"
-                      class="community-calendar-icon"
-                    />
-                  </div>
-                  <div class="community-date-details-container">
-                    <p class="community-title-mobile">DATE</p>
-                    <p class="community-subtitle-mobile">August 7-8, 2025</p>
-                  </div>
-                </div>
-
-                <div class="community-date-card">
-                  <div class="community-icon-ellipse">
-                    <img
-                      src="../assets/events/badges/clock-icon.svg"
-                      alt="clock-icon"
-                      class="community-calendar-icon"
-                    />
-                  </div>
-                  <div class="community-date-details-container">
-                    <p class="community-title-mobile">Duration</p>
-                    <p class="community-subtitle-mobile">24 Hours</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="community-location-container">
-                <div class="community-location-card">
-                  <div class="community-icon-ellipse">
-                    <img
-                      src="../assets/events/badges/pin-icon.svg"
-                      alt="pin-icon"
-                      class="community-calendar-icon"
-                    />
-                  </div>
-                  <div class="community-date-details-container">
-                    <p class="community-title-mobile">Location</p>
-                    <p class="community-subtitle-mobile">
-                      Jose Rizal University
-                    </p>
-                    <p class="community-desc-mobile">Bldg, H - 407</p>
-                  </div>
-                </div>
-              </div>
+            <!-- RIGHT: Details Column -->
+            <div class="event-details-col">
+              <span class="event-badge badge-hackathon">Hackathon</span>
+              <h3 class="event-card-title">Byte Forward Hackathon</h3>
+              <h4 class="event-card-subtitle">NCR Leg 2025</h4>
+              <p class="event-card-desc">Exceptional Creativity on Display: Team 'Hello World!' Represents JRU at the 2025 NCR Hackathon.</p>
+              <a href="event-detail.html?event=byte-forward-hackathon" class="event-btn-pill">
+                View All Events
+                <span class="btn-chevron">&gt;</span>
+              </a>
             </div>
           </div>
         </div>

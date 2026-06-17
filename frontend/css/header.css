@@ -250,7 +250,7 @@ html {
 
     .site-header {
         position: fixed;
-        top: 6%;
+        top: 3%;
         left: 50%;
         transform: translateX(-50%);
         width: 1242px;

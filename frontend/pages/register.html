@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AWS Learning Club Registration - Sign up as a member of AWS Student Builder Group JRU Chapter" />
+    <title>AWS Learning Club - Register</title>
+    <link rel="icon" type="image/png" href="../assets/shared/components/AWS-NewLogo.webp" />
+    <meta property="og:title" content="AWS Learning Club - Register" />
+    <meta property="og:description" content="Join the AWS Student Builder Group - JRU Chapter" />
+    <meta property="og:image" content="../assets/shared/components/AWS-NewLogo.webp" />
+    <meta property="og:url" content="https://awslearningclub.jru/register" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Lexend:wght@300;400;500;600;700&family=Lexend+Deca:wght@400;500;600&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/register.css" />
+  </head>
+  <body class="register-page">
+    <main class="register-main">
+      <div class="register-card">
+
+        <!-- Back button -->
+        <a href="members.html" class="register-back">
+          <span class="register-back-arrow"></span>
+          Back
+        </a>
+
+        <!-- Title -->
+        <h1 class="register-title">Sign up</h1>
+
+        <!-- Progress steps -->
+        <div class="register-progress">
+          <div class="progress-step active">
+            <div class="progress-circle filled"></div>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step">
+            <div class="progress-circle"></div>
+          </div>
+          <div class="progress-line"></div>
+          <div class="progress-step">
+            <div class="progress-circle"></div>
+          </div>
+        </div>
+
+        <!-- Section title -->
+        <h2 class="register-section-title">Basic Details</h2>
+
+        <form class="register-form" id="registerForm" novalidate>
+
+          <!-- Row: Full Name + Photo -->
+          <div class="form-row name-row">
+            <div class="form-group form-group-name">
+              <label class="form-label">Full Name.</label>
+              <input type="text" class="form-input input-name" id="fullName" placeholder="Enter Full Name" />
+              <div class="form-error" data-for="fullName">
+                <span class="error-icon"></span>
+                <span class="error-text">Input name field.</span>
+              </div>
+            </div>
+            <div class="form-group form-group-photo">
+              <div class="photo-upload" id="photoUpload">
+                <div class="photo-circle" id="photoCircle">
+                  <img src="../assets/shared/components/AWS-NewLogo.webp" alt="" class="photo-preview" id="photoPreview" />
+                  <div class="photo-placeholder">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5">
+                      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+                    </svg>
+                  </div>
+                  <input type="file" class="photo-input" id="photoInput" accept="image/*" />
+                </div>
+              </div>
+              <p class="photo-label">2x2 Photo</p>
+              <p class="photo-optional">(Optional)</p>
+            </div>
+          </div>
+
+          <!-- Row: Student Number + Email -->
+          <div class="form-row student-email-row">
+            <div class="form-group form-group-student">
+              <label class="form-label">Student Number.</label>
+              <input type="text" class="form-input input-student" id="studentNumber" placeholder="##-######" maxlength="9" />
+              <div class="form-error" data-for="studentNumber">
+                <span class="error-icon"></span>
+                <span class="error-text">Input student number.</span>
+              </div>
+            </div>
+            <div class="form-group form-group-email">
+              <label class="form-label">Email.</label>
+              <input type="email" class="form-input input-email" id="jruEmail" placeholder="Enter JRU Email" />
+              <div class="form-error" data-for="jruEmail">
+                <span class="error-icon"></span>
+                <span class="error-text">Input JRU email.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row: School Year + Program -->
+          <div class="form-row year-program-row">
+            <div class="form-group form-group-year">
+              <label class="form-label">School Year</label>
+              <div class="custom-select" data-select="schoolYear">
+                <button type="button" class="select-trigger">
+                  <span class="select-placeholder">- Year -</span>
+                  <span class="select-arrow"></span>
+                </button>
+                <ul class="select-dropdown">
+                  <li data-value="First Year">First Year</li>
+                  <li data-value="Second Year">Second Year</li>
+                  <li data-value="Third Year">Third Year</li>
+                  <li data-value="Fourth Year">Fourth Year</li>
+                </ul>
+              </div>
+              <div class="form-error" data-for="schoolYear">
+                <span class="error-icon"></span>
+                <span class="error-text">Select school year.</span>
+              </div>
+            </div>
+            <div class="form-group form-group-program">
+              <label class="form-label">Program.</label>
+              <div class="custom-select" data-select="program">
+                <button type="button" class="select-trigger">
+                  <span class="select-placeholder">-Select Program-</span>
+                  <span class="select-arrow"></span>
+                </button>
+                <ul class="select-dropdown">
+                  <li data-value="BS Computer Engineering">Bachelor of Science in Computer Engineering</li>
+                  <li data-value="BS Electronics Engineering">Bachelor of Science in Electronics Engineering</li>
+                  <li data-value="BS Information Technology">Bachelor of Science in Information Technology</li>
+                  <li data-value="BSIT Business Analytics">Bachelor of Science in Information Technology - Business Analytics</li>
+                  <li data-value="BS Entertainment and Multimedia Computing">Bachelor of Science in Entertainment &amp; Multimedia Computing</li>
+                  <li data-value="BSBA">Major in Business Analytics</li>
+                  <li data-value="BS Digital Animation Technology">Major in Digital Animation Technology</li>
+                  <li data-value="BS Game Development">Major in Game Development</li>
+                </ul>
+              </div>
+              <div class="form-error" data-for="program">
+                <span class="error-icon"></span>
+                <span class="error-text">Select program course.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Date Of Birth -->
+          <h3 class="dob-title">Date Of Birth</h3>
+          <div class="form-row dob-row">
+            <div class="form-group form-group-day">
+              <label class="form-label form-label-sm">Day.</label>
+              <div class="custom-select" data-select="dobDay">
+                <button type="button" class="select-trigger">
+                  <span class="select-placeholder">##</span>
+                  <span class="select-arrow"></span>
+                </button>
+                <ul class="select-dropdown select-dropdown-scroll" id="dayDropdown"></ul>
+              </div>
+              <div class="form-error" data-for="dobDay">
+                <span class="error-icon"></span>
+                <span class="error-text">Please select a valid day.</span>
+              </div>
+            </div>
+            <div class="form-group form-group-month">
+              <label class="form-label form-label-sm">Month.</label>
+              <div class="custom-select" data-select="dobMonth">
+                <button type="button" class="select-trigger">
+                  <span class="select-placeholder">- Month -</span>
+                  <span class="select-arrow"></span>
+                </button>
+                <ul class="select-dropdown select-dropdown-scroll" id="monthDropdown">
+                  <li data-value="January">January</li>
+                  <li data-value="February">February</li>
+                  <li data-value="March">March</li>
+                  <li data-value="April">April</li>
+                  <li data-value="May">May</li>
+                  <li data-value="June">June</li>
+                  <li data-value="July">July</li>
+                  <li data-value="August">August</li>
+                  <li data-value="September">September</li>
+                  <li data-value="October">October</li>
+                  <li data-value="November">November</li>
+                  <li data-value="December">December</li>
+                </ul>
+              </div>
+              <div class="form-error" data-for="dobMonth">
+                <span class="error-icon"></span>
+                <span class="error-text">Please select a valid month.</span>
+              </div>
+            </div>
+            <div class="form-group form-group-year-select">
+              <label class="form-label form-label-sm">Year.</label>
+              <div class="custom-select" data-select="dobYear">
+                <button type="button" class="select-trigger">
+                  <span class="select-placeholder">####</span>
+                  <span class="select-arrow"></span>
+                </button>
+                <ul class="select-dropdown select-dropdown-scroll" id="yearDropdown"></ul>
+              </div>
+              <div class="form-error" data-for="dobYear">
+                <span class="error-icon"></span>
+                <span class="error-text">Please select a valid year.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Consent -->
+          <div class="form-row consent-row">
+            <div class="form-group form-group-consent">
+              <label class="consent-label">
+                <input type="checkbox" class="consent-checkbox" id="consentCheck" />
+                <span class="consent-checkbox-custom"></span>
+                <span class="consent-text">I register for the AWS Student Builder Group - JRU Chapter, agree to abide by its guidelines and JRU's core values, and consent to my personal data being processed for official club purposes in compliance with the Data Privacy Act of 2012.</span>
+              </label>
+              <div class="form-error" data-for="consent">
+                <span class="error-icon"></span>
+                <span class="error-text">You must check the box to acknowledge your understanding and acceptance of the Data Privacy Act terms</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div class="form-submit-row">
+            <button type="submit" class="btn-save" id="btnSave">Save &amp; Continue</button>
+          </div>
+
+        </form>
+
+      </div>
+    </main>
+    <script src="../js/register.js"></script>
+  </body>
+</html>

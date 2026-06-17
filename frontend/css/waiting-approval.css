@@ -1,0 +1,206 @@
+/* ── Waiting for Approval page ── */
+
+.approval-content {
+  width: 100%;
+  position: relative;
+}
+
+/* ── Checkmark (mask from Figma) ── */
+.approval-checkmark {
+  width: 165px;
+  height: 165px;
+  margin: 0 auto;
+  background: #04990c;
+  mask: url('../assets/members/badges/Check-Icon-Badge.png') center / contain no-repeat;
+  -webkit-mask: url('../assets/members/badges/Check-Icon-Badge.png') center / contain no-repeat;
+}
+
+/* ── All circles green (completed state) ── */
+.register-page .progress-circle.filled {
+  background: #04990c;
+  border-color: #04990c;
+}
+
+.progress-line.filled {
+  border-color: #04990c;
+}
+
+/* ── Title ── */
+.approval-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  font-size: 68.923px;
+  text-align: center;
+  color: #04990c;
+  margin-top: 44px;
+  line-height: 1;
+}
+
+/* ── Message ── */
+.approval-message {
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  font-size: 18px;
+  color: #434242;
+  text-align: center;
+  max-width: 684px;
+  margin: 40px auto 0;
+  line-height: 1.5;
+}
+
+/* ── Actions row ── */
+.approval-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 48px;
+}
+
+/* ── Home / back badge ── */
+.approval-badge {
+  width: 40.4px;
+  height: 40.4px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.badge-circle {
+  width: 40.4px;
+  height: 40.4px;
+  border-radius: 50%;
+  background: #003678;
+  box-shadow: 0px 4.4635px 4.4635px rgba(0, 0, 0, 0.25);
+  position: absolute;
+}
+
+.badge-icon {
+  position: absolute;
+  inset: 6.62px;
+  background: linear-gradient(180deg, #FF750B, #FBB515);
+  mask: url('../assets/members/badges/Home-Icon-Last-Page.png') center / contain no-repeat;
+  -webkit-mask: url('../assets/members/badges/Home-Icon-Last-Page.png') center / contain no-repeat;
+}
+
+/* ── Members button ── */
+.btn-members {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  padding: 0 24px;
+  width: 299.83px;
+  height: 38.98px;
+  border: 0.557938px solid #0026FF;
+  border-radius: 18.7411px;
+  background: #fff;
+  box-shadow: 0px 4.4635px 4.4635px rgba(0, 0, 0, 0.25);
+  transition: opacity 0.2s;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: absolute;
+  left: 70%;
+  top: 105%;
+}
+
+.btn-members:hover {
+  opacity: 0.7;
+}
+
+.btn-members-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 20.0858px;
+  line-height: 30px;
+  background: linear-gradient(180deg, #FF8400 0%, #FBB515 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-arrow {
+  display: inline-block;
+  width: 15.87px;
+  height: 16.35px;
+  flex-shrink: 0;
+  background: #003678;
+  mask: url('../assets/members/badges/Back-Button-Last.png') center / contain no-repeat;
+  -webkit-mask: url('../assets/members/badges/Back-Button-Last.png') center / contain no-repeat;
+}
+
+/* ── MOBILE (< 768px) ── */
+@media (max-width: 767px) {
+  .approval-title {
+    font-size: 36px;
+    margin-top: 24px;
+  }
+
+  .approval-checkmark {
+    width: 110px;
+    height: 110px;
+  }
+
+  .approval-message {
+    font-size: 16px;
+    padding: 0 16px;
+    max-width: 100%;
+    margin-top: 16px;
+  }
+
+  .approval-actions {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .btn-members {
+    font-size: 16px;
+    padding: 6px 18px;
+  }
+}
+
+/* ── DESKTOP (1024px+) ── */
+@media (min-width: 1024px) {
+  .register-title {
+    display: none;
+  }
+
+  .register-back {
+    display: none;
+  }
+
+  .approval-content {
+    position: absolute;
+    left: 50%;
+    top: 274px;
+    transform: translateX(-50%);
+    width: auto;
+  }
+
+  .approval-checkmark {
+    margin: 0 auto;
+  }
+
+  .approval-title {
+    position: static;
+    text-align: center;
+    margin-top: 44px;
+  }
+
+  .approval-message {
+    position: static;
+    margin: 20px auto 0;
+  }
+
+  .approval-actions {
+    position: static;
+    margin-top: 60px;
+  }
+
+  .approval-badge {
+    position: absolute;
+    left: calc(70% - 54px);
+    top: 105%;
+  }
+}

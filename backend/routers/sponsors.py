@@ -27,8 +27,3 @@ def get_sponsor():
     partners = load_partners()
     data = sponors + partners
     return data
-
-# @router.get("/partners", response_model=List[Sponsor]) 
-# def get_partners():
-#     data = load_partners()
-#     return data

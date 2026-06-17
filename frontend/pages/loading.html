@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AWS Learning Club - Loading" />
+    <title>AWS Learning Club - Loading</title>
+    <link rel="icon" type="image/png" href="../assets/shared/components/AWS-NewLogo.webp" />
+    <meta property="og:title" content="AWS Learning Club - Loading" />
+    <meta property="og:image" content="../assets/shared/components/AWS-NewLogo.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/register.css" />
+    <link rel="stylesheet" href="../css/loading.css" />
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+  </head>
+  <body class="register-page">
+    <main class="register-main">
+      <div class="register-card">
+
+        <a href="javascript:history.back()" class="register-back">
+          <span class="register-back-arrow"></span>
+          Back
+        </a>
+
+        <div class="loading-content">
+            <div class="loading-spinner">
+            <dotlottie-player src="../assets/members/animation/loading-animation.json" autoplay loop style="width:100%;height:100%"></dotlottie-player>
+          </div>
+          <p class="loading-title">Loading...</p>
+          <p class="loading-subtitle">Please wait</p>
+        </div>
+
+      </div>
+    </main>
+    <script src="../js/loading.js"></script>
+  </body>
+</html>

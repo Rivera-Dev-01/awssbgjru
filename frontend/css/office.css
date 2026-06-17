@@ -1,0 +1,136 @@
+/* ── Office divisions page overrides ── */
+
+.office-section-title {
+  font-family: var(--font-poppins);
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--color-label);
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+
+/* ── Pill grid ── */
+.office-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  max-width: 849px;
+  margin: 0 auto;
+}
+
+.office-pill {
+  height: 73px;
+  border: 1px solid var(--color-orange);
+  border-radius: 20px;
+  background: #fff;
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--color-orange);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.office-pill:hover {
+  background: var(--color-orange);
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(255, 111, 8, 0.3);
+}
+
+.office-pill.selected {
+  background: var(--color-orange);
+  color: #fff;
+  border-width: 2px;
+}
+
+.office-submit-row {
+  margin-top: 40px;
+}
+
+/* ── MOBILE (< 768px) ── */
+@media (max-width: 767px) {
+  .office-section-title {
+    font-size: 20px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .office-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .office-pill {
+    height: 56px;
+    font-size: 18px;
+    white-space: normal;
+  }
+}
+
+/* ── TABLET (768px - 1023px) ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .office-pill {
+    height: 64px;
+    font-size: 22px;
+  }
+}
+
+/* ── DESKTOP (1024px+) ── */
+@media (min-width: 1024px) {
+  .office-content {
+    position: absolute;
+    left: 31px;
+    top: 232px;
+    width: 930px;
+  }
+
+  .office-section-title {
+    position: absolute;
+    left: 50%;
+    top: 34.39px;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 28px;
+    white-space: nowrap;
+  }
+
+  .office-grid {
+    position: absolute;
+    left: 40.73px;
+    top: 124.66px;
+    display: grid;
+    grid-template-columns: 412px 412px;
+    gap: 25px;
+    margin: 0;
+    max-width: none;
+  }
+
+  .office-pill {
+    height: 73px;
+    font-size: 28px;
+  }
+
+  .office-error {
+    position: absolute;
+    left: 48.34px;
+    top: 403.36px;
+    margin: 0;
+    padding-left: 0;
+    gap: 4px;
+  }
+
+  .office-submit-row {
+    position: absolute;
+    left: 50%;
+    top: 469.86px;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+}
