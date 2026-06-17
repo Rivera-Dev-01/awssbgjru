@@ -2,7 +2,7 @@
 // Requires backend running on port 8001. Frontend works without it — chat silently degrades.
 
 const CHAT_API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-  ? 'http://localhost:8001/api/chat'
+  ? 'http://localhost:8000/api/chat'
   : '/api/chat';
 
 document.addEventListener('DOMContentLoaded', () => {
