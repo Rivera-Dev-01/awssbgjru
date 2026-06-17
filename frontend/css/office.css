@@ -56,21 +56,116 @@
 
 /* ── MOBILE (< 768px) ── */
 @media (max-width: 767px) {
+  .office-content {
+    position: absolute;
+    width: 398px;
+    height: 625px;
+    left: calc(50% - 398px / 2);
+    top: 284px;
+    background: #FFFFFF;
+    border: 1px solid #EFF4FB;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
   .office-section-title {
-    font-size: 20px;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    position: absolute;
+    width: 283.23px;
+    height: 84px;
+    left: calc(50% - 283.23px / 2 - 0.17px);
+    top: 42.23px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+    background: linear-gradient(180deg, #FF8400 0%, #FBB515 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin: 0;
   }
 
   .office-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    position: absolute;
+    left: calc(50% - 297.16px / 2);
+    top: 150.18px;
+    width: 297.16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10.17px;
+    margin: 0;
+    max-width: none;
   }
 
   .office-pill {
-    height: 56px;
-    font-size: 18px;
-    white-space: normal;
+    width: 297.16px;
+    height: 52.65px;
+    border: 0.75px solid #FF6F08;
+    border-radius: 14.4px;
+    background: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 20.2px;
+    line-height: 24px;
+    color: #FF6F08;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+  }
+
+  .office-pill.selected {
+    background: #FF6F08;
+    color: #FFFFFF;
+  }
+
+  .office-error {
+    position: absolute;
+    left: calc(50% - 292px / 2);
+    width: 292px;
+    top: 522px;
+    z-index: 20;
+    margin: 0;
+    background: #fffafa;
+    border: 0.5px solid var(--color-error-border);
+    padding: 2px 5px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .office-submit-row {
+    position: absolute;
+    left: calc(50% - 292px / 2);
+    top: 550.84px;
+    margin: 0;
+    width: 292px;
+    height: 49px;
+  }
+
+  .office-submit-row .btn-save {
+    width: 292px;
+    height: 49px;
+    background: linear-gradient(180deg, #FFF200 0%, #FBB515 100%);
+    box-shadow: 0px 0px 12px rgba(255, 203, 13, 0.25);
+    border-radius: 22px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
   }
 }
 

@@ -27,8 +27,7 @@ html {
 }
 
 .header-container {
-    width: 100%;
-    height: 100%;
+    display: none;
 }
 
 /* Hide desktop elements on mobile */
@@ -47,22 +46,29 @@ html {
     position: fixed;
     top: 50px;
     right: 30px;
-    width: 40px;
-    height: 40px;
+    width: 9px;
+    height: 9px;
     padding: 0;
     border: none;
-    background: transparent;
+    background: #071E4C;
+    border-radius: 50%;
+    box-shadow: 11px 0 0 #071E4C, 22px 0 0 #071E4C;
     cursor: pointer;
     z-index: 1100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+.hamburger-btn::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 71px;
+    height: 49px;
+    cursor: pointer;
 }
 
 .hamburger-btn img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    display: none;
 }
 
 .hamburger-btn.hidden {

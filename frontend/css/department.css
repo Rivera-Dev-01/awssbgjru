@@ -116,30 +116,312 @@
 
 /* ── MOBILE (< 768px) ── */
 @media (max-width: 767px) {
-  .dept-section-title {
-    font-size: 20px;
-    margin-top: 16px;
-    margin-bottom: 16px;
+  body.register-page.register-step-dept {
+    background: #ffffff;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .dept-cards {
+  .register-step-dept .register-main {
+    width: 430px;
+    height: 932px;
+    position: relative;
+    background: #ffffff;
+    flex-shrink: 0;
+    transform: scale(calc(min(100vw / 430, 100vh / 932)));
+    transform-origin: center center;
+  }
+
+  .register-step-dept #header-placeholder {
+    position: relative;
+    z-index: 200;
+  }
+
+  .register-step-dept .register-card {
+    position: absolute;
+    inset: 0;
+    width: 430px;
+    height: 932px;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    z-index: 1;
+  }
+
+  body.register-step-dept .site-header {
+    display: block;
+    position: absolute;
+    width: 440px;
+    height: 107px;
+    left: -4px;
+    top: 0px;
+    background: #084A8D;
+    z-index: 10;
+  }
+
+  body.register-step-dept .hamburger-btn {
+    position: absolute;
+    left: 366px;
+    top: 70px;
+    right: auto;
+    bottom: auto;
+    z-index: 100;
+  }
+
+  /* Back Button styling */
+  .register-step-dept .register-back {
+    position: absolute;
+    width: 91.38px;
+    height: 26.26px;
+    left: 36.54px;
+    top: 125px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1.14289px solid #0026FF;
+    border-radius: 13.7147px;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    z-index: 150;
+  }
+
+  .register-step-dept .register-back-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16.0005px;
+    line-height: 24px;
+    background: linear-gradient(180deg, #FF8400 0%, #FBB515 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .register-step-dept .register-back-arrow {
+    border-left: 2px solid #003678;
+    border-bottom: 2px solid #003678;
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg);
+    margin-right: 6px;
+    margin-top: -1px;
+    display: inline-block;
+  }
+
+  /* Sign up */
+  .register-step-dept .register-title {
+    position: absolute;
+    width: 79px;
+    height: 26px;
+    left: calc(50% - 79px / 2 + 1.83px);
+    top: 188.95px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 21.5367px;
+    line-height: 26px;
+    color: #000000;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* Progress steps */
+  .register-step-dept .register-progress {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    left: 0;
+    top: 237.4px;
+    display: block;
+    margin: 0;
+  }
+
+  .register-step-dept .progress-step {
+    position: absolute;
+    display: block;
+    margin: 0;
+  }
+
+  .register-step-dept .progress-step:nth-child(1) {
+    left: 87.64px;
+  }
+
+  .register-step-dept .progress-step:nth-child(3) {
+    left: 202.73px;
+  }
+
+  .register-step-dept .progress-step:nth-child(5) {
+    left: 317.14px;
+  }
+
+  .register-step-dept .progress-circle {
+    width: 28.94px;
+    height: 28.94px;
+    border: none;
+    background: #FBE502;
+    border-radius: 50%;
+  }
+
+  .register-step-dept .progress-circle.filled {
+    background: #FF750B;
+  }
+
+  .register-step-dept .progress-line {
+    position: absolute;
+    height: 0;
+    border-top: 0.673021px solid #FBE502;
+    margin: 0;
+  }
+
+  .register-step-dept .progress-line.filled {
+    border-top: 0.673021px solid #FF750B !important;
+  }
+
+  .register-step-dept .progress-line:nth-child(2) {
+    left: 131.39px;
+    width: 55.86px;
+    top: 14.47px;
+  }
+
+  .register-step-dept .progress-line:nth-child(4) {
+    left: 246.48px;
+    width: 55.86px;
+    top: 14.47px;
+  }
+
+  /* Section Title */
+  .register-step-dept .dept-content {
+    position: absolute;
+    width: 398px;
+    height: 466px;
+    left: calc(50% - 398px / 2);
+    top: 284.34px;
+    background: #FFFFFF;
+    border: 1px solid #EFF4FB;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .register-step-dept .dept-section-title {
+    position: absolute;
+    width: 283.9px;
+    height: 84px;
+    left: calc(50% - 283.9px / 2 + 6.61px);
+    top: 45.32px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+    background: linear-gradient(180deg, #FF8400 0%, #FBB515 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin: 0;
+  }
+
+  /* Cards container */
+  .register-step-dept .dept-cards {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: block;
+  }
+
+  .register-step-dept .dept-card[data-dept="offices"] {
+    position: absolute;
+    width: 180.93px;
+    height: 240px;
+    left: 16.29px;
+    top: 171.91px;
+    border: 0.251294px solid #FF6F08;
+    border-radius: 6.03105px;
+    background: #FFFFFF;
+  }
+
+  .register-step-dept .dept-card[data-dept="skillbuilder"] {
+    position: absolute;
+    width: 181.94px;
+    height: 240px;
+    left: 205.28px;
+    top: 170.83px;
+    border: 0.251294px solid #FF6F08;
+    border-radius: 6.03105px;
+    background: #FFFFFF;
+  }
+
+  .register-step-dept .dept-card {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
+    padding: 0;
+    gap: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.25s ease;
   }
 
-  .dept-card {
-    width: 280px;
-    height: 320px;
+  .register-step-dept .dept-card-icon {
+    width: 109px;
+    height: 109px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
   }
 
-  .dept-card-icon {
-    width: 90px;
-    height: 90px;
+  .register-step-dept .dept-icon-circle {
+    width: 109px;
+    height: 109px;
+    border-radius: 50%;
+    background: rgba(255, 111, 8, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
   }
 
-  .dept-card-label {
-    font-size: 22px;
+  .register-step-dept .dept-icon-circle img {
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    position: static;
+    max-width: none;
+    max-height: none;
+  }
+
+  .register-step-dept .dept-icon-circle .icon-inactive {
+    display: block;
+    opacity: 1 !important;
+  }
+
+  .register-step-dept .dept-icon-circle .icon-active {
+    display: none !important;
+  }
+
+  .register-step-dept .dept-card-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 14.0725px;
+    line-height: 21px;
+    color: #FF6F08;
+    text-align: center;
+    margin: 0;
   }
 }
 
