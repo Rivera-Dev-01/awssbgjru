@@ -3,6 +3,7 @@ from groq import Groq
 import config
 import prompts
 import guardrails
+from backend.rag import get_context
 
 client = Groq(api_key=config.GROQ_API_KEY)
 
@@ -13,8 +14,17 @@ def generate(message):
         yield {"token": error}
         return
 
+    context = get_context(message)
+    system_content = prompts.SYSTEM_PROMPT
+    if context:
+        system_content += (
+            "\n\nHere is information from the AWS Student Builder Group - JRU website "
+            "that may help answer the user's question:\n\n"
+            f"{context}"
+        )
+
     messages = [
-        {"role": "system", "content": prompts.SYSTEM_PROMPT},
+        {"role": "system", "content": system_content},
         {"role": "user", "content": message},
     ]
 

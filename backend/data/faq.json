@@ -1,0 +1,142 @@
+[
+  {
+    "category": "hesitation",
+    "question": "I don't know anything about AWS or cloud computing. Can I still join?",
+    "answer": "Absolutely. The AWS Student Builder Group welcomes students of all skill levels, including complete beginners. Our workshops, like the Kiro Workshop, start from the fundamentals. You'll learn hands-on through guided sessions. No prior cloud experience needed."
+  },
+  {
+    "category": "hesitation",
+    "question": "Do I need to be an IT or Computer Science student to join?",
+    "answer": "Not at all. We accept students from all programs: BS Computer Engineering, BS Electronics Engineering, BS Information Technology, BSIT Business Analytics, BS Entertainment and Multimedia Computing, BSBA Business Analytics, BS Digital Animation Technology, and BS Game Development. If you have an interest in technology, you're welcome here."
+  },
+  {
+    "category": "hesitation",
+    "question": "I'm a freshman or first year student. Can I still join?",
+    "answer": "Yes, first year students are welcome. Many of our active members joined as freshmen. The club is designed to help you learn and grow regardless of your year level."
+  },
+  {
+    "category": "hesitation",
+    "question": "Is there a membership fee?",
+    "answer": "There is no membership fee. Joining the AWS Student Builder Group - JRU Chapter is completely free."
+  },
+  {
+    "category": "hesitation",
+    "question": "How much time do I need to commit?",
+    "answer": "There is no strict time commitment. We encourage members to attend workshops, events, and meetings as their schedule allows. Active participation is appreciated but not forced."
+  },
+  {
+    "category": "hesitation",
+    "question": "What if I can't attend all the meetings or events?",
+    "answer": "That's fine. You can attend whichever events fit your schedule. There's no penalty for missing activities."
+  },
+  {
+    "category": "hesitation",
+    "question": "What tech stack or experience do I need to join as a tech member?",
+    "answer": "None at all. The club is designed for students of all skill levels. Our workshops start from the basics. Whether you're a complete beginner or have prior experience, there's a place for you. We'll guide you through AWS cloud computing, software development, and other technologies step by step."
+  },
+  {
+    "category": "joining",
+    "question": "How do I become a member?",
+    "answer": "Go to the Register page, fill out the form with your full name, student number, JRU email, school year, program, and date of birth. Upload an optional 2x2 photo, agree to the data privacy consent, and click Save. Then explain why you want to join, pick a department (Offices or Skill Builder), choose a specific division, and submit."
+  },
+  {
+    "category": "joining",
+    "question": "What happens after I submit my application?",
+    "answer": "After submission, you'll see a loading page with an animation, followed by a congratulations page confirming your application was received. You'll then receive an email with your complete membership information."
+  },
+  {
+    "category": "joining",
+    "question": "Will there be an interview? An exam?",
+    "answer": "There is no interview or exam required for membership. Just fill out the registration form honestly and submit."
+  },
+  {
+    "category": "joining",
+    "question": "How long until I hear back after I submit?",
+    "answer": "After submitting, you'll immediately see the confirmation page. Expect a detailed email shortly with your membership information."
+  },
+  {
+    "category": "joining",
+    "question": "Can I change my mind about which department I picked?",
+    "answer": "If you need to change your department or division, contact the club officers so they can assist you with updating your application."
+  },
+  {
+    "category": "joining",
+    "question": "What programs or courses are offered in the registration form?",
+    "answer": "The available programs are: BS Computer Engineering, BS Electronics Engineering, BS Information Technology, BSIT Business Analytics, BS Entertainment and Multimedia Computing, BSBA Business Analytics, BS Digital Animation Technology, and BS Game Development."
+  },
+  {
+    "category": "member-life",
+    "question": "What does a typical meeting or event look like?",
+    "answer": "Meetings vary depending on the event. Past events include the Kiro Workshop, where members learned AI-assisted development with hands-on coding, the Byte Forward Hackathon, a 24-hour competition, and the AWS Student Community Day, featuring expert-led sessions and computing workshops."
+  },
+  {
+    "category": "member-life",
+    "question": "Do I get a certificate of membership?",
+    "answer": "Yes. Active members receive a Certificate of Membership after completing their first semester or upon approval of their membership revalidation."
+  },
+  {
+    "category": "member-life",
+    "question": "Can I be in both an Office AND a Skill Builder department?",
+    "answer": "The registration form asks you to choose one: either an Office division or a Skill Builder division. Contact the club officers if you have questions about participating in both."
+  },
+  {
+    "category": "member-life",
+    "question": "Are there leadership positions I can apply for later?",
+    "answer": "Yes. The club has executive positions such as President, Chief of Creatives, Secretary, and other officer roles. Members who show dedication and skill can be considered for leadership roles."
+  },
+  {
+    "category": "member-life",
+    "question": "Do I need a laptop to participate?",
+    "answer": "A laptop is helpful for hands-on workshops and projects, but not strictly required for all activities. Some sessions may involve watching demonstrations or participating in discussions."
+  },
+  {
+    "category": "member-life",
+    "question": "What skills will I learn as a member?",
+    "answer": "Members can learn AWS cloud computing fundamentals, AI-assisted development, software and web development, data analytics, cybersecurity, cloud architecture, machine learning, and advanced networking depending on their chosen department."
+  },
+  {
+    "category": "member-life",
+    "question": "What are the benefits of being a member?",
+    "answer": "Benefits include: Certificate of Membership, training and skill enhancement in cloud computing and related fields, certification of attendance for active participants, professional training from Chief Officers, and representation and empowerment through an inclusive community."
+  },
+  {
+    "category": "logistics",
+    "question": "Where and when do you meet?",
+    "answer": "Events are held at JRU campus locations such as Bldg. H and the Centennial Building Auditorium. Specific dates and venues are announced for each event. Past events ran from morning to afternoon."
+  },
+  {
+    "category": "logistics",
+    "question": "Is there a Facebook group, Discord, or GC for members?",
+    "answer": "Yes, the club communicates through online channels. After registering, you'll receive information about how to join the official group chat and community platforms."
+  },
+  {
+    "category": "logistics",
+    "question": "Who are the current officers of the club?",
+    "answer": "The club was founded in 2025 by Adrian Justine R. Evangelista and Co-Founders. Executive members include officers such as the President, Chief of Creatives, Secretary, and others leading the Operations, Relations, Creatives, Marketing, Finance, Media, and Technology offices."
+  },
+  {
+    "category": "logistics",
+    "question": "Can I bring a friend to an event?",
+    "answer": "Yes. Non-members and friends are welcome to attend events. It's a great way for them to see what the club is about before deciding to join."
+  },
+  {
+    "category": "general",
+    "question": "What does the AWS Student Builder Group do?",
+    "answer": "The AWS Student Builder Group - JRU Chapter is a student organization that empowers members through hands-on learning, workshops, community service, and collaborative projects. We host events like the Kiro Workshop, Byte Forward Hackathon, and AWS Student Community Day. Members learn AWS cloud skills, build projects, and network with peers and professionals."
+  },
+  {
+    "category": "general",
+    "question": "What is the vision of the club?",
+    "answer": "A thriving network of student innovators driving technological progress."
+  },
+  {
+    "category": "general",
+    "question": "What is the mission of the club?",
+    "answer": "To foster a culture of learning, volunteerism, and social impact through educational initiatives, hands-on workshops, and collaborative networking opportunities."
+  },
+  {
+    "category": "general",
+    "question": "When was the club founded?",
+    "answer": "The AWS Student Builder Group - JRU Chapter was founded in 2025 by Adrian Justine R. Evangelista and Co-Founders."
+  }
+]

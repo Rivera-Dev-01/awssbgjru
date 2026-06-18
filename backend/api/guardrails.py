@@ -23,7 +23,7 @@ def check_input(text):
 
     for pattern in BLOCKED_PATTERNS + CODE_PATTERNS:
         if re.search(pattern, text):
-            return False, "I can only answer questions about the AWS Learning Club. Want to know about our events or how to join?"
+            return False, "I can only answer questions about the AWS Student Builder Group - JRU. Want to know about our events or how to join?"
 
     return True, None
 

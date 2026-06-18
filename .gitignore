@@ -11,3 +11,6 @@ kilo.json
 *-backup.*
 .vscode/settings.json
 .vercel
+
+# FAISS RAG index
+backend/faiss_index/

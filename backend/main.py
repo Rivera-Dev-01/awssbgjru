@@ -20,7 +20,7 @@ from backend.api.config import GROQ_MODEL
 from backend.api.rate_limiter import RateLimiter
 from backend.api.cache import TTLCache
 
-app = FastAPI(title="AWS Learning Club API")
+app = FastAPI(title="AWS Student Builder Group - JRU API")
 
 app.add_middleware(
     CORSMiddleware,

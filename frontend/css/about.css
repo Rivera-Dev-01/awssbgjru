@@ -555,9 +555,9 @@ main {
 
         /* Outer frame radius and inner swoop size variables */
         --r: 25px;   
-        --s: 40px;   
-        --x: 340px;  
-        --y: 195px;  
+        --s: 34px;   
+        --x: 268px;  
+        --y: 145px;  
 
         /* Mathematical curve calculations */
         --_m: / calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(#000 70%, #0000 72%);
@@ -596,8 +596,8 @@ main {
     }
 
     .milcon-pic {
-        width: 100%;
-        height: 100%;
+        width: 120%;
+        height: 144%;
         display: block;
         object-fit: cover;
         border-radius: var(--r);
@@ -632,8 +632,8 @@ main {
 
     .hero-bottom-card {
         position: absolute;
-        bottom: 0;
-        left: 0;
+        bottom: -3px;
+        left: -15px;
         z-index: 20;
         
         display: flex;
@@ -643,7 +643,7 @@ main {
         
         width: calc(var(--x) + var(--r) + var(--s));
         height: calc(var(--y) + var(--r) + var(--s));
-        padding: 35px 40px 30px 40px;
+        padding: 10px 40px 30px 25px;
         box-sizing: border-box;
     }
 

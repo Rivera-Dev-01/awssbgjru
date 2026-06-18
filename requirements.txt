@@ -3,3 +3,7 @@ groq>=0.9.0
 python-dotenv>=1.0.0
 httpx>=0.24,<0.28
 supabase>=2.0.0
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.0
+beautifulsoup4>=4.12.0
+numpy>=1.24.0

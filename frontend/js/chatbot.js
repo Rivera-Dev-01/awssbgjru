@@ -24,6 +24,12 @@ function initChatbot() {
 
   let isOpen = false;
 
+  const statusDot = document.querySelector('.chatbot-status-dot');
+  const statusText = document.querySelector('.chatbot-status-text');
+  const headerAvatar = document.querySelector('.chatbot-header .chatbot-avatar');
+
+  let currentBubble = null;
+
   // Add first bot greeting
   addBotMessage('Hi there! 👋 Welcome aboard! Ask me anything about AWS, the cloud, or our community.');
 
@@ -73,9 +79,7 @@ function initChatbot() {
     if (isOpen) return;
     isOpen = true;
     chatWindow.classList.add('open');
-    trigger.style.animation = 'none';
-    trigger.offsetHeight;
-    trigger.style.animation = '';
+    trigger.style.display = 'none';
     setTimeout(() => input?.focus(), 400);
   }
 
@@ -83,9 +87,7 @@ function initChatbot() {
     if (!isOpen) return;
     isOpen = false;
     chatWindow.classList.remove('open');
-    trigger.style.animation = 'none';
-    trigger.offsetHeight;
-    trigger.style.animation = '';
+    trigger.style.display = '';
   }
 
   function addBotMessage(text) {
@@ -117,6 +119,22 @@ function initChatbot() {
     wrapper.appendChild(bubble);
     messages.appendChild(wrapper);
     scrollToBottom();
+  }
+
+  function showThinking(bubble) {
+    currentBubble = bubble;
+    if (statusText) statusText.textContent = 'Thinking...';
+    if (statusDot) statusDot.classList.add('thinking');
+    if (headerAvatar) headerAvatar.classList.add('bot-speaking');
+    bubble.innerHTML = '<div class="chatbot-typing"><span class="chatbot-typing-dot"></span><span class="chatbot-typing-dot"></span><span class="chatbot-typing-dot"></span></div>';
+    scrollToBottom();
+  }
+
+  function hideThinking() {
+    if (statusText) statusText.textContent = 'Aboard the Cloud';
+    if (statusDot) statusDot.classList.remove('thinking');
+    if (headerAvatar) headerAvatar.classList.remove('bot-speaking');
+    currentBubble = null;
   }
 
   function sendMessage() {
@@ -163,7 +181,7 @@ function initChatbot() {
     botWrapper.appendChild(author);
     botWrapper.appendChild(bubble);
     messages.appendChild(botWrapper);
-    scrollToBottom();
+    showThinking(bubble);
 
     const controller = new AbortController();
 
@@ -175,6 +193,7 @@ function initChatbot() {
     })
       .then(async (res) => {
         if (!res.ok) {
+          hideThinking();
           bubble.textContent = 'Sorry, I am having trouble connecting. Please try again later.';
           input.disabled = false;
           if (sendBtn) sendBtn.disabled = false;
@@ -185,10 +204,12 @@ function initChatbot() {
         const reader = res.body.getReader();
         const decoder = new TextDecoder();
         let buffer = '';
+        let isFirstToken = true;
 
         function read() {
           reader.read().then(({ done, value }) => {
             if (done) {
+              hideThinking();
               input.disabled = false;
               if (sendBtn) sendBtn.disabled = false;
               input.focus();
@@ -210,10 +231,16 @@ function initChatbot() {
                 const data = JSON.parse(part.slice(6));
                 if (data.token === '[DONE]') continue;
                 if (data.token) {
+                  if (isFirstToken) {
+                    bubble.innerHTML = '';
+                    isFirstToken = false;
+                  }
                   bubble.textContent += data.token;
                   scrollToBottom();
                 }
                 if (data.error) {
+                  hideThinking();
+                  bubble.innerHTML = '';
                   bubble.textContent = data.error;
                   scrollToBottom();
                 }
@@ -222,6 +249,7 @@ function initChatbot() {
 
             read();
           }).catch(() => {
+            hideThinking();
             input.disabled = false;
             if (sendBtn) sendBtn.disabled = false;
           });
@@ -230,6 +258,8 @@ function initChatbot() {
         read();
       })
       .catch(() => {
+        hideThinking();
+        bubble.innerHTML = '';
         bubble.textContent = 'Sorry, I am having trouble connecting. Please try again later.';
         input.disabled = false;
         if (sendBtn) sendBtn.disabled = false;

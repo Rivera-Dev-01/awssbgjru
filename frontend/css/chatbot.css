@@ -140,8 +140,8 @@
 }
 
 @keyframes chatbot-avatar-bob {
-  from { transform: translateY(0); }
-  to { transform: translateY(-3px); }
+  from { margin-top: 0; }
+  to { margin-top: -3px; }
 }
 
 .chatbot-header-info {
@@ -172,6 +172,17 @@
   border-radius: 50%;
   background: #4ade80;
   flex-shrink: 0;
+  transition: background 0.3s ease;
+}
+
+.chatbot-status-dot.thinking {
+  background: #fbbf24;
+  animation: chatbot-dot-pulse 1s ease-in-out infinite;
+}
+
+@keyframes chatbot-dot-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.6; }
 }
 
 .chatbot-status-text {
