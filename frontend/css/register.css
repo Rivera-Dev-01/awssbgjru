@@ -1205,13 +1205,17 @@ body.register-step-1 #header-placeholder {
     height: 14px;
   }
 
-  /* Day constraint — max 2 lines */
-  .register-step-1 .form-error[data-for="dobDay"] .error-text {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+  /* School year constraint — 1 line */
+  .register-step-1 .form-error[data-for="schoolYear"] .error-text {
+    white-space: nowrap;
   }
+
+  /* Day constraint — 2 lines, no cut-off */
+  .register-step-1 .form-error[data-for="dobDay"] {
+    padding-left: 10px;
+  }
+}
+
 }
 
 /* ── TABLET (768px - 1023px) ── */
