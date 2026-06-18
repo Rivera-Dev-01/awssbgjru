@@ -31,7 +31,6 @@ app.add_middleware(
 
 limiter = RateLimiter()
 response_cache = TTLCache()
-
 app.include_router(members_router)
 app.include_router(events_router)
 app.include_router(sponsors_router)

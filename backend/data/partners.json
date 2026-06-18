@@ -1,1 +1,36 @@
-{}
+{
+    "partners" : [
+        {
+            "name" : "AWS Learning Club - TUP Manila",
+            "website" : "https://www.facebook.com/AWSCloudClubHugo"
+        },
+        {
+            "name" : "AWS Learning Club - Spade",
+            "website" : "https://www.facebook.com/awsccspade/"
+        },
+        {
+            "name" : "Bitskwela",
+            "website" : "https://bitskwela.com/"
+        },
+        {
+            "name" : "Datacamp Donates",
+            "website" : "https://www.datacamp.com/donates"
+        },
+        {
+            "name" : "KadaKareer",
+            "website" : "https://www.kadakareer.com/"
+        },
+        {
+            "name" : "UXPH",
+            "website" : "https://www.uxph.org/"
+        },
+        {
+            "name" : "GDG Mapua",
+            "website" : "https://www.facebook.com/GDGoCMU/"
+        },
+        {
+            "name" : "COMBINES Mapua",
+            "website" : "https://www.facebook.com/COMBINES1012/"
+        }
+    ]
+}

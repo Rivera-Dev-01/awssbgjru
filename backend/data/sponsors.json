@@ -1,1 +1,8 @@
-{}
+{
+    "sponsors": [
+        {
+            "name" : "Tutorials Dojo",
+            "website" : "https://tutorialsdojo.com/"
+        }
+    ]
+}

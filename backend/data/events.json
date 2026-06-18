@@ -1,1 +1,19 @@
-{}
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "KIRO Workshop",
+      "image_url": "/assets/events/kiro-workshop-img.png"
+    },
+    {
+      "id": 2,
+      "name": "Student Community Day",
+      "image_url": "/assets/events/student-com-day-img.png"
+    },
+    {
+      "id": 3,
+      "name": "Byte Forward Hackathon",
+      "image_url": "/assets/events/byteforward-img.png"
+    }
+  ]
+}
