@@ -500,86 +500,722 @@ button.register-back {
   font-weight: 400;
 }
 
+/* Scoped header hide for step-1 on desktop */
+body.register-step-1 .site-header {
+  display: none;
+}
+
+body.register-step-1 #header-placeholder {
+  min-height: 0;
+}
+
 /* ── MOBILE (< 768px) ── */
 @media (max-width: 767px) {
+  html,
   body.register-page {
-    padding: 12px;
-    align-items: flex-start;
+    background: #ffffff;
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
   }
 
   .register-card {
     padding: 20px 16px 40px;
     border-radius: 12px;
-    margin-top: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    background: #ffffff;
   }
 
-  .register-title {
-    font-size: 24px;
-    margin-top: 8px;
+  body.register-step-1 .site-header {
+    display: block;
+    position: absolute;
+    width: 440px;
+    height: 107px;
+    left: -4px;
+    top: 0px;
+    background: #084A8D;
+    z-index: 10;
   }
 
-  .register-progress {
-    gap: 8px;
-    max-width: 280px;
+  body.register-step-1 .hamburger-btn {
+    position: absolute;
+    left: 366px;
+    top: 70px;
+    right: auto;
+    bottom: auto;
+    z-index: 100;
   }
 
-  .progress-circle {
-    width: 32px;
-    height: 32px;
+  body.register-step-1 {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .progress-line {
-    max-width: 50px;
+  .register-step-1 .register-main {
+    width: 430px;
+    height: 932px;
+    position: relative;
+    background: #ffffff;
+    flex-shrink: 0;
+    transform: scale(calc(min(100vw / 430, 100vh / 932)));
+    transform-origin: center center;
   }
 
-  .register-section-title {
-    font-size: 20px;
-    margin-top: 20px;
+  .register-step-1 #header-placeholder {
+    position: relative;
+    z-index: 200;
   }
 
-  .form-row {
-    flex-direction: column;
-    gap: 16px;
+  .register-step-1 .register-card {
+    position: absolute;
+    inset: 0;
+    width: 430px;
+    height: 932px;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    z-index: 1;
   }
 
-  .form-group-name,
-  .form-group-student,
-  .form-group-email,
-  .form-group-year,
-  .form-group-program {
-    flex: 1 1 100%;
-    min-width: 0;
+  .register-step-1 .register-form {
+    position: absolute;
+    inset: 0;
+    width: 430px;
+    height: 932px;
+    margin: 0;
+    padding: 0;
+    display: block;
   }
 
-  .form-group-photo {
-    order: -1;
+  /* Group 372 / Rectangle 226 - Back Button */
+  .register-step-1 .register-back {
+    position: absolute;
+    width: 91.38px;
+    height: 26.26px;
+    left: 36.54px;
+    top: 125px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border: 1.14289px solid #0026FF;
+    border-radius: 13.7147px;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    z-index: 150;
+  }
+
+  .register-step-1 .register-back-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16.0005px;
+    line-height: 24px;
+    background: linear-gradient(180deg, #FF8400 0%, #FBB515 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .register-step-1 .register-back-arrow {
+    border-left: 2px solid #003678;
+    border-bottom: 2px solid #003678;
+    width: 7px;
+    height: 7px;
+    transform: rotate(45deg);
+    margin-right: 6px;
+    margin-top: -1px;
+    display: inline-block;
+  }
+
+  /* Sign up */
+  .register-step-1 .register-title {
+    position: absolute;
+    width: 79px;
+    height: 26px;
+    left: calc(50% - 79px / 2 + 1.83px);
+    top: 188.95px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 21.5367px;
+    line-height: 26px;
+    color: #000000;
+    margin: 0;
     text-align: center;
   }
 
-  .photo-circle {
+  /* Progress steps */
+  .register-step-1 .register-progress {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    left: 0;
+    top: 237.4px;
+    display: block;
+    margin: 0;
+  }
+
+  .register-step-1 .progress-step {
+    position: absolute;
+    display: block;
+    margin: 0;
+  }
+
+  .register-step-1 .progress-step:nth-child(1) {
+    left: 87.64px;
+  }
+
+  .register-step-1 .progress-step:nth-child(3) {
+    left: 202.73px;
+  }
+
+  .register-step-1 .progress-step:nth-child(5) {
+    left: 317.14px;
+  }
+
+  .register-step-1 .progress-circle {
+    width: 28.94px;
+    height: 28.94px;
+    border: none;
+    background: #FBE502;
+    border-radius: 50%;
+  }
+
+  .register-step-1 .progress-circle.filled {
+    background: #FF750B;
+  }
+
+  .register-step-1 .progress-line {
+    position: absolute;
+    height: 0;
+    border-top: 0.673021px solid #FBE502;
+    margin: 0;
+  }
+
+  .register-step-1 .progress-line:nth-child(2) {
+    left: 131.39px;
+    width: 55.86px;
+    top: 14.47px;
+  }
+
+  .register-step-1 .progress-line:nth-child(4) {
+    left: 246.48px;
+    width: 55.86px;
+    top: 14.47px;
+  }
+
+  /* Section Title */
+  .register-step-1 .register-section-title {
+    position: absolute;
+    width: 122px;
+    height: 28px;
+    left: calc(50% - 122px / 2 - 117.63px);
+    top: 315.07px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18.6667px;
+    line-height: 28px;
+    color: #FF8400;
+    margin: 0;
+  }
+
+  /* Form groups base */
+  .register-step-1 .form-group {
+    position: absolute;
+    margin: 0;
+  }
+
+  .register-step-1 .form-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+    color: #000000;
+    margin: 0;
+    padding: 0 0 0 10px;
+  }
+
+  .register-step-1 .form-input,
+  .register-step-1 .select-trigger {
+    background: #EFF4FB;
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  /* Row 1: Full Name */
+  .register-step-1 .form-group-name {
+    position: absolute;
+    left: 34.61px;
+    top: 356.55px;
+    width: 361.75px;
+    height: 46px;
+  }
+
+  .register-step-1 .form-group-name .form-label {
+    position: absolute;
+    left: 11.58px;
+    top: 0px;
+    width: 61px;
+    height: 18px;
+  }
+
+  .register-step-1 .form-group-name .form-input {
+    position: absolute;
+    width: 361.75px;
+    height: 25.62px;
+    left: 0px;
+    top: 20.08px;
+    border-radius: 32.8861px;
+    font-size: 7.30803px;
+    padding: 0 20px;
+  }
+
+  /* Row 2: Student Number + Email */
+  .register-step-1 .form-group-student {
+    position: absolute;
+    left: 33.97px;
+    top: 415.73px;
+    width: 169.28px;
+    height: 55px;
+  }
+
+  .register-step-1 .form-group-student .form-label {
+    position: absolute;
+    left: 12.22px;
+    top: 0px;
     width: 100px;
-    height: 100px;
-    margin: 0 auto;
+    height: 18px;
   }
 
-  .student-email-row .form-group-student {
-    flex: 1 1 100%;
+  .register-step-1 .form-group-student .form-input {
+    position: absolute;
+    width: 169.28px;
+    height: 34.46px;
+    left: 0px;
+    top: 20.08px;
+    border-radius: 54.7377px;
+    font-size: 12.1639px;
+    padding: 0 20px;
   }
 
-  .dob-row .form-group-day,
-  .dob-row .form-group-month,
-  .dob-row .form-group-year-select {
-    flex: 1 1 100%;
+  .register-step-1 .form-group-email {
+    position: absolute;
+    left: 214.44px;
+    top: 415.73px;
+    width: 181.27px;
+    height: 55px;
   }
 
-  .dob-title {
-    font-size: 18px;
+  .register-step-1 .form-group-email .form-label {
+    position: absolute;
+    left: 13.75px;
+    top: 0px;
+    width: 35px;
+    height: 18px;
   }
 
-  .register-back {
+  .register-step-1 .form-group-email .form-input {
+    position: absolute;
+    width: 181.27px;
+    height: 34.57px;
+    left: 0px;
+    top: 20.08px;
+    border-radius: 54.7377px;
+    font-size: 12.1639px;
+    padding: 0 20px;
+  }
+
+  /* Row 3: School Year + Program */
+  .register-step-1 .form-group-year {
+    position: absolute;
+    left: 33.92px;
+    top: 483.86px;
+    width: 113.63px;
+    height: 49px;
+  }
+
+  .register-step-1 .form-group-year .form-label {
+    position: absolute;
+    left: 12.27px;
+    top: 0px;
+    width: 70px;
+    height: 18px;
+  }
+
+  .register-step-1 .form-group-year .select-trigger {
+    position: absolute;
+    width: 113.63px;
+    height: 28.1px;
+    left: 0px;
+    top: 20.08px;
+    border-radius: 32.9883px;
+    font-size: 7.33073px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .register-step-1 .form-group-program {
+    position: absolute;
+    left: 153.97px;
+    top: 483.86px;
+    width: 241.75px;
+    height: 50px;
+  }
+
+  .register-step-1 .form-group-program .form-label {
+    position: absolute;
+    left: 6.89px;
+    top: 0px;
+    width: 54px;
+    height: 18px;
+  }
+
+  .register-step-1 .form-group-program .select-trigger {
+    position: absolute;
+    width: 241.75px;
+    height: 28.88px;
+    left: 0px;
+    top: 20.18px;
+    border-radius: 33.9073px;
+    font-size: 7.53496px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Date Of Birth */
+  .register-step-1 .dob-title {
+    position: absolute;
+    width: 88px;
+    height: 21px;
+    left: calc(50% - 88px / 2 - 134.64px);
+    top: 552.02px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000;
+    margin: 0;
+  }
+
+  .register-step-1 .form-group-day {
+    position: absolute;
+    left: 34.71px;
+    top: 582.75px;
+    width: 91.57px;
+    height: 49px;
+  }
+
+  .register-step-1 .form-group-day .form-label {
+    position: absolute;
+    left: 10.27px;
+    top: 0px;
+    width: 26px;
+    height: 18px;
+  }
+
+  .register-step-1 .form-group-day .select-trigger {
+    position: absolute;
+    width: 91.57px;
+    height: 28.86px;
+    left: 0px;
+    top: 19.53px;
+    border-radius: 33.8567px;
+    font-size: 7.52371px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .register-step-1 .form-group-month {
+    position: absolute;
+    left: 130.04px;
+    top: 582.75px;
+    width: 157.05px;
+    height: 49px;
+  }
+
+  .register-step-1 .form-group-month .form-label {
+    position: absolute;
+    left: 16.64px;
+    top: 0px;
+    width: 40px;
+    height: 18px;
+  }
+
+  .register-step-1 .form-group-month .select-trigger {
+    position: absolute;
+    width: 157.05px;
+    height: 28.84px;
+    left: 0px;
+    top: 19.53px;
+    border-radius: 34.9002px;
+    font-size: 7.75561px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .register-step-1 .form-group-year-select {
+    position: absolute;
+    left: 293.31px;
+    top: 583.04px;
+    width: 102.95px;
+    height: 48px;
+  }
+
+  .register-step-1 .form-group-year-select .form-label {
+    position: absolute;
+    left: 10.56px;
+    top: 0px;
+    width: 29px;
+    height: 18px;
+  }
+
+  .register-step-1 .form-group-year-select .select-trigger {
+    position: absolute;
+    width: 102.95px;
+    height: 28.53px;
+    left: 0px;
+    top: 19.24px;
+    border-radius: 33.4897px;
+    font-size: 7.44217px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .register-step-1 .select-arrow {
+    width: 12px;
+    height: 12px;
+    background-size: contain;
+  }
+
+  .register-step-1 .select-dropdown {
+    top: calc(100% + 50px);
+  }
+
+  /* Photo Upload Component */
+  .register-step-1 .form-group-photo {
+    position: absolute;
+    left: 36.86px;
+    top: 662.9px;
+    width: 350px;
+    height: 50px;
+    display: block;
+  }
+
+  .register-step-1 .photo-upload {
+    position: absolute;
+    width: 119.7px;
+    height: 43.94px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .register-step-1 .photo-circle {
+    width: 119.7px;
+    height: 43.94px;
+    border-radius: 28px;
+    background: #FE9001;
+    border: none;
+    box-shadow: 0px 0px 14.5px 6px rgba(254, 144, 1, 0.5);
+    margin: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .register-step-1 .photo-placeholder svg {
+    display: none;
+  }
+
+  .register-step-1 .photo-placeholder {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>') center no-repeat;
+    background-size: 20px;
+  }
+
+  .register-step-1 .photo-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 28px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .register-step-1 .photo-preview.visible + .photo-placeholder {
+    display: none;
+  }
+
+  .register-step-1 .photo-label {
+    position: absolute;
+    width: 46px;
+    height: 14px;
+    left: 137.82px;
+    top: 10.3px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 9.55801px;
+    line-height: 14px;
+    color: #000000;
+    margin: 0;
+  }
+
+  .register-step-1 .photo-optional {
+    position: absolute;
+    width: 26px;
+    height: 8px;
+    left: 147.68px;
+    top: 24.64px;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 6.50476px;
+    line-height: 8px;
+    color: #939292;
+    margin: 0;
+  }
+
+  /* Consent Box */
+  .register-step-1 .form-group-consent {
+    position: absolute;
+    left: 42.3px;
+    top: 758.61px;
+    width: 355px;
+    height: 60px;
+    margin: 0;
+  }
+
+  .register-step-1 .consent-label {
+    position: absolute;
+    inset: 0;
+    display: block;
+    max-width: 100%;
+  }
+
+  .register-step-1 .consent-checkbox-custom {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0px;
+    top: 4.34px;
+    border: 1px solid #FBB515;
+    margin: 0;
+  }
+
+  .register-step-1 .consent-checkbox:checked + .consent-checkbox-custom::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #FF750B;
+  }
+
+  .register-step-1 .consent-text {
+    position: absolute;
+    width: 327.6px;
+    height: 60px;
+    left: 27.18px;
+    top: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: justify;
+    color: #606160;
+    margin: 0;
+  }
+
+  /* Save & Continue Button */
+  .register-step-1 .btn-save {
+    position: absolute;
+    width: 292px;
+    height: 49px;
+    left: calc(50% - 292px / 2);
+    top: 854.55px;
+    background: linear-gradient(180deg, #FFF200 0%, #FBB515 100%);
+    box-shadow: 0px 0px 12px rgba(255, 203, 13, 0.25);
+    border-radius: 22px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
     font-size: 16px;
-    padding: 4px 16px;
+    line-height: 19px;
+    color: #000000;
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
+  /* Constraint (error) button state */
+  .register-step-1 .btn-save.constraint-btn {
+    background: transparent;
+    border: 1px solid var(--color-orange);
+    color: var(--color-orange);
+    box-shadow: 0 0 12px rgba(255,203,13,0.25);
+  }
+
+  /* Error messages positioned under fields */
+  .register-step-1 .form-error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    margin: 0;
+    padding-left: 24px;
+  }
+
+  .register-step-1 .error-text {
+    font-size: 9px;
+    line-height: 1.3;
+  }
+
+  .register-step-1 .error-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* School year constraint — 1 line */
+  .register-step-1 .form-error[data-for="schoolYear"] .error-text {
+    white-space: nowrap;
+  }
+
+  /* Day constraint — 2 lines, no cut-off */
+  .register-step-1 .form-error[data-for="dobDay"] {
+    padding-left: 10px;
+  }
+}
+
 }
 
 /* ── TABLET (768px - 1023px) ── */
