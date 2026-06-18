@@ -4,15 +4,15 @@ Website for the AWS Learning Club at José Rizal University. Features a mobile-f
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|-----------|
-| Frontend | Vanilla HTML, CSS, JavaScript |
-| Backend | Python 3.12 · FastAPI |
-| Database | Supabase (PostgreSQL) |
-| AI Chat | Groq API (`llama3-8b-8192`) |
-| Email | Gmail SMTP |
-| Hosting | Vercel (frontend + backend via serverless functions) |
-| Fonts | Poppins, Montserrat, Lexend, Lexend Deca |
+| Layer    | Technology                                           |
+| -------- | ---------------------------------------------------- |
+| Frontend | Vanilla HTML, CSS, JavaScript                        |
+| Backend  | Python 3.12 · FastAPI                                |
+| Database | Supabase (PostgreSQL)                                |
+| AI Chat  | Groq API (`llama3-8b-8192`)                          |
+| Email    | Gmail SMTP                                           |
+| Hosting  | Vercel (frontend + backend via serverless functions) |
+| Fonts    | Poppins, Montserrat, Lexend, Lexend Deca             |
 
 ## Project Structure
 
@@ -112,38 +112,43 @@ AWS-Website/
 A 3-phase signup process that collects member details, validates inputs, and stores data in Supabase.
 
 ### Phase 1 — Basic Details (`register.html`)
+
 - Full name, Student ID, Email, Year, Program, Date of Birth, Photo upload
 - Custom dropdowns for Year and Program
 - Photo preview via file input
 - Saves to `sessionStorage.regBasic`
 
 ### Phase 2 — Explanation (`explanation.html`)
+
 - Free-text area for "Why do you want to join?"
 - Frontend validation (required)
 - Saves to `sessionStorage.regExplanation`
 
 ### Phase 3 — Department Choice (`department.html`)
+
 - Two cards: **Office** or **Skill Builder**
 - Click → redirects to office.html or skillbuilder.html
 
 ### Office / Skill Builder Pages
+
 - Grid of division pills (e.g., Technology, Creatives, Marketing)
 - Constraint validation (must pick one)
 - Gathers all `sessionStorage` data and POSTs to `/api/register`
 - On success → `loading.html` → `waiting-approval.html`
 
 ### Loading & Approval
+
 - **Loading**: 270×270px Lottie animation via `@dotlottie/player-component`, 4s timeout
 - **Waiting Approval**: Green progress indicator, checkmark badge, home button, "Proceed to members" link
 
 ## API Endpoints
 
-| Method | Path | Description |
-|--------|------|-------------|
-| POST | `/api/register` | Submit registration (validates + inserts to Supabase + email notification) |
-| POST | `/api/chat` | Captain Hima AI chatbot (SSE stream) |
-| GET | `/api/health` | Health check |
-| GET | `/api/_debug` | Diagnostic endpoint (env vars, Python version) |
+| Method | Path            | Description                                                                |
+| ------ | --------------- | -------------------------------------------------------------------------- |
+| POST   | `/api/register` | Submit registration (validates + inserts to Supabase + email notification) |
+| POST   | `/api/chat`     | Captain Hima AI chatbot (SSE stream)                                       |
+| GET    | `/api/health`   | Health check                                                               |
+| GET    | `/api/_debug`   | Diagnostic endpoint (env vars, Python version)                             |
 
 ## Getting Started
 
@@ -220,17 +225,17 @@ loading.html (4s) → waiting-approval.html
 
 The **Captain Hima** chatbot ("Chat with Captain Hima") appears as a floating pill button on every page. It uses `llama3-8b-8192` via Groq with SSE streaming responses.
 
-| Layer | File | Purpose |
-|-------|------|---------|
-| UI | `frontend/components/chatbot.html` | Floating panel markup |
-| Styles | `frontend/css/chatbot.css` | Panel, messages, input, trigger styling |
-| Client | `frontend/js/chatbot.js` | Toggle, send, SSE stream reader |
-| API | `backend/api/index.py` | FastAPI `/api/chat` POST endpoint |
-| Engine | `backend/api/chatbot.py` | Groq streaming call |
-| Safety | `backend/api/guardrails.py` | Content filtering |
-| Rate Limit | `backend/api/rate_limiter.py` | 20 requests/min per IP |
-| Cache | `backend/api/cache.py` | 5-min TTL for identical queries |
-| Prompt | `backend/api/prompts.py` | Captain Hima persona |
+| Layer      | File                               | Purpose                                 |
+| ---------- | ---------------------------------- | --------------------------------------- |
+| UI         | `frontend/components/chatbot.html` | Floating panel markup                   |
+| Styles     | `frontend/css/chatbot.css`         | Panel, messages, input, trigger styling |
+| Client     | `frontend/js/chatbot.js`           | Toggle, send, SSE stream reader         |
+| API        | `backend/api/index.py`             | FastAPI `/api/chat` POST endpoint       |
+| Engine     | `backend/api/chatbot.py`           | Groq streaming call                     |
+| Safety     | `backend/api/guardrails.py`        | Content filtering                       |
+| Rate Limit | `backend/api/rate_limiter.py`      | 20 requests/min per IP                  |
+| Cache      | `backend/api/cache.py`             | 5-min TTL for identical queries         |
+| Prompt     | `backend/api/prompts.py`           | Captain Hima persona                    |
 
 ## Deploying
 
