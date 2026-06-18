@@ -3,7 +3,12 @@ from groq import Groq
 import config
 import prompts
 import guardrails
-from backend.rag import get_context
+
+try:
+    from backend.rag import get_context
+    _rag_available = True
+except Exception:
+    _rag_available = False
 
 client = Groq(api_key=config.GROQ_API_KEY)
 
@@ -14,7 +19,12 @@ def generate(message):
         yield {"token": error}
         return
 
-    context = get_context(message)
+    context = ""
+    if _rag_available:
+        try:
+            context = get_context(message)
+        except Exception:
+            context = ""
     system_content = prompts.SYSTEM_PROMPT
     if context:
         system_content += (
