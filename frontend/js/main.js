@@ -1,18 +1,1 @@
-function loadComponent(elementId, filePath) {
-    return fetch(filePath)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`Failed to fetch component: ${response.statusText}`);
-            }
-            return response.text();
-        })
-        .then(data => {
-            const container = document.getElementById(elementId);
-            if (container) {
-                container.innerHTML = data;
-            }
-            return data;
-        })
-        .catch(error => console.error(`Error loading component [${elementId}] from ${filePath}:`,
-            error));
-}
+const COMPONENT_CACHE_VERSION=1;function loadComponent(t,e){const o="cmp_"+e+"_v1",n=localStorage.getItem(o);if(n){const e=document.getElementById(t);return e&&(e.innerHTML=n),Promise.resolve(n)}return fetch(e).then(t=>{if(!t.ok)throw new Error(`Failed to fetch component: ${t.statusText}`);return t.text()}).then(e=>{const n=document.getElementById(t);n&&(n.innerHTML=e);try{localStorage.setItem(o,e)}catch(t){}return e}).catch(o=>console.error(`Error loading component [${t}] from ${e}:`,o))}

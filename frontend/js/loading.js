@@ -1,5 +1,1 @@
-document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(() => {
-    window.location.href = '/waiting-approval';
-  }, 4000);
-});
+document.addEventListener("DOMContentLoaded",()=>{setTimeout(()=>{window.location.href="/waiting-approval"},4e3)});

@@ -30,8 +30,8 @@
     <!-- Header CSS - Separated for mobile and desktop -->
     <link rel="stylesheet" href="../css/header.css">
     <!-- Events CSS - Mobile specific -->
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/chatbot.css">
+    <link rel="stylesheet" href="../css/footer.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/chatbot.css" media="print" onload="this.media='all'">
 </head>
 <body class="landing-page">
     <!-- Header -->
@@ -50,8 +50,8 @@
                     Where in AWS, <span class="highlight">It's Always Day One</span>, the moment ambition meets action the single step that transforms a distant dream into your daily reality.
                 </p>
                 <div class="hero-buttons">
-                    <button class="btn-about">ABOUT US</button>
-                    <button class="btn-join">Join us</button>
+                    <a href="../pages/about.html" class="btn-about">ABOUT US</a>
+                    <a href="../pages/members.html" class="btn-join">Join us</a>
                 </div>
             </div>
         </section>

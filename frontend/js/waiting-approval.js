@@ -1,9 +1,1 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const btnMembers = document.querySelector('.btn-members');
-  if (btnMembers) {
-    btnMembers.addEventListener('click', (e) => {
-      e.preventDefault();
-      window.location.href = btnMembers.getAttribute('href');
-    });
-  }
-});
+document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector(".btn-members");e&&e.addEventListener("click",t=>{t.preventDefault(),window.location.href=e.getAttribute("href")})});

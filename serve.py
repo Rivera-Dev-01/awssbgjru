@@ -11,6 +11,12 @@ class ReuseAddrServer(socketserver.TCPServer):
         super().server_bind()
 
 class RewriteHandler(http.server.SimpleHTTPRequestHandler):
+    def handle_one_request(self):
+        try:
+            super().handle_one_request()
+        except (ConnectionAbortedError, ConnectionResetError, BrokenPipeError):
+            pass
+
     def __init__(self, *args, **kwargs):
         with open("vercel.json") as f:
             config = json.load(f)
