@@ -1,1 +1,1 @@
-document.addEventListener("DOMContentLoaded",()=>{if(!sessionStorage.getItem("regSubmitted"))return window.location.href="/register";sessionStorage.removeItem("regSubmitted"),setTimeout(()=>{window.location.href="/waiting-approval"},4e3)});
+document.addEventListener("DOMContentLoaded",()=>{if(!sessionStorage.getItem("regSubmitted"))return window.location.href="/register";sessionStorage.removeItem("regSubmitted"),setTimeout(()=>{window.location.href="/waiting-approval"},2500)});

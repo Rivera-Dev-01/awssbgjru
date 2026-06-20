@@ -53,6 +53,11 @@
         <h2 class="register-section-title">Basic Details</h2>
 
         <form class="register-form" id="registerForm" novalidate>
+          <!-- Honeypot: invisible to humans, traps bots -->
+          <div style="position:absolute;left:-9999px" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
 
           <!-- Row: Full Name + Photo -->
           <div class="form-row name-row">

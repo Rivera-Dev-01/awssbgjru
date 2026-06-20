@@ -11,31 +11,25 @@ _api_dir = os.path.join(os.path.dirname(__file__), "api")
 if _api_dir not in sys.path:
     sys.path.insert(0, _api_dir)
 
-from backend.routers.members import router as members_router
-from backend.routers.events import router as events_router
-from backend.routers.sponsors import router as sponsors_router
-from backend.routers.registration import router as registration_router
 from backend.api.chatbot import generate
 from backend.api.config import GROQ_MODEL
 from backend.api.rate_limiter import RateLimiter
 from backend.api.cache import TTLCache
+from backend.routers.registration import router as registration_router
 
 app = FastAPI(title="AWS Student Builder Group - JRU API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost:8000", "http://localhost:8001", "http://localhost:8080", "http://localhost:8081", "http://127.0.0.1:8000", "http://127.0.0.1:8001"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+app.include_router(registration_router)
+
 limiter = RateLimiter()
 response_cache = TTLCache()
-
-app.include_router(members_router)
-app.include_router(events_router)
-app.include_router(sponsors_router)
-app.include_router(registration_router)
 
 
 @app.post("/api/chat")

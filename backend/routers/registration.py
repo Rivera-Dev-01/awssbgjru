@@ -1,8 +1,10 @@
 import smtplib
+import base64
+import re
 from email.message import EmailMessage
 from datetime import datetime, timezone
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Request
 from fastapi.responses import JSONResponse
 
 from backend.database import supabase
@@ -10,12 +12,54 @@ from backend.schemas.registration import RegistrationRequest
 from backend.api.config import (
     EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, NOTIFY_EMAIL,
 )
+from backend.api.rate_limiter import RateLimiter
 
 router = APIRouter(prefix="/api", tags=["registration"])
+register_limiter = RateLimiter(requests=5, window=60)
 
 
 @router.post("/register")
-async def register(data: RegistrationRequest):
+async def register(request: Request, data: RegistrationRequest):
+    client_ip = request.client.host if request.client else "unknown"
+    if not register_limiter.is_allowed(client_ip):
+        return JSONResponse(
+            {"error": "Rate limit exceeded. Please wait before submitting again."},
+            status_code=429,
+        )
+
+    if data.website:
+        return JSONResponse({"error": "Bot detected"}, status_code=422)
+
+    print(f"Registration data received: full_name={data.full_name}, student_id={data.student_id}, year={data.year}, program={data.program}, dob={data.dob}, division_type={data.division_type}")
+
+    if not re.match(r"^\d{2}-\d{6}$", data.student_id):
+        return JSONResponse({"error": "Invalid student ID format (expecting ##-######)"}, status_code=422)
+
+    valid_years = {"First Year", "Second Year", "Third Year", "Fourth Year"}
+    if data.year not in valid_years:
+        return JSONResponse({"error": "Invalid school year selection"}, status_code=422)
+
+    valid_programs = {
+        "BS Computer Engineering", "BS Electronics Engineering",
+        "BS Information Technology", "BSIT Business Analytics",
+        "BS Entertainment and Multimedia Computing", "BSBA",
+        "BS Digital Animation Technology", "BS Game Development"
+    }
+    if data.program not in valid_programs:
+        return JSONResponse({"error": "Invalid program selection"}, status_code=422)
+
+    if not re.match(r"^\d{4}-\d{2}-\d{2}$", data.dob):
+        return JSONResponse({"error": "Invalid date of birth format (expecting YYYY-MM-DD)"}, status_code=422)
+
+    if data.photo_base64:
+        base64_data = data.photo_base64.split(",")[-1] if "," in data.photo_base64 else data.photo_base64
+        try:
+            decoded_len = len(base64.b64decode(base64_data))
+            if decoded_len > 512000:
+                return JSONResponse({"error": "Photo exceeds maximum size of 500KB"}, status_code=422)
+        except Exception:
+            return JSONResponse({"error": "Invalid photo data"}, status_code=422)
+
     row = {
         "full_name": data.full_name,
         "student_id": data.student_id,
@@ -39,8 +83,8 @@ async def register(data: RegistrationRequest):
 
     try:
         _send_notification(data)
-    except Exception:
-        pass
+    except Exception as e:
+        print(f"Email notification failed: {e}")
 
     return JSONResponse({"success": True, "id": inserted_id}, status_code=201)
 

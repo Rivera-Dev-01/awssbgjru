@@ -27,7 +27,7 @@ app = FastAPI(title="Cumulus Helm Chatbot API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://awslearningclub.jru", "http://localhost:8000", "http://localhost:8080", "http://localhost:8081"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -102,9 +102,40 @@ async def register(request: Request):
         )
     data = await request.json()
 
+    website = data.get("website", "")
+    if website:
+        return JSONResponse({"error": "Bot detected"}, status_code=422)
+
+    full_name = data.get("full_name", "").strip()
+    if not full_name or len(full_name) < 2 or len(full_name) > 100:
+        return JSONResponse({"error": "Full name must be between 2 and 100 characters"}, status_code=422)
+
+    student_id = data.get("student_id", "").strip()
+    if not student_id or not re.match(r"^\d{2}-\d{6}$", student_id):
+        return JSONResponse({"error": "Invalid student ID format (expecting ##-######)"}, status_code=422)
+
     email = data.get("email", "")
     if not re.match(r"^[^\s@]+@[^\s@]+\.[^\s@]+$", email):
         return JSONResponse({"error": "Invalid email address"}, status_code=422)
+
+    valid_years = {"First Year", "Second Year", "Third Year", "Fourth Year"}
+    year = data.get("year", "")
+    if year not in valid_years:
+        return JSONResponse({"error": "Invalid school year selection"}, status_code=422)
+
+    valid_programs = {
+        "BS Computer Engineering", "BS Electronics Engineering",
+        "BS Information Technology", "BSIT Business Analytics",
+        "BS Entertainment and Multimedia Computing", "BSBA",
+        "BS Digital Animation Technology", "BS Game Development"
+    }
+    program = data.get("program", "")
+    if program not in valid_programs:
+        return JSONResponse({"error": "Invalid program selection"}, status_code=422)
+
+    dob = data.get("dob", "").strip()
+    if not dob or not re.match(r"^\d{4}-\d{2}-\d{2}$", dob):
+        return JSONResponse({"error": "Invalid date of birth format (expecting YYYY-MM-DD)"}, status_code=422)
 
     division_type = data.get("division_type", "")
     if division_type not in ("office", "skillbuilder"):
@@ -113,14 +144,23 @@ async def register(request: Request):
     photo_base64 = data.get("photo_base64", "")
     if photo_base64 and not photo_base64.startswith("data:image/"):
         return JSONResponse({"error": "photo_base64 must be a valid data URL"}, status_code=422)
+    if photo_base64:
+        base64_data = photo_base64.split(",")[-1] if "," in photo_base64 else photo_base64
+        import base64
+        try:
+            decoded_len = len(base64.b64decode(base64_data))
+            if decoded_len > 512000:
+                return JSONResponse({"error": "Photo exceeds maximum size of 500KB"}, status_code=422)
+        except Exception:
+            return JSONResponse({"error": "Invalid photo data"}, status_code=422)
 
     row = {
-        "full_name": data.get("full_name", ""),
-        "student_id": data.get("student_id", ""),
+        "full_name": full_name,
+        "student_id": student_id,
         "email": email,
-        "year": data.get("year", ""),
-        "program": data.get("program", ""),
-        "dob": data.get("dob", ""),
+        "year": year,
+        "program": program,
+        "dob": dob,
         "photo_base64": photo_base64,
         "explanation": data.get("explanation", ""),
         "division_type": division_type,
@@ -141,8 +181,8 @@ async def register(request: Request):
 
     try:
         _send_notification(data)
-    except Exception:
-        pass
+    except Exception as e:
+        print(f"Email notification failed: {e}")
 
     return JSONResponse({"success": True, "id": inserted_id}, status_code=201)
 

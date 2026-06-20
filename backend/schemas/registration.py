@@ -9,10 +9,11 @@ class RegistrationRequest(BaseModel):
     year: str
     program: str
     dob: str
-    photo_base64: str
-    explanation: str
+    photo_base64: str = ""
+    explanation: str = ""
     division_type: str
     division_name: str
+    website: str = ""
 
     @field_validator("email")
     @classmethod
