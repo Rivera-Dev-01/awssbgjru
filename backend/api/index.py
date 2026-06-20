@@ -33,6 +33,7 @@ app.add_middleware(
 )
 
 limiter = rate_limiter.RateLimiter()
+register_limiter = rate_limiter.RateLimiter(requests=5, window=60)
 response_cache = cache.TTLCache()
 
 
@@ -93,6 +94,12 @@ def _get_supabase():
 
 @app.post("/api/register")
 async def register(request: Request):
+    client_ip = request.client.host if request.client else "unknown"
+    if not register_limiter.is_allowed(client_ip):
+        return JSONResponse(
+            {"error": "Rate limit exceeded. Please wait before submitting again."},
+            status_code=429,
+        )
     data = await request.json()
 
     email = data.get("email", "")
