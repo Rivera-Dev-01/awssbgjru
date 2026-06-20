@@ -15,6 +15,10 @@
       "dest": "backend/api/index.py"
     },
     {
+      "src": "/",
+      "dest": "frontend/pages/landing-page.html"
+    },
+    {
       "src": "/(register|explanation|department|office|skillbuilder|loading|waiting-approval|members|about|events|partners|achievements|contact|event-detail|landing-page)(?:\\.html)?$",
       "dest": "frontend/pages/$1.html"
     },
