@@ -1,1 +1,477 @@
-.site-footer{background:linear-gradient(76.24deg,#1c3466 16.65%,#1c3466 26.31%,#3868cc 88.12%);color:#fff;padding:60px 100px 0;position:relative}.footer-container{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:2.2fr 1fr 1fr;gap:80px;padding-bottom:100px}.footer-brand{display:grid;grid-template-columns:150px 1fr;gap:20px}.footer-brand-logo{width:150px;height:150px;border-radius:50%;object-fit:contain;transform:scale(1.3);align-self:start}.footer-brand-content,.footer-nav-col ul{display:flex;flex-direction:column;gap:8px}.footer-brand-name{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}.brand-name{font-family:"Poppins",sans-serif;font-size:26px;font-weight:400;color:#f2af00;margin-top:20px}.brand-chapter,.footer-description{font-family:"Poppins",sans-serif;font-size:18px;font-weight:200;color:#fff}.footer-description{font-size:16px;line-height:1.5;max-width:500px}.footer-social-icons{grid-column:1/-1;display:flex;gap:26px;padding-left:20px}.social-icon{width:40px;height:40px;border-radius:0}.social-icon img{width:100%;height:100%;object-fit:contain}.social-icon:hover{transform:scale(1.1);opacity:.9}.footer-contact h4{font-weight:500;font-size:20px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;padding-left:20px;white-space:nowrap}.footer-contact h4,.footer-contact p,.footer-nav-col h4,.footer-nav-col ul li a{font-family:"Poppins",sans-serif;color:#fff}.footer-contact p{font-size:18px;font-weight:200;display:flex;align-items:center;gap:10px;padding-left:20px}.icon-email{font-size:22px;color:#f2af00}.footer-nav-col{padding-top:6px;justify-self:end}.footer-nav-col h4{font-weight:500;font-size:24px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:-20px}.footer-nav-col ul{list-style:none;gap:14px;margin-top:42px}.footer-nav-col ul li a{font-size:20px;font-weight:400;text-decoration:none;transition:color .3s ease}.footer-nav-col ul li a:hover{color:#f2af00}.footer-bottom{background:linear-gradient(186.43deg,#f2af00 46.54%,#ff6f08 96.04%);padding:18px 24px;text-align:center;margin:0-100px}.footer-bottom p{font-family:"Poppins",sans-serif;font-size:14px;font-weight:300;color:#000;margin:0}.footer-nav-wrapper{display:contents}@media (max-width:1024px){.footer-container{grid-template-columns:1fr;gap:40px}.footer-nav-col{margin-top:10px;transform:none}}@media (max-width:768px){.site-footer{padding:40px 20px 0;background:linear-gradient(76.24deg,#1c3466 16.65%,#1c3466 26.31%,#3868cc 88.12%)}.footer-brand,.footer-container{display:flex;flex-direction:column;align-items:center;text-align:center}.footer-container{gap:30px;padding-bottom:40px}.footer-brand{width:100%}.footer-brand-logo{width:100px;height:100px;transform:none;border-radius:0;margin:0 auto 10px;display:block}.footer-brand-content{align-items:center;width:100%}.footer-brand-name{justify-content:center;margin-bottom:12px}.brand-name{font-size:20px;font-weight:500;color:#f2af00;transform:none;margin-top:0}.brand-chapter,.footer-contact p{font-size:14px;font-weight:300;transform:none}.brand-chapter{color:#fff}.footer-description{font-size:12px;font-weight:300;line-height:1.5;max-width:333px;transform:none;text-align:center;margin-bottom:20px}.footer-social-icons{justify-content:center;transform:none;gap:20px;margin-bottom:30px}.social-icon{width:54px;height:54px;border-radius:0;background:0 0;border:0;display:flex;align-items:center;justify-content:center;transition:transform .3s ease;transform:scale(1)}.social-icon:hover{transform:scale(1.2);background:0 0;border-color:transparent}.social-icon img{width:100%;height:100%;object-fit:contain}.footer-contact{width:100%;text-align:left;padding-left:48px;margin-bottom:20px;box-sizing:border-box}.footer-contact h4,.footer-nav-col h4{font-size:16px;text-align:left;letter-spacing:.5px}.footer-contact h4{font-weight:600;transform:none;margin-bottom:10px;padding-left:0}.footer-contact p{justify-content:flex-start;gap:12px;padding-left:0}.icon-email{font-size:20px;color:orange;font-weight:400}.footer-nav-wrapper{display:flex;flex-direction:row;justify-content:space-between;width:100%;max-width:400px;gap:60px;padding:0 48px;box-sizing:border-box}.footer-nav-col{transform:none;text-align:left;flex:1}.footer-nav-col h4{font-weight:700;margin-bottom:16px}.footer-nav-col ul{gap:10px;margin-top:0;padding-left:0}.footer-nav-col ul li{text-align:left}.footer-nav-col ul li a{font-size:14px;font-weight:300;color:rgba(255,255,255,.9)}.footer-nav-col ul li a:hover{color:#f2af00}.footer-bottom{margin:0-20px;padding:16px 15px;background:linear-gradient(186.43deg,#f2af00 46.54%,#ff6f08 96.04%)}.footer-bottom p{font-size:10px;font-weight:300;color:#000}}.footer-contact{grid-column:1/-1}
+/* ==========================================================================
+   Footer Stylesheet
+   ========================================================================== */
+
+/* Desktop / Base Footer Styles */
+.site-footer {
+    background: linear-gradient(76.24deg, #1c3466 16.65%, #1c3466 26.31%, #3868cc 88.12%);
+    color: #fff;
+    padding: 60px 100px 0;
+    position: relative;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2.2fr 1fr 1fr;
+    gap: 80px;
+    padding-bottom: 100px;
+}
+
+.footer-brand {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 20px;
+}
+
+.footer-brand-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: contain;
+    transform: scale(1.3);
+    align-self: start;
+}
+
+.footer-brand-content,
+.footer-nav-col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-brand-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.brand-name {
+    font-family: "Poppins", sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: #f2af00;
+    margin-top: 20px;
+}
+
+.brand-chapter,
+.footer-description {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    color: #fff;
+}
+
+.footer-description {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 500px;
+}
+
+.footer-social-icons {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 26px;
+    padding-left: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon img {
+    object-fit: contain;
+}
+
+.social-icon img[alt="Facebook"] {
+    width: 31px;
+    height: 31px;
+}
+
+.social-icon img[alt="LinkedIn"] {
+    width: 31px;
+    height: 31px;
+}
+
+.social-icon img[alt="TikTok"] {
+    width: 40px;
+    height: 40px;
+}
+
+.social-icon img[alt="Instagram"] {
+    width: 38px;
+    height: 38px;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.footer-contact {
+    grid-column: 1 / -1;
+}
+
+.footer-contact h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    white-space: nowrap;
+    color: #fff;
+}
+
+.footer-contact p {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+    color: #fff;
+}
+
+.footer-contact p a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.icon-email {
+    font-size: 22px;
+    color: #f2af00;
+}
+
+.footer-nav-col {
+    padding-top: 6px;
+    justify-self: end;
+}
+
+.footer-nav-col h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: -20px;
+    color: #fff;
+}
+
+.footer-nav-col ul {
+    list-style: none;
+    gap: 14px;
+    margin-top: 42px;
+}
+
+.footer-nav-col ul li a {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer-nav-col ul li a:hover {
+    color: #f2af00;
+}
+
+.footer-bottom {
+    background: linear-gradient(186.43deg, #f2af00 46.54%, #ff6f08 96.04%);
+    padding: 18px 24px;
+    text-align: center;
+    margin: 0 -100px;
+}
+
+.footer-bottom p {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #000;
+    margin: 0;
+}
+
+.footer-nav-wrapper {
+    display: contents;
+}
+
+/* ==========================================================================
+   Responsive / Media Queries
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .footer-nav-col {
+        margin-top: 10px;
+        transform: none;
+    }
+}
+
+/* Mobile Media Query */
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 15px 16px 0;
+        background: linear-gradient(76.24deg, #1C3466 16.65%, #1C3466 26.31%, #3868CC 88.12%);
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+        padding-bottom: 40px;
+    }
+
+    /* Brand Section */
+    .footer-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .footer-brand-logo {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        object-fit: contain;
+        transform: none;
+        align-self: unset;
+        margin-top: 0px;
+    }
+
+    .footer-brand-content {
+        align-items: center;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .footer-brand-name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .brand-name {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 20.42px;
+        line-height: 31px;
+        color: #F2AF00;
+        margin-top: 0;
+    }
+
+    .brand-chapter {
+        display: inline;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #FFFFFF;
+    }
+
+    .footer-description {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 12.25px;
+        line-height: 18px;
+        color: #FFFFFF;
+        max-width: 339.97px;
+        text-align: center;
+        margin: 0;
+    }
+
+    /* Social Icons Group 298 */
+    .footer-social-icons {
+        justify-content: center;
+        padding-left: 0;
+        gap: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .social-icon {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        background: rgba(61, 59, 59, 0.17);
+        border: 1.02px solid rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(13.17px);
+        -webkit-backdrop-filter: blur(13.17px);
+        border-radius: 50%;
+        transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .social-icon img {
+        object-fit: contain;
+    }
+
+    .social-icon img[alt="Facebook"] {
+        width: 20px;
+        height: 20px;
+    }
+
+    .social-icon img[alt="LinkedIn"] {
+        width: 20px;
+        height: 20px;
+    }
+
+    .social-icon img[alt="TikTok"] {
+        width: 27px;
+        height: 27px;
+    }
+
+    .social-icon img[alt="Instagram"] {
+        width: 26px;
+        height: 26px;
+    }
+
+    .social-icon:hover {
+        transform: scale(1.15);
+        border-color: #F2AF00;
+        background-color: rgba(242, 175, 0, 0.15);
+    }
+
+    /* Contact Section Group 295 */
+    .footer-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 380px;
+        padding: 0 16px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+
+    .footer-contact h4 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 16.33px;
+        line-height: 25px;
+        color: #FFFFFF;
+        padding-left: 0;
+        margin-bottom: 8px;
+        text-align: left;
+    }
+
+    .footer-contact p {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+        font-size: 14.29px;
+        line-height: 21px;
+        color: #FFFFFF;
+        padding-left: 0;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .icon-email {
+        font-size: 18px;
+        color: #F2AF00;
+    }
+
+    /* Navigation & Organization Layout */
+    .footer-nav-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 380px;
+        gap: 30px;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .footer-nav-col {
+        text-align: left;
+        flex: 1;
+        justify-self: unset;
+        padding-top: 0;
+    }
+
+    /* Group 294 NAVIGATION */
+    .footer-nav-col:first-child h4 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 16.33px;
+        line-height: 25px;
+        color: #FFFFFF;
+        margin-bottom: 12px;
+    }
+
+    /* Group 293 ORGANIZATION */
+    .footer-nav-col:last-child h4 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 16.33px;
+        line-height: 25px;
+        color: #FFFFFF;
+        margin-bottom: 12px;
+    }
+
+    .footer-nav-col ul {
+        gap: 12px;
+        margin-top: 0;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-nav-col ul li {
+        list-style: none;
+    }
+
+    .footer-nav-col ul li a {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 14.29px;
+        line-height: 21px;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    .footer-nav-col ul li a:hover {
+        color: #F2AF00;
+    }
+
+    /* Footer Bottom Group 286 */
+    .footer-bottom {
+        margin: 0 -16px;
+        padding: 14px 16px;
+        background: linear-gradient(186.43deg, #F2AF00 46.54%, #FF6F08 96.04%);
+        width: calc(100% + 32px);
+        box-sizing: border-box;
+    }
+
+    .footer-bottom p {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        font-size: 10.21px;
+        line-height: 15px;
+        color: #000000;
+        text-align: center;
+    }
+}
