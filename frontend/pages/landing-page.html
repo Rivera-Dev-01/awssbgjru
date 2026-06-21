@@ -27,6 +27,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Lexend:wght@300;400;500;600;700&family=Lexend+Deca:wght@400;500;600&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/landing-page.css">
+    <link rel="stylesheet" href="../css/landing-page-desktop.css">
     <!-- Header CSS - Separated for mobile and desktop -->
     <link rel="stylesheet" href="../css/header.css">
     <!-- Events CSS - Mobile specific -->
@@ -38,121 +39,291 @@
     <div id="header-placeholder"></div>
     
     <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="hero-background-sky"></div>
-            <div class="hero-background-ocean"></div>
-            <div class="hero-birds"></div>
-            
-            <div class="hero-content-wrapper">
-                <img src="../assets/landing-page/Hero-Title.webp" alt="IT'S ALWAYS BEEN DAY ONE" class="hero-title">
-                <p class="hero-description">
-                    Where in AWS, <span class="highlight">It's Always Day One</span>, the moment ambition meets action the single step that transforms a distant dream into your daily reality.
-                </p>
-                <div class="hero-buttons">
-                    <a href="../pages/about.html" class="btn-about">ABOUT US</a>
-                    <a href="../pages/members.html" class="btn-join">Join us</a>
-                </div>
-            </div>
-        </section>
+        <!-- Desktop Parallax Layout (visible only on desktop >= 769px) -->
+        <div class="desktop-parallax-wrapper">
+            <div class="desktop-parallax-home">
+                <!-- Hero Section -->
+                <div class="hero-sky-bg"></div>
+                <div class="hero-clouds-bg"></div>
+                <div class="hero-wave-clouds"></div>
 
-        <div class="content-section">
-        <!-- Who Are We Section -->
-        <section class="who-are-we-section" style="background: url('../assets/landing-page/Who-Are-We-Background.webp') center/cover no-repeat;">
-            <h2 class="section-title">Who Are We</h2>
-            <p class="section-subtitle">
-                <span class="highlight">AWS Learning Club - JRU Chapter</span> is a newly established AWS Learning Chapter focused on bringing cloud knowledge, innovation, and hands-on learning to students, based at Jose Rizal University
-            </p>
-            
-            <div class="about-container">
-                <div class="about-grid cards-grid">
-                    <div class="about-card">
-                        <div class="about-card-inner">
-                            <img src="../assets/landing-page/icons/Vision-Logo.webp" alt="Vision" class="card-icon" loading="lazy">
-                            <h3>VISION</h3>
-                            <p>To build a network of student innovators using AWS to drive technological progress and industry transformation.</p>
-                        </div>
-                    </div>
-                    <div class="about-card">
-                        <div class="about-card-inner">
-                            <img src="../assets/landing-page/icons/Mobile-Mission-Logo.webp" alt="Mission" class="card-icon" loading="lazy">
-                            <h3>MISSION</h3>
-                            <p>To empower students through hands-on learning, workshops, and community service that build real AWS and cloud skills.</p>
-                        </div>
-                    </div>
-                    <div class="about-card">
-                        <div class="about-card-inner">
-                            <img src="../assets/landing-page/icons/Mobile-Department-Logo.webp" alt="Departments" class="card-icon" loading="lazy">
-                            <h3>DEPARTMENTS</h3>
-                            <p>Dedicated technical teams that bring our projects, programs, and community initiatives to life.</p>
-                        </div>
-                    </div>
-                    <div class="about-card">
-                        <div class="about-card-inner">
-                            <img src="../assets/landing-page/icons/Mobile-Offices-Logo.webp" alt="Offices" class="card-icon" loading="lazy">
-                            <h3>OFFICES</h3>
-                            <p>The leadership teams that guide our chapter's vision, growth, and direction.</p>
+                <!-- Glowing ellipses (Ellipse 78 - 83) -->
+                <div class="hero-ellipse ellipse-78"></div>
+                <div class="hero-ellipse ellipse-79"></div>
+                <div class="hero-ellipse ellipse-80"></div>
+                <div class="hero-ellipse ellipse-81"></div>
+                <div class="hero-ellipse ellipse-82"></div>
+                <div class="hero-ellipse ellipse-83"></div>
+
+                <!-- Hero Foreground Content -->
+                <div class="hero-foreground">
+                    <div class="hero-content-panel">
+                        <h1 class="hero-title-text reveal-element">IT'S ALWAYS DAY ONE</h1>
+                        <p class="hero-subtitle-text reveal-element">Where ambition meets action. Take the single step that transforms a distant dream into your daily reality.</p>
+                        <div class="hero-buttons-container reveal-element">
+                            <a href="../pages/members.html" class="btn-parallax-join"><span>Join</span></a>
+                            <a href="../pages/about.html" class="btn-parallax-about"><span>About us</span></a>
                         </div>
                     </div>
                 </div>
 
-                <div class="mascot-container">
-                    <img src="../assets/shared/mascot/Hima_Ship.webp" alt="AWS Mascot" class="mascot-image" loading="lazy">
+                <!-- Hero clouds in front of card (Ellipse 94 - 102) -->
+                <div class="hero-cloud-ellipse ellipse-94"></div>
+                <div class="hero-cloud-ellipse ellipse-95"></div>
+                <div class="hero-cloud-ellipse ellipse-96"></div>
+                <div class="hero-cloud-ellipse ellipse-97"></div>
+                <div class="hero-cloud-ellipse ellipse-98"></div>
+                <div class="hero-cloud-ellipse ellipse-99"></div>
+                <div class="hero-cloud-ellipse ellipse-100"></div>
+                <div class="hero-cloud-ellipse ellipse-101"></div>
+                <div class="hero-cloud-ellipse ellipse-102"></div>
+
+                <!-- Transition: Med Clouds (Ellipse 84 - 93) -->
+                <div class="med-clouds-transition">
+                    <div class="med-cloud med-ellipse-84"></div>
+                    <div class="med-cloud med-ellipse-85"></div>
+                    <div class="med-cloud med-ellipse-86"></div>
+                    <div class="med-cloud med-ellipse-87"></div>
+                    <div class="med-cloud med-ellipse-88"></div>
+                    <div class="med-cloud med-ellipse-89"></div>
+                    <div class="med-cloud med-ellipse-90"></div>
+                    <div class="med-cloud med-ellipse-91"></div>
+                    <div class="med-cloud med-ellipse-92"></div>
+                    <div class="med-cloud med-ellipse-93"></div>
+                </div>
+
+                <!-- Who Are We Section -->
+                <div class="who-are-we-group">
+                    <!-- Transition Clouds Overlay -->
+                    <div class="transition-clouds-overlay"></div>
+
+                    <h2 class="waw-title reveal-element">Who Are We</h2>
+                    <div class="waw-desc-box-outer reveal-element">
+                        <div class="waw-desc-box-inner">
+                            <p class="waw-desc-text">We are a dynamic, student-led organization established within the College of Studies and Engineering. Our inclusive community welcomes students from all backgrounds to foster innovation, collaborate, and explore the power of Amazon Web Services (AWS).</p>
+                        </div>
+                    </div>
+
+                    <!-- Spotlight Cards (DEPARTMENTS, OFFICES, VISION, MISSION) -->
+                    <a href="../pages/about.html" class="waw-card waw-card-departments reveal-element">
+                        <div class="waw-card-inner">
+                            <h3 class="waw-card-title">DEPARTMENTS</h3>
+                            <p class="waw-card-desc">Dedicated technical teams that bring our projects, programs, and community initiatives to life.</p>
+                        </div>
+                    </a>
+                    
+                    <a href="../pages/about.html" class="waw-card waw-card-offices reveal-element">
+                        <div class="waw-card-inner">
+                            <h3 class="waw-card-title">OFFICES</h3>
+                            <p class="waw-card-desc">The leadership teams that guide our chapter's vision, growth, and direction.</p>
+                        </div>
+                    </a>
+                    
+                    <a href="../pages/about.html" class="waw-card waw-card-vision reveal-element">
+                        <div class="waw-card-inner">
+                            <h3 class="waw-card-title">VISION</h3>
+                            <p class="waw-card-desc">To build a network of student innovators using AWS to drive technological progress and industry transformation.</p>
+                        </div>
+                    </a>
+                    
+                    <a href="../pages/about.html" class="waw-card waw-card-mission reveal-element">
+                        <div class="waw-card-inner">
+                            <h3 class="waw-card-title">MISSION</h3>
+                            <p class="waw-card-desc">To empower students through hands-on learning, workshops, and community service that build real AWS and cloud skills.</p>
+                        </div>
+                    </a>
+
+                    <!-- Mascot (image 83) -->
+                    <img src="../assets/shared/mascot/Hima_Ship.webp" alt="" class="waw-mascot">
+
+                    <!-- Transition Leaves Overlay -->
+                    <div class="transition-leaves-overlay"></div>
+                </div>
+
+                <!-- Cloud Expertise Section -->
+                <div class="cloud-expertise-group">
+                    <div class="expertise-bg-image"></div>
+                    
+                    <!-- Leafy Foreground Mask Frame Top Layer -->
+                    <img src="../assets/landing-page/CloudExperience_Top_layer.png" class="exp-leafy-frame-top" alt="">
+
+                    <!-- Center Viewport Cards Container (scrolls behind transparent center of leafy frame) -->
+                    <div class="exp-centered-cards-container">
+                        <!-- Pathway Title Banner -->
+                        <div class="expertise-title-group reveal-element">
+                            <h4 class="exp-pathway-text">YOUR PATHWAY TO</h4>
+                            <h3 class="exp-main-title">Cloud Expertise</h3>
+                        </div>
+
+                        <!-- Content Cards: What We Do, Fueling Tomorrow, What We Offer -->
+                        <div class="exp-card exp-card-what-we-do reveal-element">
+                            <div class="exp-card-inner">
+                                <h3>What We Do</h3>
+                                <p>The AWS Learning Club - JRU Chapter bridges the gap between academic theory and real-world cloud technology. We host peer-to-peer learning sessions, interactive technical workshops, and collaborative community projects centered around cloud computing and innovation.</p>
+                            </div>
+                        </div>
+
+                        <div class="exp-card-fueling reveal-element">
+                            <div class="exp-card-fueling-inner">
+                                <h3 class="exp-card-fueling-title">Fueling Tomorrow's Tech Leaders</h3>
+                                <p class="exp-card-fueling-desc">We don't just study the cloud—we actively build and innovate within it. The AWS Learning Club - JRU Chapter is a dynamic student community that bridges the gap between academic theory and industry practice. Through hands-on training, collaborative team projects, and expert-led workshops, we turn classroom concepts into highly sought-after technical skills. Whether you are mastering AWS tools or building a robust project portfolio, you will gain a competitive edge alongside driven peers. Beyond technical expertise, we help you cultivate the vital industry connections and leadership.</p>
+                            </div>
+                        </div>
+
+                        <div class="exp-card exp-card-what-we-offer reveal-element">
+                            <div class="exp-card-inner">
+                                <h3>What We Offer</h3>
+                                <p>Explore the exclusive benefits, technical training, and career-building opportunities available to our members:</p>
+                                <ul>
+                                    <li>Hands-On Technical Workshops</li>
+                                    <li>Practical Skill Development</li>
+                                    <li>Collaborative Projects</li>
+                                    <li>Industry Networking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating decorative clouds -->
+                    <div class="exp-floating-cloud exp-cloud-left-1"></div>
+                    <div class="exp-floating-cloud exp-cloud-right-1"></div>
+                    <div class="exp-floating-cloud exp-cloud-left-2"></div>
+                    <div class="exp-floating-cloud exp-cloud-right-2"></div>
+
+                    <!-- Green Bush Bottom Transition -->
+                    <div class="green-bush-transition">
+                        <div class="green-cloud green-ellipse-84"></div>
+                        <div class="green-cloud green-ellipse-85"></div>
+                        <div class="green-cloud green-ellipse-86"></div>
+                        <div class="green-cloud green-ellipse-87"></div>
+                        <div class="green-cloud green-ellipse-88"></div>
+                        <div class="green-cloud green-ellipse-89"></div>
+                        <div class="green-cloud green-ellipse-90"></div>
+                        <div class="green-cloud green-ellipse-91"></div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- What We Do Section -->
-        <section class="what-we-do-section">
-            <img src="../assets/landing-page/clouds/What-We-Do-Cloud-Up.webp" alt="" class="cloud-img cloud-what-we-do-up" loading="lazy">
-            <img src="../assets/landing-page/clouds/What-We-Do-Cloud-Down.webp" alt="" class="cloud-img cloud-what-we-do-down" loading="lazy">
-            <img src="../assets/landing-page/clouds/Mobile-What-We-Do-Upper.webp" alt="" class="cloud-img cloud-card-wwd-upper" loading="lazy">
-            <img src="../assets/landing-page/clouds/Fueling-Lower-Cloud.webp" alt="" class="cloud-img cloud-fueling-btm-1" loading="lazy">
-            <img src="../assets/landing-page/clouds/Up - Down - Cloud.webp" alt="" class="cloud-img cloud-fueling-btm-2" loading="lazy">
-            <img src="../assets/landing-page/clouds/Up - Down - Cloud.webp" alt="" class="cloud-img cloud-fueling-btm-3" loading="lazy">
-            <img src="../assets/landing-page/clouds/What-We-Offer-Down.webp" alt="" class="cloud-img cloud-fueling-btm-4" loading="lazy">
-            <img src="../assets/landing-page/clouds/Up - Down - Cloud.webp" alt="" class="cloud-img cloud-fueling-btm-5" loading="lazy">
-            <img src="../assets/landing-page/clouds/Fueling-Lower-Cloud.webp" alt="" class="cloud-img cloud-fueling-btm-6" loading="lazy">
-            <img src="../assets/landing-page/clouds/Up - Down - Cloud.webp" alt="" class="cloud-img cloud-offer-top-left" loading="lazy">
-            <img src="../assets/landing-page/clouds/Up - Down - Cloud.webp" alt="" class="cloud-img cloud-offer-btm-right" loading="lazy">
-
-            <div class="content-card what-we-do-card">
-                <div class="content-card-inner">
-                    <h3>What We Do</h3>
-                    <p class="desktop-text">The AWS Learning Club - JRU Chapter bridges the gap between academic theory and real-world cloud technology. We host peer-to-peer learning sessions, interactive technical workshops, and collaborative community projects centered around cloud computing and innovation.</p>
-                    <p class="mobile-text">The AWS Learning Club - JRU Chapter <strong>connects academic theory with real-world cloud technology</strong> through interactive workshops, peer learning, and collaborative innovation projects.</p>
+        <!-- Mobile Layout (visible only on mobile <= 768px) -->
+        <div class="mobile-only-home">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="hero-background-sky"></div>
+                <div class="hero-background-ocean"></div>
+                <div class="hero-birds"></div>
+                
+                <div class="hero-content-wrapper">
+                    <img src="../assets/landing-page/Hero-Title.webp" alt="IT'S ALWAYS BEEN DAY ONE" class="hero-title">
+                    <p class="hero-description">
+                        Where in AWS, <span class="highlight">It's Always Day One</span>, the moment ambition meets action the single step that transforms a distant dream into your daily reality.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="../pages/about.html" class="btn-about">ABOUT US</a>
+                        <a href="../pages/members.html" class="btn-join">Join us</a>
+                    </div>
                 </div>
+            </section>
+
+            <div class="content-section">
+                <!-- Who Are We Section -->
+                <section class="who-are-we-section" style="background: url('../assets/landing-page/Who-Are-We-Background.webp') center/cover no-repeat;">
+                    <h2 class="section-title">Who Are We</h2>
+                    <p class="section-subtitle">
+                        <span class="highlight">AWS Learning Club - JRU Chapter</span> is a newly established AWS Learning Chapter focused on bringing cloud knowledge, innovation, and hands-on learning to students, based at Jose Rizal University
+                    </p>
+                    
+                    <div class="about-container">
+                        <div class="about-grid cards-grid">
+                            <div class="about-card">
+                                <div class="about-card-inner">
+                                    <img src="../assets/landing-page/icons/Vision-Logo.webp" alt="Vision" class="card-icon" loading="lazy">
+                                    <h3>VISION</h3>
+                                    <p>To build a network of student innovators using AWS to drive technological progress and industry transformation.</p>
+                                </div>
+                            </div>
+                            <div class="about-card">
+                                <div class="about-card-inner">
+                                    <img src="../assets/landing-page/icons/Mobile-Mission-Logo.webp" alt="Mission" class="card-icon" loading="lazy">
+                                    <h3>MISSION</h3>
+                                    <p>To empower students through hands-on learning, workshops, and community service that build real AWS and cloud skills.</p>
+                                </div>
+                            </div>
+                            <div class="about-card">
+                                <div class="about-card-inner">
+                                    <img src="../assets/landing-page/icons/Mobile-Department-Logo.webp" alt="Departments" class="card-icon" loading="lazy">
+                                    <h3>DEPARTMENTS</h3>
+                                    <p>Dedicated technical teams that bring our projects, programs, and community initiatives to life.</p>
+                                </div>
+                            </div>
+                            <div class="about-card">
+                                <div class="about-card-inner">
+                                    <img src="../assets/landing-page/icons/Mobile-Offices-Logo.webp" alt="Offices" class="card-icon" loading="lazy">
+                                    <h3>OFFICES</h3>
+                                    <p>The leadership teams that guide our chapter's vision, growth, and direction.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mascot-container">
+                            <img src="../assets/shared/mascot/Hima_Ship.webp" alt="AWS Mascot" class="mascot-image" loading="lazy">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- What We Do Section -->
+                <section class="what-we-do-section">
+                    <img src="../assets/landing-page/clouds/What-We-Do-Cloud-Up.webp" alt="" class="cloud-img cloud-what-we-do-up" loading="lazy">
+                    <img src="../assets/landing-page/clouds/What-We-Do-Cloud-Down.webp" alt="" class="cloud-img cloud-what-we-do-down" loading="lazy">
+                    <img src="../assets/landing-page/clouds/Mobile-What-We-Do-Upper.webp" alt="" class="cloud-img cloud-card-wwd-upper" loading="lazy">
+                    <img src="../assets/landing-page/clouds/Fueling-Lower-Cloud.webp" alt="" class="cloud-img cloud-fueling-btm-1" loading="lazy">
+                    <img src="../assets/landing-page/clouds/Up - Down - Cloud.webp" alt="" class="cloud-img cloud-fueling-btm-2" loading="lazy">
+                    <img src="../assets/landing-page/clouds/Up - Down - Cloud.webp" alt="" class="cloud-img cloud-fueling-btm-3" loading="lazy">
+                    <img src="../assets/landing-page/clouds/What-We-Offer-Down.webp" alt="" class="cloud-img cloud-fueling-btm-4" loading="lazy">
+                    <img src="../assets/landing-page/clouds/Up - Down - Cloud.webp" alt="" class="cloud-img cloud-fueling-btm-5" loading="lazy">
+                    <img src="../assets/landing-page/clouds/Fueling-Lower-Cloud.webp" alt="" class="cloud-img cloud-fueling-btm-6" loading="lazy">
+                    <img src="../assets/landing-page/clouds/Up - Down - Cloud.webp" alt="" class="cloud-img cloud-offer-top-left" loading="lazy">
+                    <img src="../assets/landing-page/clouds/Up - Down - Cloud.webp" alt="" class="cloud-img cloud-offer-btm-right" loading="lazy">
+
+                    <div class="content-card what-we-do-card">
+                        <div class="content-card-inner">
+                            <h3>What We Do</h3>
+                            <p class="desktop-text">The AWS Learning Club - JRU Chapter bridges the gap between academic theory and real-world cloud technology. We host peer-to-peer learning sessions, interactive technical workshops, and collaborative community projects centered around cloud computing and innovation.</p>
+                            <p class="mobile-text">The AWS Learning Club - JRU Chapter <strong>connects academic theory with real-world cloud technology</strong> through interactive workshops, peer learning, and collaborative innovation projects.</p>
+                        </div>
+                    </div>
+
+                    <img src="../assets/landing-page/clouds/Fueling-Cloud-Up.webp" alt="" class="cloud-img cloud-fueling-up" loading="lazy">
+                    <img src="../assets/landing-page/clouds/Fueling-Cloud-Down-1.webp" alt="" class="cloud-img cloud-fueling-down-1" loading="lazy">
+                    <img src="../assets/landing-page/clouds/Fueling-Cloud-Down-2.webp" alt="" class="cloud-img cloud-fueling-down-2" loading="lazy">
+
+                    <div class="content-card fueling-tomorrow-card">
+                        <div class="content-card-inner">
+                            <h3>Fueling Tomorrow's Tech Leaders</h3>
+                            <p class="desktop-text">We don't just study the cloud—we actively build and innovate within it. The AWS Learning Club - JRU Chapter is a dynamic student community that bridges the gap between academic theory and industry practice. Through hands-on team training, collaborative team projects, and expert-led workshops, we turn theoretical knowledge into real-world skills. Whether you're launching your first AWS build or building a robust project portfolio, you will gain a competitive edge alongside driven learners. Our technical expertise will help you cultivate the vital industry connections and leadership.</p>
+                            <p class="mobile-text">We don't just study the cloud—we build in it. The AWS Learning Club - JRU Chapter turns classroom concepts into real-world skills through hands-on training, team projects, and the industry connections you need to launch your career.</p>
+                        </div>
+                    </div>
+
+                    <img src="../assets/landing-page/clouds/What-We-Offer-Up1.webp" alt="" class="cloud-img cloud-offer-up" loading="lazy">
+                    <img src="../assets/landing-page/clouds/Fueling-Cloud-Down-1.webp" alt="" class="cloud-img cloud-offer-fueling" loading="lazy">
+                    <img src="../assets/landing-page/clouds/What-We-Offer-Down.webp" alt="" class="cloud-img cloud-offer-down" loading="lazy">
+
+                    <div class="content-card what-we-offer-card">
+                        <div class="content-card-inner">
+                            <h3>What We Offer</h3>
+                            <p>Explore the exclusive benefits, technical training, and career-building opportunities available to our members:</p>
+                            <ul>
+                                <li>Hands-On Technical Workshops</li>
+                                <li>Practical Skill Development</li>
+                                <li>Collaborative Projects</li>
+                                <li>Industry Networking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
             </div>
-
-            <img src="../assets/landing-page/clouds/Fueling-Cloud-Up.webp" alt="" class="cloud-img cloud-fueling-up" loading="lazy">
-            <img src="../assets/landing-page/clouds/Fueling-Cloud-Down-1.webp" alt="" class="cloud-img cloud-fueling-down-1" loading="lazy">
-            <img src="../assets/landing-page/clouds/Fueling-Cloud-Down-2.webp" alt="" class="cloud-img cloud-fueling-down-2" loading="lazy">
-
-            <div class="content-card fueling-tomorrow-card">
-                <div class="content-card-inner">
-                    <h3>Fueling Tomorrow's Tech Leaders</h3>
-                    <p class="desktop-text">We don't just study the cloud—we actively build and innovate within it. The AWS Learning Club - JRU Chapter is a dynamic student community that bridges the gap between academic theory and industry practice. Through hands-on team training, collaborative team projects, and expert-led workshops, we turn theoretical knowledge into real-world skills. Whether you're launching your first AWS build or building a robust project portfolio, you will gain a competitive edge alongside driven learners. Our technical expertise will help you cultivate the vital industry connections and leadership.</p>
-                    <p class="mobile-text">We don't just study the cloud—we build in it. The AWS Learning Club - JRU Chapter turns classroom concepts into real-world skills through hands-on training, team projects, and the industry connections you need to launch your career.</p>
-                </div>
-            </div>
-
-            <img src="../assets/landing-page/clouds/What-We-Offer-Up1.webp" alt="" class="cloud-img cloud-offer-up" loading="lazy">
-            <img src="../assets/landing-page/clouds/Fueling-Cloud-Down-1.webp" alt="" class="cloud-img cloud-offer-fueling" loading="lazy">
-            <img src="../assets/landing-page/clouds/What-We-Offer-Down.webp" alt="" class="cloud-img cloud-offer-down" loading="lazy">
-
-            <div class="content-card what-we-offer-card">
-                <div class="content-card-inner">
-                    <h3>What We Offer</h3>
-                    <p>Explore the exclusive benefits, technical training, and career-building opportunities available to our members:</p>
-                    <ul>
-                        <li>Hands-On Technical Workshops</li>
-                        <li>Practical Skill Development</li>
-                        <li>Collaborative Projects</li>
-                        <li>Industry Networking</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        </div>
 
         <!-- Events & Sponsors Background -->
         <div class="events-sponsors-bg">
@@ -355,202 +526,8 @@
     <div id="footer-placeholder"></div>
     
     <div id="chatbot-placeholder"></div>
-    <script src="../js/main.js"></script>
-    <script src="../js/nav.js" defer></script>
-    <script src="../js/chatbot.js" defer></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const carousel = document.querySelector('.events-carousel');
-        if (!carousel) return;
-        const slides = carousel.querySelectorAll('.event-slide');
-        const leftArrow = carousel.querySelector('.carousel-nav-left');
-        const rightArrow = carousel.querySelector('.carousel-nav-right');
-        let current = 0;
-
-        function goToSlide(index) {
-            if (index < 0 || index >= slides.length) return;
-            current = index;
-            slides.forEach((slide, i) => {
-                slide.style.display = i === current ? 'flex' : 'none';
-            });
-            leftArrow.classList.toggle('hidden', current === 0);
-            rightArrow.classList.toggle('hidden', current === slides.length - 1);
-        }
-
-        leftArrow.addEventListener('click', () => goToSlide(current - 1));
-        rightArrow.addEventListener('click', () => goToSlide(current + 1));
-
-        let touchStartX = 0;
-        carousel.addEventListener('touchstart', (e) => {
-            touchStartX = e.touches[0].clientX;
-        }, { passive: true });
-
-        carousel.addEventListener('touchend', (e) => {
-            const diff = touchStartX - e.changedTouches[0].clientX;
-            if (Math.abs(diff) > 40) {
-                if (diff > 0) goToSlide(current + 1);
-                else goToSlide(current - 1);
-            }
-        }, { passive: true });
-
-        document.addEventListener('click', (e) => {
-            const btn = e.target.closest('.event-more-btn');
-            if (!btn) return;
-            const card = btn.closest('.event-card-mobile');
-            if (!card) return;
-            const isExpanded = card.classList.toggle('expanded');
-            btn.textContent = isExpanded ? 'less' : 'more';
-        });
-
-        goToSlide(0);
-    });
-
-    // Sponsors marquee — snake flow (mobile only)
-    (function initSponsorsMarquee() {
-        const container = document.querySelector('.sponsorship-section .partners-container');
-        if (!container) return;
-
-        let wrapper = null, items = [], animId = null;
-        const SPEED = 0.4;
-        const SPACING = 80;  // Add spacing between items
-
-        function buildMarquee() {
-            destroyMarquee();
-            if (window.innerWidth > 768) return;
-
-            const originals = [...container.children].filter(c => c.classList.contains('partner-item'));
-            if (originals.length === 0) return;
-
-            wrapper = document.createElement('div');
-            wrapper.className = 'partners-marquee-wrapper';
-
-            const topRow = document.createElement('div');
-            topRow.className = 'partners-flow-row';
-            const bottomRow = document.createElement('div');
-            bottomRow.className = 'partners-flow-row';
-
-            wrapper.appendChild(topRow);
-            wrapper.appendChild(bottomRow);
-            container.appendChild(wrapper);
-
-            // Split into two different groups - NO DUPLICATES, just one of each
-            const group1 = originals.slice(0, 5);   // first 5 → top row
-            const group2 = originals.slice(5);      // last 4 → bottom row
-
-            // Create ONLY ONE copy of each item (no duplicates)
-            group1.forEach((original, i) => {
-                const el = original.cloneNode(true);
-                const isRect = el.querySelector('.partner-logo-rect');
-                el.style.width = isRect ? '180px' : '120px';
-                topRow.appendChild(el);
-                items.push({ 
-                    el, 
-                    x: 0, 
-                    width: isRect ? 180 : 120, 
-                    row: 'top',
-                    id: `top-${i}`,
-                    originalIndex: i
-                });
-            });
-
-            group2.forEach((original, i) => {
-                const el = original.cloneNode(true);
-                const isRect = el.querySelector('.partner-logo-rect');
-                el.style.width = isRect ? '180px' : '120px';
-                bottomRow.appendChild(el);
-                items.push({ 
-                    el, 
-                    x: 0, 
-                    width: isRect ? 180 : 120, 
-                    row: 'bottom',
-                    id: `bottom-${i}`,
-                    originalIndex: i
-                });
-            });
-
-            // Measure & start on next frame
-            requestAnimationFrame(() => {
-                const rowWidth = topRow.offsetWidth || container.offsetWidth;
-
-                // Top row: lay out left → right with spacing
-                let topX = 0;
-                items.filter(i => i.row === 'top').forEach(item => {
-                    item.x = topX;
-                    topX += item.width + SPACING;
-                });
-
-                // Bottom row: lay out right → left with spacing (start off-screen to the right)
-                let bottomX = rowWidth;
-                const bottomItems = items.filter(i => i.row === 'bottom');
-                bottomItems.forEach(item => {
-                    item.x = bottomX;
-                    bottomX += item.width + SPACING;
-                });
-
-                originals.forEach(c => c.style.display = 'none');
-                items.forEach(item => {
-                    item.el.style.transform = `translate(${item.x}px, -50%)`;
-                });
-                animId = requestAnimationFrame(tick);
-            });
-        }
-
-        function tick() {
-            if (!wrapper) return;
-            const rows = wrapper.querySelectorAll('.partners-flow-row');
-            const topRowEl = rows[0];
-            const bottomRowEl = rows[1];
-            const rowWidth = topRowEl.offsetWidth;
-
-            const topItems = items.filter(i => i.row === 'top');
-            const bottomItems = items.filter(i => i.row === 'bottom');
-
-            // Move top row (left to right)
-            topItems.forEach(item => {
-                item.x += SPEED;
-                if (item.x > rowWidth) {
-                    const leftmost = topItems.reduce((min, i) => i.x < min.x ? i : min);
-                    item.x = leftmost.x - item.width - SPACING;
-                }
-                item.el.style.transform = `translate(${item.x}px, -50%)`;
-            });
-
-            // Move bottom row (right to left)
-            bottomItems.forEach(item => {
-                item.x -= SPEED;
-                if (item.x + item.width < 0) {
-                    const rightmost = bottomItems.reduce((max, i) => (i.x + i.width) > (max.x + max.width) ? i : max);
-                    item.x = rightmost.x + rightmost.width + SPACING;
-                }
-                item.el.style.transform = `translate(${item.x}px, -50%)`;
-            });
-
-            animId = requestAnimationFrame(tick);
-        }
-
-        function destroyMarquee() {
-            if (animId) { cancelAnimationFrame(animId); animId = null; }
-            if (wrapper) {
-                const parent = wrapper.parentNode;
-                if (parent) parent.removeChild(wrapper);
-                wrapper = null;
-            }
-            items = [];
-            [...container.children].forEach(c => {
-                if (c.classList.contains('partner-item')) c.style.display = '';
-            });
-        }
-
-        buildMarquee();
-        let resizeTimer;
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(() => {
-                if (window.innerWidth <= 768) buildMarquee();
-                else destroyMarquee();
-            }, 250);
-        });
-    })();
-    </script>
+    <script src="../js/main.js?v=2"></script>
+    <script src="../js/nav.js?v=2" defer></script>
+    <script src="../js/chatbot.js?v=2" defer></script>
 </body>
 </html>
