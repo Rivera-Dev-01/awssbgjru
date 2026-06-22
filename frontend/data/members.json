@@ -68,19 +68,60 @@
   ],
   "executives": [
     {
+      "name": "Bautista, Rizelle B.",
+      "role": "Executive",
+      "position": "Former CEO/President, 25-26",
+      "photo": "../assets/members/founders-photos/Rizelle Bautista.png",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/rizelle-b-968006286/"
+      },
+      "resume": "../assets/members/founders-photos/resume/Resume_Rizelle_Bautista - Rizelle Bautista.pdf",
+      "portfolio": "https://www.linkedin.com/in/rizelle-b-968006286/",
+      "subsection": 2
+    },
+    {
+      "name": "Gandawali, Albosran",
+      "role": "Executive",
+      "position": "Former Vice President-Internal, 25-26",
+      "photo": "../assets/members/founders-photos/Mendoza, Albos.png",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/albosran-gandawali-888b54281/"
+      },
+      "resume": "../assets/members/founders-photos/resume/CV6_ALBOSRAN M GANDAWALI - Albosran Gandawali.pdf",
+      "subsection": 2
+    },
+    {
+      "name": "Hao",
+      "role": "Executive",
+      "position": "Vice President-External, 25-26",
+      "photo": "../assets/shared/components/AWS-NewLogo.webp",
+      "socials": {},
+      "subsection": 2
+    },
+    {
+      "name": "TBD",
+      "role": "Executive",
+      "position": "Vice President-External, 25-26",
+      "photo": "../assets/shared/components/AWS-NewLogo.webp",
+      "socials": {},
+      "subsection": 2
+    },
+    {
       "name": "Speirs, Keith Alan",
-      "position": "Chief Executive Officer | SBG Leader",
+      "role": "Executive",
+      "position": "Chief Executive Officer | SBG Leader, 26-27",
       "photo": "../assets/members/executives-photos/Keith Speris.png",
       "socials": {
         "linkedin": "https://www.linkedin.com/in/keith-speirs/",
         "facebook": "https://www.facebook.com/keith.speirs.52/"
       },
       "resume": "../assets/members/executives-photos/resume/Keith Speirs - Resume - Keith Alan Speirs(1).pdf",
-      "subsection": 2
+      "subsection": 1
     },
     {
       "name": "Rivera, Miggy",
-      "position": "Vice President of External Affairs",
+      "role": "Executive",
+      "position": "Vice President of External Affairs, 26-27",
       "photo": "../assets/members/executives-photos/Miggy Rivera.png",
       "socials": {
         "linkedin": "https://www.linkedin.com/in/miggy-rivera-b20047296/",
@@ -88,22 +129,24 @@
         "instagram": "https://www.instagram.com/raive.exp/"
       },
       "resume": "../assets/members/executives-photos/resume/Rivera, Miggy G. - Resume - Miggy Rivera.pdf",
-      "subsection": 2
+      "subsection": 1
     },
     {
       "name": "Lolong, Khobe Clayn",
-      "position": "Vice President of Internal Affairs",
+      "role": "Executive",
+      "position": "Vice President of Internal Affairs, 26-27",
       "photo": "../assets/members/executives-photos/Khoebe Lolong.png",
       "socials": {
         "linkedin": "http://www.linkedin.com/in/khobe-clayne-lolong-16aa89379",
         "facebook": "https://www.facebook.com/kbcleyn.him",
         "instagram": "https://www.instagram.com/_khxcl/"
       },
-      "subsection": 2
+      "subsection": 1
     },
     {
       "name": "Villaluna, Jullianna",
-      "position": "Secretary, '26-'27",
+      "role": "Executive",
+      "position": "Secretary, 26-27",
       "photo": "../assets/members/executives-photos/Jullianna, Villaluna.png",
       "socials": {
         "linkedin": "https://www.linkedin.com/in/jullianna-villaluna/",
@@ -111,56 +154,13 @@
         "instagram": "https://www.instagram.com/jllnnbv/"
       },
       "resume": "../assets/members/executives-photos/resume/JULLIANNA VILLALUNA_RESUME - Jullianna Villaluna.pdf",
-      "subsection": 2
-    },
-    {
-      "name": "Mondares, Matt Arron, M.",
-      "position": "Chief Creatives Officer, '26-'27",
-      "photo": "../assets/members/executives-photos/MattMondares-TemporaryPhoto - Matt Mondares.png",
-      "socials": {
-        "linkedin": "https://www.linkedin.com/in/matt-mondares-43a292396/",
-        "facebook": "https://www.facebook.com/matt.mondares.1/",
-        "instagram": "https://www.instagram.com/mattmondares/"
-      },
-      "resume": "../assets/members/executives-photos/resume/Resume_Matt-Mondares (1) - Matt Mondares.pdf",
-      "subsection": 2
-    },
-    {
-      "name": "Arenas, Andre Carl",
-      "position": "Chief Lead Operations",
-      "photo": "../assets/members/executives-photos/Carl Andre Arenas.png",
-      "socials": {
-        "linkedin": "https://www.linkedin.com/in/andre-arenas-016bb437a?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
-        "facebook": "https://www.facebook.com/share/1EKnc5gMi7/?mibextid=wwXIfr"
-      },
-      "subsection": 2
-    },
-    {
-      "name": "Marcial, Ellean",
-      "position": "Marketing Chief, \u201826-\u201827",
-      "photo": "../assets/members/executives-photos/Ellean Marcial.png",
-      "socials": {
-        "linkedin": "https://www.linkedin.com/in/ellean-marcial-573ba227a?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
-        "facebook": "https://www.facebook.com/share/1JiVfkCsCS/?mibextid=wwXIfr",
-        "instagram": "https://www.instagram.com/eleyngay?igsh=NHYwd21iNGY3cmts&utm_source=qr"
-      },
-      "subsection": 2
-    },
-    {
-      "name": "Dival, Francesca Isabel M.",
-      "position": "Vice Chief Marketing, '26-'27 ",
-      "photo": "../assets/members/executives-photos/Franchesca Dival.png",
-      "socials": {
-        "linkedin": "http://www.linkedin.com/in/francesca-isabel-dival",
-        "facebook": "https://www.facebook.com/share/1BBkiGnXuj/",
-        "instagram": "https://www.instagram.com/francescadival?igsh=MWg3N3Rmc2I0dWQ1Yg=="
-      },
-      "subsection": 2
+      "subsection": 1
     }
   ],
   "associates": [
     {
       "name": "Rivera, Miggy",
+      "subsection": 1,
       "position": "Full-Stack Web Development Lead, 26-27",
       "photo": "../assets/members/associate-photos/Miggy Rivera (1).png",
       "socials": {
@@ -172,6 +172,7 @@
     },
     {
       "name": "Speirs, Keith Alan",
+      "subsection": 1,
       "position": "Full-Stack Web Development Co-Lead, 26-27",
       "photo": "../assets/members/associate-photos/Keith Speris (1).png",
       "socials": {
@@ -182,6 +183,7 @@
     },
     {
       "name": "Mondares, Matt Arron, M.",
+      "subsection": 2,
       "position": "UI/UX Lead Designer, '26-'27",
       "photo": "../assets/members/associate-photos/MattMondares-TemporaryPhoto - Matt Mondares (1).png",
       "socials": {
@@ -193,6 +195,7 @@
     },
     {
       "name": "Dival, Francesca Isabel M.",
+      "subsection": 2,
       "position": "UI/UX Designer, '26-'27",
       "photo": "../assets/members/associate-photos/Franchesca Dival (1).png",
       "socials": {
@@ -203,6 +206,7 @@
     },
     {
       "name": "Aniog, Dayer",
+      "subsection": 2,
       "position": "UI/UX Designer, '26-'27 ",
       "photo": "../assets/members/associate-photos/Aniog, Dayer.png",
       "socials": {
@@ -214,6 +218,7 @@
     },
     {
       "name": "Lolong, Khobe Clayn",
+      "subsection": 2,
       "position": "UI/UX Designer, '26-'27 ",
       "photo": "../assets/members/associate-photos/Khoebe Lolong (1).png",
       "socials": {
@@ -224,6 +229,7 @@
     },
     {
       "name": "Vergara, Christian",
+      "subsection": 3,
       "position": "Front-End Developer Lead, 26-27",
       "photo": "../assets/shared/components/AWS-NewLogo.webp",
       "socials": {
@@ -234,6 +240,7 @@
     },
     {
       "name": "Sederia, Jharell James M. ",
+      "subsection": 3,
       "position": "Front-End Developer, 26-27",
       "photo": "../assets/members/associate-photos/Sederia,James.png",
       "socials": {
@@ -244,6 +251,7 @@
     },
     {
       "name": "Balagapo, Alfonzo Nikolei D.",
+      "subsection": 3,
       "position": "Front-End Developer, 26-27",
       "photo": "../assets/members/associate-photos/Alfonzo Balagapo.png",
       "socials": {
@@ -254,6 +262,7 @@
     },
     {
       "name": "Roque, Jeric Jacob Reece M.",
+      "subsection": 4,
       "position": "Back-End Developer, 26-27",
       "photo": "../assets/members/associate-photos/Roque,Jeric.png",
       "socials": {
@@ -264,6 +273,7 @@
     },
     {
       "name": "Macaspac, John Patrick",
+      "subsection": 4,
       "position": "Back-End Developer, 26-27",
       "photo": "../assets/members/associate-photos/Macaspac, John Patrick.png",
       "socials": {
