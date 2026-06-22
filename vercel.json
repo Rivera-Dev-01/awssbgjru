@@ -19,14 +19,12 @@
       "dest": "frontend/pages/landing-page.html"
     },
     {
-      "src": "/(register|explanation|department|office|skillbuilder|loading|waiting-approval|members|about|events|partners|achievements|contact|event-detail|landing-page)(?:\\.html)?$",
+      "src": "/(landing-page|register|explanation|department|office|skillbuilder|loading|waiting-approval|members|about|events|partners|achievements|contact|event-detail)(?:\\.html)?$",
       "dest": "frontend/pages/$1.html"
     },
     {
       "src": "/(.*)",
       "dest": "frontend/$1"
     }
-  ],
-  "cleanUrls": true,
-  "trailingSlash": false
+  ]
 }
