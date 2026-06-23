@@ -226,7 +226,7 @@ async function initMembers() {
       const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
       
       if (Array.isArray(labels[sectionKey])) {
-        if (isDesktop) {
+        if (isDesktop && sectionKey !== "founders") {
           // DESKTOP: Render a single unified grid
           const subsectionDiv = document.createElement("div");
           subsectionDiv.className = "founders-subsection";
