@@ -535,9 +535,10 @@ body.members-page {
 		flex-direction: column;
 		position: fixed;
 		left: 50px;
-		bottom: 50px;
+		top: 157px;
 		width: 247px;
-		height: 750px;
+		height: calc(100vh - 207px);
+		max-height: 750px;
 		background: #fff;
 		border-radius: 23.185px;
 		box-shadow: 0 3.367px 3.367px 0 rgba(0, 0, 0, .25);
@@ -1096,16 +1097,7 @@ body.members-page {
 	overflow: visible !important
 }
 
-@media (min-width:1024px) {
-	#section-associates .founders-content,
-	#section-offices .founders-content {
-		position: relative !important;
-		left: auto !important;
-		right: auto !important;
-		top: auto !important;
-		padding: 37px 133px 60px 460px !important
-	}
-}
+
 
 @media (max-width:767px) {
 	#section-associates,
@@ -1321,6 +1313,7 @@ body.members-page {
 	/* SECTION LAYOUT OVERRIDES (DESKTOP) */
 	#section-founders,
 	#section-executives,
+	#section-associates,
 	#section-offices {
 		height: auto !important;
 		overflow: visible !important;
@@ -1329,6 +1322,7 @@ body.members-page {
 
 	#section-founders .members-layout,
 	#section-executives .members-layout,
+	#section-associates .members-layout,
 	#section-offices .members-layout {
 		height: auto;
 		overflow: visible;
@@ -1336,6 +1330,7 @@ body.members-page {
 
 	#section-founders .founders-content,
 	#section-executives .founders-content,
+	#section-associates .founders-content,
 	#section-offices .founders-content {
 		position: relative !important;
 		left: auto !important;
@@ -1502,9 +1497,9 @@ body.members-page {
 		display: none;
 	}
 
-	/* Center first associate subsection vertically */
+	/* Align first associate subsection to the top matching other sections */
 	#section-associates .founders-subsections > .founders-subsection:first-child {
-		justify-content: center;
+		justify-content: flex-start;
 	}
 
 	/* AWS Official Website Contributors subtitle on first associate subsection */
