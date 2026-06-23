@@ -1525,6 +1525,18 @@ body.members-page {
 	}
 }
 
+/* Associate subsection titles (UI/UX, FRONTEND, BACKEND) in white italic */
+#section-associates .founders-subsection:nth-child(n+2) .founders-title {
+	font-style: italic;
+	font-size: 37.4px;
+	color: #fff;
+	text-shadow: 0 4px 10px rgba(0, 54, 120, 0.5);
+	background: none;
+	-webkit-background-clip: unset;
+	-webkit-text-fill-color: unset;
+	background-clip: unset
+}
+
 /* Hide empty description for offices */
 #section-offices .founders-description {
 	display: none
