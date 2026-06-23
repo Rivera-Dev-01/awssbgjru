@@ -1,5 +1,0 @@
-{
-  "files": ["frontend/**/*.html"],
-  "insertBefore": "</body>",
-  "commentSyntax": "html"
-}
