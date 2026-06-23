@@ -8,7 +8,7 @@ brand
 Mapúa University students, cloud enthusiasts, and aspiring tech professionals who want to build real-world skills and connect with a community.
 
 ## Product Purpose
-The official website for the AWS Learning Club Mapúa Chapter. It serves to highlight events, showcase the community, and provide a platform for members to engage with the club's activities and cloud technology.
+The official website for the AWS Student Builder Group Mapúa Chapter. It serves to highlight events, showcase the community, and provide a platform for members to engage with the club's activities and cloud technology.
 
 ## Brand Personality
 Empowering, Innovative, Student-centric, and Professional.

@@ -1,6 +1,6 @@
-# AWS Learning Club - Website
+# AWS Student Builder Group - Website
 
-Website for the AWS Learning Club at José Rizal University. Features a mobile-first responsive design with an AI chatbot (Captain Hima) powered by Groq, member registration flow, event listings, department/office spotlights, and more.
+Website for the AWS Student Builder Group at José Rizal University. Features a mobile-first responsive design with an AI chatbot (Captain Hima) powered by Groq, member registration flow, event listings, department/office spotlights, and more.
 
 ## Tech Stack
 
