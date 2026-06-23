@@ -541,7 +541,7 @@ body.members-page {
 		left: 50px;
 		bottom: 127px;
 		width: 247px;
-		height: 670px;
+		height: 750px;
 		background: #fff;
 		border-radius: 23.185px;
 		box-shadow: 0 3.367px 3.367px 0 rgba(0, 0, 0, .25);
@@ -1076,28 +1076,33 @@ body.members-page {
 	text-decoration: none
 }
 
-#section-associates {
+#section-associates,
+#section-offices {
 	height: auto !important;
 	overflow: visible !important;
 	min-height: 0 !important
 }
 
-#section-associates .members-layout {
+#section-associates .members-layout,
+#section-offices .members-layout {
 	height: auto !important;
 	overflow: visible !important
 }
 
-#section-associates .founders-content {
+#section-associates .founders-content,
+#section-offices .founders-content {
 	overflow: visible !important
 }
 
-#section-associates .founders-grid {
+#section-associates .founders-grid,
+#section-offices .founders-grid {
 	height: auto !important;
 	overflow: visible !important
 }
 
 @media (min-width:1024px) {
-	#section-associates .founders-content {
+	#section-associates .founders-content,
+	#section-offices .founders-content {
 		position: relative !important;
 		left: auto !important;
 		right: auto !important;
@@ -1107,17 +1112,20 @@ body.members-page {
 }
 
 @media (max-width:767px) {
-	#section-associates {
+	#section-associates,
+	#section-offices {
 		height: auto !important
 	}
 
-	#section-associates .snap-section {
+	#section-associates .snap-section,
+	#section-offices .snap-section {
 		height: auto !important
 	}
 }
 
 @media (max-height:850px) {
-	#section-associates {
+	#section-associates,
+	#section-offices {
 		height: auto !important
 	}
 }
@@ -1344,14 +1352,16 @@ body.members-page {
 }
 
 #section-founders,
-#section-executives {
+#section-executives,
+#section-offices {
 	height: auto !important;
 	overflow: visible !important;
 	scroll-snap-align: none
 }
 
 #section-founders .members-layout,
-#section-executives .members-layout {
+#section-executives .members-layout,
+#section-offices .members-layout {
 	height: auto;
 	overflow: visible
 }
@@ -1359,7 +1369,8 @@ body.members-page {
 @media (min-width:1024px) {
 
 	#section-founders .founders-content,
-	#section-executives .founders-content {
+	#section-executives .founders-content,
+	#section-offices .founders-content {
 		position: relative !important;
 		left: auto !important;
 		right: auto !important;
@@ -1391,6 +1402,7 @@ body.members-page {
 
 	#section-founders .founders-subsection,
 	#section-executives .founders-subsection,
+	#section-offices .founders-subsection,
 	#section-associates .founders-subsection {
 		height: auto;
 		min-height: 100vh
@@ -1527,6 +1539,11 @@ body.members-page {
 	display: none
 }
 
+/* Hide empty description for offices */
+#section-offices .founders-description {
+	display: none
+}
+
 /* Center first associate subsection vertically */
 #section-associates .founders-subsections > .founders-subsection:first-child {
 	justify-content: center
@@ -1545,4 +1562,100 @@ body.members-page {
 	color: #fff;
 	text-shadow: 0 4px 10px rgba(0, 54, 120, 0.5);
 	margin-bottom: 20px
+}
+
+/* Office card styles (same as executive) */
+#section-offices .member-card {
+	width: 300px;
+	max-width: 320px;
+	height: 550px;
+	border-radius: 23.975px;
+	padding: 16px 10px;
+	flex-shrink: 0
+}
+
+#section-offices .member-photo-wrapper {
+	width: 260px;
+	height: 300px;
+	margin-top: 10px;
+	border-radius: 17px;
+	display: flex;
+	align-items: center;
+	justify-content: center
+}
+
+#section-offices .member-photo-inner {
+	width: 250px;
+	height: 290px;
+	border-radius: 18px;
+	background: #fff;
+	transform: none;
+	left: auto;
+	top: auto;
+	position: relative;
+	border: none;
+	overflow: hidden
+}
+
+#section-offices .member-name {
+	font-size: 20px;
+	font-weight: 600;
+	color: #003678;
+	margin-top: 10px;
+	margin-bottom: 4px;
+	line-height: 30px
+}
+
+#section-offices .member-role {
+	font-size: 16px;
+	font-style: italic;
+	font-weight: 500;
+	line-height: 24px;
+	background: linear-gradient(180deg, #0064DE, #003678);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	text-align: center;
+	margin-bottom: 4px;
+	font-family: var(--font-poppins)
+}
+
+#section-offices .member-position {
+	font-size: 14px;
+	font-weight: 300;
+	color: #003678;
+	text-align: center;
+	margin-bottom: 10px;
+	line-height: 20px
+}
+
+#section-offices .founders-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px
+}
+
+#section-offices .member-socials {
+	gap: 14px;
+	margin-bottom: 8px
+}
+
+#section-offices .member-socials svg {
+	width: 18px;
+	height: 18px
+}
+
+#section-offices .member-links {
+	gap: 14px
+}
+
+#section-offices .member-links svg {
+	width: 16px;
+	height: 16px
+}
+
+#section-offices .member-card::before {
+	padding: 3px;
+	border-radius: 23.975px
 }
