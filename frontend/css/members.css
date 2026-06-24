@@ -993,7 +993,7 @@ body.members-page {
 	.hero-card {
 		margin: 0 auto;
 		border-radius: 0;
-		background: url(../assets/members/background/mobile-hero-card-ellipse.svg), url(../assets/members/background/mobile-hero-card-bg.png)center/cover no-repeat, linear-gradient(180deg, #182b58 33%, #02184b 100%);
+		background: url(../assets/members/background/mobile-hero-card-ellipse.svg), url(../assets/members/background/mobile-hero-card-bg.webp)center/cover no-repeat, linear-gradient(180deg, #182b58 33%, #02184b 100%);
 		background-position: top, center, center, center;
 		background-size: 500px 300px, cover, auto;
 		background-repeat: no-repeat, no-repeat, no-repeat;
@@ -1176,6 +1176,7 @@ body.members-page {
 	background: linear-gradient(180deg, #0064DE, #003678);
 	-webkit-background-clip: text;
 	background-clip: text;
+	-webkit-text-fill-color: transparent;
 	color: transparent;
 	text-align: center;
 	margin-bottom: 4px;
@@ -1264,6 +1265,7 @@ body.members-page {
 		background: linear-gradient(180deg, #0064DE, #003678);
 		-webkit-background-clip: text;
 		background-clip: text;
+		-webkit-text-fill-color: transparent;
 		color: transparent;
 		text-align: center;
 		margin-bottom: 4px;
@@ -1446,6 +1448,7 @@ body.members-page {
 		background: linear-gradient(180deg, #0064DE, #003678);
 		-webkit-background-clip: text;
 		background-clip: text;
+		-webkit-text-fill-color: transparent;
 		color: transparent;
 		text-align: center;
 		margin-bottom: 4px;
@@ -1585,6 +1588,7 @@ body.members-page {
 	background: linear-gradient(180deg, #0064DE, #003678);
 	-webkit-background-clip: text;
 	background-clip: text;
+	-webkit-text-fill-color: transparent;
 	color: transparent;
 	text-align: center;
 	margin-bottom: 4px;

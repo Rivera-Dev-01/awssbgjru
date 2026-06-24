@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initDesktopParallax();
     initScrollReveal();
     initSpotlightCards();
+    initLazyBackgrounds();
 });
 
 function initLandingPageCarousel() {
@@ -513,4 +514,20 @@ function initSpotlightCards() {
             card.style.setProperty("--my", "50%");
         });
     });
+}
+
+function initLazyBackgrounds() {
+    if (!("IntersectionObserver" in window)) return;
+    const els = document.querySelectorAll("[data-bg-src]");
+    if (!els.length) return;
+    const observer = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                el.style.backgroundImage = `url(${el.dataset.bgSrc})`;
+                observer.unobserve(el);
+            }
+        }
+    }, { rootMargin: "200px" });
+    for (const el of els) observer.observe(el);
 }

@@ -5,7 +5,7 @@
     position: relative;
     background:
         linear-gradient(180deg, rgba(8, 31, 25, 0.28) 0%, rgba(5, 19, 17, 0.46) 100%),
-        url(../assets/landing-page/backgrounds/Himas-Archive-Three-Stones.png) center top / cover no-repeat;
+        url(../assets/landing-page/backgrounds/Himas-Archive-Three-Stones.webp) center top / cover no-repeat;
     padding-top: 0;
 }
 
@@ -16,7 +16,7 @@
     right: 0;
     top: -126px;
     height: 318px;
-    background: url(../assets/landing-page/Green_Bush_Transition.png) center top / 152% auto no-repeat;
+    background: url(../assets/landing-page/Green_Bush_Transition.webp) center top / 152% auto no-repeat;
     opacity: 1;
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.98) 62%, rgba(0, 0, 0, 0.74) 86%, transparent 100%);
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.98) 62%, rgba(0, 0, 0, 0.74) 86%, transparent 100%);
@@ -31,7 +31,7 @@
     height: 210px;
     margin-top: -105px;
     margin-bottom: -105px;
-    background: url(../assets/landing-page/Green_Bush_Transition.png) center top / 150% auto no-repeat;
+    background: url(../assets/landing-page/Green_Bush_Transition.webp) center top / 150% auto no-repeat;
     opacity: 0.98;
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.98) 58%, rgba(0, 0, 0, 0.74) 84%, transparent 100%);
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.98) 58%, rgba(0, 0, 0, 0.74) 84%, transparent 100%);
@@ -50,7 +50,7 @@
     box-shadow: none;
     background:
         linear-gradient(180deg, rgba(10, 49, 44, 0.18) 0%, rgba(8, 28, 24, 0.36) 48%, rgba(5, 18, 15, 0.78) 100%),
-        url(../assets/landing-page/backgrounds/Himas-Archive-Three-Stones.png) center top / cover no-repeat;
+        url(../assets/landing-page/backgrounds/Himas-Archive-Three-Stones.webp) center top / cover no-repeat;
     isolation: isolate;
 }
 
@@ -298,7 +298,7 @@
     .events-sponsors-bg {
         background:
             linear-gradient(180deg, rgba(11, 50, 43, 0.18), rgba(5, 18, 15, 0.62)),
-            url(../assets/landing-page/backgrounds/Himas-Archive-Three-Stones.png) center top / cover no-repeat !important;
+            url(../assets/landing-page/backgrounds/Himas-Archive-Three-Stones.webp) center top / cover no-repeat !important;
     }
 
     .events-sponsors-bg::before {
@@ -322,7 +322,7 @@
         padding: 72px 18px 88px !important;
         background:
             linear-gradient(180deg, rgba(12, 57, 49, 0.1) 0%, rgba(7, 28, 24, 0.48) 100%),
-            url(../assets/landing-page/backgrounds/Himas-Archive-Three-Stones.png) center top / cover no-repeat !important;
+            url(../assets/landing-page/backgrounds/Himas-Archive-Three-Stones.webp) center top / cover no-repeat !important;
     }
 
     .event-archives-container {
@@ -479,7 +479,7 @@
     padding: 130px 0 110px;
     background:
         linear-gradient(180deg, rgba(8, 30, 24, 0.16) 0%, rgba(6, 18, 14, 0.82) 100%),
-        url(../assets/landing-page/backgrounds/Events-Forest-Archive-BG.png) center 62% / cover no-repeat;
+        url(../assets/landing-page/backgrounds/Events-Forest-Archive-BG.webp) center 62% / cover no-repeat;
     overflow: hidden;
     isolation: isolate;
 }
@@ -860,7 +860,7 @@
         padding: 68px 0 82px;
         background:
             linear-gradient(180deg, rgba(8, 30, 24, 0.2) 0%, rgba(6, 18, 14, 0.9) 100%),
-            url(../assets/landing-page/backgrounds/Events-Forest-Archive-BG.png) center top / cover no-repeat;
+            url(../assets/landing-page/backgrounds/Events-Forest-Archive-BG.webp) center top / cover no-repeat;
     }
 
     .sponsorship-shell {
@@ -1134,7 +1134,7 @@
         background:
             linear-gradient(180deg, #050c09 0%, transparent 15%, transparent 85%, #030806 100%),
             linear-gradient(180deg, rgba(8, 30, 24, 0.16) 0%, rgba(6, 18, 14, 0.82) 100%),
-            url(../assets/landing-page/backgrounds/Events-Forest-Archive-BG.png) center 62% / cover no-repeat;
+            url(../assets/landing-page/backgrounds/Events-Forest-Archive-BG.webp) center 62% / cover no-repeat;
     }
 
     .sponsorship-relic-stage {
@@ -1398,7 +1398,7 @@
         margin-bottom: clamp(-68px, -15vw, -44px);
         background:
             linear-gradient(180deg, rgba(247, 253, 255, 0) 0%, rgba(247, 253, 255, 0.58) 42%, rgba(248, 253, 255, 0) 100%),
-            url(../assets/landing-page/Transition_Clouds_New.png) center center / cover no-repeat;
+            url(../assets/landing-page/Transition_Clouds_New.webp) center center / cover no-repeat;
         filter: saturate(1.04) contrast(1.02);
         pointer-events: none;
         z-index: 5;
@@ -1416,7 +1416,7 @@
         background:
             radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0) 36%),
             linear-gradient(180deg, rgba(250, 254, 255, 0.9) 0%, rgba(201, 237, 255, 0.66) 52%, rgba(126, 190, 215, 0.42) 100%),
-            url(../assets/landing-page/Who_Are_WE_BG.png) center top / cover no-repeat !important;
+            url(../assets/landing-page/Who_Are_WE_BG.webp) center top / cover no-repeat !important;
     }
 
     .mobile-only-home .section-title {
@@ -1488,7 +1488,7 @@
         margin-bottom: clamp(-74px, -18vw, -52px);
         background:
             linear-gradient(180deg, rgba(70, 139, 124, 0) 0%, rgba(40, 92, 73, 0.2) 48%, rgba(16, 45, 34, 0.18) 100%),
-            url(../assets/landing-page/Green_Bush_Transition.png) center top / 280% auto no-repeat;
+            url(../assets/landing-page/Green_Bush_Transition.webp) center top / 280% auto no-repeat;
         filter: saturate(1.08) contrast(1.04);
         pointer-events: none;
         z-index: 6;
@@ -1500,8 +1500,8 @@
         background:
             linear-gradient(180deg, rgba(14, 55, 44, 0.08) 0%, rgba(5, 24, 20, 0.42) 100%),
             radial-gradient(circle at 52% 22%, rgba(165, 230, 255, 0.24) 0%, rgba(165, 230, 255, 0) 42%),
-            url(../assets/landing-page/backgrounds/Staircase_BG.png) 52% top / auto 118% no-repeat,
-            url(../assets/landing-page/backgrounds/Cloud_Expertise_BG.png) center top / cover no-repeat;
+            url(../assets/landing-page/backgrounds/Staircase_BG.webp) 52% top / auto 118% no-repeat,
+            url(../assets/landing-page/backgrounds/Cloud_Expertise_BG.webp) center top / cover no-repeat;
     }
 
     .mobile-only-home .what-we-do-section::before {
@@ -1577,19 +1577,19 @@
     }
 
     .events-sponsors-bg::before {
-        background: url(../assets/landing-page/Green_Bush_Transition.png) center top / 220% auto no-repeat;
+        background: url(../assets/landing-page/Green_Bush_Transition.webp) center top / 220% auto no-repeat;
     }
 
     .events-to-sponsors-transition {
         background:
             linear-gradient(180deg, rgba(6, 25, 20, 0) 0%, rgba(5, 20, 16, 0.28) 58%, rgba(5, 20, 16, 0) 100%),
-            url(../assets/landing-page/Green_Bush_Transition.png) center top / 235% auto no-repeat;
+            url(../assets/landing-page/Green_Bush_Transition.webp) center top / 235% auto no-repeat;
     }
 
     .events-section {
         background:
             linear-gradient(180deg, rgba(10, 48, 41, 0.1) 0%, rgba(5, 20, 17, 0.56) 100%),
-            url(../assets/landing-page/backgrounds/Himas-Archive-Three-Stones.png) 50% top / auto 100% no-repeat !important;
+            url(../assets/landing-page/backgrounds/Himas-Archive-Three-Stones.webp) 50% top / auto 100% no-repeat !important;
     }
 
     .events-section .event-archives-container {
@@ -1742,7 +1742,7 @@
     .sponsorship-section {
         background:
             linear-gradient(180deg, rgba(5, 20, 16, 0.34) 0%, rgba(3, 11, 8, 0.94) 100%),
-            url(../assets/landing-page/backgrounds/Events-Forest-Archive-BG.png) center top / cover no-repeat;
+            url(../assets/landing-page/backgrounds/Events-Forest-Archive-BG.webp) center top / cover no-repeat;
     }
 
     .landing-page .chatbot-trigger {

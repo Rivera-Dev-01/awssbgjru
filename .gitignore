@@ -15,3 +15,13 @@ kilo.json
 
 # FAISS RAG index
 backend/faiss_index/
+
+# Node dependencies
+node_modules/
+
+# OpenCode
+.opencode/
+
+# Scratch / temp
+page-snapshot.md
+register-desktop.txt

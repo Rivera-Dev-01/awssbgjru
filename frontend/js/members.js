@@ -49,19 +49,19 @@ function initIntersectionObserver() {
           if (section === "offices") {
             if (section === activeKey) {
               item.classList.add("active");
-              if (icon) icon.src = "../assets/members/badges/offices-icon-active-badge.png";
+              if (icon) icon.src = "../assets/members/badges/offices-icon-active-badge.webp";
             } else {
               item.classList.remove("active");
-              if (icon) icon.src = "../assets/members/badges/offices-icon-inactive-badge.png";
+              if (icon) icon.src = "../assets/members/badges/offices-icon-inactive-badge.webp";
             }
           } else {
             const label = section === "associates" ? "Associate" : section.charAt(0).toUpperCase() + section.slice(1);
             if (section === activeKey) {
               item.classList.add("active");
-              if (icon) icon.src = `../assets/members/badges/${label}-Active-State-Badge.png`;
+              if (icon) icon.src = `../assets/members/badges/${label}-Active-State-Badge.webp`;
             } else {
               item.classList.remove("active");
-              if (icon) icon.src = `../assets/members/badges/${label}-Inactive-State-Badge.png`;
+              if (icon) icon.src = `../assets/members/badges/${label}-Inactive-State-Badge.webp`;
             }
           }
         });
