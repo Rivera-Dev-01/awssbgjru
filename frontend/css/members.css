@@ -1040,7 +1040,7 @@ body.members-page {
 	}
 
 	.snap-section {
-		height: 130vh
+		height: 200vh
 	}
 
 	.member-title-mobile {
@@ -1123,7 +1123,6 @@ body.members-page {
 }
 
 .founders-subsection {
-	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -1610,6 +1609,67 @@ body.members-page {
 	justify-content: center;
 	gap: 20px
 }
+
+/* OFFICES MOBILE OVERRIDE */
+@media(max-width:767px){
+	#section-offices .founders-grid,
+	#section-founders .founders-grid{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+	}
+	.founders-grid::before{
+		grid-column: 1 / -1;
+	}
+	#section-offices .member-card,
+	#section-founders .member-card{
+		width: 182.46px;
+		height: 300.85px;
+	}
+	#section-offices .member-photo-wrapper,
+	#section-founders .member-photo-wrapper{
+		width: 149.09px;
+		height: 149.24px;
+	}
+	#section-offices .member-photo-inner,
+	#section-founders .member-photo-inner{
+		height: 100%;
+		width: 100%;
+	}
+	#section-offices .member-name,
+	#section-founders .member-name{
+		font-size: 13px;
+		line-height: 1.1em;
+		margin-bottom: 0;
+		margin-top: 2px;
+	}
+	#section-offices .member-role, 
+	#section-offices .member-position,
+	#section-founders .member-role,
+	#section-founders .member-position{
+		font-size: 11px;
+		margin-bottom: 0;
+	}
+	#section-offices .member-socials{
+		margin-top: 2px;
+	}
+	.member-role{
+		color: #003678;
+		font-style: italic;
+		font-size: 11px;
+	}
+	#section-founders .founders-grid > *:first-child:last-child{
+		grid-column: 1 / -1;
+		justify-self: center;
+	}
+	#section-founders .founders-grid > div:first-child:last-child .member-position{
+		font-size: 9px;
+	}
+	.hero-card{
+		height: 100vh;
+	}
+}
+
 
 #section-offices .member-socials {
 	gap: 14px;
