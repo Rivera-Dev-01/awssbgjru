@@ -7,6 +7,8 @@
         linear-gradient(180deg, rgba(8, 31, 25, 0.28) 0%, rgba(5, 19, 17, 0.46) 100%),
         url(../assets/landing-page/backgrounds/Himas-Archive-Three-Stones.webp) center top / cover no-repeat;
     padding-top: 0;
+    content-visibility: auto;
+    contain-intrinsic-size: 980px;
 }
 
 .events-sponsors-bg::before {
@@ -16,10 +18,10 @@
     right: 0;
     top: -126px;
     height: 318px;
-    background: url(../assets/landing-page/Green_Bush_Transition.webp) center top / 152% auto no-repeat;
+    background: #0a2f28 url(../assets/landing-page/Green_Bush_Transition.webp) center top / 152% auto no-repeat;
     opacity: 1;
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.98) 62%, rgba(0, 0, 0, 0.74) 86%, transparent 100%);
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.98) 62%, rgba(0, 0, 0, 0.74) 86%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.98) 62%, rgba(0, 0, 0, 0.74) 86%, transparent 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.98) 62%, rgba(0, 0, 0, 0.74) 86%, transparent 100%);
     filter: saturate(1.08) contrast(1.04);
     pointer-events: none;
     z-index: 7;
@@ -482,6 +484,8 @@
         url(../assets/landing-page/backgrounds/Events-Forest-Archive-BG.webp) center 62% / cover no-repeat;
     overflow: hidden;
     isolation: isolate;
+    content-visibility: auto;
+    contain-intrinsic-size: 700px;
 }
 
 .sponsorship-section::before {
@@ -1502,6 +1506,8 @@
             radial-gradient(circle at 52% 22%, rgba(165, 230, 255, 0.24) 0%, rgba(165, 230, 255, 0) 42%),
             url(../assets/landing-page/backgrounds/Staircase_BG.webp) 52% top / auto 118% no-repeat,
             url(../assets/landing-page/backgrounds/Cloud_Expertise_BG.webp) center top / cover no-repeat;
+        content-visibility: auto;
+        contain-intrinsic-size: 980px;
     }
 
     .mobile-only-home .what-we-do-section::before {

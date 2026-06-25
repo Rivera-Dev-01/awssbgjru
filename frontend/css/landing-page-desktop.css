@@ -44,7 +44,7 @@
         position: relative;
         width: 100%;
         overflow: hidden;
-        background: #00075d;
+        background: linear-gradient(to bottom, #00075d 0%, #00075d 75%, #0a2f28 100%);
         z-index: 1;
         margin-top: 0;
     }
@@ -528,7 +528,7 @@
     .cloud-expertise-group {
         position: absolute;
         width: 1923px;
-        height: 3290px;
+        height: 3307px;
         left: -3px;
         top: 2213px;
         background: linear-gradient(180deg, #13517d 0%, #0f3e5e 32%, #102f25 70%, #0f281e 100%);

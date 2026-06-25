@@ -66,12 +66,14 @@
       }]
     }
     </script>
-    <link rel="preload" href="../assets/landing-page/backgrounds/Hero-Section.webp" as="image" media="(min-width: 769px)">
-    <link rel="preload" href="../assets/landing-page/backgrounds/Mobile-Landing-Background.webp" as="image" media="(max-width: 768px)">
-    <!-- Google Fonts -->
+    <script>history.scrollRestoration="manual"</script>
+    <link rel="preload" href="../assets/landing-page/backgrounds/Hero-Section.webp" as="image" media="(min-width: 769px)" fetchpriority="high">
+    <link rel="preload" href="../assets/landing-page/backgrounds/Mobile-Landing-Background.webp" as="image" media="(max-width: 768px)" fetchpriority="high">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <!-- Google Fonts (non-render-blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Lexend:wght@300;400;500;600;700&family=Lexend+Deca:wght@400;500;600&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Lexend:wght@300;400;500;600;700&family=Lexend+Deca:wght@400;500;600&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../css/landing-page.css">
     <link rel="stylesheet" href="../css/landing-page-desktop.css">
     <!-- Header CSS - Separated for mobile and desktop -->
@@ -106,7 +108,7 @@
 
                 <picture>
                     <source media="(min-width: 769px)" srcset="../assets/landing-page/Transition_Clouds_New.webp">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="" class="section-transition-image hero-to-waw-transition" loading="lazy">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2560 546'%3E%3C/svg%3E" alt="" class="section-transition-image hero-to-waw-transition" loading="lazy">
                 </picture>
 
                 <!-- Who Are We Section -->
@@ -157,7 +159,7 @@
                 <div class="waw-to-expertise-band"></div>
                 <picture>
                     <source media="(min-width: 769px)" srcset="../assets/landing-page/Green_Bush_Transition.webp">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3C/svg%3E" alt="" class="section-transition-image waw-to-expertise-transition" loading="lazy">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2560 247'%3E%3C/svg%3E" alt="" class="section-transition-image waw-to-expertise-transition" loading="lazy">
                 </picture>
 
                 <!-- Cloud Expertise Section -->
