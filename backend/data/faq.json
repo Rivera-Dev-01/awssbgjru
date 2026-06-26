@@ -138,5 +138,50 @@
     "category": "general",
     "question": "When was the club founded?",
     "answer": "The AWS Student Builder Group - JRU Chapter was founded in 2025 by Adrian Justine R. Evangelista and Co-Founders."
+  },
+  {
+    "category": "offices",
+    "question": "What does the Operations office do?",
+    "answer": "The Operations office manages the club's day-to-day activities, logistics, scheduling, and internal coordination to ensure smooth execution of events and initiatives."
+  },
+  {
+    "category": "offices",
+    "question": "What does the Relations office do?",
+    "answer": "The Relations office handles external and internal communications, partnerships with organizations, sponsors, and other AWS clubs, and fosters community engagement for the club."
+  },
+  {
+    "category": "offices",
+    "question": "What does the Creatives office do?",
+    "answer": "The Creatives office is responsible for the visual identity of the club, including graphic design, layout creation, branding materials, and aesthetic direction for events and publications."
+  },
+  {
+    "category": "offices",
+    "question": "What does the Marketing office do?",
+    "answer": "The Marketing office manages promotional campaigns, social media outreach, content strategy, and advertising to increase the club's visibility and attract new members."
+  },
+  {
+    "category": "offices",
+    "question": "What does the Finance office do?",
+    "answer": "The Finance office oversees the club's budget, funding, expenses, and financial reporting to ensure transparency and responsible resource management."
+  },
+  {
+    "category": "offices",
+    "question": "What does the Media office do?",
+    "answer": "The Media office handles documentation, photography, videography, and multimedia content production to capture and share the club's activities and stories."
+  },
+  {
+    "category": "offices",
+    "question": "What does the Technology office do?",
+    "answer": "The Technology office supports the club's technical infrastructure, including website development, software tools, AWS cloud resources, and technical guidance for members and projects."
+  },
+  {
+    "category": "offices",
+    "question": "How are the offices structured in the club?",
+    "answer": "The club is organized into two departments: Offices and Skill Builder. The Offices department includes Operations, Relations, Creatives, Marketing, Finance, Media, and Technology. Each office is led by a Chief Officer responsible for its functions and team."
+  },
+  {
+    "category": "offices",
+    "question": "Can I join more than one office?",
+    "answer": "The registration form asks you to choose one office division or one Skill Builder division. If you are interested in contributing to multiple offices, contact the club officers to discuss possible arrangements."
   }
 ]
