@@ -2,6 +2,8 @@ html {
   scroll-snap-type: y proximity;
   scroll-padding-top: 0;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -287,7 +289,8 @@ body.members-page {
     padding: 12px 36px;
     font-size: 25.44px;
     margin: 0 auto;
-    width: 326px;
+    width: calc(100% - 32px);
+    max-width: 326px;
     height: 69px;
   }
 
@@ -965,7 +968,7 @@ body.members-page {
 
   .founders-content {
     overflow-y: auto;
-    padding-top: -30px;
+    padding: 20px 10px;
   }
 
   .founders-title {
@@ -1020,7 +1023,8 @@ body.members-page {
       cover,
       auto;
     background-repeat: no-repeat, no-repeat, no-repeat;
-    width: 431px;
+    width: 100%;
+    max-width: 431px;
   }
 
   .hero-mascot {
@@ -1058,7 +1062,8 @@ body.members-page {
 
   .hero-search {
     top: 10%;
-    width: 345px;
+    width: calc(100% - 32px);
+    max-width: 345px;
     margin: 0 auto;
   }
 
@@ -1655,7 +1660,8 @@ body.members-page {
   }
   #section-offices .member-card,
   #section-founders .member-card {
-    width: 182.46px;
+    width: 100%;
+    max-width: 182.46px;
     height: 340.85px;
   }
   #section-offices .member-photo-wrapper,
