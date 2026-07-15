@@ -27,11 +27,25 @@ class DivisionAvailabilityError(ValueError):
 
 
 def validate_division_availability(division_type: str, division_name: str) -> None:
+    if not isinstance(division_type, str):
+        raise DivisionAvailabilityError(
+            "invalid_division_type",
+            'division_type must be "office" or "skillbuilder"',
+            422,
+        )
+
     divisions = DIVISION_STATUS.get(division_type)
     if divisions is None:
         raise DivisionAvailabilityError(
             "invalid_division_type",
             'division_type must be "office" or "skillbuilder"',
+            422,
+        )
+
+    if not isinstance(division_name, str):
+        raise DivisionAvailabilityError(
+            "invalid_division",
+            "The selected division is not recognized.",
             422,
         )
 

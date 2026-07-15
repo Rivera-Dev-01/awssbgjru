@@ -43,6 +43,32 @@ class RegistrationAvailabilityTests(unittest.TestCase):
         self.assertEqual(raised.exception.status_code, 422)
         self.assertEqual(raised.exception.code, "invalid_division_type")
 
+    def test_non_string_division_types_return_unprocessable_entity(self):
+        for division_type in ([], {}):
+            with self.subTest(division_type=division_type):
+                try:
+                    validate_division_availability(division_type, "Relations")
+                except DivisionAvailabilityError as exc:
+                    self.assertEqual(exc.status_code, 422)
+                    self.assertEqual(exc.code, "invalid_division_type")
+                except Exception as exc:
+                    self.fail(f"Unexpected exception: {type(exc).__name__}")
+                else:
+                    self.fail("Expected DivisionAvailabilityError")
+
+    def test_non_string_division_names_return_unprocessable_entity(self):
+        for division_name in ([], {}):
+            with self.subTest(division_name=division_name):
+                try:
+                    validate_division_availability("office", division_name)
+                except DivisionAvailabilityError as exc:
+                    self.assertEqual(exc.status_code, 422)
+                    self.assertEqual(exc.code, "invalid_division")
+                except Exception as exc:
+                    self.fail(f"Unexpected exception: {type(exc).__name__}")
+                else:
+                    self.fail("Expected DivisionAvailabilityError")
+
 
 if __name__ == "__main__":
     unittest.main()
