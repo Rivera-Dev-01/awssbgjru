@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/department.css" />
     <link rel="stylesheet" href="../css/skillbuilder.css" />
+    <link rel="stylesheet" href="../css/division-availability.css" />
     <script defer src="../js/main.js"></script>
     <script defer src="../js/nav.js"></script>
   </head>
@@ -60,14 +61,15 @@
         <div class="sb-content">
           <h2 class="sb-section-title">SKILL BUILDER : Choose a Skill Builder Division</h2>
           <div class="sb-grid">
-            <button class="sb-pill" data-division="Software & Web Dev.">Software &amp; Web Dev.</button>
-            <button class="sb-pill" data-division="Security">Security</button>
+            <button class="sb-pill" data-division="Software & Web Dev." data-availability="full" aria-disabled="true">
+              <span class="division-label">Software &amp; Web Dev.</span>
+              <span class="availability-badge" aria-hidden="true">FULL</span>
+            </button>
             <button class="sb-pill" data-division="Data Analyst">Data Analyst</button>
             <button class="sb-pill" data-division="Cloud Computing">Cloud Computing</button>
             <button class="sb-pill" data-division="Machine Learning & AI">Machine Learning &amp; AI</button>
-            <button class="sb-pill wrap-text" data-division="Advanced Network & Infrastructure">Advanced Network &amp; Infrastructure</button>
           </div>
-          <div class="form-error sb-error" data-for="skillbuilder">
+          <div class="form-error sb-error" data-for="skillbuilder" role="status" aria-live="polite">
             <span class="error-icon"></span>
             <span class="error-text">To proceed, please select a Skill Builder Division</span>
           </div>
@@ -82,6 +84,7 @@
 
       </div>
     </main>
+    <script src="../js/division-availability.js"></script>
     <script src="../js/skillbuilder.js"></script>
   </body>
 </html>

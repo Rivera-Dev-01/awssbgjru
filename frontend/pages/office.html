@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../css/header.css" />
     <link rel="stylesheet" href="../css/department.css" />
     <link rel="stylesheet" href="../css/office.css" />
+    <link rel="stylesheet" href="../css/division-availability.css" />
     <script defer src="../js/main.js"></script>
     <script defer src="../js/nav.js"></script>
   </head>
@@ -64,10 +65,16 @@
             <button class="office-pill" data-division="Operations">Operations</button>
             <button class="office-pill" data-division="Technology">Technology</button>
             <button class="office-pill" data-division="Creatives">Creatives</button>
-            <button class="office-pill" data-division="Marketing">Marketing</button>
-            <button class="office-pill" data-division="Media">Media</button>
+            <button class="office-pill" data-division="Marketing" data-availability="full" aria-disabled="true">
+              <span class="division-label">Marketing</span>
+              <span class="availability-badge" aria-hidden="true">FULL</span>
+            </button>
+            <button class="office-pill" data-division="Media" data-availability="full" aria-disabled="true">
+              <span class="division-label">Media</span>
+              <span class="availability-badge" aria-hidden="true">FULL</span>
+            </button>
           </div>
-          <div class="form-error office-error" data-for="office">
+          <div class="form-error office-error" data-for="office" role="status" aria-live="polite">
             <span class="error-icon"></span>
             <span class="error-text">To proceed, please select a Office Division</span>
           </div>
@@ -82,6 +89,7 @@
 
       </div>
     </main>
+    <script src="../js/division-availability.js"></script>
     <script src="../js/office.js"></script>
   </body>
 </html>
