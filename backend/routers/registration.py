@@ -13,6 +13,10 @@ from backend.api.config import (
     EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, NOTIFY_EMAIL,
 )
 from backend.api.rate_limiter import RateLimiter
+from backend.registration_availability import (
+    DivisionAvailabilityError,
+    validate_division_availability,
+)
 
 router = APIRouter(prefix="/api", tags=["registration"])
 register_limiter = RateLimiter(requests=5, window=60)
@@ -29,6 +33,14 @@ async def register(request: Request, data: RegistrationRequest):
 
     if data.website:
         return JSONResponse({"error": "Bot detected"}, status_code=422)
+
+    try:
+        validate_division_availability(data.division_type, data.division_name)
+    except DivisionAvailabilityError as exc:
+        return JSONResponse(
+            {"error": exc.message, "code": exc.code},
+            status_code=exc.status_code,
+        )
 
     print(f"Registration data received: full_name={data.full_name}, student_id={data.student_id}, year={data.year}, program={data.program}, dob={data.dob}, division_type={data.division_type}")
 
