@@ -1161,28 +1161,28 @@ body.members-page {
 
 /* FOUNDERS SECTION STYLES */
 #section-founders .member-card {
-  width: 382px;
-  max-width: 382px;
-  height: 600px;
-  border-radius: 39.556px;
-  padding: 24px 8px;
+  width: 300px;
+  max-width: 320px;
+  height: 550px;
+  border-radius: 23.975px;
+  padding: 16px 10px;
   flex-shrink: 0;
 }
 
 #section-founders .member-photo-wrapper {
-  width: 316px;
-  height: 346px;
-  margin-bottom: 10px;
-  border-radius: 28.301px;
+  width: 260px;
+  height: 300px;
+  margin-top: 10px;
+  border-radius: 17px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 #section-founders .member-photo-inner {
-  width: 390px;
-  height: 305px;
-  border-radius: 30.07px;
+  width: 250px;
+  height: 290px;
+  border-radius: 18px;
   background: #fff;
   transform: none;
   left: auto;
@@ -1193,19 +1193,19 @@ body.members-page {
 }
 
 #section-founders .member-name {
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 600;
   color: #003678;
   margin-top: 10px;
   margin-bottom: 4px;
-  line-height: 34px;
+  line-height: 30px;
 }
 
 #section-founders .member-role {
-  font-size: 24.7222px;
+  font-size: 16px;
   font-style: italic;
   font-weight: 500;
-  line-height: 37px;
+  line-height: 24px;
   background: linear-gradient(180deg, #0064de, #003678);
   -webkit-background-clip: text;
   background-clip: text;
@@ -1217,19 +1217,19 @@ body.members-page {
 }
 
 #section-founders .member-position {
-  font-size: 14.8333px;
+  font-size: 14px;
   font-weight: 300;
   color: #003678;
   text-align: center;
   margin-bottom: 10px;
-  line-height: 22px;
+  line-height: 20px;
 }
 
 #section-founders .founders-grid {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 #section-founders .member-socials {
@@ -1242,8 +1242,8 @@ body.members-page {
 }
 
 #section-founders .member-card::before {
-  padding: 4px;
-  border-radius: 39.556px;
+  padding: 3px;
+  border-radius: 23.975px;
 }
 
 @media (min-width: 1024px) {
