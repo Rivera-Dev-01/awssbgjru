@@ -17,6 +17,17 @@ CACHE_TTL = int(os.getenv("CACHE_TTL", "300"))
 SUPABASE_URL = os.getenv("SUPABASE_URL", "")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY", "")
 
+# Valid registration divisions (must match frontend pill options)
+VALID_DIVISIONS = {
+    "office": {
+        "Relations", "Operations", "Technology", "Creatives", "Marketing", "Media",
+    },
+    "skillbuilder": {
+        "Web Development", "Software Development", "Security", "Data Analyst",
+        "Cloud Computing", "Machine Learning & AI", "Advanced Network & Infrastructure",
+    },
+}
+
 # Email
 EMAIL_HOST = os.getenv("EMAIL_HOST", "smtp.gmail.com")
 EMAIL_PORT = int(os.getenv("EMAIL_PORT", "587"))

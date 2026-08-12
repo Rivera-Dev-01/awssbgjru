@@ -141,6 +141,10 @@ async def register(request: Request):
     if division_type not in ("office", "skillbuilder"):
         return JSONResponse({"error": "division_type must be office or skillbuilder"}, status_code=422)
 
+    division_name = data.get("division_name", "")
+    if division_name not in config.VALID_DIVISIONS.get(division_type, set()):
+        return JSONResponse({"error": "Invalid division selection"}, status_code=422)
+
     photo_base64 = data.get("photo_base64", "")
     if photo_base64 and not photo_base64.startswith("data:image/"):
         return JSONResponse({"error": "photo_base64 must be a valid data URL"}, status_code=422)
@@ -164,7 +168,7 @@ async def register(request: Request):
         "photo_base64": photo_base64,
         "explanation": data.get("explanation", ""),
         "division_type": division_type,
-        "division_name": data.get("division_name", ""),
+        "division_name": division_name,
         "created_at": datetime.now(timezone.utc).isoformat(),
     }
 

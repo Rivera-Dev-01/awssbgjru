@@ -10,7 +10,7 @@ from fastapi.responses import JSONResponse
 from backend.database import supabase
 from backend.schemas.registration import RegistrationRequest
 from backend.api.config import (
-    EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, NOTIFY_EMAIL,
+    EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, NOTIFY_EMAIL, VALID_DIVISIONS,
 )
 from backend.api.rate_limiter import RateLimiter
 
@@ -59,6 +59,9 @@ async def register(request: Request, data: RegistrationRequest):
                 return JSONResponse({"error": "Photo exceeds maximum size of 500KB"}, status_code=422)
         except Exception:
             return JSONResponse({"error": "Invalid photo data"}, status_code=422)
+
+    if data.division_name not in VALID_DIVISIONS.get(data.division_type, set()):
+        return JSONResponse({"error": "Invalid division selection"}, status_code=422)
 
     row = {
         "full_name": data.full_name,
