@@ -10,12 +10,13 @@ from fastapi.responses import JSONResponse
 from backend.database import supabase
 from backend.schemas.registration import RegistrationRequest
 from backend.api.config import (
-    EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, NOTIFY_EMAIL,
+    EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, NOTIFY_EMAIL, VALID_DIVISIONS,
 )
 from backend.api.rate_limiter import RateLimiter
 from backend.registration_availability import (
     DivisionAvailabilityError,
     validate_division_availability,
+    validate_division_eligibility,
 )
 
 router = APIRouter(prefix="/api", tags=["registration"])
@@ -51,6 +52,14 @@ async def register(request: Request, data: RegistrationRequest):
     if data.year not in valid_years:
         return JSONResponse({"error": "Invalid school year selection"}, status_code=422)
 
+    try:
+        validate_division_eligibility(data.division_type, data.division_name, data.year)
+    except DivisionAvailabilityError as exc:
+        return JSONResponse(
+            {"error": exc.message, "code": exc.code},
+            status_code=exc.status_code,
+        )
+
     valid_programs = {
         "BS Computer Engineering", "BS Electronics Engineering",
         "BS Information Technology", "BSIT Business Analytics",
@@ -71,6 +80,9 @@ async def register(request: Request, data: RegistrationRequest):
                 return JSONResponse({"error": "Photo exceeds maximum size of 500KB"}, status_code=422)
         except Exception:
             return JSONResponse({"error": "Invalid photo data"}, status_code=422)
+
+    if data.division_name not in VALID_DIVISIONS.get(data.division_type, set()):
+        return JSONResponse({"error": "Invalid division selection"}, status_code=422)
 
     row = {
         "full_name": data.full_name,
