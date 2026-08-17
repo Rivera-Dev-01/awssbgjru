@@ -55,11 +55,6 @@
     0 3px 8px rgba(31, 41, 55, 0.14);
 }
 
-.office-pill.year-ineligible .availability-ribbon {
-  filter: grayscale(1);
-  opacity: 0.65;
-}
-
 .availability-ribbon {
   position: absolute;
   top: 50%;

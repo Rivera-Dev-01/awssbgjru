@@ -156,6 +156,11 @@ class RegistrationAvailabilityTest(unittest.TestCase):
             '.office-pill[data-division="Creatives"] .division-eligibility-note,',
             availability_css,
         )
+        self.assertNotIn(
+            ".office-pill.year-ineligible .availability-ribbon {\n"
+            "  filter: grayscale(1);",
+            availability_css,
+        )
         office_js = (ROOT / "frontend/js/office.js").read_text()
         self.assertIn(
             "This division is only open to specific year level students.",
