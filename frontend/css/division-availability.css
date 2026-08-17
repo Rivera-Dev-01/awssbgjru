@@ -156,6 +156,8 @@
   margin-left: 10px;
 }
 
+.office-pill[data-division="Relations"] .division-eligibility-note,
+.office-pill[data-division="Creatives"] .division-eligibility-note,
 .office-pill.eligibility-message-visible .division-eligibility-note {
   display: block;
   white-space: normal;

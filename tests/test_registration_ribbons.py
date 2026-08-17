@@ -145,6 +145,22 @@ class RegistrationAvailabilityTest(unittest.TestCase):
             "Creatives is open only to 1st and 2nd year students.",
             office,
         )
+        availability_css = (
+            ROOT / "frontend/css/division-availability.css"
+        ).read_text()
+        self.assertIn(
+            '.office-pill[data-division="Relations"] .division-eligibility-note,',
+            availability_css,
+        )
+        self.assertIn(
+            '.office-pill[data-division="Creatives"] .division-eligibility-note,',
+            availability_css,
+        )
+        office_js = (ROOT / "frontend/js/office.js").read_text()
+        self.assertIn(
+            "This division is only open to specific year level students.",
+            office_js,
+        )
 
 
 if __name__ == "__main__":
