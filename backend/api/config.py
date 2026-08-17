@@ -23,7 +23,7 @@ VALID_DIVISIONS = {
         "Relations", "Operations", "Technology", "Creatives", "Marketing", "Media",
     },
     "skillbuilder": {
-        "Web Development", "Software Development", "Security", "Data Analyst",
+        "Software & Web Dev.", "Security", "Data Analyst",
         "Cloud Computing", "Machine Learning & AI", "Advanced Network & Infrastructure",
     },
 }

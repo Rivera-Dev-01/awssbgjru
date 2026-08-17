@@ -1,0 +1,58 @@
+/* Decorative Hima inserts: layout is reserved so copy and cards stay readable. */
+.future-mascot-img--rocket {
+  height: auto !important;
+  object-fit: contain;
+}
+
+.about-mascot-slot {
+  width: clamp(10rem, 20vw, 20rem);
+  aspect-ratio: 1 / 1;
+  margin-inline: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.about-mascot-slot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.about-mascot-slot--vision {
+  margin-top: -2rem;
+  margin-bottom: 2rem;
+}
+
+.about-mascot-slot--goals {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 1025px) {
+  .about-mascot-slot--vision {
+    width: clamp(14rem, 18vw, 20rem);
+    margin-top: -5rem;
+    margin-bottom: 0;
+    margin-left: 9%;
+  }
+
+  .about-mascot-slot--goals {
+    width: clamp(14rem, 19vw, 21rem);
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-mascot-slot--vision,
+  .about-mascot-slot--goals {
+    width: clamp(10rem, 56vw, 15rem);
+    margin-inline: auto;
+  }
+
+  .about-mascot-slot--vision {
+    margin-top: 1rem;
+  }
+
+}

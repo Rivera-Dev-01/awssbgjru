@@ -13,6 +13,11 @@ sys.path.insert(0, _api_dir)
 if _project_root not in sys.path:
     sys.path.insert(0, _project_root)
 
+from backend.registration_availability import (
+    DivisionAvailabilityError,
+    validate_division_availability,
+    validate_division_eligibility,
+)
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
@@ -138,8 +143,22 @@ async def register(request: Request):
         return JSONResponse({"error": "Invalid date of birth format (expecting YYYY-MM-DD)"}, status_code=422)
 
     division_type = data.get("division_type", "")
-    if division_type not in ("office", "skillbuilder"):
-        return JSONResponse({"error": "division_type must be office or skillbuilder"}, status_code=422)
+    division_name = data.get("division_name", "")
+    try:
+        validate_division_availability(division_type, division_name)
+    except DivisionAvailabilityError as exc:
+        return JSONResponse(
+            {"error": exc.message, "code": exc.code},
+            status_code=exc.status_code,
+        )
+
+    try:
+        validate_division_eligibility(division_type, division_name, year)
+    except DivisionAvailabilityError as exc:
+        return JSONResponse(
+            {"error": exc.message, "code": exc.code},
+            status_code=exc.status_code,
+        )
 
     division_name = data.get("division_name", "")
     if division_name not in config.VALID_DIVISIONS.get(division_type, set()):
