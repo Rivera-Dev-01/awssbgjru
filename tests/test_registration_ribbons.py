@@ -161,6 +161,10 @@ class RegistrationAvailabilityTest(unittest.TestCase):
             "This division is only open to specific year level students.",
             office_js,
         )
+        self.assertRegex(
+            office,
+            r'<script src="\.\./js/office\.js\?v=[^"]+"></script>',
+        )
 
 
 if __name__ == "__main__":
